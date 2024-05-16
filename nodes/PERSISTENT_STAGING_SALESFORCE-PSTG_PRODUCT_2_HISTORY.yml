@@ -1,0 +1,310 @@
+steps:
+  PSTG_PRODUCT_2_HISTORY-4862:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120599"
+              stepCounter: "4862"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_PRODUCT_2_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "120600"
+              stepCounter: "4862"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112055"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120601"
+              stepCounter: "4862"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112056"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120602"
+              stepCounter: "4862"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PRODUCT_2_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112057"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120603"
+              stepCounter: "4862"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112058"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120604"
+              stepCounter: "4862"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112059"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120605"
+              stepCounter: "4862"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIELD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112060"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120606"
+              stepCounter: "4862"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATA_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112061"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120607"
+              stepCounter: "4862"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OLD_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112062"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120608"
+              stepCounter: "4862"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NEW_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112063"
+                    stepCounter: "4537"
+                transform: ""
+          - columnReference:
+              columnCounter: "120609"
+              stepCounter: "4862"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "112064"
+                    stepCounter: "4537"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120610"
+              stepCounter: "4862"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120611"
+              stepCounter: "4862"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "123603"
+              stepCounter: "4862"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120612"
+              stepCounter: "4862"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120613"
+              stepCounter: "4862"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120614"
+              stepCounter: "4862"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120615"
+              stepCounter: "4862"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: PRODUCT_2_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'PRODUCT_2_HISTORY') }} "PRODUCT_2_HISTORY"
+            name: PSTG_PRODUCT_2_HISTORY
+            noLinkRefs: []
+      name: PSTG_PRODUCT_2_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4862"

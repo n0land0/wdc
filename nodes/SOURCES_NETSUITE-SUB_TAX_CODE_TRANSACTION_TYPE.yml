@@ -1,0 +1,153 @@
+steps:
+  SUB_TAX_CODE_TRANSACTION_TYPE-2930:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48692"
+              stepCounter: "2930"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: LIST_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48693"
+              stepCounter: "2930"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48694"
+              stepCounter: "2930"
+            config: {}
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: IS_RECORD_INACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48695"
+              stepCounter: "2930"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48696"
+              stepCounter: "2930"
+            config: {}
+            dataType: VARCHAR(3996)
+            defaultValue: ""
+            description: ""
+            name: LIST_ITEM_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48697"
+              stepCounter: "2930"
+            config: {}
+            dataType: VARCHAR(1020)
+            defaultValue: ""
+            description: ""
+            name: SUB_TAX_CODE_TRANSACTION_TY_EX
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48698"
+              stepCounter: "2930"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48699"
+              stepCounter: "2930"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48700"
+              stepCounter: "2930"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'SUB_TAX_CODE_TRANSACTION_TYPE') }}
+      name: SUB_TAX_CODE_TRANSACTION_TYPE
+      schema: ""
+      sqlType: Source
+      table: SUB_TAX_CODE_TRANSACTION_TYPE
+      type: sourceInput
+    stepCounter: "2930"

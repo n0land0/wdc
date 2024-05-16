@@ -1,0 +1,108 @@
+steps:
+  ITEM_DEFAULT_SECONDARY_UNITS-2678:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44064"
+              stepCounter: "2678"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ITEM_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44065"
+              stepCounter: "2678"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SECONDARY_UNIT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44066"
+              stepCounter: "2678"
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: UNIT_PURPOSE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44067"
+              stepCounter: "2678"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44068"
+              stepCounter: "2678"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44069"
+              stepCounter: "2678"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ITEM_DEFAULT_SECONDARY_UNITS') }}
+      name: ITEM_DEFAULT_SECONDARY_UNITS
+      schema: ""
+      sqlType: Source
+      table: ITEM_DEFAULT_SECONDARY_UNITS
+      type: sourceInput
+    stepCounter: "2678"

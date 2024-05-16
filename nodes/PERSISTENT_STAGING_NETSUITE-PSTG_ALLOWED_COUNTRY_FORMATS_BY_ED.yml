@@ -1,0 +1,306 @@
+steps:
+  PSTG_ALLOWED_COUNTRY_FORMATS_BY_ED-3036:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51022"
+              stepCounter: "3036"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ALLOWED_COUNTRY_FORMATS_BY_ED_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "51023"
+              stepCounter: "3036"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ALLOWED_COUNTRY_FORMATS_BY__ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38589"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51024"
+              stepCounter: "3036"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ALLOWED_COUNTRY_FORMATS_BY__EX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38590"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51025"
+              stepCounter: "3036"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38591"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51026"
+              stepCounter: "3036"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EDITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38592"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51027"
+              stepCounter: "3036"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_INACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38593"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51028"
+              stepCounter: "3036"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38594"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51029"
+              stepCounter: "3036"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38595"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51030"
+              stepCounter: "3036"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38596"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51031"
+              stepCounter: "3036"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38597"
+                    stepCounter: "2358"
+                transform: ""
+          - columnReference:
+              columnCounter: "51032"
+              stepCounter: "3036"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38598"
+                    stepCounter: "2358"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51033"
+              stepCounter: "3036"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51034"
+              stepCounter: "3036"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "55213"
+              stepCounter: "3036"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51035"
+              stepCounter: "3036"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51036"
+              stepCounter: "3036"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51037"
+              stepCounter: "3036"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51038"
+              stepCounter: "3036"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: ALLOWED_COUNTRY_FORMATS_BY_ED
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ALLOWED_COUNTRY_FORMATS_BY_ED') }} "ALLOWED_COUNTRY_FORMATS_BY_ED"
+            name: PSTG_ALLOWED_COUNTRY_FORMATS_BY_ED
+            noLinkRefs: []
+      name: PSTG_ALLOWED_COUNTRY_FORMATS_BY_ED
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3036"

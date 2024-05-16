@@ -1,0 +1,269 @@
+steps:
+  PSTG_EXPENSE_REPORTS-3417:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81588"
+              stepCounter: "3417"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_EXPENSE_REPORTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "81589"
+              stepCounter: "3417"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: EXPENSE_REPORT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41982"
+                    stepCounter: "2576"
+                transform: ""
+          - columnReference:
+              columnCounter: "81590"
+              stepCounter: "3417"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41983"
+                    stepCounter: "2576"
+                transform: ""
+          - columnReference:
+              columnCounter: "81591"
+              stepCounter: "3417"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41984"
+                    stepCounter: "2576"
+                transform: ""
+          - columnReference:
+              columnCounter: "81592"
+              stepCounter: "3417"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_POLICY_VIOLATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41985"
+                    stepCounter: "2576"
+                transform: ""
+          - columnReference:
+              columnCounter: "81593"
+              stepCounter: "3417"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41986"
+                    stepCounter: "2576"
+                transform: ""
+          - columnReference:
+              columnCounter: "81594"
+              stepCounter: "3417"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41987"
+                    stepCounter: "2576"
+                transform: ""
+          - columnReference:
+              columnCounter: "81595"
+              stepCounter: "3417"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "41988"
+                    stepCounter: "2576"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81596"
+              stepCounter: "3417"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81597"
+              stepCounter: "3417"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85793"
+              stepCounter: "3417"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81598"
+              stepCounter: "3417"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81599"
+              stepCounter: "3417"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81600"
+              stepCounter: "3417"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "81601"
+              stepCounter: "3417"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: EXPENSE_REPORTS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'EXPENSE_REPORTS') }} "EXPENSE_REPORTS"
+            name: PSTG_EXPENSE_REPORTS
+            noLinkRefs: []
+      name: PSTG_EXPENSE_REPORTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3417"

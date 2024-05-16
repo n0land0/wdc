@@ -1,0 +1,307 @@
+steps:
+  PSTG_DEAL_PROPERTY_HISTORY-1609:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37336"
+              stepCounter: "1609"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_DEAL_PROPERTY_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "37337"
+              stepCounter: "1609"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: DEAL_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34812"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37338"
+              stepCounter: "1609"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34813"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37339"
+              stepCounter: "1609"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34814"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37340"
+              stepCounter: "1609"
+            dataType: VARCHAR(4096)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34815"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37341"
+              stepCounter: "1609"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34816"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37342"
+              stepCounter: "1609"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34817"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37343"
+              stepCounter: "1609"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34818"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37344"
+              stepCounter: "1609"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_START
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34819"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37345"
+              stepCounter: "1609"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_END
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34820"
+                    stepCounter: "1514"
+                transform: ""
+          - columnReference:
+              columnCounter: "37346"
+              stepCounter: "1609"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34821"
+                    stepCounter: "1514"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37347"
+              stepCounter: "1609"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37348"
+              stepCounter: "1609"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "80274"
+              stepCounter: "1609"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37349"
+              stepCounter: "1609"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37350"
+              stepCounter: "1609"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37351"
+              stepCounter: "1609"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37352"
+              stepCounter: "1609"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: DEAL_PROPERTY_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'DEAL_PROPERTY_HISTORY') }} "DEAL_PROPERTY_HISTORY"
+            name: PSTG_DEAL_PROPERTY_HISTORY
+            noLinkRefs: []
+      name: PSTG_DEAL_PROPERTY_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1609"

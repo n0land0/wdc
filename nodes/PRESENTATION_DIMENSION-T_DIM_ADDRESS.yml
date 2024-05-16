@@ -1,0 +1,294 @@
+steps:
+  T_DIM_ADDRESS-5097:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180404"
+              stepCounter: "5097"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: ADDRESS_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "180405"
+              stepCounter: "5097"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: SOURCE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180345"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180406"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ADDRESS_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180370"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180407"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: ADDRESS_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180371"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180408"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180372"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180409"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: STATE_PROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180375"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180410"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180362"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180411"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180376"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180412"
+              stepCounter: "5097"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: POSTAL_ZONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180377"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180413"
+              stepCounter: "5097"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ADDRESS_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180396"
+                    stepCounter: "5096"
+                transform: ""
+          - columnReference:
+              columnCounter: "180414"
+              stepCounter: "5097"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180397"
+                    stepCounter: "5096"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180421"
+              stepCounter: "5097"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180422"
+              stepCounter: "5097"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180423"
+              stepCounter: "5097"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180424"
+              stepCounter: "5097"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180425"
+              stepCounter: "5097"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180426"
+              stepCounter: "5097"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_DIM_ADDRESS_UNION: "5096"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_ADDRESS_UNION
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_ADDRESS_UNION') }} "STG_DIM_ADDRESS_UNION"
+            name: T_DIM_ADDRESS
+            noLinkRefs: []
+      name: T_DIM_ADDRESS
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: "5097"

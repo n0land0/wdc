@@ -1,0 +1,94 @@
+steps:
+  T_CONTAINER_INV_CAT-e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0dacb322-2b17-4764-9c46-dd3f63dc6ffc
+              stepCounter: e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: INV_CAT
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9e06b82-4a56-47dc-96dc-736bafee8ea5
+              stepCounter: e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CONTAINER_TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cafa8baa-edb2-4e2b-9f03-4da7415d610a
+              stepCounter: e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 248c8c0b-a939-44b5-b6b4-a81d932144dd
+              stepCounter: e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 707a792b-20aa-46b8-aa31-314414919de5
+              stepCounter: e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_CONTAINER_INV_CAT') }}
+      name: T_CONTAINER_INV_CAT
+      schema: ""
+      sqlType: Source
+      table: T_CONTAINER_INV_CAT
+      type: sourceInput
+    stepCounter: e42f4b0b-4a96-4893-9353-ec8e2e4d2a4e

@@ -1,0 +1,90 @@
+steps:
+  TMP_WEBSITES_ANWD-5569:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table pulls in only website_id, website source and source system from the orders anwd table.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "370986"
+              stepCounter: "5569"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179494"
+                    stepCounter: "5067"
+                transform: DISTINCT("ORDERS_ANWD"."TENANT_ID")
+          - columnReference:
+              columnCounter: "371006"
+              stepCounter: "5569"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: WEBSITE_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179839"
+                    stepCounter: "5067"
+                transform: "'All New'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371008"
+              stepCounter: "5569"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ECOMMERCE'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDERS_ANWD: "5067"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: ORDERS_ANWD
+            join:
+              joinCondition: |
+                FROM {{ ref('SOURCES_ECOMMERCE', 'ORDERS_ANWD') }} "ORDERS_ANWD"
+            name: TMP_WEBSITES_ANWD
+            noLinkRefs: []
+      name: TMP_WEBSITES_ANWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5569"

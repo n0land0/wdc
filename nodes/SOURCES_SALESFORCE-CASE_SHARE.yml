@@ -1,0 +1,168 @@
+steps:
+  CASE_SHARE-208a9281-c4ac-4725-a8c9-c67b5783e72d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: SOURCES_SALESFORCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f0201e10-d5ad-4148-95e2-4d41338a7fa0
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c75e102b-5288-449b-a6df-244863df327c
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: CASE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6f821e17-3c2f-4546-bd04-362c7bec9219
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: USER_OR_GROUP_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0253f4f9-0bcd-4b1f-b12f-d7b5bdd9e295
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: CASE_ACCESS_LEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 86d731bc-8cf3-4cfb-8c6f-f58a4f6fb0a1
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ROW_CAUSE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93e7d4f8-e508-4f89-8156-aa61ea5ccfae
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 37499b9b-7565-4964-9d1b-8d6134f33679
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: LAST_MODIFIED_BY_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2f5f78f1-909c-46a6-a3cf-0c8a36a70ab1
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: IS_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe5da90e-fdcf-4beb-8754-1e7d03bad85c
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79a1cfde-afb6-41ec-a980-b21cb2536649
+              stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'CASE_SHARE') }}
+      name: CASE_SHARE
+      schema: ""
+      sqlType: Source
+      table: CASE_SHARE
+      type: sourceInput
+    stepCounter: 208a9281-c4ac-4725-a8c9-c67b5783e72d

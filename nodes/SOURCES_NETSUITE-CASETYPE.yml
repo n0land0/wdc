@@ -1,0 +1,153 @@
+steps:
+  CASETYPE-2455:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39896"
+              stepCounter: "2455"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CASE_TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39897"
+              stepCounter: "2455"
+            config: {}
+            dataType: VARCHAR(1020)
+            defaultValue: ""
+            description: ""
+            name: CASE_TYPE_EXTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39898"
+              stepCounter: "2455"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39899"
+              stepCounter: "2455"
+            config: {}
+            dataType: VARCHAR(800)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39900"
+              stepCounter: "2455"
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: IS_INACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39901"
+              stepCounter: "2455"
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39902"
+              stepCounter: "2455"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39903"
+              stepCounter: "2455"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39904"
+              stepCounter: "2455"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CASETYPE') }}
+      name: CASETYPE
+      schema: ""
+      sqlType: Source
+      table: CASETYPE
+      type: sourceInput
+    stepCounter: "2455"

@@ -1,0 +1,297 @@
+steps:
+  PSTG_PARTNER_SALES_ROLES-4258:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106353"
+              stepCounter: "4258"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_PARTNER_SALES_ROLES_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "106354"
+              stepCounter: "4258"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46256"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106355"
+              stepCounter: "4258"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ISINACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46257"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106356"
+              stepCounter: "4258"
+            dataType: VARCHAR(124)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46258"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106357"
+              stepCounter: "4258"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46259"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106358"
+              stepCounter: "4258"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARTNER_SALES_ROLE_EXTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46260"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106359"
+              stepCounter: "4258"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: PARTNER_SALES_ROLE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46261"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106360"
+              stepCounter: "4258"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46262"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106361"
+              stepCounter: "4258"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46263"
+                    stepCounter: "2793"
+                transform: ""
+          - columnReference:
+              columnCounter: "106362"
+              stepCounter: "4258"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "46264"
+                    stepCounter: "2793"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106363"
+              stepCounter: "4258"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106364"
+              stepCounter: "4258"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "107036"
+              stepCounter: "4258"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106365"
+              stepCounter: "4258"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106366"
+              stepCounter: "4258"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106367"
+              stepCounter: "4258"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "106368"
+              stepCounter: "4258"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: PARTNER_SALES_ROLES
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'PARTNER_SALES_ROLES') }} "PARTNER_SALES_ROLES"
+            name: PSTG_PARTNER_SALES_ROLES
+            noLinkRefs: []
+      name: PSTG_PARTNER_SALES_ROLES
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4258"

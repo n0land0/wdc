@@ -1,0 +1,124 @@
+steps:
+  T_VIEW_WAVE-65116ec0-aa15-4a85-9650-596038f61fb1:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a8355444-fe50-4b6d-b7e0-9aec286009d9
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SELECTED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c1d9620-5e6c-47da-a205-033b9b566f1c
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: WAVE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7efe92e2-5085-424a-acca-6aa64388930b
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 58232346-2e2d-4845-8e1b-0f862cd2e3a8
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: USER_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5a6a37a-8cb1-4109-8761-3a7bcd7a1e4a
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: VIEW_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9e0e3700-d715-4bbb-89cd-e2eaaa144474
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d6545cce-cbe4-47e1-b26b-7bdb650682dc
+              stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_VIEW_WAVE') }}
+      name: T_VIEW_WAVE
+      schema: ""
+      sqlType: Source
+      table: T_VIEW_WAVE
+      type: sourceInput
+    stepCounter: 65116ec0-aa15-4a85-9650-596038f61fb1

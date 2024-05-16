@@ -1,0 +1,292 @@
+steps:
+  PSTG_CAMPAIGN_VERTICALS-3289:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56708"
+              stepCounter: "3289"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CAMPAIGN_VERTICALS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "56709"
+              stepCounter: "3289"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CAMPAIGNVERTICAL_EXTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39859"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56710"
+              stepCounter: "3289"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CAMPAIGNVERTICAL_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39860"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56711"
+              stepCounter: "3289"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39861"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56712"
+              stepCounter: "3289"
+            dataType: VARCHAR(2000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39862"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56713"
+              stepCounter: "3289"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ISINACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39863"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56714"
+              stepCounter: "3289"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39864"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56715"
+              stepCounter: "3289"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39865"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56716"
+              stepCounter: "3289"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39866"
+                    stepCounter: "2451"
+                transform: ""
+          - columnReference:
+              columnCounter: "56717"
+              stepCounter: "3289"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39867"
+                    stepCounter: "2451"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56718"
+              stepCounter: "3289"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56719"
+              stepCounter: "3289"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "58029"
+              stepCounter: "3289"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56720"
+              stepCounter: "3289"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56721"
+              stepCounter: "3289"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56722"
+              stepCounter: "3289"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56723"
+              stepCounter: "3289"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: CAMPAIGN_VERTICALS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CAMPAIGN_VERTICALS') }} "CAMPAIGN_VERTICALS"
+            name: PSTG_CAMPAIGN_VERTICALS
+            noLinkRefs: []
+      name: PSTG_CAMPAIGN_VERTICALS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3289"

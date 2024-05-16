@@ -1,0 +1,306 @@
+steps:
+  PSTG_AMORTIZATION_SCHED_LINES-3039:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51073"
+              stepCounter: "3039"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_AMORTIZATION_SCHED_LINES_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "51074"
+              stepCounter: "3039"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ACCOUNTING_PERIOD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38619"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51075"
+              stepCounter: "3039"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38620"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51076"
+              stepCounter: "3039"
+            dataType: VARCHAR(168)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38621"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51077"
+              stepCounter: "3039"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_RECOGNIZED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38622"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51078"
+              stepCounter: "3039"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: JOURNAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38623"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51079"
+              stepCounter: "3039"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SCHEDULE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38624"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51080"
+              stepCounter: "3039"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38625"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51081"
+              stepCounter: "3039"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38626"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51082"
+              stepCounter: "3039"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIVETRAN_INDEX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38627"
+                    stepCounter: "2361"
+                transform: ""
+          - columnReference:
+              columnCounter: "51083"
+              stepCounter: "3039"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38628"
+                    stepCounter: "2361"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51084"
+              stepCounter: "3039"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51085"
+              stepCounter: "3039"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "55218"
+              stepCounter: "3039"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51086"
+              stepCounter: "3039"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51087"
+              stepCounter: "3039"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51088"
+              stepCounter: "3039"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "51089"
+              stepCounter: "3039"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: AMORTIZATION_SCHED_LINES
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'AMORTIZATION_SCHED_LINES') }} "AMORTIZATION_SCHED_LINES"
+            name: PSTG_AMORTIZATION_SCHED_LINES
+            noLinkRefs: []
+      name: PSTG_AMORTIZATION_SCHED_LINES
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3039"

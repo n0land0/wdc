@@ -1,0 +1,325 @@
+steps:
+  PSTG_NOSAFT_INCOME_STATEMENT_RF117-4223:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105018"
+              stepCounter: "4223"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_NOSAFT_INCOME_STATEMENT_RF117_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "105019"
+              stepCounter: "4223"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: NOSAFT_INCOME_STATEMENT_RF1_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45166"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105020"
+              stepCounter: "4223"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45167"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105021"
+              stepCounter: "4223"
+            dataType: VARCHAR(140)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: GROUPING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45168"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105022"
+              stepCounter: "4223"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: GROUPING_CODE_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45169"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105023"
+              stepCounter: "4223"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_INACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45170"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105024"
+              stepCounter: "4223"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45171"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105025"
+              stepCounter: "4223"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NOSAFT_INCOME_STATEMENT_RF1_EX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45172"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105026"
+              stepCounter: "4223"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45173"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105027"
+              stepCounter: "4223"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45174"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105028"
+              stepCounter: "4223"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45175"
+                    stepCounter: "2758"
+                transform: ""
+          - columnReference:
+              columnCounter: "105029"
+              stepCounter: "4223"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "45176"
+                    stepCounter: "2758"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105030"
+              stepCounter: "4223"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105031"
+              stepCounter: "4223"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "107169"
+              stepCounter: "4223"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105032"
+              stepCounter: "4223"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105033"
+              stepCounter: "4223"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105034"
+              stepCounter: "4223"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "105035"
+              stepCounter: "4223"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: NOSAFT_INCOME_STATEMENT_RF117
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'NOSAFT_INCOME_STATEMENT_RF117') }} "NOSAFT_INCOME_STATEMENT_RF117"
+            name: PSTG_NOSAFT_INCOME_STATEMENT_RF117
+            noLinkRefs: []
+      name: PSTG_NOSAFT_INCOME_STATEMENT_RF117
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4223"

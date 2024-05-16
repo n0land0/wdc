@@ -1,0 +1,322 @@
+steps:
+  PSTG_T_ORDER_TYPES-c1a43087-3dff-47d1-a3aa-f2116da2a829:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: PERSISTENT_STAGING_ORACLE_WMS
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b088d518-465d-4120-98c7-8744759f9c5a
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_T_ORDER_TYPES_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 8941ef87-0f07-4cd4-905d-7b1fb8a4e61a
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            name: CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c7b6842-282e-40c9-9411-0a2d8ac30248
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: f0471fc8-620b-4f9d-8a5d-2a26352fd045
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(50)
+            description: ""
+            hashDetails: null
+            name: REQUIRED_VAS_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 842e49b3-19a7-4df5-b596-3d51c77f0723
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: 28ca8dcd-d239-4f7a-8b05-de02bda5ab5d
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(10)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WH_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e40a252f-6362-439c-8927-0d4577f60fe6
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: f1f1ac88-88e4-4b24-b91c-1518f61b699a
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(1)
+            description: ""
+            hashDetails: null
+            name: REQUIRES_VAS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b6d8919-fae8-42ee-9dfc-db8ee47c294d
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: b87354fb-eb0d-40dc-a22b-aa8d748b890a
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UPDATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d248cc03-ce67-4127-b31c-ef3c9c07a4c3
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: 99e4b152-754f-4f80-8cea-9b71ee9d0567
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(50)
+            description: ""
+            hashDetails: null
+            name: ORDER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39c7417d-2f99-45e2-8532-6afb3e3cd059
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: 7b89afb7-c4ae-4c1d-a35d-f4512a8cb7fc
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: VARCHAR(10)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ORDER_TYPE_CODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2bda78a-b416-42e0-b6e1-ce7a46133ec3
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: b25408e0-b789-456a-93ae-29e34e2e9adc
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4887127b-9369-453d-b471-060aecec9eee
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: 92b1bb0a-a082-41fb-a23e-7a27f8073a93
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb01303d-9585-4e1c-b9bb-aee11940eda9
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: 3f06e163-7409-4a77-bec5-3c49c7f1846b
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UPDATED_ON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c381063-d4e7-46de-b99a-8a34c83f363e
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - columnReference:
+              columnCounter: 89f7578e-270f-42a1-a29f-a3420f943c7f
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_ON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 663fc35d-d23d-47b2-a0dd-f4d519602a3c
+                    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8b0435b8-9801-4c1b-8f66-d0f9c0dd3b53
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d48d769d-d46c-4f4e-9c20-a183ff6006d0
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bc558538-5ba7-4b0b-ac55-274aba29410b
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 071055be-b591-4bf5-95c6-790f22b7999b
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e3be03e3-2131-450c-9e37-808c38a20558
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3afb988f-f9c4-411e-a28c-c83b1fd420f6
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7825eca7-cdc1-446a-bde5-04384559e4ee
+              stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ORACLE WMS'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ORACLE_WMS
+                nodeName: T_ORDER_TYPES
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ORDER_TYPES') }} "T_ORDER_TYPES"
+            name: PSTG_T_ORDER_TYPES
+            noLinkRefs: []
+      name: PSTG_T_ORDER_TYPES
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: c1a43087-3dff-47d1-a3aa-f2116da2a829

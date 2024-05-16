@@ -1,0 +1,310 @@
+steps:
+  PSTG_ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY-4843:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120044"
+              stepCounter: "4843"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "120045"
+              stepCounter: "4843"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111724"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120046"
+              stepCounter: "4843"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111725"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120047"
+              stepCounter: "4843"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ITEM_ADJUSTMENT_LINE_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111726"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120048"
+              stepCounter: "4843"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111727"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120049"
+              stepCounter: "4843"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111728"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120050"
+              stepCounter: "4843"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIELD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111729"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120051"
+              stepCounter: "4843"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATA_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111730"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120052"
+              stepCounter: "4843"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OLD_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111731"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120053"
+              stepCounter: "4843"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NEW_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111732"
+                    stepCounter: "4518"
+                transform: ""
+          - columnReference:
+              columnCounter: "120054"
+              stepCounter: "4843"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111733"
+                    stepCounter: "4518"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120055"
+              stepCounter: "4843"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120056"
+              stepCounter: "4843"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120057"
+              stepCounter: "4843"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120058"
+              stepCounter: "4843"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120059"
+              stepCounter: "4843"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "120060"
+              stepCounter: "4843"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: "120309"
+              stepCounter: "4843"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY') }} "ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY"
+            name: PSTG_ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY
+            noLinkRefs: []
+      name: PSTG_ORDER_ITEM_ADJUSTMENT_LINE_ITEM_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4843"

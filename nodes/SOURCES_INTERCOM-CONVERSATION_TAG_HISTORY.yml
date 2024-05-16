@@ -1,0 +1,79 @@
+steps:
+  CONVERSATION_TAG_HISTORY-dff48224-296d-4456-8f49-14b067a0d132:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_INTERCOM
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 201c16e5-f871-4dc0-8217-612c37239b4b
+              stepCounter: dff48224-296d-4456-8f49-14b067a0d132
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: CONVERSATION_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab4d5b33-d373-489c-9d82-3681093ae31a
+              stepCounter: dff48224-296d-4456-8f49-14b067a0d132
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: CONVERSATION_UPDATED_AT
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed3da1d7-7f4b-4b6f-b87f-615785284429
+              stepCounter: dff48224-296d-4456-8f49-14b067a0d132
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: TAG_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b3ad5427-bc95-40a0-9640-7d05196db4ff
+              stepCounter: dff48224-296d-4456-8f49-14b067a0d132
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_INTERCOM', 'CONVERSATION_TAG_HISTORY') }}
+      name: CONVERSATION_TAG_HISTORY
+      schema: ""
+      sqlType: Source
+      table: CONVERSATION_TAG_HISTORY
+      type: sourceInput
+    stepCounter: dff48224-296d-4456-8f49-14b067a0d132

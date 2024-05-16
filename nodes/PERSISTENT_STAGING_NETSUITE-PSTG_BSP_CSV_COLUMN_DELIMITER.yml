@@ -1,0 +1,292 @@
+steps:
+  PSTG_BSP_CSV_COLUMN_DELIMITER-3266:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56198"
+              stepCounter: "3266"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_BSP_CSV_COLUMN_DELIMITER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "56199"
+              stepCounter: "3266"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: LIST_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39560"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56200"
+              stepCounter: "3266"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BSP_CSV_COLUMN_DELIMITER_EXTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39561"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56201"
+              stepCounter: "3266"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39562"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56202"
+              stepCounter: "3266"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_RECORD_INACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39563"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56203"
+              stepCounter: "3266"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39564"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56204"
+              stepCounter: "3266"
+            dataType: VARCHAR(3996)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LIST_ITEM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39565"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56205"
+              stepCounter: "3266"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39566"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56206"
+              stepCounter: "3266"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39567"
+                    stepCounter: "2428"
+                transform: ""
+          - columnReference:
+              columnCounter: "56207"
+              stepCounter: "3266"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39568"
+                    stepCounter: "2428"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56208"
+              stepCounter: "3266"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56209"
+              stepCounter: "3266"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "56397"
+              stepCounter: "3266"
+            dataType: VARCHAR(3996)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56210"
+              stepCounter: "3266"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56211"
+              stepCounter: "3266"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56212"
+              stepCounter: "3266"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "56213"
+              stepCounter: "3266"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: BSP_CSV_COLUMN_DELIMITER
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'BSP_CSV_COLUMN_DELIMITER') }} "BSP_CSV_COLUMN_DELIMITER"
+            name: PSTG_BSP_CSV_COLUMN_DELIMITER
+            noLinkRefs: []
+      name: PSTG_BSP_CSV_COLUMN_DELIMITER
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3266"

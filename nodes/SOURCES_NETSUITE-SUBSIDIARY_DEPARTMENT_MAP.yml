@@ -1,0 +1,93 @@
+steps:
+  SUBSIDIARY_DEPARTMENT_MAP-2926:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48662"
+              stepCounter: "2926"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEPARTMENT_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48663"
+              stepCounter: "2926"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SUBSIDIARY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48664"
+              stepCounter: "2926"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48665"
+              stepCounter: "2926"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48666"
+              stepCounter: "2926"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'SUBSIDIARY_DEPARTMENT_MAP') }}
+      name: SUBSIDIARY_DEPARTMENT_MAP
+      schema: ""
+      sqlType: Source
+      table: SUBSIDIARY_DEPARTMENT_MAP
+      type: sourceInput
+    stepCounter: "2926"

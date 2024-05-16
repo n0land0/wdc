@@ -1,0 +1,347 @@
+steps:
+  PSTG_T_KEWILL_ACTIVITY-0034966a-9369-469a-aed4-2e94f8e74d74:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: PERSISTENT_STAGING_ORACLE_WMS
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f749419-2e3b-4ffc-beea-e168916a2ca1
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_T_KEWILL_ACTIVITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: edfa8e82-303b-4be2-9e06-a88231597a7e
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(80)
+            description: ""
+            hashDetails: null
+            name: ACTIVITY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f7b168df-11b7-41dd-a58d-b47868b3a280
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: edcae8b5-ffe4-4553-8df5-e287e3fc0dcd
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MESSAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b6e3b73-7717-4f45-9f78-e7fcd0b1608d
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 0f39174e-bd45-479c-ae35-1cf9617cf95b
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: KEWILL_TRX_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4baeef27-001d-43b4-9284-0906b67043d4
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 2e9f06d3-0112-48d3-9aa5-bf3947587d30
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(1)
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1501bf5b-2a23-4f1d-887d-9219b296282d
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 09e0b8fb-ac99-4959-aaff-19b196d0a029
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7357c9f-3f26-4d1b-8652-49d6dc54cde8
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: f74fad68-a836-4a97-b030-07bbae24eba5
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3804e067-b62c-48e8-b219-79bc203c1b00
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: b712dbf4-20e7-4ca6-b12f-a3c2755565a9
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01f85e19-8a69-406e-9361-20b45a42643d
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 80ca9d60-1664-4f11-9ad0-7dfea86a85c1
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: ACTIVITY_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f93660b3-cb0f-49e7-ba3d-d1db8c07a12a
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 2eaaf5e0-19c0-41eb-8ab0-c8bec6257489
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DURATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d102a9b-6e7b-4730-b57d-447acf299c2e
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 94104672-0355-4472-9d52-3bd2118fa9d4
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: START_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c4ce3b8-f500-4547-8fc2-4c0a0f859460
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 36bb6971-f11b-4a40-914f-df7837f5b16e
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: KEWILL_TRX_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 966edff3-4a68-4aca-bf43-5e3f05567606
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: 77ae0a08-f4c5-4950-a78f-0e66438ebd03
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: END_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8b4180e4-5eff-41e9-9415-4a53ef084f57
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - columnReference:
+              columnCounter: f49e4088-5c21-493d-9c11-3a4151cac64e
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: KEWILL_ACTIVITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e3b2e3c-0647-4460-ac21-92034c15c8cf
+                    stepCounter: 5d828456-2b94-4341-8259-830bd87faf40
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8e5154d3-62fe-4a4d-87dd-61a32dbd15dd
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 65c40a93-3dd2-4123-87cd-d2b0327667e3
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f783902f-78d3-460f-8185-cefcc4c0e9cb
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75e9912b-f6fb-4afb-9bd8-f1bd1eb36670
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 015347c2-03d3-41dc-9fa3-b78a0dd135d2
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 30732ec4-cd85-4a7c-aadd-62cb999c9ad2
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d994dad1-0555-467c-8ffd-84e98aaff2d3
+              stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ORACLE WMS'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ORACLE_WMS
+                nodeName: T_KEWILL_ACTIVITY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_KEWILL_ACTIVITY') }} "T_KEWILL_ACTIVITY"
+            name: PSTG_T_KEWILL_ACTIVITY
+            noLinkRefs: []
+      name: PSTG_T_KEWILL_ACTIVITY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: 0034966a-9369-469a-aed4-2e94f8e74d74

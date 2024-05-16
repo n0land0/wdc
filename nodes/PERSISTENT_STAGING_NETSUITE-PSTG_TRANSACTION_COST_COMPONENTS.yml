@@ -1,0 +1,325 @@
+steps:
+  PSTG_TRANSACTION_COST_COMPONENTS-3627:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87073"
+              stepCounter: "3627"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_TRANSACTION_COST_COMPONENTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "87074"
+              stepCounter: "3627"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49811"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87075"
+              stepCounter: "3627"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: COST_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49812"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87076"
+              stepCounter: "3627"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49813"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87077"
+              stepCounter: "3627"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49814"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87078"
+              stepCounter: "3627"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STANDARD_COST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49815"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87079"
+              stepCounter: "3627"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: TRANSACTION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49816"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87080"
+              stepCounter: "3627"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TRANSACTION_LINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49817"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87081"
+              stepCounter: "3627"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49818"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87082"
+              stepCounter: "3627"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49819"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87083"
+              stepCounter: "3627"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIVETRAN_INDEX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49820"
+                    stepCounter: "2980"
+                transform: ""
+          - columnReference:
+              columnCounter: "87084"
+              stepCounter: "3627"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "49821"
+                    stepCounter: "2980"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87085"
+              stepCounter: "3627"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87086"
+              stepCounter: "3627"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88295"
+              stepCounter: "3627"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87087"
+              stepCounter: "3627"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87088"
+              stepCounter: "3627"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87089"
+              stepCounter: "3627"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87090"
+              stepCounter: "3627"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: TRANSACTION_COST_COMPONENTS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'TRANSACTION_COST_COMPONENTS') }} "TRANSACTION_COST_COMPONENTS"
+            name: PSTG_TRANSACTION_COST_COMPONENTS
+            noLinkRefs: []
+      name: PSTG_TRANSACTION_COST_COMPONENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3627"

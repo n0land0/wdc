@@ -1,0 +1,153 @@
+steps:
+  TRANSACTION_SALES_TEAMS-2987:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50097"
+              stepCounter: "2987"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TRANSACTION_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50098"
+              stepCounter: "2987"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SALES_REP_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50099"
+              stepCounter: "2987"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CONTRIBUTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50100"
+              stepCounter: "2987"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50101"
+              stepCounter: "2987"
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: ISPRIMARY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50102"
+              stepCounter: "2987"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SALES_ROLE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50103"
+              stepCounter: "2987"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50104"
+              stepCounter: "2987"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50105"
+              stepCounter: "2987"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'TRANSACTION_SALES_TEAMS') }}
+      name: TRANSACTION_SALES_TEAMS
+      schema: ""
+      sqlType: Source
+      table: TRANSACTION_SALES_TEAMS
+      type: sourceInput
+    stepCounter: "2987"

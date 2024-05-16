@@ -1,0 +1,278 @@
+steps:
+  PSTG_EMAIL_EVENT_SUPPRESSED-1624:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37553"
+              stepCounter: "1624"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_EMAIL_EVENT_SUPPRESSED_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "37554"
+              stepCounter: "1624"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34924"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37555"
+              stepCounter: "1624"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34925"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37556"
+              stepCounter: "1624"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SUBJECT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34926"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37557"
+              stepCounter: "1624"
+            dataType: VARIANT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34927"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37558"
+              stepCounter: "1624"
+            dataType: VARIANT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BCC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34928"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37559"
+              stepCounter: "1624"
+            dataType: VARIANT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: REPLY_TO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34929"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37560"
+              stepCounter: "1624"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EMAIL_CAMPAIGN_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34930"
+                    stepCounter: "1529"
+                transform: ""
+          - columnReference:
+              columnCounter: "37561"
+              stepCounter: "1624"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34931"
+                    stepCounter: "1529"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37562"
+              stepCounter: "1624"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37563"
+              stepCounter: "1624"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38319"
+              stepCounter: "1624"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37564"
+              stepCounter: "1624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37565"
+              stepCounter: "1624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37566"
+              stepCounter: "1624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37567"
+              stepCounter: "1624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: EMAIL_EVENT_SUPPRESSED
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'EMAIL_EVENT_SUPPRESSED') }} "EMAIL_EVENT_SUPPRESSED"
+            name: PSTG_EMAIL_EVENT_SUPPRESSED
+            noLinkRefs: []
+      name: PSTG_EMAIL_EVENT_SUPPRESSED
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1624"

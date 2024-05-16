@@ -1,0 +1,688 @@
+steps:
+  PSTG_ORDER_DELIVERY_GROUP-4835:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119827"
+              stepCounter: "4835"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ORDER_DELIVERY_GROUP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "119828"
+              stepCounter: "4835"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111563"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119829"
+              stepCounter: "4835"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111564"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119830"
+              stepCounter: "4835"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_DELIVERY_GROUP_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111565"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119831"
+              stepCounter: "4835"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111566"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119832"
+              stepCounter: "4835"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111567"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119833"
+              stepCounter: "4835"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111568"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119834"
+              stepCounter: "4835"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111569"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119835"
+              stepCounter: "4835"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SYSTEM_MODSTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111570"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119836"
+              stepCounter: "4835"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111571"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119837"
+              stepCounter: "4835"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RELATED_DELIVERY_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111572"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119838"
+              stepCounter: "4835"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111573"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119839"
+              stepCounter: "4835"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PHONE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111574"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119840"
+              stepCounter: "4835"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EMAIL_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111575"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119841"
+              stepCounter: "4835"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_STREET
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111576"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119842"
+              stepCounter: "4835"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111577"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119843"
+              stepCounter: "4835"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111578"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119844"
+              stepCounter: "4835"
+            dataType: VARCHAR(60)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111579"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119845"
+              stepCounter: "4835"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111580"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119846"
+              stepCounter: "4835"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_LATITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111581"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119847"
+              stepCounter: "4835"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_LONGITUDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111582"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119848"
+              stepCounter: "4835"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_GEOCODE_ACCURACY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111583"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119849"
+              stepCounter: "4835"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_GIFT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111584"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119850"
+              stepCounter: "4835"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROMISED_DELIVERY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111585"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119851"
+              stepCounter: "4835"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DESIRED_DELIVERY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111586"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119852"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_TAX_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111587"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119853"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111588"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119854"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_LINE_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111589"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119855"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_ADJUSTMENT_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111590"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119856"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_LINE_TAX_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111591"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119857"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_ADJUSTMENT_TAX_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111592"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119858"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: GRAND_TOTAL_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111593"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119859"
+              stepCounter: "4835"
+            dataType: VARCHAR(6000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: GIFT_MESSAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111594"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119860"
+              stepCounter: "4835"
+            dataType: VARCHAR(6000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111595"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119861"
+              stepCounter: "4835"
+            dataType: VARCHAR(6000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVERY_INSTRUCTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111596"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119862"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_LINE_AMT_WITH_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111597"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119863"
+              stepCounter: "4835"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_ADJUSTMENT_AMT_WITH_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111598"
+                    stepCounter: "4510"
+                transform: ""
+          - columnReference:
+              columnCounter: "119864"
+              stepCounter: "4835"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111599"
+                    stepCounter: "4510"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119865"
+              stepCounter: "4835"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119866"
+              stepCounter: "4835"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "120319"
+              stepCounter: "4835"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119867"
+              stepCounter: "4835"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119868"
+              stepCounter: "4835"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119869"
+              stepCounter: "4835"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119870"
+              stepCounter: "4835"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: ORDER_DELIVERY_GROUP
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'ORDER_DELIVERY_GROUP') }} "ORDER_DELIVERY_GROUP"
+            name: PSTG_ORDER_DELIVERY_GROUP
+            noLinkRefs: []
+      name: PSTG_ORDER_DELIVERY_GROUP
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4835"

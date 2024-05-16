@@ -1,0 +1,153 @@
+steps:
+  CAMPAIGN_SEARCH_ENGINE-2448:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39833"
+              stepCounter: "2448"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39834"
+              stepCounter: "2448"
+            config: {}
+            dataType: VARCHAR(2000)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39835"
+              stepCounter: "2448"
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: ISINACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39836"
+              stepCounter: "2448"
+            config: {}
+            dataType: VARCHAR(240)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39837"
+              stepCounter: "2448"
+            config: {}
+            dataType: VARCHAR(1020)
+            defaultValue: ""
+            description: ""
+            name: SEARCH_ENGINE_EXTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39838"
+              stepCounter: "2448"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SEARCH_ENGINE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39839"
+              stepCounter: "2448"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39840"
+              stepCounter: "2448"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39841"
+              stepCounter: "2448"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CAMPAIGN_SEARCH_ENGINE') }}
+      name: CAMPAIGN_SEARCH_ENGINE
+      schema: ""
+      sqlType: Source
+      table: CAMPAIGN_SEARCH_ENGINE
+      type: sourceInput
+    stepCounter: "2448"

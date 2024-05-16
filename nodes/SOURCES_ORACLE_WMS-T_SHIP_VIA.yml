@@ -1,0 +1,94 @@
+steps:
+  T_SHIP_VIA-ec4c7078-3d77-4f82-aac8-e9657e33c1c0:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3776ea6-0ee5-466a-8580-c0c0e53c7513
+              stepCounter: ec4c7078-3d77-4f82-aac8-e9657e33c1c0
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SHIP_VIA
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3c07adc0-0768-41e6-acf2-6332479c49a0
+              stepCounter: ec4c7078-3d77-4f82-aac8-e9657e33c1c0
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ebb5e590-2ef3-4ef4-91d0-6bd17d6010f6
+              stepCounter: ec4c7078-3d77-4f82-aac8-e9657e33c1c0
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d26a3589-49e4-477c-8540-8de9d73161ad
+              stepCounter: ec4c7078-3d77-4f82-aac8-e9657e33c1c0
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f8ca720b-a9ca-4acf-893b-919fe0469015
+              stepCounter: ec4c7078-3d77-4f82-aac8-e9657e33c1c0
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_SHIP_VIA') }}
+      name: T_SHIP_VIA
+      schema: ""
+      sqlType: Source
+      table: T_SHIP_VIA
+      type: sourceInput
+    stepCounter: ec4c7078-3d77-4f82-aac8-e9657e33c1c0

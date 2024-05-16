@@ -1,0 +1,50 @@
+steps:
+  STG_END_OF_DAY_RECAP_REPORT_MAX_DATE-b5d66955-4cd0-41b8-98c0-6e32237cf83d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f43358ae-eac1-4c5f-b562-cf69b860b366
+              stepCounter: b5d66955-4cd0-41b8-98c0-6e32237cf83d
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47ba09bc-14df-4f91-a7bd-db314e214bfd
+                    stepCounter: 0c246a5b-a62e-4160-be26-9b26da00cc8c
+                transform: max(TO_DATE("DATA_ENTRY_END_OF_DAY_RECAP_REPORT_DATA_ENTRY_END_OF_DAY_RECAP"."DATE"))
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SHAREPOINT
+                nodeName: DATA_ENTRY_END_OF_DAY_RECAP_REPORT_DATA_ENTRY_END_OF_DAY_RECAP
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SHAREPOINT', 'DATA_ENTRY_END_OF_DAY_RECAP_REPORT_DATA_ENTRY_END_OF_DAY_RECAP') }} "DATA_ENTRY_END_OF_DAY_RECAP_REPORT_DATA_ENTRY_END_OF_DAY_RECAP"
+            name: STG_END_OF_DAY_RECAP_REPORT_MAX_DATE
+            noLinkRefs: []
+      name: STG_END_OF_DAY_RECAP_REPORT_MAX_DATE
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: b5d66955-4cd0-41b8-98c0-6e32237cf83d

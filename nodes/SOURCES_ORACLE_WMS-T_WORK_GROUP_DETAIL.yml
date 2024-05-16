@@ -1,0 +1,124 @@
+steps:
+  T_WORK_GROUP_DETAIL-c016c75d-78e2-4ad9-b787-49d2b170c615:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b3993cf3-27fc-42f9-8d73-e5bc8f46099e
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WORK_GROUP_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73b9eccb-3a9d-467d-823d-73423efb50e9
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: ""
+            name: WORK_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 096dd970-49c9-4d7c-8f07-c3ff5473f68a
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: PUT_TRAN_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 09b75a16-c075-4656-8a78-7ecc4da85762
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: PICK_TRAN_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04c9c5d4-11a4-4950-b891-6e62af81f29a
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e33dfd95-d895-4a9c-a0f4-ba1f5bae5afa
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb714e60-8a94-42fc-8235-cfad90ed6e2a
+              stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_WORK_GROUP_DETAIL') }}
+      name: T_WORK_GROUP_DETAIL
+      schema: ""
+      sqlType: Source
+      table: T_WORK_GROUP_DETAIL
+      type: sourceInput
+    stepCounter: c016c75d-78e2-4ad9-b787-49d2b170c615

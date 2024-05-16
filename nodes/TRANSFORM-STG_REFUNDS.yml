@@ -1,0 +1,231 @@
+steps:
+  STG_REFUNDS-0bad6fee-68eb-47f3-941a-884791156db2:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 14191138-af37-445e-bcba-30c43cc42262
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_REFUND_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37fbfc89-ae09-401b-b67b-62f6d1de5457
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: 31e564a6-3deb-4fa8-8a11-6b655d9007d4
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: REFUND_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 768181cb-a874-4d6a-a1b0-42b80cd629e1
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: a9db5405-5b35-4616-9a5c-8607d3c38218
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: REFUND_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c99e8fd2-6814-44a9-b097-7da810234e4f
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: 85b8f191-d6ab-4e3b-b662-55e8f43696d0
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de4e0a90-580f-4d5c-8bb8-6500311e220d
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: 11de7ad8-2dc8-428e-b039-8ae66678a703
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09ec6539-9ba3-4c3f-8c68-73534ea7f416
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: a69fcd0f-8a56-4b07-805b-15a288666938
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9137a56-17dd-45f5-aa07-09baae5b6a33
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: cbee2b62-bca6-428c-bab7-f3713df881f6
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 61ce0554-b050-4aba-b8f8-d846a1172689
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "REFUNDS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: 6170f71c-a06d-46d1-a6ea-8e3122328c13
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ac67e26-0c2f-4a12-ae3e-d50e477b1923
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: 7e371990-8b26-402b-b6dc-66623e6ca242
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f9eb018-46c2-4c1f-a1ca-e72d028befc6
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "REFUNDS"."DELETED_AT")
+          - columnReference:
+              columnCounter: b7bc3aa0-d6a7-4df3-be2f-04384858489b
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 05cc06da-0111-4d6a-9844-5c35f04c834b
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: bab3c7a0-8b80-45b3-aa4b-35a95cf13d5a
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c265c688-eb8f-4f54-97e4-93a4404fd811
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "REFUNDS"."CREATED_AT")
+          - columnReference:
+              columnCounter: fcd26c2a-e458-4b4a-9490-48e23c6a391c
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd7fd7d2-9c85-4045-9232-ad0174f1ae84
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - columnReference:
+              columnCounter: 38aedeef-630f-47b3-967e-a72258aedf35
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06d56a85-112f-4676-b0a6-05d8bba8e86f
+                    stepCounter: ff0f3296-a000-43b3-b4d9-23f4231761bc
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e3de4878-879a-49e6-ac17-8e0a2bbf7a95
+              stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "REFUNDS"."ID" ORDER BY "REFUNDS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              REFUNDS: ff0f3296-a000-43b3-b4d9-23f4231761bc
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: REFUNDS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'REFUNDS') }} "REFUNDS"
+                WHERE "REFUNDS"."ID" IS NOT NULL 
+                QUALIFY R_NO = 1
+            name: STG_REFUNDS
+            noLinkRefs: []
+      name: STG_REFUNDS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 0bad6fee-68eb-47f3-941a-884791156db2

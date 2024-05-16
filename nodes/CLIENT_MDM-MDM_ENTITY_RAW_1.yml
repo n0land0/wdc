@@ -1,0 +1,306 @@
+steps:
+  MDM_ENTITY_RAW_1-5629:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |+
+        Pulls in records from Netsuite, Recurly, Oracle, Salesforce, and the ecomm website list. Joined on matching IDs from the various systems.
+        Netsuite recurly_id joins to Rc code and some Salesforce Account Numbers,
+        netsuite company_extid joins to some oracle records,
+        Netsuite company_id joins to some records from finance customers list,
+
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "623597"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: Coalesces entities names to find the mode accurate name. Starts with the manual override table to ensure any name changes pass downstream.
+            hashDetails: null
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57056"
+                    stepCounter: "3308"
+                transform: |2-
+                   COALESCE("MDM_OVERRIDE"."OVERRIDE_VALUE",
+                             COALESCE("PSTG_COMPANIES"."COMPANYNAME",
+                                  COALESCE("MDM_SRC_RC_ID_NAME"."COMPANY",
+                                       COALESCE("MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_NAME",
+                                             COALESCE("MDM_SRC_SF_ID_NAME"."NAME",
+                                                  COALESCE("STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_NAME",
+                                                           COALESCE("PSTG_COMPANIES"."FULL_NAME", "FINANCE_CUSTOMERS_LIST"."CUSTOMER_NAME_RAW"
+                                                    )))))))                      
+          - columnReference:
+              columnCounter: "623897"
+              stepCounter: "5629"
+            dataType: NUMBER(18,0)
+            description: ""
+            name: FIN_ROW_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623880"
+                    stepCounter: "5634"
+                transform: ""
+          - columnReference:
+              columnCounter: "623454"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: NS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57056"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "623598"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: ""
+            name: NS_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57116"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "623599"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: Second Netsuite join allows the grandparent id to be populated.
+            name: NS_GPAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "\"PSTG_COMPANIES2\".\"PARENT_ID\""
+          - columnReference:
+              columnCounter: "625190"
+              stepCounter: "5629"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ECOMM_WEB_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d4c10f8-7550-46fc-8f61-2fe18bb4655b
+                    stepCounter: ffe61f26-5b94-40a4-9435-23552da9969e
+                transform: ""
+          - columnReference:
+              columnCounter: "623800"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623314"
+                    stepCounter: "5627"
+                transform: ""
+          - columnReference:
+              columnCounter: "623600"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: Upper CODE from Recurly. Recurly stores code in lower case, other systems store this value in all uppercase
+            name: RC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623316"
+                    stepCounter: "5627"
+                transform: UPPER("MDM_SRC_RC_ID_NAME"."CODE")
+          - columnReference:
+              columnCounter: "623805"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            name: RC_TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623350"
+                    stepCounter: "5627"
+                transform: ""
+          - columnReference:
+              columnCounter: "623603"
+              stepCounter: "5629"
+            dataType: VARCHAR(1020)
+            description: ""
+            name: NS_EXT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57069"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "623803"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RC_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623344"
+                    stepCounter: "5627"
+                transform: ""
+          - columnReference:
+              columnCounter: "623606"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: Oracle ID pulled from Fulfill_clients_all table which pulls from Oracle.
+            name: ORACLE_CUST_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CAST("MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" AS VARCHAR(50))
+          - columnReference:
+              columnCounter: "623607"
+              stepCounter: "5629"
+            dataType: VARCHAR(256)
+            description: Ecomm web id pulled from excel reference provided by WD
+            name: ECOMM_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: UPPER("STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_ID")
+          - columnReference:
+              columnCounter: "623807"
+              stepCounter: "5629"
+            dataType: VARCHAR(18)
+            description: ""
+            name: SF_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623352"
+                    stepCounter: "5628"
+                transform: ""
+          - columnReference:
+              columnCounter: "623801"
+              stepCounter: "5629"
+            dataType: VARCHAR(18)
+            description: ""
+            name: SF_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623357"
+                    stepCounter: "5628"
+                transform: ""
+          - columnReference:
+              columnCounter: "623802"
+              stepCounter: "5629"
+            dataType: VARCHAR(120)
+            description: ""
+            name: SF_ACCT_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623376"
+                    stepCounter: "5628"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              FINANCE_CUSTOMERS_LIST: "5634"
+              MDM_DIM_FULFILL_CLIENTS: "5612"
+              MDM_OVERRIDE: "5610"
+              MDM_SRC_RC_ID_NAME: "5627"
+              MDM_SRC_SF_ID_NAME: "5628"
+              PSTG_COMPANIES: "3308"
+              PSTG_COMPANIES2: "3308"
+              STG_ECOMMERCE_WEBSITE_LIST: ffe61f26-5b94-40a4-9435-23552da9969e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_DIM_FULFILL_CLIENTS
+              - locationName: CLIENT_MDM
+                nodeName: MDM_SRC_RC_ID_NAME
+              - locationName: CLIENT_MDM
+                nodeName: MDM_SRC_SF_ID_NAME
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_COMPANIES
+              - locationName: REFERENCE_EXCEL_SOURCES
+                nodeName: FINANCE_CUSTOMERS_LIST
+              - locationName: REFERENCE_OVERRIDE
+                nodeName: MDM_OVERRIDE
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_ECOMMERCE_WEBSITE_LIST
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_COMPANIES') }} "PSTG_COMPANIES"
+
+                LEFT OUTER JOIN {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_COMPANIES') }} "PSTG_COMPANIES2"
+                    ON "PSTG_COMPANIES"."PARENT_ID" = "PSTG_COMPANIES2"."COMPANY_ID"
+                    AND "PSTG_COMPANIES2"."SYSTEM_CURRENT_FLAG" = 'Y'
+
+                FULL OUTER JOIN {{ ref('CLIENT_MDM', 'MDM_SRC_RC_ID_NAME') }} "MDM_SRC_RC_ID_NAME"
+                    ON UPPER("PSTG_COMPANIES"."RECURLY_WEBSITE_ID") = UPPER("MDM_SRC_RC_ID_NAME"."CODE")
+
+                FULL OUTER JOIN {{ ref('CLIENT_MDM', 'MDM_DIM_FULFILL_CLIENTS') }} "MDM_DIM_FULFILL_CLIENTS"
+                    ON CAST("PSTG_COMPANIES"."COMPANY_EXTID" AS VARCHAR(50)) = CAST("MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" AS VARCHAR(50))
+
+                LEFT OUTER JOIN {{ ref('CLIENT_MDM', 'MDM_SRC_SF_ID_NAME') }} "MDM_SRC_SF_ID_NAME"
+                    ON ("PSTG_COMPANIES"."RECURLY_WEBSITE_ID" IS NOT NULL AND "MDM_SRC_SF_ID_NAME"."ACCOUNT_NUMBER" IS NOT NULL AND "PSTG_COMPANIES"."RECURLY_WEBSITE_ID" = "MDM_SRC_SF_ID_NAME"."ACCOUNT_NUMBER") 
+                    OR ( "MDM_SRC_RC_ID_NAME"."CODE" IS NOT NULL AND  "MDM_SRC_SF_ID_NAME"."ACCOUNT_NUMBER" IS NOT NULL AND UPPER("MDM_SRC_RC_ID_NAME"."CODE") = UPPER("MDM_SRC_SF_ID_NAME"."ACCOUNT_NUMBER"))
+
+                LEFT OUTER JOIN {{ ref('TRANSFORM_DIMENSION', 'STG_ECOMMERCE_WEBSITE_LIST' ) }} "STG_ECOMMERCE_WEBSITE_LIST"
+                    ON (
+                    UPPER("PSTG_COMPANIES"."RECURLY_WEBSITE_ID") = UPPER("STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_ID")
+                    OR UPPER("MDM_SRC_RC_ID_NAME"."CODE") = UPPER("STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_ID")
+                    OR UPPER("MDM_SRC_SF_ID_NAME"."ACCOUNT_NUMBER") = UPPER("STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_ID")
+                    )
+                    AND UPPER("STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_NAME") NOT LIKE '%ZZ%'
+
+                LEFT OUTER JOIN {{ ref('REFERENCE_EXCEL_SOURCES', 'FINANCE_CUSTOMERS_LIST') }} "FINANCE_CUSTOMERS_LIST"
+                    ON "FINANCE_CUSTOMERS_LIST"."NS_COMP_ID" = "PSTG_COMPANIES"."COMPANY_ID"
+                    AND CAST("FINANCE_CUSTOMERS_LIST"."CUSTOMER_ID" AS VARCHAR(50)) = CAST("MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" AS VARCHAR(50))
+                    and "FINANCE_CUSTOMERS_LIST"."CUSTOMER_NAME_RAW" = "PSTG_COMPANIES"."FULL_NAME"
+                    
+                LEFT JOIN {{ ref('REFERENCE_OVERRIDE', 'MDM_OVERRIDE') }} "MDM_OVERRIDE"
+                    ON ("MDM_OVERRIDE"."ORIGINAL_VALUE" = "PSTG_COMPANIES"."COMPANYNAME"
+                    OR "MDM_OVERRIDE"."ORIGINAL_VALUE" = "MDM_SRC_RC_ID_NAME"."COMPANY"
+                    OR "MDM_OVERRIDE"."ORIGINAL_VALUE" = "MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_NAME"
+                    OR "MDM_OVERRIDE"."ORIGINAL_VALUE" = "MDM_SRC_SF_ID_NAME"."NAME"
+                    OR "MDM_OVERRIDE"."ORIGINAL_VALUE" = "STG_ECOMMERCE_WEBSITE_LIST"."WEBSITE_NAME"
+                    OR "MDM_OVERRIDE"."ORIGINAL_VALUE" = "FINANCE_CUSTOMERS_LIST"."CUSTOMER_NAME_RAW")
+                    AND "MDM_OVERRIDE"."VALUE_TYPE" = 'Name'
+                WHERE "PSTG_COMPANIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: MDM_ENTITY_RAW_1
+            noLinkRefs: []
+      name: MDM_ENTITY_RAW_1
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5629"

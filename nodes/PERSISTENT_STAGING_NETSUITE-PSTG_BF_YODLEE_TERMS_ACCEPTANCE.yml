@@ -1,0 +1,306 @@
+steps:
+  PSTG_BF_YODLEE_TERMS_ACCEPTANCE-3236:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55510"
+              stepCounter: "3236"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_BF_YODLEE_TERMS_ACCEPTANCE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "55511"
+              stepCounter: "3236"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: BF_YODLEE_TERMS_ACCEPTANCE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39082"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55512"
+              stepCounter: "3236"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BF_YODLEE_TERMS_ACCEPTANCE_EXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39083"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55513"
+              stepCounter: "3236"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39084"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55514"
+              stepCounter: "3236"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_OF_REGISTRATIONACCEPTANC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39085"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55515"
+              stepCounter: "3236"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_INACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39086"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55516"
+              stepCounter: "3236"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39087"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55517"
+              stepCounter: "3236"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39088"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55518"
+              stepCounter: "3236"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39089"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55519"
+              stepCounter: "3236"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39090"
+                    stepCounter: "2398"
+                transform: ""
+          - columnReference:
+              columnCounter: "55520"
+              stepCounter: "3236"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "39091"
+                    stepCounter: "2398"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55521"
+              stepCounter: "3236"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55522"
+              stepCounter: "3236"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "56368"
+              stepCounter: "3236"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55523"
+              stepCounter: "3236"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55524"
+              stepCounter: "3236"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55525"
+              stepCounter: "3236"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55526"
+              stepCounter: "3236"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: BF_YODLEE_TERMS_ACCEPTANCE
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'BF_YODLEE_TERMS_ACCEPTANCE') }} "BF_YODLEE_TERMS_ACCEPTANCE"
+            name: PSTG_BF_YODLEE_TERMS_ACCEPTANCE
+            noLinkRefs: []
+      name: PSTG_BF_YODLEE_TERMS_ACCEPTANCE
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3236"

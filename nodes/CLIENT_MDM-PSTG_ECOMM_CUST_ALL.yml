@@ -1,0 +1,237 @@
+steps:
+  PSTG_ECOMM_CUST_ALL-5583:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371286"
+              stepCounter: "5583"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ECOMM_CUST_ALL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "371287"
+              stepCounter: "5583"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370267"
+                    stepCounter: "5556"
+                transform: ""
+          - columnReference:
+              columnCounter: "371288"
+              stepCounter: "5583"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370268"
+                    stepCounter: "5556"
+                transform: |-
+                  UPPER(TRIM("ECOMM_CUST_ALL"."WEBSITE_ID", '
+                  '))
+          - columnReference:
+              columnCounter: "371289"
+              stepCounter: "5583"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370269"
+                    stepCounter: "5556"
+                transform: ""
+          - columnReference:
+              columnCounter: "371290"
+              stepCounter: "5583"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370270"
+                    stepCounter: "5556"
+                transform: ""
+          - columnReference:
+              columnCounter: "371291"
+              stepCounter: "5583"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATE_ADDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370271"
+                    stepCounter: "5556"
+                transform: ""
+          - columnReference:
+              columnCounter: "371292"
+              stepCounter: "5583"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370272"
+                    stepCounter: "5556"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371293"
+              stepCounter: "5583"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371294"
+              stepCounter: "5583"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371295"
+              stepCounter: "5583"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371296"
+              stepCounter: "5583"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371297"
+              stepCounter: "5583"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371298"
+              stepCounter: "5583"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: ECOMM_CUST_ALL
+            join:
+              joinCondition: FROM {{ ref('CLIENT_MDM', 'ECOMM_CUST_ALL') }} "ECOMM_CUST_ALL"
+            name: PSTG_ECOMM_CUST_ALL
+            noLinkRefs: []
+      name: PSTG_ECOMM_CUST_ALL
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5583"

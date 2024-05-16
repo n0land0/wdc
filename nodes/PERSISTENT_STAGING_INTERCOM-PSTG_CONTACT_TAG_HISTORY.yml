@@ -1,0 +1,264 @@
+steps:
+  PSTG_CONTACT_TAG_HISTORY-5716:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_INTERCOM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692364"
+              stepCounter: "5716"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CONTACT_TAG_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "692365"
+              stepCounter: "5716"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CONTACT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692227"
+                    stepCounter: "5707"
+                transform: ""
+          - columnReference:
+              columnCounter: "692366"
+              stepCounter: "5716"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CONTACT_UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692228"
+                    stepCounter: "5707"
+                transform: ""
+          - columnReference:
+              columnCounter: "692367"
+              stepCounter: "5716"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: TAG_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692229"
+                    stepCounter: "5707"
+                transform: ""
+          - columnReference:
+              columnCounter: "692368"
+              stepCounter: "5716"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692230"
+                    stepCounter: "5707"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692369"
+              stepCounter: "5716"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692370"
+              stepCounter: "5716"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692375"
+              stepCounter: "5716"
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'INTERCOM'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692371"
+              stepCounter: "5716"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692372"
+              stepCounter: "5716"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692373"
+              stepCounter: "5716"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692374"
+              stepCounter: "5716"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 310de51f-2cbc-41d6-9533-c17376eff3a7
+              stepCounter: "5716"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bcff18e-7f67-4810-ab66-b992c0fa9b44
+                    stepCounter: "5707"
+                transform: ""
+          - columnReference:
+              columnCounter: 8b0be523-0b09-4148-aa26-aac8820441a5
+              stepCounter: "5716"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_END
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c102bb12-4b62-403e-9df9-0778b511ef3c
+                    stepCounter: "5707"
+                transform: ""
+          - columnReference:
+              columnCounter: 38a9166d-d54c-4058-82a4-de901898f5e2
+              stepCounter: "5716"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 971af92a-0341-4530-a3fd-2258f1882b7d
+                    stepCounter: "5707"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_INTERCOM
+                nodeName: CONTACT_TAG_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_INTERCOM', 'CONTACT_TAG_HISTORY') }} "CONTACT_TAG_HISTORY"
+            name: PSTG_CONTACT_TAG_HISTORY
+            noLinkRefs: []
+      name: PSTG_CONTACT_TAG_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5716"

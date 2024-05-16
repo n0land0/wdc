@@ -1,0 +1,109 @@
+steps:
+  T_PICK_PUT_DETAIL-d135d420-01b1-4816-83c1-9cdf47da3eb4:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c49d9fde-426f-4b5f-a977-646709f00171
+              stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: RULE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dc91bec6-c80d-40ca-a7cd-8a277bb28eae
+              stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d6b5ba95-b9dd-46b4-9b11-1f9e14f12287
+              stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: PICK_PUT_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd3bbd9a-85a1-4b6a-8689-2d527db740cd
+              stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4
+            config: {}
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80c5a52d-d13a-4879-90d7-f93d0b769f65
+              stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bba2dfd1-694a-4927-8be6-a903c11358bc
+              stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_PICK_PUT_DETAIL') }}
+      name: T_PICK_PUT_DETAIL
+      schema: ""
+      sqlType: Source
+      table: T_PICK_PUT_DETAIL
+      type: sourceInput
+    stepCounter: d135d420-01b1-4816-83c1-9cdf47da3eb4

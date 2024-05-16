@@ -1,0 +1,93 @@
+steps:
+  SCM_DPS_TASK_VIEW_WORK_ORDER_STATUS_MAP-2890:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48022"
+              stepCounter: "2890"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SCM_DPS_TASK_VIEW_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48023"
+              stepCounter: "2890"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TRANSACTION_STATUS_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48024"
+              stepCounter: "2890"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48025"
+              stepCounter: "2890"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48026"
+              stepCounter: "2890"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'SCM_DPS_TASK_VIEW_WORK_ORDER_STATUS_MAP') }}
+      name: SCM_DPS_TASK_VIEW_WORK_ORDER_STATUS_MAP
+      schema: ""
+      sqlType: Source
+      table: SCM_DPS_TASK_VIEW_WORK_ORDER_STATUS_MAP
+      type: sourceInput
+    stepCounter: "2890"

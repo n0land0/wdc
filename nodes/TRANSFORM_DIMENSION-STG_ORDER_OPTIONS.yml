@@ -1,0 +1,238 @@
+steps:
+  STG_ORDER_OPTIONS-5086:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180015"
+              stepCounter: "5086"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: PSTG_ORDER_OPTIONS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179261"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180016"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179262"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180017"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179263"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180018"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179264"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180019"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179265"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180020"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179266"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180021"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: OPTION_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179267"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180022"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: OPTION_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179268"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180023"
+              stepCounter: "5086"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179269"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180024"
+              stepCounter: "5086"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179270"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180025"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179271"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180026"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179272"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180027"
+              stepCounter: "5086"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179273"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180028"
+              stepCounter: "5086"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179274"
+                    stepCounter: "5057"
+                transform: ""
+          - columnReference:
+              columnCounter: "180035"
+              stepCounter: "5086"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179437"
+                    stepCounter: "5057"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ORDER_OPTIONS: "5057"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_ORDER_OPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_ORDER_OPTIONS') }} "PSTG_ORDER_OPTIONS"
+                WHERE "PSTG_ORDER_OPTIONS"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_ORDER_OPTIONS
+            noLinkRefs: []
+      name: STG_ORDER_OPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5086"

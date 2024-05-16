@@ -1,0 +1,168 @@
+steps:
+  CAMPAIGNRESPONSE-2441:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39732"
+              stepCounter: "2441"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CAMPAIGN_EVENT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39733"
+              stepCounter: "2441"
+            config: {}
+            dataType: VARCHAR(1020)
+            defaultValue: ""
+            description: ""
+            name: CAMPAIGN_RESPONSE_EXTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39734"
+              stepCounter: "2441"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CAMPAIGN_RESPONSE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39735"
+              stepCounter: "2441"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CONTACT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39736"
+              stepCounter: "2441"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_SENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39737"
+              stepCounter: "2441"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ENTITY_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39738"
+              stepCounter: "2441"
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: RESPONSE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39739"
+              stepCounter: "2441"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39740"
+              stepCounter: "2441"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39741"
+              stepCounter: "2441"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CAMPAIGNRESPONSE') }}
+      name: CAMPAIGNRESPONSE
+      schema: ""
+      sqlType: Source
+      table: CAMPAIGNRESPONSE
+      type: sourceInput
+    stepCounter: "2441"

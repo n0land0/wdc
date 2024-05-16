@@ -1,0 +1,123 @@
+steps:
+  ITEM_QUANTITY-2687:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44301"
+              stepCounter: "2687"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ITEM_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44302"
+              stepCounter: "2687"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ITEM_QUANTITY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44303"
+              stepCounter: "2687"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: MAX_COUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44304"
+              stepCounter: "2687"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: MIN_COUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44305"
+              stepCounter: "2687"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44306"
+              stepCounter: "2687"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44307"
+              stepCounter: "2687"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ITEM_QUANTITY') }}
+      name: ITEM_QUANTITY
+      schema: ""
+      sqlType: Source
+      table: ITEM_QUANTITY
+      type: sourceInput
+    stepCounter: "2687"

@@ -1,0 +1,331 @@
+steps:
+  PSTG_ERP_EXTERNAL_VALUE_MAP-5426:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ORACLE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185729"
+              stepCounter: "5426"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ERP_EXTERNAL_VALUE_MAP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "185730"
+              stepCounter: "5426"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183638"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185731"
+              stepCounter: "5426"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXTERNAL_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183639"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185732"
+              stepCounter: "5426"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183640"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185733"
+              stepCounter: "5426"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: EXTERNAL_VALUE_MAP_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183641"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185734"
+              stepCounter: "5426"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUST_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183642"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185735"
+              stepCounter: "5426"
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MAP_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183643"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185736"
+              stepCounter: "5426"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: INTERNAL_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183644"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185737"
+              stepCounter: "5426"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183645"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185738"
+              stepCounter: "5426"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183646"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185739"
+              stepCounter: "5426"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183647"
+                    stepCounter: "5303"
+                transform: ""
+          - columnReference:
+              columnCounter: "185740"
+              stepCounter: "5426"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183648"
+                    stepCounter: "5303"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185741"
+              stepCounter: "5426"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185742"
+              stepCounter: "5426"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185743"
+              stepCounter: "5426"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185744"
+              stepCounter: "5426"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185745"
+              stepCounter: "5426"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185746"
+              stepCounter: "5426"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "185747"
+              stepCounter: "5426"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ORACLE XWS'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ORACLE_XWS
+                nodeName: ERP_EXTERNAL_VALUE_MAP
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_XWS', 'ERP_EXTERNAL_VALUE_MAP') }} "ERP_EXTERNAL_VALUE_MAP"
+            name: PSTG_ERP_EXTERNAL_VALUE_MAP
+            noLinkRefs: []
+      name: PSTG_ERP_EXTERNAL_VALUE_MAP
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5426"

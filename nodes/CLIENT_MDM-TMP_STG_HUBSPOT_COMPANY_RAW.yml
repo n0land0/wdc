@@ -1,0 +1,251 @@
+steps:
+  TMP_STG_HUBSPOT_COMPANY_RAW-5109:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: "Pulls a list of distinct rows from the Hubspot company table. Adds a platform key that is concat of id and company_name to help find distinct records. "
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180871"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: Finds the max ID for Hubspot records, partitioned by property_name. Returns the most recent record for the entity.
+            hashDetails: null
+            name: MAX_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: DISTINCT TRIM(MAX( "PSTG_COMPANY"."ID") OVER (PARTITION BY UPPER("PSTG_COMPANY"."PROPERTY_NAME")),' ')
+          - columnReference:
+              columnCounter: "185024"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CONCAT( "PSTG_COMPANY"."ID", '|', "PSTG_COMPANY"."PROPERTY_NAME")
+          - columnReference:
+              columnCounter: "434903"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35939"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181109"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38270"
+                    stepCounter: "1595"
+                transform: "'Hubspot'"
+          - columnReference:
+              columnCounter: "181029"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36097"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "185064"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Hubspot Lead'"
+          - columnReference:
+              columnCounter: "181045"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36113"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181036"
+              stepCounter: "5109"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36104"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181027"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36095"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181025"
+              stepCounter: "5109"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36093"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181107"
+              stepCounter: "5109"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36175"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181108"
+              stepCounter: "5109"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36176"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181110"
+              stepCounter: "5109"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36177"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181111"
+              stepCounter: "5109"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36178"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181112"
+              stepCounter: "5109"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36179"
+                    stepCounter: "1595"
+                transform: ""
+          - columnReference:
+              columnCounter: "181113"
+              stepCounter: "5109"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "36180"
+                    stepCounter: "1595"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_COMPANY: "1595"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_HUBSPOT
+                nodeName: PSTG_COMPANY
+            join:
+              joinCondition: |
+                FROM {{ ref('PERSISTENT_STAGING_HUBSPOT', 'PSTG_COMPANY') }} "PSTG_COMPANY"
+                WHERE "PSTG_COMPANY"."SYSTEM_CURRENT_FLAG" = 'Y' AND
+                      "PSTG_COMPANY"."PROPERTY_ADDRESS" IS NOT NULL AND
+                      "PSTG_COMPANY"."PROPERTY_CITY" IS NOT NULL AND
+                      "PSTG_COMPANY"."PROPERTY_STATE" IS NOT NULL AND
+                      "PSTG_COMPANY"."PROPERTY_ZIP" IS NOT NULL AND
+                      "PSTG_COMPANY"."PROPERTY_HS_ANALYTICS_SOURCE_DATA_1" <> 'IMPORT'
+            name: TMP_STG_HUBSPOT_COMPANY_RAW
+            noLinkRefs: []
+      name: TMP_STG_HUBSPOT_COMPANY_RAW
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5109"

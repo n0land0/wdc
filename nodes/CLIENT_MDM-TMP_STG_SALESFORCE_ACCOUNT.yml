@@ -1,0 +1,235 @@
+steps:
+  TMP_STG_SALESFORCE_ACCOUNT-5106:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: FOR USE IN CLIENT DATA- DATA IS FROM SALESFORCE
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180748"
+              stepCounter: "5106"
+            dataType: VARCHAR(180)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117618"
+                    stepCounter: "4758"
+                transform: "TRIM(\"PSTG_ACCOUNT\".\"ID\", ' ') "
+          - columnReference:
+              columnCounter: "370948"
+              stepCounter: "5106"
+            dataType: VARCHAR(765)
+            description: ""
+            name: PLATFORM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CONCAT("PSTG_ACCOUNT"."ID",'|', "PSTG_ACCOUNT"."NAME")
+          - columnReference:
+              columnCounter: "180751"
+              stepCounter: "5106"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117621"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "371471"
+              stepCounter: "5106"
+            dataType: VARCHAR(120)
+            description: ""
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117642"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180753"
+              stepCounter: "5106"
+            dataType: VARCHAR(1010)
+            description: ""
+            hashDetails: null
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117623"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "370289"
+              stepCounter: "5106"
+            dataType: VARCHAR(765)
+            description: ""
+            name: PARENT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "\"PSTG_ACCOUNT2\".\"NAME\""
+          - columnReference:
+              columnCounter: "370288"
+              stepCounter: "5106"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            name: ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Salesforce Account'"
+          - columnReference:
+              columnCounter: "180841"
+              stepCounter: "5106"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117711"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180842"
+              stepCounter: "5106"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117712"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180843"
+              stepCounter: "5106"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117713"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180844"
+              stepCounter: "5106"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117718"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180845"
+              stepCounter: "5106"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117714"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180846"
+              stepCounter: "5106"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117715"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180847"
+              stepCounter: "5106"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117716"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180848"
+              stepCounter: "5106"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117717"
+                    stepCounter: "4758"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ACCOUNT: "4758"
+              PSTG_ACCOUNT2: "4758"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_SALESFORCE
+                nodeName: PSTG_ACCOUNT
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_SALESFORCE', 'PSTG_ACCOUNT') }} "PSTG_ACCOUNT"
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_SALESFORCE', 'PSTG_ACCOUNT') }} "PSTG_ACCOUNT2"
+                ON "PSTG_ACCOUNT"."PARENT_ID" = "PSTG_ACCOUNT2"."ID" 
+                    AND "PSTG_ACCOUNT2"."SYSTEM_CURRENT_FLAG" = 'Y'
+                WHERE "PSTG_ACCOUNT"."SYSTEM_CURRENT_FLAG" = 'Y' and "PSTG_ACCOUNT"."NAME" IS NOT NULL AND "PSTG_ACCOUNT"."NAME" <> '' AND
+                      "PSTG_ACCOUNT"."BILLING_STREET" IS NOT NULL 
+            name: TMP_STG_SALESFORCE_ACCOUNT
+            noLinkRefs: []
+      name: TMP_STG_SALESFORCE_ACCOUNT
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5106"

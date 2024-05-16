@@ -1,0 +1,154 @@
+steps:
+  T_ITEM_IMAGE-1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2dfbd49a-ca0c-4293-b96a-769e3bc18af0
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PICTURE_FILENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0ce3b0d7-cc67-4efa-a76c-585d2b8594ec
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 54df143b-5fff-4d9d-9f65-984eee5224ef
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: ITEM_MASTER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2232d80a-8455-42f1-9590-2feb60279a95
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5b568354-53f2-421a-b3a8-ca45b5177d70
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: ITEM_IMAGE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 468b15a3-1a92-4b9d-8c5b-7fdd990f2f55
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: PICTURE_MIME_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7383ffc6-5aca-4f70-817c-699f5acc4959
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 82a6b5c3-3850-459f-a5aa-6c18524cc956
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f091b61-fdb6-498a-8a99-2539eea4e25d
+              stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ITEM_IMAGE') }}
+      name: T_ITEM_IMAGE
+      schema: ""
+      sqlType: Source
+      table: T_ITEM_IMAGE
+      type: sourceInput
+    stepCounter: 1c1c9d5c-b946-4d6a-92d2-8c0c4ae0e443

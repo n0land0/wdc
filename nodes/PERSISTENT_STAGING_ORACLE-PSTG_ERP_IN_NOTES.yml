@@ -1,0 +1,331 @@
+steps:
+  PSTG_ERP_IN_NOTES-5470:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ORACLE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188824"
+              stepCounter: "5470"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ERP_IN_NOTES_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "188825"
+              stepCounter: "5470"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: IN_NOTE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183864"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188826"
+              stepCounter: "5470"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183865"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188827"
+              stepCounter: "5470"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183866"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188828"
+              stepCounter: "5470"
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NOTE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183867"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188829"
+              stepCounter: "5470"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183868"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188830"
+              stepCounter: "5470"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NOTE_TEXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183869"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188831"
+              stepCounter: "5470"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NOTE_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183870"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188832"
+              stepCounter: "5470"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IN_HEADER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183871"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188833"
+              stepCounter: "5470"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183872"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188834"
+              stepCounter: "5470"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183873"
+                    stepCounter: "5317"
+                transform: ""
+          - columnReference:
+              columnCounter: "188835"
+              stepCounter: "5470"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "183874"
+                    stepCounter: "5317"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188836"
+              stepCounter: "5470"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188837"
+              stepCounter: "5470"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188838"
+              stepCounter: "5470"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188839"
+              stepCounter: "5470"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188840"
+              stepCounter: "5470"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188841"
+              stepCounter: "5470"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "188842"
+              stepCounter: "5470"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ORACLE XWS'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ORACLE_XWS
+                nodeName: ERP_IN_NOTES
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_XWS', 'ERP_IN_NOTES') }} "ERP_IN_NOTES"
+            name: PSTG_ERP_IN_NOTES
+            noLinkRefs: []
+      name: PSTG_ERP_IN_NOTES
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5470"

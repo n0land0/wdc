@@ -1,0 +1,472 @@
+steps:
+  MDM_ENTITY_HISTORY-5624:
+    operation:
+      config:
+        postSQL: |-
+          CREATE OR REPLACE TABLE "REFERENCE"."OVERRIDES"."MDM_ENTITY_HISTORY_BACKUP" AS (
+              SELECT *
+              FROM "DEV_TRANSFORM"."CLIENT_MDM"."MDM_ENTITY_HISTORY")
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "624160"
+              stepCounter: "5624"
+            dataType: NUMBER(38,0)
+            description: ""
+            isBusinessKey: true
+            name: ENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624396"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624352"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624161"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624397"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624353"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624162"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: NS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624398"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624354"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624163"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: NS_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624399"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624355"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624164"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: NS_GPAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624400"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624356"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624165"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: RC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624401"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624357"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "625060"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: RC_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625037"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "625059"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624166"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            isChangeTracking: true
+            name: RC_TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624402"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624358"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624167"
+              stepCounter: "5624"
+            dataType: VARCHAR(1020)
+            description: ""
+            isChangeTracking: true
+            name: NS_EXT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624403"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624359"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624168"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: RC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624404"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624360"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624169"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: ORACLE_CUST_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624405"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624361"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624170"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: ECOMM_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624406"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624362"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624171"
+              stepCounter: "5624"
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: ECOMM_WEB_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624407"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624363"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624172"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: SF_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624408"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624365"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624173"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: SF_ACCT_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624409"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624366"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624174"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: SF_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624410"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624364"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624175"
+              stepCounter: "5624"
+            dataType: NUMBER(18,0)
+            description: ""
+            isChangeTracking: true
+            name: FIN_ROW_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624411"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624368"
+                    stepCounter: "5647"
+                transform: ""
+          - columnReference:
+              columnCounter: "624176"
+              stepCounter: "5624"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: HS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624412"
+                    stepCounter: "5649"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "624367"
+                    stepCounter: "5647"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623207"
+              stepCounter: "5624"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623208"
+              stepCounter: "5624"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623209"
+              stepCounter: "5624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623210"
+              stepCounter: "5624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623211"
+              stepCounter: "5624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623212"
+              stepCounter: "5624"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              MDM_TMP_ENTITY_CURRENT: "5649"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_TMP_ENTITY_CURRENT
+            join:
+              joinCondition: FROM {{ ref('CLIENT_MDM', 'MDM_TMP_ENTITY_CURRENT') }} "MDM_TMP_ENTITY_CURRENT"
+            name: CURRENT
+            noLinkRefs: []
+          - aliases:
+              MDM_TMP_ENTITY_RAW_NEW_ID: "5647"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_TMP_ENTITY_RAW_NEW_ID
+            join:
+              joinCondition: FROM {{ ref('CLIENT_MDM', 'MDM_TMP_ENTITY_RAW_NEW_ID') }} "MDM_TMP_ENTITY_RAW_NEW_ID"
+            name: NEW_ID
+            noLinkRefs: []
+      name: MDM_ENTITY_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: "5624"

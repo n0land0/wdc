@@ -1,0 +1,521 @@
+steps:
+  TMP_ENTITY_DIMS_1-5658:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "625018"
+              stepCounter: "5658"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624160"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625029"
+              stepCounter: "5658"
+            dataType: VARCHAR(256)
+            description: ""
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624161"
+                    stepCounter: "5624"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624864"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ENTERPRISE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "ENTERPRISE_LIST"."WEBSITE_ID" IS NOT NULL OR "ENTERPRISE_LIST"."ENTITY_ID" IS NOT NULL THEN 'Y' ELSE 'N' END
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "625031"
+              stepCounter: "5658"
+            dataType: VARCHAR(256)
+            description: ""
+            name: NS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624162"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625032"
+              stepCounter: "5658"
+            dataType: VARCHAR(256)
+            description: ""
+            name: NS_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624163"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625030"
+              stepCounter: "5658"
+            dataType: VARCHAR(1020)
+            description: ""
+            name: NS_EXT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624167"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625439"
+              stepCounter: "5658"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            name: RC_TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624166"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625440"
+              stepCounter: "5658"
+            dataType: VARCHAR(256)
+            description: ""
+            name: ORACLE_CUST_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624169"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625441"
+              stepCounter: "5658"
+            dataType: VARCHAR(256)
+            description: ""
+            name: ECOMM_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624170"
+                    stepCounter: "5624"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624878"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: PARTNER_ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      WHEN LOWER("PSTG_COMPANIES"."COMPANY_TYPE") ILIKE '%customer%'
+                          THEN 'Client'
+                      WHEN LOWER("PSTG_COMPANIES"."COMPANY_TYPE") ILIKE '%vendor%'
+                          THEN 'Vendor'
+                      WHEN "MDM_DIM_WEBSITE_IDS_W_ORDERS"."WEBSITE_ID" IS NOT NULL OR "MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" IS NOT NULL OR "MDM_ENTITY_HISTORY"."RC_ID" IS NOT NULL 
+                          THEN 'Client' 
+                      WHEN TRIM("MDM_ENTITY_HISTORY"."ORACLE_CUST_ID",' ') IN ('GR ST FF', 'GR ST MP', 'FF NonVol', 'GR SS FF', 'GR BL MP', 'GR BL FF', 'GR SS MP') 
+                          THEN 'Internal Finance Category'
+                      WHEN "MDM_ENTITY_HISTORY"."ORACLE_CUST_ID" IS NOT NULL 
+                          THEN 'Client'
+                      WHEN "MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."STATUS" = 'Active' 
+                          THEN 'Client - Finance Active'
+                      WHEN "MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."STATUS" IS NULL 
+                          THEN 'Client - Finance Status unknown' 
+                      WHEN "MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."STATUS" = 'Inactive' 
+                          THEN 'Client - Finance Inactive' 
+                      ELSE NULL 
+                  END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624883"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: WEB_ORDER_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "MDM_DIM_WEBSITE_IDS_W_ORDERS"."WEBSITE_ID" IS NOT NULL THEN 'Y' ELSE 'N' END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624884"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: FULFILL_INVOICE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" IS NOT NULL THEN 'Y' ELSE 'N' END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624885"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ECOMMERCE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "MDM_ENTITY_HISTORY" ."RC_CODE" IS NOT NULL OR "MDM_ENTITY_HISTORY"."RC_TENANT_ID" IS NOT NULL OR "MDM_ENTITY_HISTORY"."ECOMM_WEB_ID" IS NOT NULL THEN 'Y' ELSE 'N' END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624886"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: FULFILLMENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "MDM_ENTITY_HISTORY" ."ORACLE_CUST_ID" IS NOT NULL OR LOWER("MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."FULL_OR_MKT") LIKE '%fulfill%' THEN 'Y' ELSE 'N' END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624887"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: MARKETPLACE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      WHEN LOWER("MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."FULL_OR_MKT") LIKE '%market%' OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%marketplace' 
+                          THEN 'Y' 
+                      ELSE 'N' 
+                  END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624888"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: TEST_ACCT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      WHEN LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%redesign%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%staging%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '% uat %'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%template%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%testing%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%test%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'test'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%demo%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%sandbox%' 
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zz %'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zz%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zzz%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zz -%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%training%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%vin65%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%delton%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%asfasdff%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%warehouse%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%fundrais%'
+                     OR ((LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'winedirect%'
+                       OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%winedirect%')
+                       AND LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME")  LIKE '% -  winedirect%'
+                         )
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") = 'united parcel service'
+                     AND ("NS_ID" > 0 or "NS_ID" is null)
+                          THEN 'Y'
+                      ELSE 'N'
+                  END
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624889"
+              stepCounter: "5658"
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CLIENT_ELIGIBLE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      WHEN (LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%redesign%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%staging%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '% uat %'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%template%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%testing%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%test%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'test'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%demo%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%sandbox%' 
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zz %'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zz%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zzz%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'zz -%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%training%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%vin65%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%delton%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%asfasdff%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%warehouse%'
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%fundrais%'
+                     OR (LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE 'winedirect%'
+                       OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") LIKE '%winedirect%'
+                       AND LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") NOT LIKE '% - winedirect%'
+                         )
+                     OR LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") = 'united parcel service') THEN 'N'
+                      WHEN LOWER("MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."PARENT_CUSTOMER") ILIKE '%exclude%' THEN 'N'
+                      WHEN "MDM_ENTITY_HISTORY"."COMPANY_NAME" IS NULL THEN 'N' 
+                      ELSE NULL
+                  END
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "625276"
+              stepCounter: "5658"
+            dataType: NUMBER
+            description: ""
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623207"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625277"
+              stepCounter: "5658"
+            dataType: VARCHAR
+            description: ""
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623208"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625278"
+              stepCounter: "5658"
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623209"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625279"
+              stepCounter: "5658"
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623210"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625280"
+              stepCounter: "5658"
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623211"
+                    stepCounter: "5624"
+                transform: ""
+          - columnReference:
+              columnCounter: "625281"
+              stepCounter: "5658"
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623212"
+                    stepCounter: "5624"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ENTERPRISE_LIST: "5652"
+              MDM_DIM_FULFILL_CLIENTS: "5612"
+              MDM_DIM_WEBSITE_IDS_W_ORDERS: "5669"
+              MDM_ENTITY_HISTORY: "5624"
+              MDM_SRC_FINANCE_CUSTOMERS_EXCEL: "5653"
+              PSTG_COMPANIES: "3308"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_COMPANIES
+              - locationName: CLIENT_MDM
+                nodeName: MDM_DIM_FULFILL_CLIENTS
+              - locationName: CLIENT_MDM
+                nodeName: MDM_ENTITY_HISTORY
+              - locationName: REFERENCE_EXCEL_SOURCES
+                nodeName: ENTERPRISE_LIST
+              - locationName: REFERENCE_EXCEL_SOURCES
+                nodeName: MDM_SRC_FINANCE_CUSTOMERS_EXCEL
+              - locationName: CLIENT_MDM
+                nodeName: MDM_DIM_WEBSITE_IDS_W_ORDERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('CLIENT_MDM', 'MDM_ENTITY_HISTORY') }} "MDM_ENTITY_HISTORY" 
+
+                LEFT JOIN {{ ref('CLIENT_MDM', 'MDM_DIM_WEBSITE_IDS_W_ORDERS') }} "MDM_DIM_WEBSITE_IDS_W_ORDERS"
+                    ON ("MDM_ENTITY_HISTORY"."RC_CODE" = "MDM_DIM_WEBSITE_IDS_W_ORDERS"."WEBSITE_ID"
+                    OR "MDM_ENTITY_HISTORY"."RC_TENANT_ID" = "MDM_DIM_WEBSITE_IDS_W_ORDERS"."WEBSITE_ID")
+
+                LEFT JOIN {{ ref('CLIENT_MDM', 'MDM_DIM_FULFILL_CLIENTS') }} "MDM_DIM_FULFILL_CLIENTS"
+                    ON CAST("MDM_ENTITY_HISTORY"."ORACLE_CUST_ID" AS VARCHAR(50)) = CAST("MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" AS VARCHAR(50))
+                    AND LOWER("MDM_ENTITY_HISTORY"."COMPANY_NAME") = LOWER("MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_NAME")
+
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_COMPANIES') }} "PSTG_COMPANIES"
+                    ON "PSTG_COMPANIES"."COMPANY_ID" = "MDM_ENTITY_HISTORY"."NS_ID"
+                    AND "PSTG_COMPANIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+
+                LEFT JOIN {{ ref('REFERENCE_EXCEL_SOURCES', 'MDM_SRC_FINANCE_CUSTOMERS_EXCEL') }} "MDM_SRC_FINANCE_CUSTOMERS_EXCEL"
+                    ON UPPER("MDM_ENTITY_HISTORY"."COMPANY_NAME") = UPPER("MDM_SRC_FINANCE_CUSTOMERS_EXCEL"."COMPANY_NAME_RAW")
+                    AND "MDM_ENTITY_HISTORY"."NS_ID" IS NULL
+                    AND "MDM_ENTITY_HISTORY" ."RC_ID" IS NULL
+
+                LEFT JOIN {{ ref('REFERENCE_EXCEL_SOURCES', 'ENTERPRISE_LIST') }} "ENTERPRISE_LIST"
+                    ON ("MDM_ENTITY_HISTORY"."RC_CODE" = "ENTERPRISE_LIST"."WEBSITE_ID"
+                        OR "MDM_ENTITY_HISTORY"."RC_TENANT_ID" = "ENTERPRISE_LIST"."WEBSITE_ID")
+                    AND "MDM_ENTITY_HISTORY"."COMPANY_NAME" = "ENTERPRISE_LIST"."ENTITY_COMPANY_NAME"
+
+                WHERE "MDM_ENTITY_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: TMP_ENTITY_DIMS_1
+            noLinkRefs: []
+      name: TMP_ENTITY_DIMS_1
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5658"

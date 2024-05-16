@@ -1,0 +1,182 @@
+steps:
+  STG_DIM_WAREHOUSE-3921:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "96066"
+              stepCounter: "3921"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WAREHOUSE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85371"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96068"
+              stepCounter: "3921"
+            dataType: VARCHAR(400)
+            description: ""
+            hashDetails: null
+            name: WAREHOUSE_ADDRESSEE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85373"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96077"
+              stepCounter: "3921"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: WAREHOUSE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85382"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96076"
+              stepCounter: "3921"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85381"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96078"
+              stepCounter: "3921"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            name: WAREHOUSE_INVENTORY_AVAILABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85383"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96079"
+              stepCounter: "3921"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            name: WAREHOUSE_INVENTORY_AVAILABLE_WEB_STORE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85384"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96081"
+              stepCounter: "3921"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            name: WAREHOUSE_SUPPLY_PLANNING_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85386"
+                    stepCounter: "3563"
+                transform: CASE WHEN "PSTG_LOCATIONS"."IS_INCLUDE_IN_SUPPLY_PLANNING" = 'Yes' THEN 'TRUE' WHEN "PSTG_LOCATIONS"."IS_INCLUDE_IN_SUPPLY_PLANNING" = 'No' THEN 'FALSE' ELSE 'ERROR' END
+          - columnReference:
+              columnCounter: "96083"
+              stepCounter: "3921"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: WAREHOUSE_LOCATION_PLANNING_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85388"
+                    stepCounter: "3563"
+                transform: ""
+          - columnReference:
+              columnCounter: "96096"
+              stepCounter: "3921"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            name: USE_BINS_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "85401"
+                    stepCounter: "3563"
+                transform: CASE WHEN "PSTG_LOCATIONS"."USE_BINS" = 'Yes' THEN 'TRUE' WHEN "PSTG_LOCATIONS"."USE_BINS" = 'No' THEN 'FALSE' ELSE 'ERROR' END
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "434252"
+              stepCounter: "3921"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: WAREHOUSE_ABBREVIATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "CASE WHEN \"PSTG_LOCATIONS\".\"FULL_NAME\" = 'Glenwillow' THEN 'GLW' WHEN \"PSTG_LOCATIONS\".\"FULL_NAME\" = 'Paso Robles' THEN 'PSO' WHEN \"PSTG_LOCATIONS\".\"FULL_NAME\" = 'Santa Maria' THEN 'SMA' WHEN \"PSTG_LOCATIONS\".\"FULL_NAME\" = 'Sherwood, OR' THEN 'SHW' WHEN \"PSTG_LOCATIONS\".\"FULL_NAME\" = 'Corporate (WDI) : Marketplace' THEN 'WDI' WHEN \"PSTG_LOCATIONS\".\"FULL_NAME\" = 'Dallas' THEN 'DAL' END"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_LOCATIONS: "3563"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_LOCATIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_LOCATIONS') }} "PSTG_LOCATIONS"
+                WHERE "PSTG_LOCATIONS"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_DIM_WAREHOUSE
+            noLinkRefs: []
+      name: STG_DIM_WAREHOUSE
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "3921"

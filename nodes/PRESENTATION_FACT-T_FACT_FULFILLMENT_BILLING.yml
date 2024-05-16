@@ -1,0 +1,414 @@
+steps:
+  T_FACT_FULFILLMENT_BILLING-3926:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |-
+        This is the fact table for the finance shipment report.
+
+        This fact table is taken at the line item grain for a package. One line represents one fee for a package.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96423"
+              stepCounter: "3926"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashDetails: null
+            isSurrogateKey: true
+            keyColumnType: None
+            name: BILLING_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96318"
+                    stepCounter: "3928"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "124144"
+              stepCounter: "3926"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashDetails: null
+            isSurrogateKey: true
+            keyColumnType: None
+            name: CUSTOMER_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124123"
+                    stepCounter: "4987"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96424"
+              stepCounter: "3926"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashDetails: null
+            isSurrogateKey: true
+            keyColumnType: None
+            name: WAREHOUSE_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96302"
+                    stepCounter: "3927"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96291"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96238"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96292"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: BILLED_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96239"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96293"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CASE_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96242"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96294"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96253"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96295"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_ADJUSTMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96254"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96296"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_BEGIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96255"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96297"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_DAMAGED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96256"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96298"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_KIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96257"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "96299"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_SHIPPED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96258"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370420"
+              stepCounter: "3926"
+            dataType: FLOAT
+            description: ""
+            isBusinessKey: true
+            name: WD_INDIVIDUAL_INVOICE_HEADE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96425"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370608"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370607"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370619"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: HEADER_DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370609"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370620"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: HEADER_LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370611"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370621"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: LINE_DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370614"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370622"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: LINE_LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370615"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370623"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: HEADER_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370616"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370624"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: HEADER_NS_INVOICE_SUMMARY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370617"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "370625"
+              stepCounter: "3926"
+            dataType: DATE
+            description: ""
+            name: HEADER_PRINT_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "370618"
+                    stepCounter: "3924"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96300"
+              stepCounter: "3926"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96301"
+              stepCounter: "3926"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: "625011"
+              stepCounter: "3926"
+            dataType: VARCHAR(16000)
+            description: ""
+            name: TRACKING_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625010"
+                    stepCounter: "3924"
+                transform: ""
+          - columnReference:
+              columnCounter: "625012"
+              stepCounter: "3926"
+            dataType: VARCHAR(16000)
+            description: ""
+            name: BILLING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624951"
+                    stepCounter: "3924"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_FACT_FULFILLMENT_BILLING: "3924"
+              T_DIM_FULFILLMENT_BILLING: "3928"
+              T_DIM_TEMPORARY_CUSTOMER: "4987"
+              T_DIM_WAREHOUSE: "3927"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_FACT
+                nodeName: STG_FACT_FULFILLMENT_BILLING
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_WAREHOUSE
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_FULFILLMENT_BILLING
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_TEMPORARY_CUSTOMER
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_FACT', 'STG_FACT_FULFILLMENT_BILLING') }} "STG_FACT_FULFILLMENT_BILLING"
+                left JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_FULFILLMENT_BILLING') }} "T_DIM_FULFILLMENT_BILLING"
+                    ON "T_DIM_FULFILLMENT_BILLING"."HEADER_INVOICE_NUMBER_ID" = "STG_FACT_FULFILLMENT_BILLING"."WD_INDIVIDUAL_INVOICE_HEADE_ID"
+                    AND ("T_DIM_FULFILLMENT_BILLING"."SYSTEM_CURRENT_FLAG" = 'Y')
+                left JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_WAREHOUSE') }} "T_DIM_WAREHOUSE"
+                    ON ("STG_FACT_FULFILLMENT_BILLING"."LOCATION_ID" = "T_DIM_WAREHOUSE"."WAREHOUSE_ID")
+                    AND ("T_DIM_WAREHOUSE"."SYSTEM_CURRENT_FLAG" = 'Y')
+                LEFT JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_TEMPORARY_CUSTOMER') }} "T_DIM_TEMPORARY_CUSTOMER"
+                    on "T_DIM_TEMPORARY_CUSTOMER"."COMPANY_ID" = "STG_FACT_FULFILLMENT_BILLING"."CUSTOMER_ID" 
+                    and "T_DIM_TEMPORARY_CUSTOMER"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: T_FACT_FULFILLMENT_BILLING
+            noLinkRefs: []
+      name: T_FACT_FULFILLMENT_BILLING
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: "3926"

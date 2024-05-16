@@ -1,0 +1,380 @@
+steps:
+  PSTG_XWS_SHIP_TRACKING_EVENTS-5549:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ORACLE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190598"
+              stepCounter: "5549"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_XWS_SHIP_TRACKING_EVENTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "190599"
+              stepCounter: "5549"
+            dataType: VARCHAR(60)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185009"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190600"
+              stepCounter: "5549"
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185010"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190601"
+              stepCounter: "5549"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            name: EVENT_COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185011"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190602"
+              stepCounter: "5549"
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXCEPTION_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185012"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190603"
+              stepCounter: "5549"
+            dataType: VARCHAR(2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185013"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190604"
+              stepCounter: "5549"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: SHIP_TRACKING_EVENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185014"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190605"
+              stepCounter: "5549"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            name: EXCEPTION_COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185015"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190606"
+              stepCounter: "5549"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185016"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190607"
+              stepCounter: "5549"
+            dataType: VARCHAR(10)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_ZIP_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185017"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190608"
+              stepCounter: "5549"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_ADDRESS1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185018"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190609"
+              stepCounter: "5549"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SHIP_CONFIRM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185019"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190610"
+              stepCounter: "5549"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185020"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190611"
+              stepCounter: "5549"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185021"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190612"
+              stepCounter: "5549"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: TIME_RECORDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185022"
+                    stepCounter: "5395"
+                transform: ""
+          - columnReference:
+              columnCounter: "190613"
+              stepCounter: "5549"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: EVENT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185023"
+                    stepCounter: "5395"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190614"
+              stepCounter: "5549"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190615"
+              stepCounter: "5549"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190616"
+              stepCounter: "5549"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190617"
+              stepCounter: "5549"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190618"
+              stepCounter: "5549"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190619"
+              stepCounter: "5549"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "190631"
+              stepCounter: "5549"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ORACLE XWS'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ORACLE_XWS
+                nodeName: XWS_SHIP_TRACKING_EVENTS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_XWS', 'XWS_SHIP_TRACKING_EVENTS') }} "XWS_SHIP_TRACKING_EVENTS"
+            name: PSTG_XWS_SHIP_TRACKING_EVENTS
+            noLinkRefs: []
+      name: PSTG_XWS_SHIP_TRACKING_EVENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5549"

@@ -1,0 +1,109 @@
+steps:
+  T_VAS_TASK_IMAGE-149ade9d-0a7b-4754-affa-9bf75e304319:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe356964-5022-4e16-853f-845f1027e0dd
+              stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319
+            config: {}
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PICTURE_FILENAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66d7a940-14da-4876-a1c9-200f902e84d5
+              stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9f5f591-5c04-4cc1-abe2-176aca3b39e1
+              stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: VAS_TASK_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0560fa9e-1f36-4bfe-82a7-b8a738446952
+              stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: PICTURE_MIME_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bab2e4fd-5403-49dc-8ab0-3e21b178b462
+              stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4f7af3e-9589-414f-b691-587d65ba6740
+              stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_VAS_TASK_IMAGE') }}
+      name: T_VAS_TASK_IMAGE
+      schema: ""
+      sqlType: Source
+      table: T_VAS_TASK_IMAGE
+      type: sourceInput
+    stepCounter: 149ade9d-0a7b-4754-affa-9bf75e304319

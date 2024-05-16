@@ -1,0 +1,124 @@
+steps:
+  CONVERSATION_ADMIN_HISTORY-a0695320-c0f6-426f-98bc-1cc3253a40fe:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_INTERCOM
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c5717915-6c2f-45e7-b073-f354feda84cf
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: ADMIN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73682a49-ac76-4539-b7d8-0d1aae726515
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: CONVERSATION_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 98c2bcdc-beb5-4bdd-b29c-6f4cd562be8c
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: CONVERSATION_UPDATED_AT
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f9092e5a-51b9-4cbb-ab76-8631d4d24e5d
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 83207e71-39b4-4646-98e2-8fa296180c2b
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_START
+            nullable: true
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b778a0a7-0bc1-4c50-9ac3-9c98bd20ec64
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_END
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 43e8a23a-48cb-41d1-aef9-cd5e8735e372
+              stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ACTIVE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_INTERCOM', 'CONVERSATION_ADMIN_HISTORY') }}
+      name: CONVERSATION_ADMIN_HISTORY
+      schema: ""
+      sqlType: Source
+      table: CONVERSATION_ADMIN_HISTORY
+      type: sourceInput
+    stepCounter: a0695320-c0f6-426f-98bc-1cc3253a40fe

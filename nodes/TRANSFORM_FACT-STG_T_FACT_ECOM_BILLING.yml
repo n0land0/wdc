@@ -1,0 +1,342 @@
+steps:
+  STG_T_FACT_ECOM_BILLING-4032:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |-
+        This table is where all tables are joined in order to provided the necessary columns for the eCommerce fact table. 
+
+        The tables used to make this table are LINE_ITEM_HISTORY, INVOICE_HISTORY, AND ACCOUNT_HISTORY.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "99316"
+              stepCounter: "4032"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54919"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99318"
+              stepCounter: "4032"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54921"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99319"
+              stepCounter: "4032"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: UNIT_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54922"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99320"
+              stepCounter: "4032"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54923"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99321"
+              stepCounter: "4032"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: DISCOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54924"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99322"
+              stepCounter: "4032"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54925"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99330"
+              stepCounter: "4032"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: REFUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54933"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99331"
+              stepCounter: "4032"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: REFUNDED_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54934"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "99348"
+              stepCounter: "4032"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: INVOICE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54903"
+                    stepCounter: "3213"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "99343"
+              stepCounter: "4032"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "55200"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "371130"
+              stepCounter: "4032"
+            dataType: VARCHAR(256)
+            description: ""
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54900"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "118660"
+              stepCounter: "4032"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: UUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54907"
+                    stepCounter: "3213"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "371049"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: LINE_ITEM_UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54899"
+                    stepCounter: "3213"
+                transform: DATE("PSTG_LINE_ITEM_HISTORY"."UPDATED_AT")
+          - columnReference:
+              columnCounter: "371050"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: LINE_ITEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54936"
+                    stepCounter: "3213"
+                transform: DATE("PSTG_LINE_ITEM_HISTORY"."START_DATE")
+          - columnReference:
+              columnCounter: "371051"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: LINE_ITEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54937"
+                    stepCounter: "3213"
+                transform: DATE("PSTG_LINE_ITEM_HISTORY"."END_DATE")
+          - columnReference:
+              columnCounter: "371052"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: LINE_ITEM_CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54938"
+                    stepCounter: "3213"
+                transform: DATE("PSTG_LINE_ITEM_HISTORY"."CREATED_AT")
+          - columnReference:
+              columnCounter: "371598"
+              stepCounter: "4032"
+            dataType: VARCHAR(256)
+            description: ""
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54674"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "371137"
+              stepCounter: "4032"
+            dataType: VARCHAR(256)
+            description: ""
+            name: INVOICE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54913"
+                    stepCounter: "3213"
+                transform: ""
+          - columnReference:
+              columnCounter: "371524"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: INVOICE_UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54842"
+                    stepCounter: "3211"
+                transform: DATE("PSTG_INVOICE_HISTORY"."UPDATED_AT")
+          - columnReference:
+              columnCounter: "371525"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: INVOICE_CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54876"
+                    stepCounter: "3211"
+                transform: DATE("PSTG_INVOICE_HISTORY"."CREATED_AT")
+          - columnReference:
+              columnCounter: "371526"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: INVOICE_DUE_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54877"
+                    stepCounter: "3211"
+                transform: DATE("PSTG_INVOICE_HISTORY"."DUE_AT")
+          - columnReference:
+              columnCounter: "371527"
+              stepCounter: "4032"
+            dataType: DATE
+            description: ""
+            name: INVOICE_CLOSED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54878"
+                    stepCounter: "3211"
+                transform: DATE("PSTG_INVOICE_HISTORY"."CLOSED_AT")
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ACCOUNT_HISTORY: "3204"
+              PSTG_INVOICE_HISTORY: "3211"
+              PSTG_LINE_ITEM_HISTORY: "3213"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_ACCOUNT_HISTORY
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_INVOICE_HISTORY
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_LINE_ITEM_HISTORY
+            join:
+              joinCondition: |
+                FROM {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_LINE_ITEM_HISTORY') }} "PSTG_LINE_ITEM_HISTORY"
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_INVOICE_HISTORY') }} "PSTG_INVOICE_HISTORY"
+                on "PSTG_LINE_ITEM_HISTORY"."INVOICE_ID" = "PSTG_INVOICE_HISTORY"."ID" 
+                and "PSTG_INVOICE_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_ACCOUNT_HISTORY') }} "PSTG_ACCOUNT_HISTORY"
+                ON "PSTG_ACCOUNT_HISTORY"."ID" = "PSTG_LINE_ITEM_HISTORY"."ACCOUNT_ID" AND "PSTG_ACCOUNT_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+                where  "PSTG_LINE_ITEM_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_T_FACT_ECOM_BILLING
+            noLinkRefs: []
+      name: STG_T_FACT_ECOM_BILLING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "4032"

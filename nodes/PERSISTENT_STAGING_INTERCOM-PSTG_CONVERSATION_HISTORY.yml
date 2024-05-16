@@ -1,0 +1,1363 @@
+steps:
+  PSTG_CONVERSATION_HISTORY-5719:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_INTERCOM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692403"
+              stepCounter: "5719"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CONVERSATION_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "692404"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692235"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692405"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692236"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692406"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692237"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692407"
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OPEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692238"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692408"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692239"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692409"
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: READ
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692240"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692410"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAITING_SINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692241"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692411"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SNOOZED_UNTIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692242"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692412"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PRIORITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692243"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692413"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692244"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692414"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692245"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 8c7d3be2-beaf-43d2-962c-fdb15d7817fe
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CUSTOM_TIME_SPENT_MINUTES_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0212c9a-f1b0-46ff-9dfa-e7d237b309f3
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 3a9efc2f-e733-46dd-a73f-f61ba7b05322
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_LATEST_WORKSPACE_PHONE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c40ecfd2-550e-4658-b297-9cc88cdff79a
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 65dedff4-25b1-449e-bb31-4d68c7f5c4e1
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_LAST_INBOUND_CALL_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 760e9638-35de-4356-8af4-a3013ee8ebe5
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 694263ae-a1e7-4de8-8480-e5c791d2a500
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_RESOLVED_REASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e7801863-3006-4b6b-8057-3e3fbfb41077
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692415"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692246"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692416"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_DELIVERED_AS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692247"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692417"
+              stepCounter: "5719"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_SUBJECT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692248"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692418"
+              stepCounter: "5719"
+            dataType: VARCHAR(524288)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692249"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692419"
+              stepCounter: "5719"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692250"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692420"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_AUTHOR_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692251"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692421"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE_AUTHOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692252"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692422"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TEAM_ASSIGNEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692253"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692423"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_CONTACT_REPLY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692254"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692424"
+              stepCounter: "5719"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_CONTACT_REPLY_URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692255"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692425"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_CONTACT_REPLY_CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692256"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692426"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SLA_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692257"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692427"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SLA_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692258"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692428"
+              stepCounter: "5719"
+            dataType: VARCHAR(2048)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONVERSATION_RATING_REMARK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692259"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692429"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONVERSATION_RATING_CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692260"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692430"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONVERSATION_RATING_TEAMMATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692261"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692431"
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONVERSATION_RATING_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692262"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692432"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ASSIGNEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692263"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692433"
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SOURCE_CHANNEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692264"
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: "692434"
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692265"
+                    stepCounter: "5709"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692435"
+              stepCounter: "5719"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692436"
+              stepCounter: "5719"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7201b43-a927-4752-8748-0f650a575845
+              stepCounter: "5719"
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'INTERCOM'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692437"
+              stepCounter: "5719"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692438"
+              stepCounter: "5719"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692439"
+              stepCounter: "5719"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692440"
+              stepCounter: "5719"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: a1bdee15-931d-4d90-8732-0085879306cb
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_RESOLUTION_DATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b1e70a18-dd51-4af9-936a-925ec131ef61
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: eb9346f4-8809-42cc-9e8d-00189eef5ec1
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_SOURCE_APPLICATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3809ba80-0a01-4229-baa0-d0faa3024483
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 07345ed9-24b4-4502-a55a-ccea21bf8ca6
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_JIRA_KEY_IE_CSI_1234_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 52a0883a-e0ce-49ef-bb47-a96babdc5f7c
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 6e0cb7e0-0392-4c99-8109-5010cae2d62b
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_ECOMM_CASE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 03b45547-f844-4fc2-9d62-b42fe171cddb
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 42852033-9ee2-4fff-9f1a-b3598640591a
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bc35db3-075f-46b0-8009-8a12e943a8d1
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: aaca43e5-737e-4d07-aea3-3b850f89ccef
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_WHAT_IS_THE_URL_OF_THE_WEBSITE_THAT_YOU_D_LIKE_GOOGLE_TAG_MANAGER_ENABLED_ON_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55ba5971-b8f3-4ca6-997b-33e0dc3d687f
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: a863a094-c02e-4539-8fda-3dd1a983cc7c
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_HAVE_YOU_INVITED_ENHANCEDECOMMERCE_VIN_65_COM_TO_BE_AN_ADMINISTRATOR_FOR_BOTH_YOUR_GOOGLE_ANALYTICS_AND_GOOGLE_TAG_MANAGER_ACCOUNTS_IN_ORDER_FOR_THIS_FEATURE_TO_BE_IMPLEMENTED_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f9cabdc-46f7-4dea-9293-79b57ccbddf6
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: b26582e2-220a-40ac-8871-3aba682ba86b
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_WHAT_IS_THE_CONTAINER_ID_OF_THE_GTM_CONTAINER_TO_BE_INSTALLED_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a47a347-3843-473b-ad1c-db218af21457
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: becde99a-206c-42c6-b5ef-ae595b785666
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_WHAT_IS_THE_TRACKING_CODE_OF_THE_UA_CONTAINER_TO_BE_INSTALLED_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2eee2692-3283-49f2-a564-63069801994c
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: d8a69413-ce49-482c-9106-c666a3633cca
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_SUBJECT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7dc3f355-85f1-4ecd-9e19-33e043293b39
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 02756827-96e6-4493-8b03-b3601365f697
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_HOW_URGENT_IS_YOUR_ISSUE_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce41a715-043e-469d-ba6e-275950050784
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 168dd3ef-3175-420e-a618-2cad60a41001
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: CUSTOM_FIN_PREVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fea881cc-cf30-4b5b-94bc-b57676040f46
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 6b22e851-c7bf-4c57-9cd0-7202492d1fca
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_FIRST_ADMIN_REPLY_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d674964-3707-4678-9821-75044d750d3e
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 45a59866-626e-47da-8fbc-1d01403cc3e6
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_TIME_TO_FIRST_CLOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d959496-e132-423a-88b6-6152856e7fb5
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 24b09185-112f-4fb2-97b7-63cc74f173c5
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_COUNT_REOPENS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2fcc6db-2502-4961-8633-1a548de74a23
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 5d5eee11-9b8e-4706-a647-f0e2958a9ad8
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_LAST_ASSIGNMENT_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26506449-e2b9-4aa3-b362-680fa02f81f3
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 599a54b4-e307-41db-b9a9-bdcb5a989d3e
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_LAST_CLOSE_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f6010d4-e6ad-43f8-ad09-8d7ece5d581e
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 20ee0210-3e90-416f-b55f-c8ece29228c6
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_FIRST_CLOSE_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb59873d-6c52-4c98-8f9c-5ade6a4c55c7
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: e3cca3a1-1af8-499d-a72f-415b254bd643
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_FIRST_CONTACT_REPLY_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29eb0823-21cf-4bd1-8b5b-a5a6c8208d1c
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: b6f60f3a-c0b5-4787-8e0e-3f419db4c2ff
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_LAST_ADMIN_REPLY_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a60142ad-7de1-4a8f-bd72-33cfa3418765
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 31c295c9-7fc2-434f-9e00-f25989426f55
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_COUNT_ASSIGNMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb39f83b-f8f5-4fee-af21-6b233ba8371f
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 22e8544d-9dae-426a-93a5-e6134923c7aa
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_TIME_TO_ADMIN_REPLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1692cff2-7b55-4b78-8b99-2efdf5c8a178
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 3e6488ad-3746-4636-a5be-fbeb4a4d9efe
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_FIRST_ASSIGNMENT_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e05ea7f-23bf-418f-806e-8caf5c3e8dc2
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 26abb0d1-82f2-4bbb-b8b9-262a64507a69
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_MEDIAN_TIME_TO_REPLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1df50ffa-fbfe-464f-bcb9-89a33997d218
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 9b58f17d-baed-46d5-85de-b4f78d7a554b
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_TIME_TO_LAST_CLOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 282a950d-22b3-4922-9afe-9a9ee40da3c1
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 9165c0f4-5d74-4d83-95b1-5ba4896eff86
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_LAST_ASSIGNMENT_ADMIN_REPLY_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6087806-aac3-48b2-b248-8493edf718c3
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 8fddff0e-9b5c-470c-96e3-2aeeacb3254d
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_TIME_TO_ASSIGNMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18492fc1-1a81-4fe2-b98e-dfa8414eb40a
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: c7a2e926-c44b-4f7d-b2fd-767f1bb49518
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: STATISTICS_LAST_CONTACT_REPLY_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ad5ac6b-c83c-4160-a8b1-c2bf96bbf023
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 58e2e30b-a329-41ca-8f94-d2d87d73769b
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: STATISTICS_LAST_CLOSED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e1fa9ee3-350c-4ea7-8b6d-21a31fba6fa4
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: f2998dfa-57ad-4ac5-855e-ee7b9c5feed4
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: STATISTICS_COUNT_CONVERSATION_PARTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2dd98c0f-48f2-4ad1-850a-8c30dcae398c
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: a4cf9db7-f3e6-44c6-afc2-a6a3a93034dd
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: CUSTOM_SOURCE_FIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bef5e95e-8fc5-457f-98c3-a66426850cdf
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 31e426a8-590f-4433-9ce6-4816317427bc
+              stepCounter: "5719"
+            dataType: VARCHAR(8192)
+            description: ""
+            name: CUSTOM_DEFAULT_DESCRIPTION_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f14e2195-20b6-432a-9121-276dc9cbab28
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: a0e3ce0f-dccd-4993-a38c-afe10e6bebdb
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_DEFAULT_TITLE_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e143021-709f-438f-8e16-f6699fa0657b
+                    stepCounter: "5709"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f01954c4-8a2e-4952-9ada-ecd87bb370c4
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: CUSTOM_SOURCE_SWITCH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 718793a9-935b-4970-a3e7-911beb6508f1
+                    stepCounter: "5709"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e5dbfa36-1e3f-4230-9b1e-a3c2a1986566
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_SEVERITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5fd57b68-d670-484a-a495-58355ff853fe
+                    stepCounter: "5709"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c7f556c5-4a62-4a7f-aff7-b916dcbf8eae
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86ee64c2-5b63-4a3f-ac67-cc86918e9630
+                    stepCounter: "5709"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 85ef3547-1b6f-43a1-a45e-c9b5c17e7929
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_PLATFORM_COMPONENT_CHOOSE_BEST_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f5a7c51-337b-409d-99fc-707a829691c9
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: fd74cb84-7768-4f82-a0ca-b2bc388d7be4
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_CSI_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74c52405-e2ac-4285-b05f-546dcf186875
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 01ee15e5-1993-438f-91d1-e0c985794e07
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_LANGUAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9620cfdd-aafd-412f-a631-6e2da622ef7e
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 2f6c0d95-1cab-4d18-8865-976d4d2a3a85
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: CUSTOM_WORKFLOW_PREVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01616485-1541-468d-ac45-63b982392c9f
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 9be76d03-b2ac-43d0-9bff-c81efb50d9e5
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_EXTERNAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b2b737a-8a97-42fc-a1d3-089d7c1c3183
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 4a1cbf1b-8760-4dbf-8e09-edb434f4ba09
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_TICKET_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8cb1788-ea94-49bc-ad40-716185abe9d6
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 6ef4b35f-3d53-41ca-bf60-4c144c5b32d2
+              stepCounter: "5719"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CUSTOM_CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 51ead100-eb74-4622-ab3d-7f463bc87473
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 9679e285-6929-4f8b-ba28-d7e829f46d86
+              stepCounter: "5719"
+            dataType: VARIANT
+            description: ""
+            name: CUSTOM_PLEASE_ATTACH_RELEVANT_FILES_SUCH_AS_SCREENSHOTS_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59ec55c4-1e55-43db-bcb8-80a584259c34
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 63efd5a2-f630-4ef0-a80b-d7908e596349
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_WHAT_IS_THE_URGENCY_OF_THIS_CALL_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44f22e33-4891-4b17-859a-eb6f5ca707df
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: cca99650-c0a9-4160-b67e-23e5c2ef90f8
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_PHONE_REQUEST_RESULT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e52d62b-304c-4ce4-a9c4-be42313f4e5e
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 77a4e39a-f9d1-41f6-b831-92f030784173
+              stepCounter: "5719"
+            dataType: VARCHAR(1024)
+            description: ""
+            name: CUSTOM_IMPACT_TO_CLIENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c4288f7-90c8-4cc0-aebe-f4eddf241681
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 832541a5-8eae-404d-be7a-77b64d4249db
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_RECORDING_REQUIRED_FOR_BUGS_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f6da9c7-4f17-4946-81a1-a419a4f6eafc
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 33a0ea88-d8e7-451a-9475-7bd30b3d70f7
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_WHAT_IS_THE_DOMAIN_OF_YOUR_SEND_FROM_EMAIL_ADDRESSES_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f17e2aee-9670-4ccd-b9f6-93afa7ad2015
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 6d6b22e2-c53f-4984-a7c8-c5a8a4c47a3b
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: CUSTOM_DOES_YOU_SPF_RECORD_INCLUDE_THE_FOLLOWING_SPF_VIN_65_COM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00172cc6-8021-44b9-abae-d425d67672f5
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 58289e78-cbf0-41bf-b21b-82851619c894
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9fdfba44-bc4b-4bf3-bf9e-0099d3da9656
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: ec5387ad-ca0c-4e6f-86b2-56370418443f
+              stepCounter: "5719"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_END
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 128d7c2e-78d7-44ec-a214-56e6074f29d6
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 1a92a3e8-15d1-4243-9e51-943df3060dea
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 873ddf7e-b3a3-4ea0-b739-15d635fb0b5a
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: a917c51e-29d3-4d6c-865a-e3a3d586eadc
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_WHAT_IS_THE_EMAIL_ADDRESS_FOR_YOUR_DNS_ADMINISTRATOR_IF_DIFFERENT_FROM_YOUR_OWN_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0b7e790e-cc10-4094-bd8d-273659764277
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 5f0a6f96-cc29-4b55-8410-9b76b646a8f3
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_WHAT_IS_THE_EMAIL_ADDRESS_FOR_YOUR_DNS_ADMINISTRATOR_WHO_CAN_UPDATE_YOUR_CNAME_RECORDS_ONCE_WE_GENERATE_THEM_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55f04be9-7506-4aa1-a39a-4eef37b598ea
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: f3c4f03a-1bf6-419b-acfa-da5518a8c626
+              stepCounter: "5719"
+            dataType: BOOLEAN
+            description: ""
+            name: CUSTOM_BEFORE_PROCEEDING_CONFIRM_THAT_YOUR_SPF_RECORD_ALREADY_INCLUDES_THE_FOLLOWING_SPF_VIN_65_COM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bd2501e-a412-470d-a0b2-a29803ee9bec
+                    stepCounter: "5709"
+                transform: ""
+          - columnReference:
+              columnCounter: 28f2c501-73ad-4c7d-9d34-498308ffea32
+              stepCounter: "5719"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_FIN_RESOLUTION_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0f45ef6-1a94-478e-8b92-a82c12c88f89
+                    stepCounter: "5709"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_INTERCOM
+                nodeName: CONVERSATION_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_INTERCOM', 'CONVERSATION_HISTORY') }} "CONVERSATION_HISTORY"
+            name: PSTG_CONVERSATION_HISTORY
+            noLinkRefs: []
+      name: PSTG_CONVERSATION_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5719"

@@ -1,0 +1,213 @@
+steps:
+  PERIOD-4529:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_SALESFORCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111931"
+              stepCounter: "4529"
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111932"
+              stepCounter: "4529"
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: FISCAL_YEAR_SETTINGS_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111933"
+              stepCounter: "4529"
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111934"
+              stepCounter: "4529"
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: START_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111935"
+              stepCounter: "4529"
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: END_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111936"
+              stepCounter: "4529"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: SYSTEM_MODSTAMP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111937"
+              stepCounter: "4529"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: IS_FORECAST_PERIOD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111938"
+              stepCounter: "4529"
+            config: {}
+            dataType: VARCHAR(765)
+            defaultValue: ""
+            description: ""
+            name: QUARTER_LABEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111939"
+              stepCounter: "4529"
+            config: {}
+            dataType: VARCHAR(765)
+            defaultValue: ""
+            description: ""
+            name: PERIOD_LABEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111940"
+              stepCounter: "4529"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111941"
+              stepCounter: "4529"
+            config: {}
+            dataType: VARCHAR(240)
+            defaultValue: ""
+            description: ""
+            name: FULLY_QUALIFIED_LABEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111942"
+              stepCounter: "4529"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "111943"
+              stepCounter: "4529"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'PERIOD') }}
+      name: PERIOD
+      schema: ""
+      sqlType: Source
+      table: PERIOD
+      type: sourceInput
+    stepCounter: "4529"

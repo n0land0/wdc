@@ -1,0 +1,154 @@
+steps:
+  T_VENDOR-495d6e48-dcce-46cb-871f-3d2494c7a384:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 595ed06e-d7ed-4a08-85bc-3432980eda04
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: VENDOR_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8343eb7e-5ca5-44bb-b5d1-db831f9e6d74
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: VENDOR_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b066c0a4-4c39-45a8-aba8-db3d50744216
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: VQM_PROFILE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ee7c3359-3bd8-4e14-b0b4-b2d1ca874122
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: OWNERSHIP_CONTROL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2504e473-6192-423e-ae74-1b64b9f30627
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: AUDIT_PERCENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5f8d1204-0d6c-40df-9ddf-00870df62f68
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: VENDOR_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04308367-e496-4759-bbd5-daa0d815b133
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: INSPECTION_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 12f8f937-2d51-4f0a-8cb8-66d63e6fcfbe
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3dce873e-0eb1-479b-af88-373665e79c09
+              stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_VENDOR') }}
+      name: T_VENDOR
+      schema: ""
+      sqlType: Source
+      table: T_VENDOR
+      type: sourceInput
+    stepCounter: 495d6e48-dcce-46cb-871f-3d2494c7a384

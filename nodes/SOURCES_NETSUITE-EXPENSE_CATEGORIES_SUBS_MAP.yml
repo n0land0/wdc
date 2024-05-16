@@ -1,0 +1,93 @@
+steps:
+  EXPENSE_CATEGORIES_SUBS_MAP-2572:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41893"
+              stepCounter: "2572"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: EXPENSE_CATEGORY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41894"
+              stepCounter: "2572"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SUBSIDIARY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41895"
+              stepCounter: "2572"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41896"
+              stepCounter: "2572"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41897"
+              stepCounter: "2572"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'EXPENSE_CATEGORIES_SUBS_MAP') }}
+      name: EXPENSE_CATEGORIES_SUBS_MAP
+      schema: ""
+      sqlType: Source
+      table: EXPENSE_CATEGORIES_SUBS_MAP
+      type: sourceInput
+    stepCounter: "2572"

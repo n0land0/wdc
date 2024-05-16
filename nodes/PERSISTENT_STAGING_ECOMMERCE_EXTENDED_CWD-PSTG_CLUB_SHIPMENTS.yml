@@ -1,0 +1,501 @@
+steps:
+  PSTG_CLUB_SHIPMENTS-c33583e7-bb90-467f-a56b-95e0c583884b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: PERSISTENT_STAGING_ECOMMERCE_EXTENDED_CWD
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 42e40e4b-7ada-40fd-819a-6434e39c5b07
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CLUB_SHIPMENTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 503912c5-590c-4f75-af34-e199beb38378
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: OP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b724095-eefa-406a-b8b1-6789aa4326f5
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: a1b1ce0f-5298-4c3e-923a-6d9698bea418
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: TIMESTAMP_TRACK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab28132d-ab23-4ee5-b193-7f873da95381
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 7a240993-6db7-48dd-85df-fdc444c8b513
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isBusinessKey: true
+            name: CLUBSHIPMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b15b7574-f2d5-4b34-b5e7-1b755c18e7da
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 485c6200-ee81-41b1-9f63-d55d594de70d
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: CLUBID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e52c85f3-29d3-4e31-ab33-1290211bf150
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 559bc398-e119-4f9c-8769-8a1b339b8a48
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SHIPMENTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2dcc8da5-a943-432c-aab3-53aa15f936f3
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 943ba062-7ffe-41ad-badd-fbf6bcc1b585
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: DATE
+            description: ""
+            isChangeTracking: true
+            name: ANTICIPATEDSHIPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e672ed2b-39d4-42e9-abab-a60e1ba7861b
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 9064b1a4-4b53-4706-b528-11c03b3729de
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: NUMBER(18,2)
+            description: ""
+            isChangeTracking: true
+            name: SUBTOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f6079bd-54a9-4c16-a4e7-4397f705dac8
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: a7ec1aca-f216-4866-9bab-eed280f5005b
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: BOOLEAN
+            description: ""
+            isChangeTracking: true
+            name: USESREGULARSHIPRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0084700-31ee-4897-935f-89255dac979a
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 1ef55219-f7d1-4f84-96b3-9b229e44359c
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: NUMBER(18,2)
+            description: ""
+            isChangeTracking: true
+            name: FLATSHIPPINGRATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 522c2c16-b945-4ea6-aeea-1c1b37da1c5c
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 0a186d0b-5cff-4d00-81ae-c390fad2d421
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SHIPPINGSTRATEGYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75baa9d6-d2de-4bca-be04-f4d57a1533a5
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 17a39960-7bfb-4278-b246-042ec77f53ad
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SHIPPINGTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc924542-7ec6-4e40-9ae5-9021d1e57b9e
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 5d6e0daf-16e4-4c76-8c9d-85f604a7a9d7
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            isChangeTracking: true
+            name: DATEADDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 84304c42-3d53-4da3-bf83-050d83479b23
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 684bd67d-57f9-4f55-b3c3-f746854dc3d4
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            isChangeTracking: true
+            name: DATEMODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25c5f77e-7841-4175-a06c-58281850d05a
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: fa2015c8-d572-4366-88e8-0994b44ab408
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: MODIFIEDBY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2661f1aa-59f0-4b71-a12e-5975858afd9c
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 69b1eb9b-bc29-43c9-b427-0bba5accbf13
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: DATE
+            description: ""
+            isChangeTracking: true
+            name: FUTURESHIPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a9b654c-51fd-4d7c-8857-6226c3c77eec
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: e04edc9c-cbec-4dda-b13f-b922ca0df4f0
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: PICKUPEMAILDOCUMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6474557-c0c0-485d-91d1-0e3af7395cdc
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: c4f0bf93-72f6-4b07-a6ba-741cea9a0197
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SHIPPINGEMAILDOCUMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de5ac398-70d9-4339-9e06-586970b9e356
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 32b78c8a-dfc4-428b-b7d0-5c648af95056
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: PICKUPEMAILCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c1d69ce-c2c2-4755-ad52-6398400f617e
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 2ce894be-48c2-4a66-b97d-e51b6d30e848
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SHIPPINGEMAILCATEGORYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c1b3ce8c-8f09-4dbe-b8da-947e4f156861
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: b2ba372e-b275-43c1-81e0-65d1946a31d3
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: CLUBCUSTOMSEASONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ecc423ca-65a9-4e1a-93b7-db5b677eeae0
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: f7c58120-4176-40f2-9d0b-c65b762d1885
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: PICKUPINVENTORYPOOLID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 284f877d-cd25-4a7a-83d5-8e5f79687596
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: c6de2c32-e4ef-49a8-bd00-0b78a1790b16
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SHIPPINGINVENTORYPOOLID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f743cb5-0971-46ef-b483-69ccc1f04701
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 89c2dde0-ee96-4dcb-a52f-d252b1b786c3
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: BOOLEAN
+            description: ""
+            isChangeTracking: true
+            name: ISACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6532004e-c0fa-4434-b796-99651e4df35b
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 035db8f5-36bf-4e69-9e81-a92725e4d26b
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: SIGNUPMONTHS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7635b93-f206-47a9-8610-603d9d8e054c
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: 56220411-c35a-43a3-b07d-b9149592034b
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: BOOLEAN
+            description: ""
+            isChangeTracking: true
+            name: MIGRATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1eccf509-7285-4b6c-ab04-57f72d8c1cbc
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - columnReference:
+              columnCounter: c8634d8d-7f99-465c-9175-38e9af416475
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d22dd63-b7bb-489a-bc14-788b2f478aad
+                    stepCounter: c23596d7-66cb-4da6-98d4-a51e85ce8625
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a61ff818-40fb-43d9-8deb-0951302bb012
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8a0f5f8a-fd9b-431f-a723-effc79a9e130
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e46c33d4-bc5d-46c3-bbd3-92877598f49b
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b415dc2-fb67-4502-aebc-f068d7b766cf
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 80b36c75-4a49-4748-8cda-b6e48e58c53f
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ae364761-d9ec-4b38-8ecd-2a98a6a6b6b2
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 0ac39f56-250d-431b-af88-2e3be70aa4f5
+              stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b
+            dataType: VARCHAR
+            description: ""
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_CLUB_SHIPMENTS
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'STG_CLUB_SHIPMENTS') }} "STG_CLUB_SHIPMENTS"
+            name: PSTG_CLUB_SHIPMENTS
+            noLinkRefs: []
+      name: PSTG_CLUB_SHIPMENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: c33583e7-bb90-467f-a56b-95e0c583884b

@@ -1,0 +1,227 @@
+steps:
+  TMP_STG_ECOMM_CUST_ALL-5557:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371299"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371288"
+                    stepCounter: "5583"
+                transform: UPPER("PSTG_ECOMM_CUST_ALL"."WEBSITE_ID")
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371303"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WEBSITE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371290"
+                    stepCounter: "5583"
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "370951"
+              stepCounter: "5557"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CONCAT(UPPER("PSTG_ECOMM_CUST_ALL"."WEBSITE_ID"), '|', "PSTG_ECOMM_CUST_ALL"."WEBSITE_NAME")
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371309"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WEBSITE_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: |-
+                  CASE 
+                      WHEN "PSTG_ECOMM_CUST_ALL"."WEBSITE_GROUP_ID" = 'NULL' 
+                          THEN NULL 
+                      ELSE "PSTG_ECOMM_CUST_ALL"."WEBSITE_GROUP_ID" 
+                  END
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371312"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAR_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371283"
+                    stepCounter: "5582"
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "370279"
+              stepCounter: "5557"
+            dataType: VARCHAR(1000)
+            defaultValue: "1"
+            description: ""
+            hashDetails: null
+            name: IS_CURR_ECOMM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: |-
+                  CASE 
+                      WHEN "PSTG_ECOMM_CUST_ALL"."LAST_UPDATE_DATE" IS NOT NULL AND "PSTG_ECOMM_CUST_ALL"."LAST_UPDATE_DATE" >= '2022-12-01'
+                          THEN 'Y'
+                      ELSE 'N'
+                  END
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371311"
+              stepCounter: "5557"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: NAMED_ACCOUNT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: |-
+                  CASE
+                      WHEN "ENTERPRISE_ECOMMERCE_ALL"."IS_NAMED_ACCOUNT" IS NULL 
+                          THEN 'N' 
+                      ELSE "ENTERPRISE_ECOMMERCE_ALL"."IS_NAMED_ACCOUNT"
+                  END
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371284"
+              stepCounter: "5557"
+            dataType: VARCHAR(100)
+            description: ""
+            name: E_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371280"
+                    stepCounter: "5582"
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "370280"
+              stepCounter: "5557"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Ecommerce Customer'"
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371300"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371287"
+                    stepCounter: "5583"
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371302"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371292"
+                    stepCounter: "5583"
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "370281"
+              stepCounter: "5557"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Ecommerce Customer'"
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371301"
+              stepCounter: "5557"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: DATE_ADDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371291"
+                    stepCounter: "5583"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ENTERPRISE_ECOMMERCE_ALL: "5582"
+              PSTG_ECOMM_CUST_ALL: "5583"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: ENTERPRISE_ECOMMERCE_ALL
+              - locationName: CLIENT_MDM
+                nodeName: PSTG_ECOMM_CUST_ALL
+            join:
+              joinCondition: |
+                FROM {{ ref('CLIENT_MDM', 'PSTG_ECOMM_CUST_ALL') }} "PSTG_ECOMM_CUST_ALL"
+                LEFT JOIN {{ ref('CLIENT_MDM', 'ENTERPRISE_ECOMMERCE_ALL') }} "ENTERPRISE_ECOMMERCE_ALL"
+                ON UPPER("PSTG_ECOMM_CUST_ALL"."WEBSITE_ID") = UPPER("ENTERPRISE_ECOMMERCE_ALL"."WEBSITE_ID")
+                    AND "ENTERPRISE_ECOMMERCE_ALL"."WEBSITE_ID" IS NOT NULL
+            name: TMP_STG_ECOMM_CUST_ALL
+            noLinkRefs: []
+      name: TMP_STG_ECOMM_CUST_ALL
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5557"

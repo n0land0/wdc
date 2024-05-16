@@ -1,0 +1,138 @@
+steps:
+  COMPONENTS_PER_ROUTING_STEPS-2476:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40246"
+              stepCounter: "2476"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: COMPONENT_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40247"
+              stepCounter: "2476"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: MFG_ROUTING_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40248"
+              stepCounter: "2476"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40249"
+              stepCounter: "2476"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40250"
+              stepCounter: "2476"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40251"
+              stepCounter: "2476"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40252"
+              stepCounter: "2476"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: FIVETRAN_INDEX
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40253"
+              stepCounter: "2476"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'COMPONENTS_PER_ROUTING_STEPS') }}
+      name: COMPONENTS_PER_ROUTING_STEPS
+      schema: ""
+      sqlType: Source
+      table: COMPONENTS_PER_ROUTING_STEPS
+      type: sourceInput
+    stepCounter: "2476"

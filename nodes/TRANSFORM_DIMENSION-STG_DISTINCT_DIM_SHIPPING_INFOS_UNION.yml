@@ -1,0 +1,191 @@
+steps:
+  STG_DISTINCT_DIM_SHIPPING_INFOS_UNION-04de639f-996e-4d21-9f4e-8cfe9811d678:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a7e22054-a89c-4acc-b33b-f5d16acb4342
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179574"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179365"
+                    stepCounter: "5061"
+                transform: DISTINCT "PSTG_SHIPPING_INFOS_ANWD"."ORDER_ID"
+          - columnReference:
+              columnCounter: d773c3df-76a1-448e-b09b-05f0842d1408
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179579"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179345"
+                    stepCounter: "5061"
+                transform: ""
+          - columnReference:
+              columnCounter: 25e1cd99-8801-4d18-ab39-bccdbc6d1ae3
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179580"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179346"
+                    stepCounter: "5061"
+                transform: ""
+          - columnReference:
+              columnCounter: 0d88a4d9-1c53-4355-b965-b5dca1b1828e
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179581"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179347"
+                    stepCounter: "5061"
+                transform: ""
+          - columnReference:
+              columnCounter: fe24f877-aefc-479a-a9f5-17eb1ed9b460
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STATE_PROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179583"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179349"
+                    stepCounter: "5061"
+                transform: ""
+          - columnReference:
+              columnCounter: 6b7e1322-24ed-423c-8785-964c38b4ea8d
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179584"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179350"
+                    stepCounter: "5061"
+                transform: ""
+          - columnReference:
+              columnCounter: 83cd8ce5-a242-454d-b1ae-9f42e8c9fca0
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ZIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179582"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179348"
+                    stepCounter: "5061"
+                transform: ""
+          - columnReference:
+              columnCounter: 429a1206-bb68-43b5-b18d-05c69983a1d1
+              stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179603"
+                    stepCounter: "5071"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179438"
+                    stepCounter: "5061"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_SHIPPING_INFOS_CWD: "5071"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_SHIPPING_INFOS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_SHIPPING_INFOS_CWD') }} "PSTG_SHIPPING_INFOS_CWD"
+                WHERE "PSTG_SHIPPING_INFOS_CWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: cwd
+            noLinkRefs: []
+          - aliases:
+              PSTG_SHIPPING_INFOS_ANWD: "5061"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_SHIPPING_INFOS_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_SHIPPING_INFOS_ANWD') }} "PSTG_SHIPPING_INFOS_ANWD"
+                WHERE "PSTG_SHIPPING_INFOS_ANWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: ANWD
+            noLinkRefs: []
+      name: STG_DISTINCT_DIM_SHIPPING_INFOS_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678

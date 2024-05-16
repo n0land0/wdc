@@ -1,0 +1,325 @@
+steps:
+  PSTG_JOB_RESOURCE_ROLE-3550:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85120"
+              stepCounter: "3550"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_JOB_RESOURCE_ROLE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "85121"
+              stepCounter: "3550"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: JOB_RESOURCE_ROLE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44489"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85122"
+              stepCounter: "3550"
+            dataType: VARCHAR(3996)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44490"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85123"
+              stepCounter: "3550"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_OWN_TIME_APPROVAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44491"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85124"
+              stepCounter: "3550"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_REPLACE_ASSIGNMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44492"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85125"
+              stepCounter: "3550"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ISINACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44493"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85126"
+              stepCounter: "3550"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_PROJECT_TIME_APPROVER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44494"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85127"
+              stepCounter: "3550"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44495"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85128"
+              stepCounter: "3550"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SEND_MAIL_FOR_RATOFF_CONFLICT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44496"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85129"
+              stepCounter: "3550"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44497"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85130"
+              stepCounter: "3550"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44498"
+                    stepCounter: "2705"
+                transform: ""
+          - columnReference:
+              columnCounter: "85131"
+              stepCounter: "3550"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "44499"
+                    stepCounter: "2705"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85132"
+              stepCounter: "3550"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85133"
+              stepCounter: "3550"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85134"
+              stepCounter: "3550"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85135"
+              stepCounter: "3550"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85136"
+              stepCounter: "3550"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85137"
+              stepCounter: "3550"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "85829"
+              stepCounter: "3550"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+            systemColumnType: None
+            type: Column
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: JOB_RESOURCE_ROLE
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'JOB_RESOURCE_ROLE') }} "JOB_RESOURCE_ROLE"
+            name: PSTG_JOB_RESOURCE_ROLE
+            noLinkRefs: []
+      name: PSTG_JOB_RESOURCE_ROLE
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3550"

@@ -1,0 +1,316 @@
+steps:
+  PSTG_PAYMENTS_CWD-5070:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ECOMMERCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179555"
+              stepCounter: "5070"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_PAYMENTS_CWD_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179556"
+              stepCounter: "5070"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179627"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179557"
+              stepCounter: "5070"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179628"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179558"
+              stepCounter: "5070"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179629"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179559"
+              stepCounter: "5070"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179630"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179560"
+              stepCounter: "5070"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREDIT_CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179631"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179561"
+              stepCounter: "5070"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179632"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179562"
+              stepCounter: "5070"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WDC_PAYMENT_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179633"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179563"
+              stepCounter: "5070"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179634"
+                    stepCounter: "5073"
+                transform: ""
+          - columnReference:
+              columnCounter: "179689"
+              stepCounter: "5070"
+            dataType: VARCHAR(3)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179688"
+                    stepCounter: "5073"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179565"
+              stepCounter: "5070"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179566"
+              stepCounter: "5070"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179567"
+              stepCounter: "5070"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179568"
+              stepCounter: "5070"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179569"
+              stepCounter: "5070"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179570"
+              stepCounter: "5070"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179571"
+              stepCounter: "5070"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624957"
+              stepCounter: "5070"
+            dataType: NUMBER(38,2)
+            description: ""
+            isChangeTracking: true
+            name: TIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624956"
+                    stepCounter: "5073"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_PAYMENTS_CWD: "5073"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: TMP_PAYMENTS_CWD
+            join:
+              joinCondition: |
+                from {{ ref('TRANSFORM_DIMENSION', 'TMP_PAYMENTS_CWD') }} "TMP_PAYMENTS_CWD"
+            name: PSTG_PAYMENTS_CWD
+            noLinkRefs: []
+      name: PSTG_PAYMENTS_CWD
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5070"

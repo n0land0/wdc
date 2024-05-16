@@ -1,0 +1,364 @@
+steps:
+  MDM_ENTITY_RAW_3-5636:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: |-
+          CREATE OR REPLACE TABLE "REFERENCE"."OVERRIDES"."MDM_TMP_ENTITY_HIST" AS (
+              SELECT DISTINCT
+                "MDM_ENTITY_HISTORY"."ENTITY_ID" AS "ENTITY_ID",
+                "MDM_ENTITY_HISTORY"."COMPANY_NAME" AS "COMPANY_NAME",
+                "MDM_ENTITY_HISTORY"."NS_ID" AS "NS_ID",
+                "MDM_ENTITY_HISTORY"."NS_PAR_ID" AS "NS_PAR_ID",
+                "MDM_ENTITY_HISTORY"."NS_GPAR_ID" AS "NS_GPAR_ID",
+                "MDM_ENTITY_HISTORY"."RC_CODE" AS "RC_CODE",
+                "MDM_ENTITY_HISTORY"."RC_TENANT_ID" AS "RC_TENANT_ID",
+                "MDM_ENTITY_HISTORY"."NS_EXT_ID" AS "NS_EXT_ID",
+                "MDM_ENTITY_HISTORY"."RC_ID" AS "RC_ID",
+                "MDM_ENTITY_HISTORY"."RC_PAR_ID" AS "RC_PAR_ID",
+                "MDM_ENTITY_HISTORY"."ORACLE_CUST_ID" AS "ORACLE_CUST_ID",
+                "MDM_ENTITY_HISTORY"."ECOMM_WEB_ID" AS "ECOMM_WEB_ID",
+                "MDM_ENTITY_HISTORY"."ECOMM_WEB_GROUP_ID" AS "ECOMM_WEB_GROUP_ID",
+                "MDM_ENTITY_HISTORY"."SF_ID" AS "SF_ID",
+                "MDM_ENTITY_HISTORY"."SF_PAR_ID" AS "SF_PAR_ID",
+                "MDM_ENTITY_HISTORY"."SF_ACCT_NUM" AS "SF_ACCT_NUM",
+                "MDM_ENTITY_HISTORY"."HS_ID" AS "HS_ID", 
+                "MDM_ENTITY_HISTORY"."FIN_ROW_NUM" AS "FIN_ROW_NUM"
+                
+              FROM "DEV_TRANSFORM"."CLIENT_MDM"."MDM_ENTITY_HISTORY"
+              
+              WHERE "SYSTEM_CURRENT_FLAG" = 'Y')
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Pulls records from entity_raw_2 and pulls entity ids in from mdm_tmp_entity_hist reference table created by post sql in entity_history table
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "624348"
+              stepCounter: "5636"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: ENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623993"
+                    stepCounter: "5638"
+                transform: |2-
+                       COALESCE("MDM_TMP_ENTITY_HIST"."ENTITY_ID",
+                             COALESCE("MDM_TMP_ENTITY_HIST2"."ENTITY_ID",
+                                 COALESCE("MDM_TMP_ENTITY_HIST3"."ENTITY_ID",
+                                     COALESCE("MDM_TMP_ENTITY_HIST4"."ENTITY_ID",
+                                          COALESCE("MDM_TMP_ENTITY_HIST5"."ENTITY_ID",
+                                               COALESCE(
+                                                   "MDM_TMP_ENTITY_HIST6"."ENTITY_ID"
+                                                   , "MDM_TMP_ENTITY_HIST7"."ENTITY_ID")
+                                                  )))))
+          - columnReference:
+              columnCounter: "623936"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623901"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623937"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: NS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623902"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623938"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: NS_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623903"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623939"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: NS_GPAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623904"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623940"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: RC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623905"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623941"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            hashDetails: null
+            name: RC_TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623906"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623942"
+              stepCounter: "5636"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            name: NS_EXT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623907"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623943"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: RC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623908"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "625036"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RC_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625035"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623944"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ORACLE_CUST_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623909"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623945"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ECOMM_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623910"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623946"
+              stepCounter: "5636"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ECOMM_WEB_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623911"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623947"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SF_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623914"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623948"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SF_ACCT_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623915"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623949"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SF_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623913"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623950"
+              stepCounter: "5636"
+            dataType: NUMBER(18,0)
+            description: ""
+            hashDetails: null
+            name: FIN_ROW_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623916"
+                    stepCounter: "5633"
+                transform: ""
+          - columnReference:
+              columnCounter: "623951"
+              stepCounter: "5636"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: HS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623912"
+                    stepCounter: "5633"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              MDM_ENTITY_RAW_2: "5633"
+              MDM_TMP_ENTITY_HIST: "5638"
+              MDM_TMP_ENTITY_HIST2: "5638"
+              MDM_TMP_ENTITY_HIST3: "5638"
+              MDM_TMP_ENTITY_HIST4: "5638"
+              MDM_TMP_ENTITY_HIST5: "5638"
+              MDM_TMP_ENTITY_HIST6: "5638"
+              MDM_TMP_ENTITY_HIST7: "5638"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_ENTITY_RAW_2
+            join:
+              joinCondition: |-
+                FROM {{ ref('CLIENT_MDM', 'MDM_ENTITY_RAW_2') }} "MDM_ENTITY_RAW_2"
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST"
+                    ON ("MDM_ENTITY_RAW_2"."NS_ID" = "MDM_TMP_ENTITY_HIST"."NS_ID" 
+                    AND "MDM_TMP_ENTITY_HIST"."NS_ID" IS NOT NULL 
+                    AND "MDM_ENTITY_RAW_2"."NS_EXT_ID" = "MDM_TMP_ENTITY_HIST"."NS_EXT_ID"
+                    AND "MDM_TMP_ENTITY_HIST"."NS_EXT_ID" IS NOT NULL
+                    AND "MDM_TMP_ENTITY_HIST"."COMPANY_NAME" = "MDM_ENTITY_RAW_2"."COMPANY_NAME")
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST2"
+                    ON ("MDM_ENTITY_RAW_2"."RC_ID" = "MDM_TMP_ENTITY_HIST2"."RC_ID" 
+                    AND "MDM_TMP_ENTITY_HIST2"."RC_ID" IS NOT NULL 
+                    AND "MDM_TMP_ENTITY_HIST2"."COMPANY_NAME" = "MDM_ENTITY_RAW_2"."COMPANY_NAME")
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST3"
+                    ON ("MDM_ENTITY_RAW_2"."ORACLE_CUST_ID"= "MDM_TMP_ENTITY_HIST3"."ORACLE_CUST_ID" 
+                    AND "MDM_TMP_ENTITY_HIST3"."ORACLE_CUST_ID" IS NOT NULL)
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST4"
+                    ON ("MDM_ENTITY_RAW_2"."RC_CODE"= "MDM_TMP_ENTITY_HIST4"."RC_CODE" 
+                    AND "MDM_TMP_ENTITY_HIST4"."RC_CODE" IS NOT NULL)
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST5"
+                    ON ("MDM_ENTITY_RAW_2"."ECOMM_WEB_ID" = "MDM_TMP_ENTITY_HIST5"."RC_CODE" 
+                        AND "MDM_TMP_ENTITY_HIST5"."RC_CODE" IS NOT NULL 
+                        AND "MDM_ENTITY_RAW_2"."NS_ID" = "MDM_TMP_ENTITY_HIST5"."NS_ID")
+                    OR ("MDM_ENTITY_RAW_2"."COMPANY_NAME" = "MDM_TMP_ENTITY_HIST5"."COMPANY_NAME"
+                        AND ("MDM_ENTITY_RAW_2"."NS_ID" = "MDM_TMP_ENTITY_HIST5"."NS_ID"
+                        OR "MDM_ENTITY_RAW_2"."RC_ID" = "MDM_TMP_ENTITY_HIST5"."RC_ID"
+                        OR "MDM_ENTITY_RAW_2"."FIN_ROW_NUM" = "MDM_TMP_ENTITY_HIST5"."FIN_ROW_NUM")
+                    )
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST6"
+                    ON ("MDM_ENTITY_RAW_2"."SF_ID" = "MDM_TMP_ENTITY_HIST6"."SF_ID" 
+                    AND "MDM_TMP_ENTITY_HIST6"."SF_ID" IS NOT NULL 
+                    AND "MDM_ENTITY_RAW_2"."NS_ID" = "MDM_TMP_ENTITY_HIST6"."NS_ID" 
+                    AND "MDM_ENTITY_RAW_2"."NS_ID" IS NOT NULL 
+                    AND "MDM_ENTITY_RAW_2"."RC_ID" = "MDM_TMP_ENTITY_HIST6"."RC_ID")
+
+                LEFT JOIN {{ ref_no_link('REFERENCE_OVERRIDE', 'MDM_TMP_ENTITY_HIST') }} "MDM_TMP_ENTITY_HIST7"
+                    ON ("MDM_ENTITY_RAW_2"."HS_ID" = "MDM_TMP_ENTITY_HIST7"."HS_ID"
+                    AND "MDM_TMP_ENTITY_HIST7"."HS_ID" IS NOT NULL
+                    AND "MDM_ENTITY_RAW_2"."RC_ID" IS NULL
+                    AND "MDM_ENTITY_RAW_2"."NS_ID" IS NULL
+                    AND "MDM_ENTITY_RAW_2"."RC_CODE" IS NULL
+                    AND "MDM_ENTITY_RAW_2"."ECOMM_WEB_ID" IS NULL
+                    AND "MDM_ENTITY_RAW_2"."SF_ID" IS NULL
+                    AND "MDM_ENTITY_RAW_2"."ORACLE_CUST_ID" IS NULL)
+            name: MDM_ENTITY_RAW_3
+            noLinkRefs:
+              - locationName: REFERENCE_OVERRIDE
+                nodeName: MDM_TMP_ENTITY_HIST
+      name: MDM_ENTITY_RAW_3
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5636"

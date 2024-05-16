@@ -1,0 +1,169 @@
+steps:
+  T_ITEM_VENDOR-f8f0221e-018d-4f7d-b004-28f524371109:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c3b661c-f632-4136-ab8f-f1c87cc122ed
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: ITEM_VENDOR_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db6c4cfb-b53e-47e7-856f-e6ccb4738984
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 15bf8297-24be-4cfd-b628-3d0efa47c844
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8ffe864f-f01c-48ab-8566-e204806fc174
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: ITEM_MASTER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c8eea87-4a3a-4156-8251-4b66c895dc48
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: PREFERRED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 379b9d0d-236f-4650-b90c-6a4886f7cb69
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: VENDOR_ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 07a67064-03ea-49e9-99c2-b159d4066fdc
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e2426f1-950d-44e5-bb60-f62db96b2fe2
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: VENDOR_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6a0224b2-2dd4-4a59-8ffa-f00b8e8b1da0
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f8a84093-7d2f-4de0-ab20-616ee5b0d39d
+              stepCounter: f8f0221e-018d-4f7d-b004-28f524371109
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ITEM_VENDOR') }}
+      name: T_ITEM_VENDOR
+      schema: ""
+      sqlType: Source
+      table: T_ITEM_VENDOR
+      type: sourceInput
+    stepCounter: f8f0221e-018d-4f7d-b004-28f524371109

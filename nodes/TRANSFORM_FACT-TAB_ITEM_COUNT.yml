@@ -1,0 +1,151 @@
+steps:
+  TAB_ITEM_COUNT-5631:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "623814"
+              stepCounter: "5631"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SHIP_CONFIRM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186256"
+                    stepCounter: "5452"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623843"
+              stepCounter: "5631"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: WINE_BOTTLES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUM(DECODE("PSTG_MTL_SYSTEM_ITEMS_B"."ITEM_TYPE",  'WINE', "PSTG_XWS_SHIP_CONFIRM_LINES"."SHIP_QUANTITY", 0))
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623844"
+              stepCounter: "5631"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: GSET
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUM(DECODE("PSTG_MTL_SYSTEM_ITEMS_B"."ITEM_TYPE", 'GSET', "PSTG_XWS_SHIP_CONFIRM_LINES"."SHIP_QUANTITY",0))
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623845"
+              stepCounter: "5631"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: OTHER_ITEMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUM(DECODE(REGEXP_INSTR('WINE GSET', "PSTG_MTL_SYSTEM_ITEMS_B"."ITEM_TYPE",1,1), 0, "PSTG_XWS_SHIP_CONFIRM_LINES"."SHIP_QUANTITY",0))
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "623846"
+              stepCounter: "5631"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: TOTAL_ITEMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUM("PSTG_XWS_SHIP_CONFIRM_LINES"."SHIP_QUANTITY")
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_MTL_SYSTEM_ITEMS_B: "5461"
+              PSTG_OE_ORDER_LINES_ALL: "5463"
+              PSTG_XWS_SHIP_CONFIRM_LINES: "5452"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_XWS_SHIP_CONFIRM_LINES
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_MTL_SYSTEM_ITEMS_B
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_OE_ORDER_LINES_ALL
+            join:
+              joinCondition: |
+                FROM {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_XWS_SHIP_CONFIRM_LINES') }} "PSTG_XWS_SHIP_CONFIRM_LINES"
+                    , {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_OE_ORDER_LINES_ALL') }} "PSTG_OE_ORDER_LINES_ALL"
+                    , {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_MTL_SYSTEM_ITEMS_B') }} "PSTG_MTL_SYSTEM_ITEMS_B"
+                WHERE "PSTG_OE_ORDER_LINES_ALL"."LINE_ID" = "PSTG_XWS_SHIP_CONFIRM_LINES"."ORDER_LINE_ID"
+                    AND "PSTG_MTL_SYSTEM_ITEMS_B"."INVENTORY_ITEM_ID" = "PSTG_OE_ORDER_LINES_ALL"."INVENTORY_ITEM_ID"
+                    AND "PSTG_MTL_SYSTEM_ITEMS_B"."ORGANIZATION_ID" = "PSTG_OE_ORDER_LINES_ALL"."SHIP_FROM_ORG_ID"
+                GROUP BY 1
+            name: TAB_ITEM_COUNT
+            noLinkRefs: []
+      name: TAB_ITEM_COUNT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5631"

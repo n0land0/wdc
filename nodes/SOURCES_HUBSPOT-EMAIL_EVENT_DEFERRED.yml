@@ -1,0 +1,78 @@
+steps:
+  EMAIL_EVENT_DEFERRED-1520:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_HUBSPOT
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "34870"
+              stepCounter: "1520"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "34871"
+              stepCounter: "1520"
+            config: {}
+            dataType: VARCHAR(4096)
+            defaultValue: ""
+            description: ""
+            name: RESPONSE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "34872"
+              stepCounter: "1520"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ATTEMPT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "34873"
+              stepCounter: "1520"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'EMAIL_EVENT_DEFERRED') }}
+      name: EMAIL_EVENT_DEFERRED
+      schema: ""
+      sqlType: Source
+      table: EMAIL_EVENT_DEFERRED
+      type: sourceInput
+    stepCounter: "1520"

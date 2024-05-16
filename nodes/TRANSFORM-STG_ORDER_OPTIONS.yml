@@ -1,0 +1,244 @@
+steps:
+  STG_ORDER_OPTIONS-17361b03-814e-45fd-ad7d-c688ee49b421:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2d857061-1031-4731-8a00-97d5eacf3a18
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: OPTION_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1974a447-5c96-4a46-92d0-f82d1776e39d
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 57b49a84-492d-46d8-8fcf-087577f32298
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86c72532-3d07-411f-b8eb-a9d424eef142
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: bb09bc37-60e9-4e32-adaa-deeef47a99e1
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5d8d06e-27e1-49dd-bdc2-66923a79b536
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 72b9c485-37d8-43fa-813f-058213b6c32f
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8127b47d-f50a-4eba-a83e-deaeb10ca215
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 0bf906ea-87fc-461d-a761-c07d0fc69aef
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6365a104-ac81-4be7-81ee-7aee6a83ad7d
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 61d8d5f3-2975-4d95-ad4d-ce55641a0f91
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f1bd3e95-2721-48e6-a223-bf7d7a910721
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_OPTIONS"."DELETED_AT")
+          - columnReference:
+              columnCounter: ab06d34f-7b3d-47fb-84e3-35e20179ed79
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8037753-4c70-4352-8605-45dc8e83ac7f
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: b111c4b9-3768-4042-8769-ffd9b0926ed1
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6449f86e-6cd7-4a40-89c4-a2418e7eaac9
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_OPTIONS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: 04088020-2e04-4c22-bac6-2c8249808837
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 30cb6257-fa0d-4379-8163-d25ecd8920cc
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_OPTIONS"."CREATED_AT")
+          - columnReference:
+              columnCounter: c178baa6-20e0-4afc-9853-5a7644e4508f
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f59baa98-9010-45a1-a298-4915e5a2bc9b
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 57b9859b-95f2-45c9-b4b6-19f29748d372
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8402c4a1-4f33-450c-a47b-083d6d20e2fe
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: be5aa134-fabf-43bc-ae87-4c60abb9ba26
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BC_OPTION_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79b343a0-482c-44d8-ae7e-fc4fcb067229
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 9b5a20ee-0819-4e1a-aad4-b663e185bb69
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: OPTION_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 946b9068-fcdd-4823-b683-256088fd358f
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - columnReference:
+              columnCounter: 65c80d12-e377-463e-8891-978bf82a13fe
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            dataType: NUMBER(3,0)
+            description: ""
+            hashDetails: null
+            name: BC_OPTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17792a5b-3abc-4f8b-a5f9-7b0bf4a147c1
+                    stepCounter: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72672455-cad6-47b5-b16d-eb30937e998d
+              stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "ORDER_OPTIONS"."ID" ORDER BY "ORDER_OPTIONS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDER_OPTIONS: 9a37cb3d-7bdd-4ea8-b3b0-db41c1e7315c
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: ORDER_OPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'ORDER_OPTIONS') }} "ORDER_OPTIONS"
+                WHERE "ORDER_OPTIONS"."ID" IS NOT NULL 
+                QUALIFY R_NO = 1
+            name: STG_ORDER_OPTIONS
+            noLinkRefs: []
+      name: STG_ORDER_OPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 17361b03-814e-45fd-ad7d-c688ee49b421

@@ -1,0 +1,422 @@
+steps:
+  PSTG_EVENT_RELAY_FEEDBACK-4753:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117504"
+              stepCounter: "4753"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_EVENT_RELAY_FEEDBACK_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "117505"
+              stepCounter: "4753"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110145"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117506"
+              stepCounter: "4753"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110146"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117507"
+              stepCounter: "4753"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_RELAY_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110147"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117508"
+              stepCounter: "4753"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110148"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117509"
+              stepCounter: "4753"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110149"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117510"
+              stepCounter: "4753"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110150"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117511"
+              stepCounter: "4753"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110151"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117512"
+              stepCounter: "4753"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SYSTEM_MODSTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110152"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117513"
+              stepCounter: "4753"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EVENT_RELAY_CONFIG_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110153"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117514"
+              stepCounter: "4753"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: REMOTE_RESOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110154"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117515"
+              stepCounter: "4753"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: REPLAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110155"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117516"
+              stepCounter: "4753"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NUM_EVENTS_DROPPED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110156"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117517"
+              stepCounter: "4753"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NUM_EVENTS_RELAYED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110157"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117518"
+              stepCounter: "4753"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110158"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117519"
+              stepCounter: "4753"
+            dataType: VARCHAR(3072)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ERROR_MESSAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110159"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117520"
+              stepCounter: "4753"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ERROR_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110160"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117521"
+              stepCounter: "4753"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ERROR_IDENTIFIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110161"
+                    stepCounter: "4430"
+                transform: ""
+          - columnReference:
+              columnCounter: "117522"
+              stepCounter: "4753"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110162"
+                    stepCounter: "4430"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117523"
+              stepCounter: "4753"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117524"
+              stepCounter: "4753"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "117729"
+              stepCounter: "4753"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117525"
+              stepCounter: "4753"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117526"
+              stepCounter: "4753"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117527"
+              stepCounter: "4753"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117528"
+              stepCounter: "4753"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: EVENT_RELAY_FEEDBACK
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'EVENT_RELAY_FEEDBACK') }} "EVENT_RELAY_FEEDBACK"
+            name: PSTG_EVENT_RELAY_FEEDBACK
+            noLinkRefs: []
+      name: PSTG_EVENT_RELAY_FEEDBACK
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4753"

@@ -1,0 +1,283 @@
+steps:
+  STG_TAXES-d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4b7a0e35-2511-4972-a22e-0b2d4cb6a763
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: NUMBER(8,4)
+            description: ""
+            hashDetails: null
+            name: TAX_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 827ace2d-c49b-494a-9b91-cb308a81ef59
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: ef4e64a2-75b0-4731-8b8e-def8bb4c0a79
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: NUMBER(9,4)
+            description: ""
+            hashDetails: null
+            name: TAX_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 726c2961-f71d-47f2-b4fc-180bb2a51dc9
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: d3059b11-58f3-4f6f-baad-f5728b4cac4b
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e927818a-b557-4fcd-850f-84938fb9c0c7
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TAXES"."UPDATED_AT")
+          - columnReference:
+              columnCounter: 05ec9690-9b3b-40c5-9157-d35b9502f685
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 592199ee-fb2f-4052-9059-ab741b7e5f4f
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TAXES"."DELETED_AT")
+          - columnReference:
+              columnCounter: 66a9ad5c-36d5-43fe-a6f0-7532c3d18cf5
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: faa13529-6db8-4fb4-8d5a-6b4fbd17b968
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TAXES"."CREATED_AT")
+          - columnReference:
+              columnCounter: 292b856e-e6df-4b2c-9015-d7835efa4c9d
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74abb5c8-3629-45b2-aefb-4fe27201beb9
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: eb32ec49-71f5-4f64-b114-ec0e2554cd02
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c7bba23-a10a-45f3-93bb-4e44b9ed39c2
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: caf764cf-a3cb-41fc-9ec5-699fe5c5712a
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3367188e-7ff5-4d67-8c23-a198ca1fe0e8
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: 7068256b-91d8-4475-a95d-bbfced8b116d
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TAX_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb4e1c1e-40ae-4a69-a0d5-394d76da9574
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: 0c149a4e-1067-4987-8fdc-b69ff6dea870
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 334149bd-d32c-4519-b83a-f3a9805f4776
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: a29ca64d-ec4e-4764-955e-5655b69eaf2c
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 679e4e61-c3d7-47b5-bacf-216f306219ce
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: 2f57af80-f2cc-4a7c-8910-855f8b9f3d56
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 561f1e4c-ffb8-49c1-8a4b-a8b8c65ac876
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: c1e61e68-02b6-4619-99f3-a943df95b679
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa45f155-a241-48a1-9ceb-9cf3069b995e
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: ec17fc95-7c64-45e1-8d02-4f64ee36ba2b
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 186afb08-76ac-4f67-8a30-464034ab19c6
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: 2fe25be8-68e3-436b-aea9-b2e5a7299297
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a5f7a21-5cde-4bfc-bb9d-37ef89f7da04
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: 5209ae39-13d4-4fa7-8b61-6a411ad83052
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: INCLUDED_IN_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b8e8314a-86d9-444c-b9ba-561a7339a291
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - columnReference:
+              columnCounter: b7a62743-f00c-4a68-bad6-880efab11d1b
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d9fc9ad9-a743-4368-b1d9-d2a18fc3d150
+                    stepCounter: e63357de-1ea8-4bfd-80a8-82a962673e79
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c80e51f-ff72-42d4-af8f-5dd769e072df
+              stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "TAXES"."ID" ORDER BY "TAXES"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TAXES: e63357de-1ea8-4bfd-80a8-82a962673e79
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: TAXES
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'TAXES') }} "TAXES"
+                WHERE "TAXES"."ID" IS NOT NULL 
+                QUALIFY R_NO = 1
+            name: STG_TAXES
+            noLinkRefs: []
+      name: STG_TAXES
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: d6a4dcee-38e1-4fe0-8ab3-2c9f2bbaa321

@@ -1,0 +1,293 @@
+steps:
+  TMP_ORDER_ITEMS_CWD-5567:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "370926"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BRAND_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178846"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370927"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178847"
+                    stepCounter: "5035"
+                transform: case when "ORDER_ITEMS_CWD"."DATA_SOURCE_NAME" = 'ibg' then 'IBG' ELSE "ORDER_ITEMS_CWD"."DATA_SOURCE_NAME" END
+          - columnReference:
+              columnCounter: "370928"
+              stepCounter: "5567"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: WDC_COST_OF_GOOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178848"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370929"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_IS_SUB_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178849"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370930"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178850"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370931"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178851"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370932"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178852"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370933"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178853"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370934"
+              stepCounter: "5567"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178854"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370935"
+              stepCounter: "5567"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178855"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370936"
+              stepCounter: "5567"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_NON_TAXABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178856"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370937"
+              stepCounter: "5567"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_PRICE_OVERRIDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178857"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370938"
+              stepCounter: "5567"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: ORIGINAL_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178858"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370939"
+              stepCounter: "5567"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: DEPOSIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178859"
+                    stepCounter: "5035"
+                transform: ""
+          - columnReference:
+              columnCounter: "370940"
+              stepCounter: "5567"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178860"
+                    stepCounter: "5035"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEMS_CWD"."CREATED_AT"))
+          - columnReference:
+              columnCounter: "370941"
+              stepCounter: "5567"
+            dataType: VARCHAR(3)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179856"
+                    stepCounter: "5035"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "435257"
+              stepCounter: "5567"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ORDER_ITEM_RN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "ORDER_ITEMS_CWD"."WDC_ORDER_ITEM_ID" ORDER BY "ORDER_ITEMS_CWD"."CREATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "435258"
+              stepCounter: "5567"
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN ORDER_ITEM_RN = 1 THEN 'Y' WHEN ORDER_ITEM_RN <> 1 THEN 'N' ELSE 'ERROR' END
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDER_ITEMS_CWD: "5035"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: ORDER_ITEMS_CWD
+            join:
+              joinCondition: |
+                FROM {{ ref('SOURCES_ECOMMERCE', 'ORDER_ITEMS_CWD') }} "ORDER_ITEMS_CWD"
+                QUALIFY ACTIVE_FLAG = 'Y'
+            name: TMP_ORDER_ITEMS_CWD
+            noLinkRefs: []
+      name: TMP_ORDER_ITEMS_CWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5567"

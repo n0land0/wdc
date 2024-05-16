@@ -1,0 +1,173 @@
+steps:
+  STG_ECOMM_CUSTOMER-5444:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "186069"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185985"
+                    stepCounter: "5438"
+                transform: ""
+          - columnReference:
+              columnCounter: "186070"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185986"
+                    stepCounter: "5438"
+                transform: ""
+          - columnReference:
+              columnCounter: "186075"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185991"
+                    stepCounter: "5438"
+                transform: |-
+                  CASE
+                      WHEN WEBSITE_GROUP_ID ='NULL' 
+                          THEN NULL
+                      ELSE WEBSITE_GROUP_ID
+                  END
+          - columnReference:
+              columnCounter: "186077"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            defaultValue: "1"
+            description: ""
+            hashDetails: null
+            name: IS_CURR_ECOMM_IND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185987"
+                    stepCounter: "5438"
+                transform: ""
+          - columnReference:
+              columnCounter: "186078"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185988"
+                    stepCounter: "5438"
+                transform: "'Ecommerce Customer'"
+          - columnReference:
+              columnCounter: "186079"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Ecommerce Customer'"
+          - columnReference:
+              columnCounter: "186076"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: LAST_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185992"
+                    stepCounter: "5438"
+                transform: ""
+          - columnReference:
+              columnCounter: "186071"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: DATE_ADDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185987"
+                    stepCounter: "5438"
+                transform: ""
+          - columnReference:
+              columnCounter: "186072"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185988"
+                    stepCounter: "5438"
+                transform: ""
+          - columnReference:
+              columnCounter: "186074"
+              stepCounter: "5444"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185990"
+                    stepCounter: "5438"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: ECOMM_CUSTOMER
+            join:
+              joinCondition: FROM {{ ref('CLIENT_MDM', 'ECOMM_CUSTOMER') }} "ECOMM_CUSTOMER"
+            name: STG_ECOMM_CUSTOMER
+            noLinkRefs: []
+      name: STG_ECOMM_CUSTOMER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5444"

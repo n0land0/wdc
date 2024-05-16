@@ -1,0 +1,138 @@
+steps:
+  CUSTOMER_CURRENCIES-2493:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40726"
+              stepCounter: "2493"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CURRENCY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40727"
+              stepCounter: "2493"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40728"
+              stepCounter: "2493"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEPOSIT_BALANCE_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40729"
+              stepCounter: "2493"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: OPENBALANCE_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40730"
+              stepCounter: "2493"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: UNBILLED_ORDERS_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40731"
+              stepCounter: "2493"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40732"
+              stepCounter: "2493"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40733"
+              stepCounter: "2493"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CUSTOMER_CURRENCIES') }}
+      name: CUSTOMER_CURRENCIES
+      schema: ""
+      sqlType: Source
+      table: CUSTOMER_CURRENCIES
+      type: sourceInput
+    stepCounter: "2493"

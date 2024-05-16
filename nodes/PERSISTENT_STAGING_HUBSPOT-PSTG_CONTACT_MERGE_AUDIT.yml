@@ -1,0 +1,488 @@
+steps:
+  PSTG_CONTACT_MERGE_AUDIT-1602:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36831"
+              stepCounter: "1602"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CONTACT_MERGE_AUDIT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "36832"
+              stepCounter: "1602"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CANONICAL_VID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34356"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36833"
+              stepCounter: "1602"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CONTACT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34357"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36834"
+              stepCounter: "1602"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: VID_TO_MERGE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34358"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36835"
+              stepCounter: "1602"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34359"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36836"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_TO_EMAIL_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34360"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36837"
+              stepCounter: "1602"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_TO_EMAIL_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34361"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36838"
+              stepCounter: "1602"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_TO_EMAIL_SELECTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34362"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36839"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_TO_EMAIL_SOURCE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34363"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36840"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_TO_EMAIL_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34364"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36841"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_TO_EMAIL_SOURCE_LABEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34365"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36842"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34366"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36843"
+              stepCounter: "1602"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34367"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36844"
+              stepCounter: "1602"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_SELECTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34368"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36845"
+              stepCounter: "1602"
+            dataType: VARIANT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_SOURCE_VIDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34369"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36846"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_SOURCE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34370"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36847"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34371"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36848"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MERGED_FROM_EMAIL_SOURCE_LABEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34372"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36849"
+              stepCounter: "1602"
+            dataType: VARIANT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34373"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36850"
+              stepCounter: "1602"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34374"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36851"
+              stepCounter: "1602"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NUM_PROPERTIES_MOVED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34375"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36852"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34376"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36853"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34377"
+                    stepCounter: "1507"
+                transform: ""
+          - columnReference:
+              columnCounter: "36854"
+              stepCounter: "1602"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34378"
+                    stepCounter: "1507"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36855"
+              stepCounter: "1602"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36856"
+              stepCounter: "1602"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38281"
+              stepCounter: "1602"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'   "
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36857"
+              stepCounter: "1602"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36858"
+              stepCounter: "1602"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36859"
+              stepCounter: "1602"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36860"
+              stepCounter: "1602"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: CONTACT_MERGE_AUDIT
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'CONTACT_MERGE_AUDIT') }} "CONTACT_MERGE_AUDIT"
+            name: PSTG_CONTACT_MERGE_AUDIT
+            noLinkRefs: []
+      name: PSTG_CONTACT_MERGE_AUDIT
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1602"

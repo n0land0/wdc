@@ -1,0 +1,789 @@
+steps:
+  PSTG_WD_INDIVIDUAL_INVOICE_HEADER-3659:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88011"
+              stepCounter: "3659"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_WD_INDIVIDUAL_INVOICE_HEADER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "88012"
+              stepCounter: "3659"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WD_INDIVIDUAL_INVOICE_HEADE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50525"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88013"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BILLING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50526"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88014"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CARRIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50527"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88015"
+              stepCounter: "3659"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50528"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88016"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOMER_ORDER_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50529"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88017"
+              stepCounter: "3659"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HEADER_DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50530"
+                    stepCounter: "3012"
+                transform: DATE("WD_INDIVIDUAL_INVOICE_HEADER"."DATE_CREATED")
+          - columnReference:
+              columnCounter: "88018"
+              stepCounter: "3659"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HEADER_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50531"
+                    stepCounter: "3012"
+                transform: DATE("WD_INDIVIDUAL_INVOICE_HEADER"."INVOICE_DATE")
+          - columnReference:
+              columnCounter: "88019"
+              stepCounter: "3659"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: INVOICE_TYPE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50532"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88020"
+              stepCounter: "3659"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_INACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50533"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88021"
+              stepCounter: "3659"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HEADER_LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50534"
+                    stepCounter: "3012"
+                transform: DATE("WD_INDIVIDUAL_INVOICE_HEADER"."LAST_MODIFIED_DATE")
+          - columnReference:
+              columnCounter: "88022"
+              stepCounter: "3659"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NS_INVOICE_NUMBER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50535"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88023"
+              stepCounter: "3659"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HEADER_NS_INVOICE_SUMMARY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50536"
+                    stepCounter: "3012"
+                transform: DATE("WD_INDIVIDUAL_INVOICE_HEADER"."NS_INVOICE_SUMMARY_DATE")
+          - columnReference:
+              columnCounter: "88024"
+              stepCounter: "3659"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50537"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88025"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PRICING_MODEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50538"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88026"
+              stepCounter: "3659"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HEADER_PRINT_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50539"
+                    stepCounter: "3012"
+                transform: DATE("WD_INDIVIDUAL_INVOICE_HEADER"."PRINT_INVOICE_DATE")
+          - columnReference:
+              columnCounter: "88027"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PRINT_INVOICE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50540"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88028"
+              stepCounter: "3659"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROCESSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50541"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88029"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECIPIENT_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50542"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88030"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_ADDRESS_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50543"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88031"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_ADDRESS_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50544"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88032"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50545"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88033"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50546"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88034"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50547"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88035"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50548"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88036"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SENDER_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50549"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88037"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_ADDRESS_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50550"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88038"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_ADDRESS_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50551"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88039"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50552"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88040"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50553"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88041"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50554"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88042"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50555"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88043"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_ZIP_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50556"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88044"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIPTO_ZONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50557"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88045"
+              stepCounter: "3659"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATISTICAL_JOURNAL_55_DAILY_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50558"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88046"
+              stepCounter: "3659"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATISTICAL_JOURNAL_56_DAILY_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50559"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88047"
+              stepCounter: "3659"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATISTICAL_JOURNAL_57_CLUB_Q
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50560"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88048"
+              stepCounter: "3659"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATISTICAL_JOURNAL_58_CLUB_R
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50561"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88049"
+              stepCounter: "3659"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SUBSIDIARY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50562"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88050"
+              stepCounter: "3659"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WD_INDIVIDUAL_INVOICE_HEADE_EX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50563"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88051"
+              stepCounter: "3659"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WD_ORDER_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50564"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88052"
+              stepCounter: "3659"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WEIGHT_LBS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50565"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88053"
+              stepCounter: "3659"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50566"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88054"
+              stepCounter: "3659"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50567"
+                    stepCounter: "3012"
+                transform: ""
+          - columnReference:
+              columnCounter: "88055"
+              stepCounter: "3659"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50568"
+                    stepCounter: "3012"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88056"
+              stepCounter: "3659"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88057"
+              stepCounter: "3659"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88252"
+              stepCounter: "3659"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88058"
+              stepCounter: "3659"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88059"
+              stepCounter: "3659"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88060"
+              stepCounter: "3659"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88061"
+              stepCounter: "3659"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              WD_INDIVIDUAL_INVOICE_HEADER: "3012"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: WD_INDIVIDUAL_INVOICE_HEADER
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'WD_INDIVIDUAL_INVOICE_HEADER') }} "WD_INDIVIDUAL_INVOICE_HEADER"
+            name: PSTG_WD_INDIVIDUAL_INVOICE_HEADER
+            noLinkRefs: []
+      name: PSTG_WD_INDIVIDUAL_INVOICE_HEADER
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3659"

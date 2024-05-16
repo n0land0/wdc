@@ -1,0 +1,349 @@
+steps:
+  MDM_ENTITY_RAW_2-5633:
+    operation:
+      config:
+        insertStrategy: UNION ALL
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Pulls records from entity_raw_1 and adds records from Hubspot and Saleforce on name joins where the id matching wasn't available.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "623901"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: COMPANY_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("MDM_OVERRIDE"."OVERRIDE_VALUE",COALESCE("MDM_ENTITY_RAW_1"."COMPANY_NAME", COALESCE("TMP_STG_HUBSPOT_COMPANY_CLEAN"."COMPANY_NAME", COALESCE("ECOMMERCE_WEBSITE_LIST"."WEBSITE_NAME", "MDM_SRC_SF_ID_NAME"."NAME"))))
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623902"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: NS_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623454"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623903"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: NS_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623598"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623904"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: NS_GPAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623599"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623905"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623600"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623906"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            name: RC_TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623805"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623907"
+              stepCounter: "5633"
+            dataType: VARCHAR(1020)
+            description: ""
+            name: NS_EXT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623603"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623908"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623800"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "625035"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RC_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623803"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623909"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: ORACLE_CUST_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623606"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623910"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: ECOMM_WEB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623607"
+                    stepCounter: "5629"
+                transform: upper(COALESCE("MDM_ENTITY_RAW_1"."ECOMM_WEB_ID", "ECOMMERCE_WEBSITE_LIST"."WEBSITE_ID"))
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623911"
+              stepCounter: "5633"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ECOMM_WEB_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("MDM_ENTITY_RAW_1"."ECOMM_WEB_GROUP_ID", "ECOMMERCE_WEBSITE_LIST"."WEBSITE_GROUP_ID")
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623913"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: Coalesces the value from entity_raw_1 with value pulled in by name join
+            name: SF_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("MDM_ENTITY_RAW_1"."SF_ID", "MDM_SRC_SF_ID_NAME"."ID" )
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623914"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: Coalesces the value from entity_raw_1 with value pulled in by name join
+            name: SF_PAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("MDM_ENTITY_RAW_1"."SF_PAR_ID", "MDM_SRC_SF_ID_NAME"."PARENT_ID")
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623915"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: Coalesces the value from entity_raw_1 with value pulled in by name join
+            name: SF_ACCT_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("MDM_ENTITY_RAW_1"."SF_ACCT_NUM", "MDM_SRC_SF_ID_NAME"."ACCOUNT_NUMBER")
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623916"
+              stepCounter: "5633"
+            dataType: NUMBER(18,0)
+            description: ""
+            name: FIN_ROW_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623897"
+                    stepCounter: "5629"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "623912"
+              stepCounter: "5633"
+            dataType: VARCHAR(256)
+            description: ""
+            name: HS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185081"
+                    stepCounter: "5397"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ECOMMERCE_WEBSITE_LIST: ffe61f26-5b94-40a4-9435-23552da9969e
+              MDM_ENTITY_RAW_1: "5629"
+              MDM_OVERRIDE: "5610"
+              MDM_SRC_SF_ID_NAME: "5628"
+              TMP_STG_HUBSPOT_COMPANY_CLEAN: "5397"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_ENTITY_RAW_1
+              - locationName: CLIENT_MDM
+                nodeName: MDM_SRC_SF_ID_NAME
+              - locationName: CLIENT_MDM
+                nodeName: TMP_STG_HUBSPOT_COMPANY_CLEAN
+              - locationName: REFERENCE_OVERRIDE
+                nodeName: MDM_OVERRIDE
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_ECOMMERCE_WEBSITE_LIST
+            join:
+              joinCondition: |-
+                FROM  {{ ref('CLIENT_MDM', 'MDM_ENTITY_RAW_1') }} "MDM_ENTITY_RAW_1"
+
+                FULL OUTER JOIN {{ ref('CLIENT_MDM', 'TMP_STG_HUBSPOT_COMPANY_CLEAN') }} "TMP_STG_HUBSPOT_COMPANY_CLEAN"
+                  ON "TMP_STG_HUBSPOT_COMPANY_CLEAN"."COMPANY_NAME" = "MDM_ENTITY_RAW_1"."COMPANY_NAME"
+                   AND "TMP_STG_HUBSPOT_COMPANY_CLEAN"."COMPANY_NAME" IS NOT NULL
+
+                FULL OUTER JOIN {{ ref('CLIENT_MDM', 'MDM_SRC_SF_ID_NAME') }} "MDM_SRC_SF_ID_NAME"
+                  ON ("MDM_ENTITY_RAW_1"."COMPANY_NAME" = "MDM_SRC_SF_ID_NAME"."NAME" AND "MDM_ENTITY_RAW_1"."COMPANY_NAME" IS NOT NULL)
+                  OR ("TMP_STG_HUBSPOT_COMPANY_CLEAN"."COMPANY_NAME" = "MDM_SRC_SF_ID_NAME"."NAME" AND "TMP_STG_HUBSPOT_COMPANY_CLEAN"."COMPANY_NAME" IS NOT NULL)
+
+                FULL OUTER JOIN {{ ref('TRANSFORM_DIMENSION', 'STG_ECOMMERCE_WEBSITE_LIST') }} "ECOMMERCE_WEBSITE_LIST"
+                    ON "MDM_ENTITY_RAW_1"."COMPANY_NAME" = "ECOMMERCE_WEBSITE_LIST"."WEBSITE_NAME"
+
+                LEFT JOIN {{ ref('REFERENCE_OVERRIDE', 'MDM_OVERRIDE') }} "MDM_OVERRIDE"
+                  ON (
+                    "MDM_OVERRIDE"."ORIGINAL_VALUE" = "TMP_STG_HUBSPOT_COMPANY_CLEAN"."COMPANY_NAME"
+                    OR
+                    "MDM_OVERRIDE"."ORIGINAL_VALUE" = "MDM_SRC_SF_ID_NAME"."NAME"
+                    )
+                    AND "MDM_OVERRIDE"."VALUE_TYPE" = 'Name' 
+
+                WHERE (
+                      LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%redesign%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%staging%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '% uat %'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%template%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%testing%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%test%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE 'test'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%demo%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%sandbox%' 
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE 'zz %'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE 'zz%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE 'zzz%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE 'zz -%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%training%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%vin65%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%delton%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%asfasdff%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%warehouse%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%fundrais%'
+                   AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") <> 'united parcel service')
+                   AND ((LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE 'winedirect%'
+                     AND LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME") NOT LIKE '%winedirect%')
+                     OR LOWER("MDM_ENTITY_RAW_1"."COMPANY_NAME")  LIKE '% - winedirect%'
+                       )
+                   AND ("MDM_ENTITY_RAW_1"."NS_ID" > 0 or "MDM_ENTITY_RAW_1"."NS_ID" is null)
+            name: MDM_ENTITY_RAW_2
+            noLinkRefs: []
+          - aliases:
+              MDM_ENTITY_RAW_1: "5629"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_ENTITY_RAW_1
+            join:
+              joinCondition: FROM {{ ref('CLIENT_MDM', 'MDM_ENTITY_RAW_1') }} "MDM_ENTITY_RAW_1"
+            name: RAW_1
+            noLinkRefs: []
+      name: MDM_ENTITY_RAW_2
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5633"

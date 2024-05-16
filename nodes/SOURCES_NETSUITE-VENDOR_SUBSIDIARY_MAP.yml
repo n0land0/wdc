@@ -1,0 +1,198 @@
+steps:
+  VENDOR_SUBSIDIARY_MAP-3010:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50505"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SUBSIDIARY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50506"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: VENDOR_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50507"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: BALANCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50508"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: BALANCE_BASE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50509"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CREDIT_LIMIT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50510"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: UNBILLED_ORDERS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50511"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: UNBILLED_ORDERS_BASE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50512"
+              stepCounter: "3010"
+            config: {}
+            dataType: VARCHAR(1020)
+            defaultValue: ""
+            description: ""
+            name: VENDOR_SUBSIDIARY_MAP_EXTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50513"
+              stepCounter: "3010"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: VENDOR_SUBSIDIARY_MAP_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50514"
+              stepCounter: "3010"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50515"
+              stepCounter: "3010"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50516"
+              stepCounter: "3010"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'VENDOR_SUBSIDIARY_MAP') }}
+      name: VENDOR_SUBSIDIARY_MAP
+      schema: ""
+      sqlType: Source
+      table: VENDOR_SUBSIDIARY_MAP
+      type: sourceInput
+    stepCounter: "3010"

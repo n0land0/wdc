@@ -1,0 +1,93 @@
+steps:
+  ACCOUNT_SHOW_IN_FIXED_ASSETS_MANAGEMENT_MAP-2351:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38502"
+              stepCounter: "2351"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ACCOUNT_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38503"
+              stepCounter: "2351"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: FAM_USED_ACCOUNTS_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38504"
+              stepCounter: "2351"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38505"
+              stepCounter: "2351"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38506"
+              stepCounter: "2351"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ACCOUNT_SHOW_IN_FIXED_ASSETS_MANAGEMENT_MAP') }}
+      name: ACCOUNT_SHOW_IN_FIXED_ASSETS_MANAGEMENT_MAP
+      schema: ""
+      sqlType: Source
+      table: ACCOUNT_SHOW_IN_FIXED_ASSETS_MANAGEMENT_MAP
+      type: sourceInput
+    stepCounter: "2351"

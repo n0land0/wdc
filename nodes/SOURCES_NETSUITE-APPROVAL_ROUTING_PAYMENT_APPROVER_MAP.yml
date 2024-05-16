@@ -1,0 +1,93 @@
+steps:
+  APPROVAL_ROUTING_PAYMENT_APPROVER_MAP-2377:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38805"
+              stepCounter: "2377"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: APPROVAL_ROUTING_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38806"
+              stepCounter: "2377"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38807"
+              stepCounter: "2377"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38808"
+              stepCounter: "2377"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38809"
+              stepCounter: "2377"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'APPROVAL_ROUTING_PAYMENT_APPROVER_MAP') }}
+      name: APPROVAL_ROUTING_PAYMENT_APPROVER_MAP
+      schema: ""
+      sqlType: Source
+      table: APPROVAL_ROUTING_PAYMENT_APPROVER_MAP
+      type: sourceInput
+    stepCounter: "2377"

@@ -1,0 +1,93 @@
+steps:
+  ITEM_CATEGORY_ITEMS_MAP-2675:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44044"
+              stepCounter: "2675"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ITEM_CATEGORY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44045"
+              stepCounter: "2675"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ITEM_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44046"
+              stepCounter: "2675"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44047"
+              stepCounter: "2675"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44048"
+              stepCounter: "2675"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ITEM_CATEGORY_ITEMS_MAP') }}
+      name: ITEM_CATEGORY_ITEMS_MAP
+      schema: ""
+      sqlType: Source
+      table: ITEM_CATEGORY_ITEMS_MAP
+      type: sourceInput
+    stepCounter: "2675"

@@ -1,0 +1,93 @@
+steps:
+  EMPLOYEE_CORPORATE_CARDS-2535:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41293"
+              stepCounter: "2535"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41294"
+              stepCounter: "2535"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: FORMAT_PROFILE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41295"
+              stepCounter: "2535"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41296"
+              stepCounter: "2535"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41297"
+              stepCounter: "2535"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'EMPLOYEE_CORPORATE_CARDS') }}
+      name: EMPLOYEE_CORPORATE_CARDS
+      schema: ""
+      sqlType: Source
+      table: EMPLOYEE_CORPORATE_CARDS
+      type: sourceInput
+    stepCounter: "2535"

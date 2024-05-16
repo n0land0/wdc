@@ -1,0 +1,169 @@
+steps:
+  T_OUTCOFESHIPPINGDIVERT-3a116ed0-85d0-4d48-aaf7-79401ebc7a0e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 23629f62-8f69-4d65-a06a-156b1913c99c
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: PROCESSING_STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bd48ca93-741c-47b8-a834-7dc7e8f416ce
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: VARCHAR(34)
+            defaultValue: ""
+            description: ""
+            name: TRACKING_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e2722927-c539-42d9-82e5-5763bc2653aa
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: VARCHAR(2000)
+            defaultValue: ""
+            description: ""
+            name: PROCESSING_MESSAGE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 84df4705-03c3-4d46-870c-441470c28df2
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: LANE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f8726a73-200f-4f48-bac0-41133b3a19f9
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f227bb72-bbd7-4e3a-ac5d-a2256fb995a3
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac804401-1a44-4c0e-a370-9d5246fb9261
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 98976d64-9cf7-4642-bc9c-cfe6765684be
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: PROCESSING_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6df37dc-1efb-40fe-b106-07821c06c2f6
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: INTERFACED_ON
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 20e9532b-6872-4d68-a642-d43f444decfb
+              stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: RECORD_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_OUTCOFESHIPPINGDIVERT') }}
+      name: T_OUTCOFESHIPPINGDIVERT
+      schema: ""
+      sqlType: Source
+      table: T_OUTCOFESHIPPINGDIVERT
+      type: sourceInput
+    stepCounter: 3a116ed0-85d0-4d48-aaf7-79401ebc7a0e

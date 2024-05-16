@@ -1,0 +1,93 @@
+steps:
+  NATURE_OF_TRANSACTION_DEFAULT_TRANSACTION_TYPE_MAP-2740:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44958"
+              stepCounter: "2740"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: NATURE_OF_TRANSACTION_DEFAU_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44959"
+              stepCounter: "2740"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TRANSACTION_TYPE_LIST_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44960"
+              stepCounter: "2740"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44961"
+              stepCounter: "2740"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44962"
+              stepCounter: "2740"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'NATURE_OF_TRANSACTION_DEFAULT_TRANSACTION_TYPE_MAP') }}
+      name: NATURE_OF_TRANSACTION_DEFAULT_TRANSACTION_TYPE_MAP
+      schema: ""
+      sqlType: Source
+      table: NATURE_OF_TRANSACTION_DEFAULT_TRANSACTION_TYPE_MAP
+      type: sourceInput
+    stepCounter: "2740"

@@ -1,0 +1,117 @@
+steps:
+  TMP_WEBSITE_CWD-5568:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table pulls in only wdc_website_id, ecommerce paltform, active record flag, and source system from the orders cwd table
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "370978"
+              stepCounter: "5568"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178797"
+                    stepCounter: "5032"
+                transform: DISTINCT("ORDERS_CWD"."WDC_WEBSITE_ID")
+          - columnReference:
+              columnCounter: "370980"
+              stepCounter: "5568"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179838"
+                    stepCounter: "5032"
+                transform: "'Classic'"
+          - columnReference:
+              columnCounter: "370982"
+              stepCounter: "5568"
+            dataType: VARCHAR(5)
+            description: ""
+            hashDetails: null
+            name: ACTIVE_RECORD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179905"
+                    stepCounter: "5032"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371007"
+              stepCounter: "5568"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ECOMMERCE'"
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "624914"
+              stepCounter: "5568"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178775"
+                    stepCounter: "5032"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDERS_CWD: "5032"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: ORDERS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE', 'ORDERS_CWD') }} "ORDERS_CWD"
+                WHERE "ORDERS_CWD"."ACTIVE_RECORD" = 'Y'
+                AND SUBSTR("ORDERS_CWD"."WDC_DATE_MODIFIED",1,4) <> '1900'
+            name: TMP_WEBSITE_CWD
+            noLinkRefs: []
+      name: TMP_WEBSITE_CWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5568"

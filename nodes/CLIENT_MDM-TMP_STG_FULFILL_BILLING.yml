@@ -1,0 +1,192 @@
+steps:
+  TMP_STG_FULFILL_BILLING-5595:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "434177"
+              stepCounter: "5595"
+            dataType: VARCHAR(360)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185151"
+                    stepCounter: "5399"
+                transform: COALESCE ("MDM_OVERRIDE"."OVERRIDE_VALUE", "PSTG_ERP_AR_INVOICES_TO_NS"."CUSTOMER_NAME")
+          - columnReference:
+              columnCounter: "434203"
+              stepCounter: "5595"
+            dataType: VARCHAR(50)
+            description: ""
+            name: BILLING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185142"
+                    stepCounter: "5399"
+                transform: ""
+          - columnReference:
+              columnCounter: "434145"
+              stepCounter: "5595"
+            dataType: VARCHAR(50)
+            description: ""
+            hashDetails: null
+            name: INVOICE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185119"
+                    stepCounter: "5399"
+                transform: ""
+          - columnReference:
+              columnCounter: "434193"
+              stepCounter: "5595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUBSTRING("PSTG_ERP_AR_INVOICES_TO_NS"."INVOICE_DATE", 1, 7)
+          - columnReference:
+              columnCounter: "625237"
+              stepCounter: "5595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185167"
+                    stepCounter: "5399"
+                transform: ""
+          - columnReference:
+              columnCounter: "434157"
+              stepCounter: "5595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185131"
+                    stepCounter: "5399"
+                transform: ""
+          - columnReference:
+              columnCounter: "434169"
+              stepCounter: "5595"
+            dataType: VARCHAR(360)
+            description: ""
+            hashDetails: null
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185143"
+                    stepCounter: "5399"
+                transform: ""
+          - columnReference:
+              columnCounter: "434207"
+              stepCounter: "5595"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: INVOICE_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: COUNT(*)
+          - columnReference:
+              columnCounter: "434183"
+              stepCounter: "5595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SUM_INVOICE_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SUM("PSTG_ERP_AR_INVOICES_TO_NS"."INVOICE_AMOUNT")
+          - columnReference:
+              columnCounter: "434205"
+              stepCounter: "5595"
+            dataType: VARCHAR(20)
+            description: ""
+            name: MAX_INVOICE_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SUBSTRING(MAX("PSTG_ERP_AR_INVOICES_TO_NS"."INVOICE_DATE"), 1,7)
+          - columnReference:
+              columnCounter: "434206"
+              stepCounter: "5595"
+            dataType: VARCHAR(20)
+            description: ""
+            name: LOAD_YR_MO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: SUBSTRING(CURRENT_DATE(), 1,7)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_ERP_AR_INVOICES_TO_NS
+              - locationName: REFERENCE_OVERRIDE
+                nodeName: MDM_OVERRIDE
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_ERP_AR_INVOICES_TO_NS') }} "PSTG_ERP_AR_INVOICES_TO_NS"
+
+                LEFT JOIN {{ ref('REFERENCE_OVERRIDE', 'MDM_OVERRIDE') }} "MDM_OVERRIDE"
+                    ON "MDM_OVERRIDE"."ORIGINAL_VALUE" = "PSTG_ERP_AR_INVOICES_TO_NS"."CUSTOMER_NAME"
+                    AND "MDM_OVERRIDE"."VALUE_TYPE" = 'Name'
+
+                GROUP BY 
+                    "CUSTOMER_NAME",
+                    "BILLING_CODE",
+                    "INVOICE_TYPE",
+                    "INVOICE_DATE",
+                    "CUSTOMER_ID",
+                    "DESCRIPTION",
+                    "MDM_OVERRIDE"."OVERRIDE_VALUE"
+
+                ORDER BY 
+                    "CUSTOMER_NAME",
+                    "INVOICE_DATE",
+                    "INVOICE_TYPE"
+            name: TMP_STG_FULFILL_BILLING
+            noLinkRefs: []
+      name: TMP_STG_FULFILL_BILLING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5595"

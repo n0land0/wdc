@@ -1,0 +1,527 @@
+steps:
+  STG_DIM_ADDRESS_UNION-5096:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180345"
+              stepCounter: "5096"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88012"
+                    stepCounter: "3659"
+                transform: CAST("PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."WD_INDIVIDUAL_INVOICE_HEADE_ID" AS VARCHAR)
+              - columnReferences:
+                  - columnCounter: "54672"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88012"
+                    stepCounter: "3659"
+                transform: CAST("PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."WD_INDIVIDUAL_INVOICE_HEADE_ID" AS VARCHAR)
+              - columnReferences:
+                  - columnCounter: "57056"
+                    stepCounter: "3308"
+                transform: CAST("PSTG_COMPANIES"."COMPANY_ID" as VARCHAR)
+              - columnReferences:
+                  - columnCounter: "179741"
+                    stepCounter: "5077"
+                transform: CAST("STG_DIM_BILLING_INFOS_UNION"."ORDER_ID" AS VARCHAR)
+              - columnReferences:
+                  - columnCounter: a7e22054-a89c-4acc-b33b-f5d16acb4342
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: CAST("STG_DISTINCT_DIM_SHIPPING_INFOS_UNION"."ORDER_ID" AS VARCHAR)
+              - columnReferences:
+                  - columnCounter: "85371"
+                    stepCounter: "3563"
+                transform: CAST("PSTG_LOCATIONS"."LOCATION_ID" AS VARCHAR)
+              - columnReferences:
+                  - columnCounter: "117642"
+                    stepCounter: "4758"
+                transform: CAST("PSTG_ACCOUNT"."ACCOUNT_NUMBER" AS VARCHAR)
+          - columnReference:
+              columnCounter: "180370"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: ADDRESS_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88037"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "54693"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88030"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "180398"
+                    stepCounter: "3308"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179746"
+                    stepCounter: "5077"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: d773c3df-76a1-448e-b09b-05f0842d1408
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85374"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "117624"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180371"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: ADDRESS_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88038"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "54694"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88031"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "180399"
+                    stepCounter: "3308"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179747"
+                    stepCounter: "5077"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 25e1cd99-8801-4d18-ab39-bccdbc6d1ae3
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85376"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "180372"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88039"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "54695"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88032"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "180400"
+                    stepCounter: "3308"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179737"
+                    stepCounter: "5077"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 0d88a4d9-1c53-4355-b965-b5dca1b1828e
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85379"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "117625"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180375"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: STATE_PROVINCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88042"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "54696"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88036"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "180402"
+                    stepCounter: "3308"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179748"
+                    stepCounter: "5077"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: fe24f877-aefc-479a-a9f5-17eb1ed9b460
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85399"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "117626"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180362"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88029"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "54698"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88034"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "57071"
+                    stepCounter: "3308"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179738"
+                    stepCounter: "5077"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 6b7e1322-24ed-423c-8785-964c38b4ea8d
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85380"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "117628"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180376"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88043"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "54697"
+                    stepCounter: "3204"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "88035"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "180403"
+                    stepCounter: "3308"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179752"
+                    stepCounter: "5077"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 83cd8ce5-a242-454d-b1ae-9f42e8c9fca0
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85402"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "117627"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "180377"
+              stepCounter: "5096"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: POSTAL_ZONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88044"
+                    stepCounter: "3659"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180396"
+              stepCounter: "5096"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ADDRESS_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'SHIPPING'"
+              - columnReferences: []
+                transform: "'BILLING'"
+              - columnReferences: []
+                transform: "'SENDER'"
+              - columnReferences: []
+                transform: "'Vendor'"
+              - columnReferences: []
+                transform: "'Billing'"
+              - columnReferences: []
+                transform: "'Shipping'"
+              - columnReferences: []
+                transform: "'Warehouse'"
+              - columnReferences: []
+                transform: "'Billing'"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180397"
+              stepCounter: "5096"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'NETSUITE'"
+              - columnReferences: []
+                transform: "'RECURLY'"
+              - columnReferences:
+                  - columnCounter: "88252"
+                    stepCounter: "3659"
+                transform: "'NETSUITE'"
+              - columnReferences:
+                  - columnCounter: "58435"
+                    stepCounter: "3308"
+                transform: "'Netsuite'"
+              - columnReferences: []
+                transform: "'eCommerce'"
+              - columnReferences:
+                  - columnCounter: 429a1206-bb68-43b5-b18d-05c69983a1d1
+                    stepCounter: 04de639f-996e-4d21-9f4e-8cfe9811d678
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "85884"
+                    stepCounter: "3563"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "117718"
+                    stepCounter: "4758"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_WD_INDIVIDUAL_INVOICE_HEADER: "3659"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_WD_INDIVIDUAL_INVOICE_HEADER
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_WD_INDIVIDUAL_INVOICE_HEADER') }} "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"
+                WHERE "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: FULFILLMENT_SHIPPING
+            noLinkRefs: []
+          - aliases:
+              PSTG_ACCOUNT_HISTORY: "3204"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_ACCOUNT_HISTORY
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_ACCOUNT_HISTORY') }} "PSTG_ACCOUNT_HISTORY"
+                WHERE "PSTG_ACCOUNT_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: RECURLY BILLING
+            noLinkRefs: []
+          - aliases:
+              PSTG_WD_INDIVIDUAL_INVOICE_HEADER: "3659"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_WD_INDIVIDUAL_INVOICE_HEADER
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_WD_INDIVIDUAL_INVOICE_HEADER') }} "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"
+                WHERE "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: FULFILLMENT SENDER
+            noLinkRefs: []
+          - aliases:
+              PSTG_COMPANIES: "3308"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_COMPANIES
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_COMPANIES') }} "PSTG_COMPANIES"
+                WHERE "PSTG_COMPANIES"."COMPANY_TYPE" = 'Vendor'
+                AND "PSTG_COMPANIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: VENDOR
+            noLinkRefs: []
+          - aliases:
+              STG_DIM_BILLING_INFOS_UNION: "5077"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_BILLING_INFOS_UNION
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_BILLING_INFOS_UNION') }} "STG_DIM_BILLING_INFOS_UNION"
+            name: eCommerce Consumer Billing
+            noLinkRefs: []
+          - aliases:
+              STG_DISTINCT_DIM_SHIPPING_INFOS_UNION: 04de639f-996e-4d21-9f4e-8cfe9811d678
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DISTINCT_DIM_SHIPPING_INFOS_UNION
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DISTINCT_DIM_SHIPPING_INFOS_UNION') }} "STG_DISTINCT_DIM_SHIPPING_INFOS_UNION"
+            name: ECOMMERCE SHIPPING
+            noLinkRefs: []
+          - aliases:
+              PSTG_LOCATIONS: "3563"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_LOCATIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_LOCATIONS') }} "PSTG_LOCATIONS"
+                WHERE "PSTG_LOCATIONS"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: Warehouse
+            noLinkRefs: []
+          - aliases:
+              PSTG_ACCOUNT: "4758"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_SALESFORCE
+                nodeName: PSTG_ACCOUNT
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_SALESFORCE', 'PSTG_ACCOUNT') }} "PSTG_ACCOUNT"
+                WHERE "PSTG_ACCOUNT"."ACCOUNT_NUMBER" IS NOT NULL
+                AND "PSTG_ACCOUNT"."SYSTEM_CURRENT_FLAG" = 'Y'
+                AND "PSTG_ACCOUNT"."BILLING_STREET" IS NOT NULL
+                AND "PSTG_ACCOUNT"."IS_DELETED" <> TRUE
+            name: Salesforce Billing
+            noLinkRefs: []
+      name: STG_DIM_ADDRESS_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5096"

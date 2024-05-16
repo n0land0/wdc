@@ -1,0 +1,63 @@
+steps:
+  FIVETRAN_FORMULA_MODEL-4443:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_SALESFORCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "110330"
+              stepCounter: "4443"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: OBJECT
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "110331"
+              stepCounter: "4443"
+            config: {}
+            dataType: VARCHAR(16384)
+            defaultValue: ""
+            description: ""
+            name: MODEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "110332"
+              stepCounter: "4443"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'FIVETRAN_FORMULA_MODEL') }}
+      name: FIVETRAN_FORMULA_MODEL
+      schema: ""
+      sqlType: Source
+      table: FIVETRAN_FORMULA_MODEL
+      type: sourceInput
+    stepCounter: "4443"

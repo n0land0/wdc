@@ -1,0 +1,93 @@
+steps:
+  NAVIGATION_SHORTCUT_GROUP_ROLE_MAP-2744:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45002"
+              stepCounter: "2744"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: NAVIGATION_SHORTCUT_GROUP_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45003"
+              stepCounter: "2744"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ROLE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45004"
+              stepCounter: "2744"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45005"
+              stepCounter: "2744"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45006"
+              stepCounter: "2744"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'NAVIGATION_SHORTCUT_GROUP_ROLE_MAP') }}
+      name: NAVIGATION_SHORTCUT_GROUP_ROLE_MAP
+      schema: ""
+      sqlType: Source
+      table: NAVIGATION_SHORTCUT_GROUP_ROLE_MAP
+      type: sourceInput
+    stepCounter: "2744"

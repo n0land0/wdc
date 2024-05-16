@@ -1,0 +1,4255 @@
+steps:
+  PSTG_COMPANY-1595:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "35938"
+              stepCounter: "1595"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_COMPANY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "35939"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33512"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35940"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PORTAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33513"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35941"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33514"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35942"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33515"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35943"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33516"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 11032fa4-33b4-4a0d-beae-1860abaf4a6c
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_ESM_MANAGED_ACCOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ce17343-7e3d-4e01-b7f9-58e59dff0011
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 273a0480-802e-41fc-89d4-b402b9ce077c
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_ANWD_MIGRATION_WILLINGNESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4965c0e3-240c-42e6-be7e-9f0da24ea256
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 735fc880-6771-47bc-b5b3-298349a7ccd0
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_ANWD_MIGRATION_READINESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9f5648b-58a8-445f-a5eb-2a8d7b4756bb
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 1b39aeeb-3bb3-4c2d-b232-275a52d213d2
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_CLIENT_SATISFACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c13e01ef-27dc-4ea5-8a56-c2aab002dde8
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: b923a053-e83d-42ec-ac76-7020cef287c9
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_ANWD_TARGET_LAUNCH_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01edc775-924d-4bfb-8d42-e00b154dff7e
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 2cdfafd5-d412-4697-8523-51528848b7fd
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_ESM_INTERACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db006e31-fbfb-4d5d-b241-4259d937dfde
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: d81a6af9-9bb7-44d8-a8c8-1ae44a40e53d
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_IS_ANWD_MIGRATION_TOP_TEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59c987f5-9048-4e7a-82a5-f604e3f0e311
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: f2e1a270-f7cf-44a6-b514-da4faea4b66d
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_NECESSARY_FEATURES_FUNCTIONALITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b02bc57-e746-4b34-a4c6-0730eb6759cc
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: b7cac49f-0505-436d-9dc2-9bd12c9ff646
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_INTEGRATIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6e424de-f4b9-4319-9546-a581b7fcae8e
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 487fe149-6a71-4155-a391-8ee22f494c04
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_DATE_LAST_VISITED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef0ff102-b0a4-405d-a2fa-b3acba882171
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: eb9139b5-a6d0-45f0-bde2-6dd2a2c69671
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_FULFILLMENT_HOUSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f34ee601-030a-4803-bc25-93fa17582574
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 63319b4e-6fb5-45ee-8d11-d69abf05d218
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_TYPE_OF_LOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a56851b4-7a74-4ba9-b0d8-6248b8f40f94
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: c5f7cad0-dbc4-4a07-88de-7dc555179213
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_FEATURES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc0a0621-bf8c-4d2c-91ed-2078e29842c3
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: cc275c79-43d3-4434-bda2-5193c452d12c
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6590ef9a-3309-4597-9f80-eb8bb20a173d
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35944"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ECOMMERCE_PROVIDER_NEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33517"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35945"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_FIRST_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33518"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35946"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_OPPORTUNITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33519"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35947"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LAST_VISIT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33520"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35948"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LASTMODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33521"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35949"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FOUNDED_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33522"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: acffafde-c5f8-45d6-9368-94f35c02c26f
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_PRIORITIZATION_REQUESTED_FOR_ANWD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f1a8b05b-494d-4de1-aa84-388f155634f6
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: d4a3b302-46cc-4a78-a10d-403527c3ab4b
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_STORE_IS_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9b29fd6-6c63-4e3d-8bc3-8177a5b79b2d
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 1efaade2-948e-4d35-a221-8b1d0451806f
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_ENGAGED_WITH_PROJECT_MANAGER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce891849-437c-4679-bc38-a23cc98a8110
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 0ccf0478-b728-47fa-af4b-0166bbf14ab6
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_UNRESPONSIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 327cca58-7756-4fde-852a-0bcfefc25d6c
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: da683363-5071-4de2-8c55-855a05843d5c
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_REQUESTED_PRIORITIZATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fada14d6-1ac8-4140-851f-691b3e37d480
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 291b2443-dc7a-4381-8b81-ec6e8e433dcb
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_WAVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 92bf6bf3-cb5f-46ae-a9b6-9a5599e4c8d9
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 71174813-ac20-44d0-87b6-dc5f5f546a71
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_DUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74350227-e621-4db9-92ac-eaed51ce02cd
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 5b4dc74a-942e-42b8-9020-3693c2bdf686
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_INCENTIVE_ELIGIBILITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 56f566e7-d7da-44f1-8e10-896da6be0982
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 5f2c786f-2ee8-4670-80f5-3378f143a673
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2aa65efa-7377-4256-ba87-392fa83f978e
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: dbb3aeb9-6c13-40c4-9401-690ad6b2b75d
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_PRODUCTS_USED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f6f02d8-5eff-4304-8b2b-11aecd57e412
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 5128f55e-6836-461d-afe5-0c77a2f6f529
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_ANNUAL_GMV
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35d70c99-79a4-4879-9aa8-6249c06871d9
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: b0982761-3f08-4324-a63e-b75a8d31499b
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 285c5995-eb1d-4678-9e3b-fe252ce285ee
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 9798b512-8bb4-4a44-91d9-175875d172d4
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09b05f0d-883f-406b-b652-af7ed4cbd8a6
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 6b923794-c35e-4269-9e6b-78c6fe1f1030
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_NETSUITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b02c327-9c5b-4242-ba75-0b6481a2619b
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: dbacd71b-e47e-497a-b0a6-38cb4a7a3490
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_ENTERPRISE_TIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e757ce45-0324-4f9e-a44f-164f76ab8074
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 76d0e095-fffa-40c1-a378-1c493e7b1e7e
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fdd37b2a-d469-4862-a3d2-b05c746f28f9
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: b55a1fb3-dd2b-4bc7-a31f-a1973c957872
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_CLASSIC_WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 784bcb26-74f3-4b3a-a4e0-cdcf945959f7
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: a2d08b81-ef85-400e-944a-e3225fdfa492
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_GMV_SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8c64a77-8807-4f62-a47d-da88daa6eecd
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: c2e31bfb-b4b5-4a43-aeaf-5b71318e16f6
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_SALES_CHANNEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4913b32-5c83-49c1-88cd-ade066c413b3
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: ea14290c-9e80-40dc-8c26-5eb067e5a571
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_STATE_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccd9a7c4-ebd7-45ad-bd96-280d4faa77a7
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 394bc5ae-9bdc-43a0-ae5c-733992cf30d7
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6cb0805-a187-4869-9453-8f1ae530652d
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: b5d1750f-2b57-4384-afea-c19cd910dbf2
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_IMPORT_TAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25dff0a2-81da-4650-ab04-e1c169f72997
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 65e9a914-014c-4c8b-b50c-d54fd2991b53
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_INTERCOM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4be74afc-0ebe-44dd-b077-d5964fcbd7c2
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 2940d1bc-6044-4ead-9af1-e87f1a377fe7
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_BILLING_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c272db5c-bc60-4f20-b98d-0818b19193ed
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: dfb36513-d6ed-4e5e-b8f2-40e5d0048704
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_NETSUITE_PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6cb245c6-e6e3-4ce4-b9b1-ff8427027181
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 4d26184b-f756-4ea2-9df4-42201142c7a4
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TIME_IN_118904675
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e395c3f-d8b9-4904-af47-2b34c52cdf53
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 23db5349-fd0a-49fd-a090-222a20fe416f
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_DATE_ENTERED_118904675
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8dcbda2-6085-469c-b6e6-7c7100df6ecf
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 6ce4738c-ac84-4f48-9c58-a5b9665d392c
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_TARGET_LAUNCH_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9ebd6b73-5ea5-4102-9eea-234f0761dd17
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: b54a70f8-e6a1-4fc5-a55a-6c5c4c1a3e7e
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_DATE_EXITED_118904675
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 521377ed-6178-44a9-a802-0c4957a8d81b
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35950"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LAST_SALES_ACTIVITY_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33523"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35951"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_FIRST_VISIT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33524"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35952"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LAST_SALES_ACTIVITY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33525"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35953"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LATEST_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33526"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35954"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ADDITIONAL_SERVICES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33527"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35955"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LAST_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33528"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35956"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LATEST_SOURCE_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33529"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35957"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_SOURCE_DATA_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33530"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35958"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_NUM_PAGE_VIEWS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33531"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35959"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_SOURCE_DATA_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33532"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35960"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FULFILLMENT_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33533"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35961"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FULFILLMENT_PROVIDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33534"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35962"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_CONVERSION_EVENT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33535"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35963"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_NUM_VISITS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33536"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35964"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33537"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35965"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_OPPORTUNITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33538"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35966"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_DEAL_CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33539"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35967"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LAST_TOUCH_CONVERTING_CAMPAIGN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33540"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35968"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LATEST_SOURCE_DATA_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33541"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35969"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_LATEST_SOURCE_DATA_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33542"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35970"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CLIENT_PHASE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33543"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35971"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ANALYTICS_FIRST_TOUCH_CONVERTING_CAMPAIGN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33544"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35972"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_CONVERSION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33545"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35973"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DTC_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33546"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35974"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_SUBSCRIBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33547"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35975"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33548"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35976"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LAST_BOOKED_MEETING_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33549"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35977"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LAST_LOGGED_CALL_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33550"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35978"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_OTHER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33551"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35979"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ACCOUNT_COORDINATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33552"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35980"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ADMIN_PANEL_REVENUE_2018
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33553"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35981"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ECOMMERCE_EXTERNAL_ID_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33554"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35982"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ACCOUNT_MANAGER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33555"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35983"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_EXECUTIVE_SPONSORSHIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33556"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35984"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_DATE_CANCELLED_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33557"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35985"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_SUBSCRIBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33558"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35986"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_LEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33559"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35987"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LAST_OPEN_TASK_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33560"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35988"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ADDITIONAL_DOMAINS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33561"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35989"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_CONVERSION_DATE_TIMESTAMP_EARLIEST_VALUE_61_F_58_F_2_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33562"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35990"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_CONVERSION_EVENT_NAME_TIMESTAMP_EARLIEST_VALUE_68_DDAE_0_A
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33563"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35991"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_CONTACT_CREATEDATE_TIMESTAMP_EARLIEST_VALUE_78_B_50_EEA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33564"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35992"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LAST_SALES_ACTIVITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33565"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35993"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ASSIGNED_CS_MEMBER_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33566"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35994"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CUSTOMER_ID_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33567"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35995"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_MARKETINGQUALIFIEDLEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33568"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35996"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_SALESQUALIFIEDLEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33569"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35997"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_MARKETINGQUALIFIEDLEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33570"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35998"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_SALESQUALIFIEDLEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33571"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "35999"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_AVATAR_FILEMANAGER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33572"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36000"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_LEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33573"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36001"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FACEBOOKFANS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33574"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36002"
+              stepCounter: "1595"
+            dataType: VARCHAR(2048)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CLIENT_GOALS_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33575"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36003"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HOW_IS_CLIENT_GETTING_DATA_INTO_WD_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33576"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36004"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HIGH_TOUCH_CUSTOMER_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33577"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36005"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_COMPANY_NAME_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33578"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36006"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ERP_ACCOUNTING_SOFTWARE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33579"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36007"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_EXITED_EVANGELIST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33580"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36008"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_DATE_ENTERED_EVANGELIST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33581"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36009"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_CREATED_BY_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33582"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36010"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DESIGN_OPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33583"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36011"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NUM_CONVERSION_EVENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33584"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36012"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_NUM_DECISION_MAKERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33585"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36013"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_NUM_OPEN_DEALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33586"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36014"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NUM_ASSOCIATED_DEALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33587"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36015"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_VIN_65_PLAN_NEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33588"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36016"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NUM_ASSOCIATED_CONTACTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33589"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36017"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_RECENT_DEAL_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33590"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36018"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WINE_REGION_TEST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33591"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36019"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_NUM_BLOCKERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33592"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36020"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TOTAL_REVENUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33593"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36021"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NAMED_ACCOUNT_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33594"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36022"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_NUM_CONTACTS_WITH_BUYING_ROLES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33595"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36023"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HUBSPOT_OWNER_ASSIGNEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33596"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36024"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_RECENT_CONVERSION_EVENT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33597"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36025"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33598"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36026"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_RECENT_DEAL_CLOSE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33599"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36027"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TOTAL_DEAL_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33600"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36028"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_RECENT_CONVERSION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33601"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36029"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TARGET_ACCOUNT_PROBABILITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33602"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36030"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_OBJECT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33603"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36031"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_OPPORTUNITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33604"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36032"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_IS_PUBLIC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33605"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36033"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TIMEZONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33606"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36034"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_MARKETPLACE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33607"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36035"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WINE_CLUB
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33608"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36036"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PRODUCTION_RANGE_NEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33609"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36037"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ENTITYID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33610"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36038"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PRODUCTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33611"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36039"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_PREDICTIVECONTACTSCORE_V_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33612"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36040"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_SUBSCRIBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33613"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36041"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PREVIOUS_ECOMMERCE_PROVIDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33614"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36042"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_OTHER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33615"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36043"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TOTAL_MONEY_RAISED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33616"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36044"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WAREHOUSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33617"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36045"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ONBOARDING_HOURS_IN_PROJECT_ASSIGNED_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33618"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36046"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PAYMENT_GATEWAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33619"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36047"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PRICETEMPLATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33620"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36048"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_USER_IDS_OF_ALL_OWNERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33621"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36049"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_MERGED_OBJECT_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33622"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36050"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_UPDATED_BY_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33623"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36051"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_RECENT_CONVERSION_DATE_TIMESTAMP_LATEST_VALUE_72856_DA_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33624"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36052"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PRICING_MIGRATION_INITIATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33625"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36053"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_RECENT_CONVERSION_EVENT_NAME_TIMESTAMP_LATEST_VALUE_66_C_820_BF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33626"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36054"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_USER_IDS_OF_ALL_NOTIFICATION_UNFOLLOWERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33627"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36055"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_PINNED_ENGAGEMENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33628"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36056"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_PIPELINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33629"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36057"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_LAUNCH_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33630"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36058"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SUBSCRIPTIONS_TESTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33631"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36059"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ONBOARDING_PROJECT_MANAGER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33632"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36060"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WINE_CLUB_SIZE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33633"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36061"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_LEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33634"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36062"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_TRANSACTION_FEE_EFFECTIVE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33635"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36063"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_MARKETPLACE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33636"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36064"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_MERCHANTID_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33637"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36065"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_LAUNCH_DATE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33638"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36066"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PROJECT_MANAGER_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33639"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36067"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TRADESHOW_ROADSHOW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33640"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36068"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_SALESQUALIFIEDLEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33641"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36069"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_MARKETINGQUALIFIEDLEAD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33642"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36070"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PC_JOB_TITLE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33643"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36071"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_VIN_65_ACCOUNT_MANAGER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33644"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36072"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WEBSITE_TEMPLATE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33645"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36073"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WHICH_CERTIFIED_WEB_DESIGNER_ARE_YOU_USING_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33646"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36074"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WD_SALES_REP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33647"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36075"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WEBSITE_ELEMENTS_HOSTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33648"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36076"
+              stepCounter: "1595"
+            dataType: VARCHAR(2048)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_LET_S_GIVE_THE_ONBOARDING_TEAM_A_HEADS_UP_ON_ANY_OTHER_DETAILS_NOT_COVERED_ALREADY_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33649"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36077"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SC_JOB_TITLE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33650"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36078"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_OTHER_INTEGRATIONS_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33651"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36079"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_OC_JOB_TITLE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33652"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36080"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ONBOARDING_HOURS_IN_PROGRESS_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33653"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36081"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PREVIOUS_ECOMMERCE_PROVIDER_OTHER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33654"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36082"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PREVIOUS_PROVIDER_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33655"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36083"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_USER_IDS_OF_ALL_NOTIFICATION_FOLLOWERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33656"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36084"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_TIME_IN_EVANGELIST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33657"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36085"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WEB_DESIGNER_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33658"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36086"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NUM_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33659"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36087"
+              stepCounter: "1595"
+            dataType: VARCHAR(2048)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33660"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36088"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HUBSPOT_TEAM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33661"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36089"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_INDUSTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33662"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36090"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_FULFILLMENT_EXPIRY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33663"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36091"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33664"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36092"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ALL_ACCESSIBLE_TEAM_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33665"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36093"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ZIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33666"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36094"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FULFILLMENT_CLIENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33667"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36095"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33668"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36096"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DAYS_TO_CLOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33669"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36097"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33670"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36098"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NOTES_LAST_UPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33671"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36099"
+              stepCounter: "1595"
+            dataType: VARCHAR(2048)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_LINKEDINBIO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33672"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36100"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CLOSEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33673"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36101"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33674"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36102"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NOTES_NEXT_ACTIVITY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33675"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36103"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ANNUALREVENUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33676"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36104"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33677"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36105"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DOMAIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33678"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36106"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ECOMMERCE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33679"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36107"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NOTES_LAST_CONTACTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33680"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36108"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SALESFORCEACCOUNTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33681"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36109"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WEBSITE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33682"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36110"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WEB_TECHNOLOGIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33683"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36111"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_LIFECYCLESTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33684"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36112"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SALESFORCELASTSYNCTIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33685"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36113"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33686"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36114"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_SALES_EMAIL_LAST_REPLIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33687"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36115"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NUM_CONTACTED_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33688"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36116"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CREATEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33689"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36117"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_LINKEDIN_COMPANY_PAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33690"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36118"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_FULFILLMENT_EXPIRY_NOTIFICATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33691"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36119"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ALL_TEAM_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33692"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36120"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HUBSPOT_OWNER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33693"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36121"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ADDRESS_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33694"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36122"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_ALL_OWNER_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33695"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36123"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FIRST_CONTACT_CREATEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33696"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36124"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NUMBEROFEMPLOYEES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33697"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36125"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33698"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36126"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_AVG_BOTTLE_PRICE_RANGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33699"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36127"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_COUNTY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33700"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36128"
+              stepCounter: "1595"
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FACEBOOK_COMPANY_PAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33701"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36129"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_VARIETALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33702"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36130"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TWITTERHANDLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33703"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36131"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TASTING_ROOM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33704"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36132"
+              stepCounter: "1595"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_BRANDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33705"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36133"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LATEST_MEETING_ACTIVITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33706"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36134"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DTC_TOTAL_REVENUE_2018
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33707"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36135"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_NUM_CHILD_COMPANIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33708"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36136"
+              stepCounter: "1595"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ECOMMERCE_PROVIDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33709"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36137"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WEBSITE_REVENUE_2018
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33710"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36138"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_NOT_USING_INVENTORY_TOOLS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33711"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36139"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_AVG_BOTTLE_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33712"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36140"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SUPPORT_PLAN_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33713"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36141"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_COMPANY_PLAN_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33714"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36142"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_PARENT_COMPANY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33715"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36143"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33716"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36144"
+              stepCounter: "1595"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: PROPERTY_CONTRACT_FSA_ANNIVERSARY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33717"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36145"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PURCHASERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33718"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36146"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PARENT_COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33719"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36147"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ECOMMERCE_MRR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33720"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36148"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SUBSCRIBERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33721"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36149"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_LICENSED_TO_SHIP_TO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33722"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36150"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TOTAL_ORDERS_TTM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33723"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36151"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TOTAL_REVENUE_TTM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33724"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36152"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WINEDIRECT_IMPORT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33725"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36153"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TOTAL_BOTTLES_TTM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33726"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36154"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ENTERPRISE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33727"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36155"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_FULFILLMENT_REFERENCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33728"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36156"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_BI_COASTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33729"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36157"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CLIENT_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33730"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36158"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_WINE_CLUB_REVENUE_2018
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33731"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36159"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_POS_REVENUE_2018
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33732"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36160"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_CERTIFIED_DESIGNER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33733"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36161"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_VENDOR_SERVICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33734"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36162"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_VENDOR_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33735"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36163"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_SALESFORCEDELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33736"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36164"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_AFFECTED_BY_CLUB_ORDER_CONFIRMATION_MISHAP_10_18
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33737"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36165"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_OTHER_FULFILLMENT_PROVIDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33738"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36166"
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_DESK_COM_EXTERNAL_ID_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33739"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36167"
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_TWITTERFOLLOWERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33740"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36168"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ECOMMERNCE_EXTERNAL_ID_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33741"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36169"
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_ACTIVE_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33742"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36170"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_BUSINESS_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33743"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36171"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_VIN_65_PLAN_OLD_FOR_UPGRADES_
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33744"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36172"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_PARTNER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33745"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36173"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_HS_LEAD_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33746"
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: "36174"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROPERTY_INSTAGRAM_HANDLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33747"
+                    stepCounter: "1500"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36175"
+              stepCounter: "1595"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36176"
+              stepCounter: "1595"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38270"
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'   "
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36177"
+              stepCounter: "1595"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36178"
+              stepCounter: "1595"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36179"
+              stepCounter: "1595"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "36180"
+              stepCounter: "1595"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: edaa6e5c-0dfe-4bc0-9724-35872a9e3907
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_LABEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19f7a097-1f28-454f-bce3-b38265e53cc7
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: dec16a9c-e386-42f2-90fb-0ba53f5d4f92
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_DBA_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5a7f003-6ca7-482c-a63a-1b17ccb16dd2
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 81a2e79e-f4d5-48e8-8231-d15460a91081
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_ANWD_STORE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efe259b6-c600-41d5-a1a1-6a518beceb30
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 3fc27660-0b8a-4b59-86f8-ea93fba4bc53
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_ESM_ASSIGNED_FOR_MIGRATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 914f7c1d-c885-4b17-b421-f4c54e5e5bb9
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 19dcd2ca-8181-4fd0-a4f8-7d9c15af7190
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_WEBSITE_CONTENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb91cffc-6cfc-4cf7-8fe3-d1bfa65a3e09
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: bfc6c29a-2937-4fed-b59c-cc72778c3c53
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_DATA_TO_BE_TRANSFERRED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 67873325-99f4-48c6-8562-604f4b4ff40c
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: fd6a0b35-a3bb-4bb4-a21a-c1312f5d943a
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_COMMENTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 872bf489-4a86-4d06-bcc7-c1223a4738c7
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 916a2eac-2791-4c88-8730-508482436aa3
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_DELTA_IMPORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: acd6292b-61ef-434d-b39a-6190378a29d5
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 5319c2a3-f53a-4db1-a023-b61581c01d4c
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_IS_PARENT_COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0796442a-0d58-4ee6-8b29-ad3f205d5d05
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 86fbd02a-8c05-4122-b8ff-1ccd8d70c834
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ANNUAL_REVENUE_CURRENCY_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b82536a-074b-4fee-8e03-e0d9cd9a2c5e
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: a0a61f6d-7117-4ada-addf-29831dd22675
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_REQUIRED_FEATURES_TO_UPGRADE_TO_ANWD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9806fa44-8c91-4bca-b677-427e0386c5df
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 6089ee3e-2b04-4f1c-b3c4-b0f14359e614
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_WAS_IMPORTED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5c045908-3cb6-464d-8139-aa8e471f2a9f
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 7df41a17-b7e0-4c17-b7c1-46dd10f2654a
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98aa3024-9a2e-4393-96c0-c4debeb0f2ba
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: cf5636ba-6280-4b4d-9eab-699cbfaac509
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83e87abd-6425-4dbf-9877-889547007705
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: a4df2585-ec74-45ba-9dbd-a30e8bb80b4d
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4cb3d599-52dd-40e7-a091-d0a8832efe8f
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: a2c6afcc-b6a9-4d44-b763-d42b9015f096
+              stepCounter: "1595"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab71e0cb-bcf3-42ad-97c3-7fd542bea282
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: cd741a24-709f-43a1-80e6-8f60cb558d8d
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_DETAIL_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d8c04113-67f2-42e7-af4c-5ed2043f7354
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 58ab103a-0341-4e22-978e-b9c1ab9f0fd3
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_NOTES_NEXT_ACTIVITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f85ef18f-4952-4a08-9f16-07bd81ffaaa8
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 84ab79ed-407f-4ff7-a896-c87922143ccb
+              stepCounter: "1595"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_ALL_ASSIGNED_BUSINESS_UNIT_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 233b467e-b621-498e-a3b8-f240404d7397
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 0a05cc37-0b23-4e09-b5d6-0ebda8d0de01
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_MIGRATION_SCRIPT_NEEDS_CLUB_MEMBERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9c8a4a1d-6f63-4848-a8d2-9cf3079b135b
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 22320e8e-5bc8-45f6-a9ab-1ee04cc2103c
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_MIGRATION_SCRIPT_NEEDS_NON_CLUB_CONTACTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5fbd919a-971c-40ad-94f2-63bd03be95dd
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 240e4c39-dbe8-4179-ad81-a4dfbca61d8b
+              stepCounter: "1595"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_MIGRATION_SCRIPT_NEEDS_ORDERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c1b3cd51-9315-498a-b169-2f74b14f1084
+                    stepCounter: "1500"
+                transform: ""
+          - columnReference:
+              columnCounter: 076249c2-6acb-43a4-a340-2975fd43a485
+              stepCounter: "1595"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_ANWD_UPGRADE_COHORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab5c0b8f-b1c3-4c56-9a37-529ff9b03e4a
+                    stepCounter: "1500"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: COMPANY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'COMPANY') }} "COMPANY"
+            name: PSTG_COMPANY
+            noLinkRefs: []
+      name: PSTG_COMPANY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1595"

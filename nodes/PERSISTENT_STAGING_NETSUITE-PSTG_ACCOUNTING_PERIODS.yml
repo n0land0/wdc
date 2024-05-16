@@ -1,0 +1,544 @@
+steps:
+  PSTG_ACCOUNTING_PERIODS-3027:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50812"
+              stepCounter: "3027"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ACCOUNTING_PERIODS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "50813"
+              stepCounter: "3027"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ACCOUNTING_PERIOD_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38442"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50814"
+              stepCounter: "3027"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIVETRAN_INDEX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38443"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50815"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38444"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50816"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSED_ACCOUNTS_PAYABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38445"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50817"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSED_ACCOUNTS_RECEIVABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38446"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50818"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSED_ALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38447"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50819"
+              stepCounter: "3027"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSED_ON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38448"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50820"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSED_PAYROLL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38449"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50821"
+              stepCounter: "3027"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38450"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50822"
+              stepCounter: "3027"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ENDING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38451"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50823"
+              stepCounter: "3027"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FISCAL_CALENDAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38452"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50824"
+              stepCounter: "3027"
+            dataType: VARCHAR(2388)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FULL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38453"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50825"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ISINACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38454"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50826"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_ADJUSTMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38455"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50827"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCKED_ACCOUNTS_PAYABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38456"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50828"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCKED_ACCOUNTS_RECEIVABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38457"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50829"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCKED_ALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38458"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50830"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCKED_PAYROLL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38459"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50831"
+              stepCounter: "3027"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38460"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50832"
+              stepCounter: "3027"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38461"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50833"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: QUARTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38462"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50834"
+              stepCounter: "3027"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STARTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38463"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50835"
+              stepCounter: "3027"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: YEAR_0
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38464"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50836"
+              stepCounter: "3027"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: YEAR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38465"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50837"
+              stepCounter: "3027"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38466"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50838"
+              stepCounter: "3027"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38467"
+                    stepCounter: "2349"
+                transform: ""
+          - columnReference:
+              columnCounter: "50839"
+              stepCounter: "3027"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "38468"
+                    stepCounter: "2349"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50840"
+              stepCounter: "3027"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50841"
+              stepCounter: "3027"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "54639"
+              stepCounter: "3027"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'NETSUITE'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50842"
+              stepCounter: "3027"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50843"
+              stepCounter: "3027"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50844"
+              stepCounter: "3027"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50845"
+              stepCounter: "3027"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: ACCOUNTING_PERIODS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ACCOUNTING_PERIODS') }} "ACCOUNTING_PERIODS"
+            name: PSTG_ACCOUNTING_PERIODS
+            noLinkRefs: []
+      name: PSTG_ACCOUNTING_PERIODS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3027"

@@ -1,0 +1,592 @@
+steps:
+  TMP_INVOICE_HISTORY-5578:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Recurly has a PK combination that includes the updated_at column. Due to this PK combination, every time a record is updated coalesce will see it as a branch new record and not a modified record. In order to have the records persisted correctly, a row_number() function is used to group records by ID and then choose the most up-to-date record to pass to the persisted layer.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "371194"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33224"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371195"
+              stepCounter: "5578"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33225"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371196"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33226"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371197"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: PREVIOUS_INVOICE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33227"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371198"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33228"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371199"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ORIGIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33229"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371200"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33230"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371201"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33231"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371202"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: COLLECTION_METHOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33232"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371203"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: PO_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33233"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371204"
+              stepCounter: "5578"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: NET_TERMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33234"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371205"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33235"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371206"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33236"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371207"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33237"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371208"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33238"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371209"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33239"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371210"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33240"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371211"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33241"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371212"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33242"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371213"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33243"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371214"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: INVOICE_NAME_ON_ACCOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33244"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371215"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33245"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371216"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: BALANCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33246"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371217"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: PAID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33247"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371218"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33248"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371219"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33249"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371220"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: REFUNDABLE_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33250"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371221"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: DISCOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33251"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371222"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33252"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371223"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: TAX_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33253"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371224"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: TAX_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33254"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371225"
+              stepCounter: "5578"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: TAX_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33255"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371226"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: VAT_REVERSE_CHARGE_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33256"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371227"
+              stepCounter: "5578"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: TERMS_AND_CONDITIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33257"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371228"
+              stepCounter: "5578"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33258"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371229"
+              stepCounter: "5578"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33259"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371230"
+              stepCounter: "5578"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: DUE_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33260"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371231"
+              stepCounter: "5578"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: CLOSED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33261"
+                    stepCounter: "1485"
+                transform: ""
+          - columnReference:
+              columnCounter: "371232"
+              stepCounter: "5578"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33262"
+                    stepCounter: "1485"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371233"
+              stepCounter: "5578"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: INVOICE_HISTORY_ROW_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "INVOICE_HISTORY"."ID" ORDER BY "INVOICE_HISTORY"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371522"
+              stepCounter: "5578"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "INVOICE_HISTORY_ROW_NUMBER" = 1 THEN 'Y' WHEN "INVOICE_HISTORY_ROW_NUMBER" <> 1 THEN 'N' ELSE 'ERROR' END
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              INVOICE_HISTORY: "1485"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_RECURLY
+                nodeName: INVOICE_HISTORY
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_RECURLY', 'INVOICE_HISTORY') }} "INVOICE_HISTORY"
+                QUALIFY "ACTIVE_FLAG" = 'Y'
+            name: TMP_INVOICE_HISTORY
+            noLinkRefs: []
+      name: TMP_INVOICE_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5578"

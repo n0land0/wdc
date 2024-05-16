@@ -1,0 +1,184 @@
+steps:
+  T_ORDER_COMMENT-e7ab3fff-6db3-4d42-9428-2c2a03e552da:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5aca48de-1650-4389-ad1b-fcd1d7bcddf6
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: ORDER_COMMENT_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7daa6426-4ba7-4df7-b48e-e827a4ea233d
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: VARCHAR(280)
+            defaultValue: ""
+            description: ""
+            name: COMMENT_TEXT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b6fb44f8-ba55-4394-a639-2355d97f1db5
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: ORDER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b00aac91-c46c-4148-bb7b-1fb9e710c2f1
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: COMMENT_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ff320b83-dd7b-4630-82a6-50d2e60131c9
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 83138538-45dc-45de-b8eb-15c1d1c11aea
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: SEQUENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b58391e-c60b-4ad8-85b2-bf7d9d5536bc
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ORDER_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2112bf2e-7bb7-4c64-8bf6-208914734aec
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: HEADER_FOOTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe00727c-8082-426a-aab0-8fba6f20f5c7
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d3952331-f272-4f84-9de7-f2872b26e6d9
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: daf9a32d-62be-40c5-acf1-79486f2efc38
+              stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: COMMENT_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ORDER_COMMENT') }}
+      name: T_ORDER_COMMENT
+      schema: ""
+      sqlType: Source
+      table: T_ORDER_COMMENT
+      type: sourceInput
+    stepCounter: e7ab3fff-6db3-4d42-9428-2c2a03e552da

@@ -1,0 +1,139 @@
+steps:
+  T_CONTAINER_HISTORY-2781aef5-ee7d-46bb-b9c3-7d657a18f36d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f25ee7c7-065f-43e6-a1f8-524d4be10a97
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b29b5267-23bb-45b9-aab8-53122ea586d3
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: VARCHAR(500)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97e2e71d-9e09-4c3c-babd-56155dd66ff3
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: TRACKING_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8290175c-cebd-4df6-b914-4ea2c97d28cb
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: VARCHAR(34)
+            defaultValue: ""
+            description: ""
+            name: CONTAINER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7876d32-550b-49a3-a2b8-9bbd1dfb759f
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 77f0cb32-e0e2-4ac8-8768-784c3cc734a8
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b13bd9ed-62f2-440c-924c-afaf6ce8a90f
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: TIME_RECORDED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 49e92bc6-e44b-44d4-8354-9b7d3e8e5016
+              stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: ROW_ID
+            nullable: true
+            primaryKey: true
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_CONTAINER_HISTORY') }}
+      name: T_CONTAINER_HISTORY
+      schema: ""
+      sqlType: Source
+      table: T_CONTAINER_HISTORY
+      type: sourceInput
+    stepCounter: 2781aef5-ee7d-46bb-b9c3-7d657a18f36d

@@ -1,0 +1,341 @@
+steps:
+  T_FACT_ECOMMERCE_BILLING-5576:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: The grain of this fact table is taken at the line item level for ecommerce billing. One record represents one line item on an invoice
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "371150"
+              stepCounter: "5576"
+            dataType: NUMBER
+            description: ""
+            name: ECOMMERCE_BILLING_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117732"
+                    stepCounter: "4759"
+                transform: ""
+          - columnReference:
+              columnCounter: "434404"
+              stepCounter: "5576"
+            dataType: NUMBER
+            description: ""
+            name: WEBSITE_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371685"
+                    stepCounter: "5593"
+                transform: ""
+          - columnReference:
+              columnCounter: "371111"
+              stepCounter: "5576"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99316"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371112"
+              stepCounter: "5576"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99318"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371113"
+              stepCounter: "5576"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: UNIT_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99319"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371114"
+              stepCounter: "5576"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99320"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371115"
+              stepCounter: "5576"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: DISCOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99321"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371116"
+              stepCounter: "5576"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99322"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371117"
+              stepCounter: "5576"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: REFUND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99330"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371118"
+              stepCounter: "5576"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: REFUNDED_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99331"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371121"
+              stepCounter: "5576"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "99343"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371123"
+              stepCounter: "5576"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: UUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "118660"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371124"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: LINE_ITEM_UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371049"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371125"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: LINE_ITEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371050"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371126"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: LINE_ITEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371051"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371127"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: LINE_ITEM_CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371052"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371146"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            name: INVOICE_UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371524"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371147"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            name: INVOICE_CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371525"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371148"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            name: INVOICE_DUE_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371526"
+                    stepCounter: "4032"
+                transform: ""
+          - columnReference:
+              columnCounter: "371149"
+              stepCounter: "5576"
+            dataType: DATE
+            description: ""
+            name: INVOICE_CLOSED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371527"
+                    stepCounter: "4032"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371128"
+              stepCounter: "5576"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371129"
+              stepCounter: "5576"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_T_FACT_ECOM_BILLING: "4032"
+              T_DIM_ECOMMERCE_BILLING: "4759"
+              T_DIM_ECOMMERCE_WEBSITE_XREF: "5593"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_FACT
+                nodeName: STG_T_FACT_ECOM_BILLING
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_BILLING
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_WEBSITE_XREF
+            join:
+              joinCondition: |-
+                FROM {{ ref('TRANSFORM_FACT', 'STG_T_FACT_ECOM_BILLING') }} "STG_T_FACT_ECOM_BILLING"
+                left JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_ECOMMERCE_BILLING') }} "T_DIM_ECOMMERCE_BILLING"
+                ON "STG_T_FACT_ECOM_BILLING"."UUID" = "T_DIM_ECOMMERCE_BILLING"."UUID"
+                 AND "T_DIM_ECOMMERCE_BILLING"."SYSTEM_CURRENT_FLAG" = 'Y'
+                left JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_ECOMMERCE_WEBSITE_XREF') }} "T_DIM_ECOMMERCE_WEBSITE_XREF"
+                ON UPPER("T_DIM_ECOMMERCE_WEBSITE_XREF"."WEBSITE_ID") = UPPER("STG_T_FACT_ECOM_BILLING"."WEBSITE_ID") 
+                and "T_DIM_ECOMMERCE_WEBSITE_XREF"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: T_FACT_ECOMMERCE_BILLING
+            noLinkRefs: []
+      name: T_FACT_ECOMMERCE_BILLING
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: "5576"

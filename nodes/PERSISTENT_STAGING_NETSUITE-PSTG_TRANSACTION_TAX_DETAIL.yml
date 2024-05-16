@@ -1,0 +1,367 @@
+steps:
+  PSTG_TRANSACTION_TAX_DETAIL-3636:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_NETSUITE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87440"
+              stepCounter: "3636"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_TRANSACTION_TAX_DETAIL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "87441"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: TAX_ITEM_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50115"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87442"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: TRANSACTION_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50116"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87443"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: TRANSACTION_LINE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50117"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87444"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50118"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87445"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50119"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87446"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT_FOREIGN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50120"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87447"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT_NET
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50121"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87448"
+              stepCounter: "3636"
+            dataType: VARCHAR(262136)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CALCULATION_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50122"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87449"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TAX_BASIS_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50123"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87450"
+              stepCounter: "3636"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TAX_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50124"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87451"
+              stepCounter: "3636"
+            dataType: VARCHAR(20)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TAX_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50125"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87452"
+              stepCounter: "3636"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50126"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87453"
+              stepCounter: "3636"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50127"
+                    stepCounter: "2989"
+                transform: ""
+          - columnReference:
+              columnCounter: "87454"
+              stepCounter: "3636"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "50128"
+                    stepCounter: "2989"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87455"
+              stepCounter: "3636"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87456"
+              stepCounter: "3636"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - appliedColumnTests: {}
+            columnReference:
+              columnCounter: "88286"
+              stepCounter: "3636"
+            config: {}
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87457"
+              stepCounter: "3636"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87458"
+              stepCounter: "3636"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87459"
+              stepCounter: "3636"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "87460"
+              stepCounter: "3636"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_NETSUITE
+                nodeName: TRANSACTION_TAX_DETAIL
+            join:
+              joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'TRANSACTION_TAX_DETAIL') }} "TRANSACTION_TAX_DETAIL"
+            name: PSTG_TRANSACTION_TAX_DETAIL
+            noLinkRefs: []
+      name: PSTG_TRANSACTION_TAX_DETAIL
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3636"

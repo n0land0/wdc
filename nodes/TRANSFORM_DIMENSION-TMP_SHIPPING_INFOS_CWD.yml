@@ -1,0 +1,341 @@
+steps:
+  TMP_SHIPPING_INFOS_CWD-5072:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "179604"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: VARIANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179446"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179605"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179447"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179606"
+              stepCounter: "5072"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: TOTAL_ITEMS_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179448"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179607"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179449"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179608"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179450"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179609"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179451"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179610"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179452"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179611"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179453"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179612"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179454"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179613"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ZIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179455"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179614"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SUBDIVISION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179456"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179615"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179457"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179616"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179458"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179617"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179459"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179618"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179460"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179619"
+              stepCounter: "5072"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: FUTURE_SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179461"
+                    stepCounter: "5065"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "SHIPPING_INFOS_CWD"."FUTURE_SHIP_DATE"))
+          - columnReference:
+              columnCounter: "179620"
+              stepCounter: "5072"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179462"
+                    stepCounter: "5065"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "SHIPPING_INFOS_CWD"."CREATED_AT"))
+          - columnReference:
+              columnCounter: "179621"
+              stepCounter: "5072"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179463"
+                    stepCounter: "5065"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "SHIPPING_INFOS_CWD"."UPDATED_AT"))
+          - columnReference:
+              columnCounter: "179622"
+              stepCounter: "5072"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179464"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179623"
+              stepCounter: "5072"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179465"
+                    stepCounter: "5065"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "SHIPPING_INFOS_CWD"."DELETED_AT"))
+          - columnReference:
+              columnCounter: "179624"
+              stepCounter: "5072"
+            dataType: NUMBER(18,0)
+            description: ""
+            hashDetails: null
+            name: CURRENT_SHIPPING_RECORD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179599"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179625"
+              stepCounter: "5072"
+            dataType: VARCHAR(5)
+            description: ""
+            hashDetails: null
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179600"
+                    stepCounter: "5065"
+                transform: ""
+          - columnReference:
+              columnCounter: "179864"
+              stepCounter: "5072"
+            dataType: VARCHAR(3)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179860"
+                    stepCounter: "5065"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              SHIPPING_INFOS_CWD: "5065"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: SHIPPING_INFOS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE', 'SHIPPING_INFOS_CWD') }} "SHIPPING_INFOS_CWD"
+                WHERE "SHIPPING_INFOS_CWD"."ACTIVE_FLAG" = 'Y'
+            name: TMP_SHIPPING_INFOS_CWD
+            noLinkRefs: []
+      name: TMP_SHIPPING_INFOS_CWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5072"

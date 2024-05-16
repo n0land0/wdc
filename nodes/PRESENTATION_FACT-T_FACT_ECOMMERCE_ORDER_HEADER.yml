@@ -1,0 +1,326 @@
+steps:
+  T_FACT_ECOMMERCE_ORDER_HEADER-5095:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |-
+        This is the fact table for the eCommerce Sales and Orders report.
+
+        This fact table is taken at an order-level grain. One row represents one transaction.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180340"
+              stepCounter: "5095"
+            dataType: NUMBER
+            description: ""
+            name: ORDERS_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180036"
+                    stepCounter: "5087"
+                transform: ""
+          - columnReference:
+              columnCounter: "180341"
+              stepCounter: "5095"
+            dataType: NUMBER
+            description: ""
+            name: CONSUMER_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180147"
+                    stepCounter: "5090"
+                transform: ""
+          - columnReference:
+              columnCounter: "371698"
+              stepCounter: "5095"
+            dataType: NUMBER
+            description: ""
+            name: WEBSITE_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371685"
+                    stepCounter: "5593"
+                transform: ""
+          - columnReference:
+              columnCounter: "180327"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_EXCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624983"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180328"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_INCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624984"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180329"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_EXCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624985"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180330"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_INCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624986"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180331"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_EXCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624987"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180332"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_INCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624988"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180333"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: TOTAL_INCLUDING_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624989"
+                    stepCounter: "5661"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624960"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: TIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625008"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180334"
+              stepCounter: "5095"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624982"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180336"
+              stepCounter: "5095"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: BILLING_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624990"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "180337"
+              stepCounter: "5095"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: TOTAL_ITEMS_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624991"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "624881"
+              stepCounter: "5095"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAYMENT_CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624996"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "371702"
+              stepCounter: "5095"
+            dataType: DATE
+            description: ""
+            name: ORDER_DATE_COMPLETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624993"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "371703"
+              stepCounter: "5095"
+            dataType: DATE
+            description: ""
+            name: ORIGINAL_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624994"
+                    stepCounter: "5661"
+                transform: ""
+          - columnReference:
+              columnCounter: "371704"
+              stepCounter: "5095"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORDER_DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624995"
+                    stepCounter: "5661"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180338"
+              stepCounter: "5095"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180339"
+              stepCounter: "5095"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_FACT_ECOMMERCE_HEADER: "5661"
+              T_DIM_ECOMMERCE_CONSUMER: "5090"
+              T_DIM_ECOMMERCE_ORDERS: "5087"
+              T_DIM_ECOMMERCE_WEBSITE_XREF: "5593"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_CONSUMER
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_ORDERS
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_WEBSITE_XREF
+              - locationName: TRANSFORM_FACT
+                nodeName: STG_FACT_ECOMMERCE_HEADER
+            join:
+              joinCondition: |-
+                FROM {{ ref('TRANSFORM_FACT', 'STG_FACT_ECOMMERCE_HEADER') }} "STG_FACT_ECOMMERCE_HEADER"
+                LEFT JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_ECOMMERCE_ORDERS') }} "T_DIM_ECOMMERCE_ORDERS"
+                    ON "T_DIM_ECOMMERCE_ORDERS"."ORDER_ID" = "STG_FACT_ECOMMERCE_HEADER"."ORDER_ID"
+                    AND "T_DIM_ECOMMERCE_ORDERS"."SYSTEM_CURRENT_FLAG" = 'Y'
+                LEFT JOIN {{ ref('PRESENTATION_DIMENSION',  'T_DIM_ECOMMERCE_CONSUMER') }} "T_DIM_ECOMMERCE_CONSUMER"
+                    ON "T_DIM_ECOMMERCE_CONSUMER"."ORDER_ID" = "STG_FACT_ECOMMERCE_HEADER"."ORDER_ID"
+                        AND "T_DIM_ECOMMERCE_CONSUMER"."SYSTEM_CURRENT_FLAG" = 'Y'
+                LEFT JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_ECOMMERCE_WEBSITE_XREF') }} "T_DIM_ECOMMERCE_WEBSITE_XREF"
+                    ON UPPER("STG_FACT_ECOMMERCE_HEADER"."WEBSITE_ID") = UPPER("T_DIM_ECOMMERCE_WEBSITE_XREF"."WEBSITE_ID")
+                    AND "T_DIM_ECOMMERCE_WEBSITE_XREF"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: T_FACT_ECOMMERCE_ORDER_HEADER
+            noLinkRefs: []
+      name: T_FACT_ECOMMERCE_ORDER_HEADER
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: "5095"

@@ -1,0 +1,422 @@
+steps:
+  T_DIM_MDM_ENTITY-5676:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "625389"
+              stepCounter: "5676"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625018"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625390"
+              stepCounter: "5676"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625029"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625391"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ENTERPRISE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624864"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625395"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARTNER_ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624878"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625396"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WEB_ORDER_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624883"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625397"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FULFILL_INVOICE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624884"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625398"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ECOMMERCE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624885"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625399"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FULFILLMENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624886"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625400"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MARKETPLACE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624887"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625401"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TEST_ACCT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624888"
+                    stepCounter: "5658"
+                transform: ""
+          - columnReference:
+              columnCounter: "625402"
+              stepCounter: "5676"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLIENT_ELIGIBLE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624889"
+                    stepCounter: "5658"
+                transform: |-
+                  CASE
+                      WHEN "TMP_ENTITY_DIMS_1"."TEST_ACCT_FLAG" ='Y'
+                          THEN 'N'
+                      WHEN "TMP_ENTITY_DIMS_1"."PARTNER_ENTITY_TYPE" NOT LIKE 'Client%'
+                          THEN 'N'
+                      WHEN LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%vine%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%cellar%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%wine%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%marketplace%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%orchard%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%brewing%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%distill%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '% meadery%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%estate%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%vins%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%vino%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%vintner%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     =    'fat bastard'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%reserve%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%grape%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%cider%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%parent%'
+                              OR LOWER("TMP_ENTITY_DIMS_1"."COMPANY_NAME")     LIKE '%spirits%'
+                          THEN 'Y'
+                      WHEN "TMP_ENTITY_DIMS_1"."NS_ID" IS NOT NULL AND "TMP_ENTITY_DIMS_1"."NS_EXT_ID" LIKE '%-%-%-%-%'
+                          THEN 'Y'
+                      WHEN "TMP_ENTITY_DIMS_1"."NS_PAR_ID" IS NOT NULL
+                          THEN 'Y' 
+                      WHEN "TMP_ENTITY_DIMS_1"."WEB_ORDER_FLAG" = 'Y' OR "TMP_ENTITY_DIMS_1"."FULFILL_INVOICE_FLAG" = 'Y'
+                          THEN 'Y'
+                      WHEN "TMP_ENTITY_DIMS_1"."ECOMMERCE_FLAG" = 'Y' OR "TMP_ENTITY_DIMS_1"."FULFILLMENT_FLAG" = 'Y' OR "TMP_ENTITY_DIMS_1"."MARKETPLACE_FLAG" = 'Y'
+                          THEN 'Y'  
+                      WHEN "TMP_ENTITY_DIMS_1"."CLIENT_ELIGIBLE_FLAG" IS NOT NULL 
+                          THEN "TMP_ENTITY_DIMS_1"."CLIENT_ELIGIBLE_FLAG"
+                      ELSE 'Y' 
+                  END
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625442"
+              stepCounter: "5676"
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            isChangeTracking: true
+            keyColumnType: None
+            name: ACTIVE_WEBSITE_ORDER_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "CASE WHEN \"MDM_DIM_WEBSITE_IDS_W_ORDERS\".\"WEBSITE_ID\" IS NOT NULL AND DATEDIFF(DAYS, \"MDM_DIM_WEBSITE_IDS_W_ORDERS\".\"MAX_ORDER_DATE\", CURRENT_DATE()) <= 90 THEN 'Y' ELSE 'N' END "
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625443"
+              stepCounter: "5676"
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            isChangeTracking: true
+            keyColumnType: None
+            name: ACTIVE_FULFILLMENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE 
+                      WHEN "MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID" IS NOT NULL AND DATEDIFF(DAYS, "MDM_DIM_FULFILL_CLIENTS"."MAX_INVOICE_DATE", CURRENT_DATE()) <= 90 
+                          THEN 'Y' 
+                      ELSE 'N' 
+                  END 
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "625490"
+              stepCounter: "5676"
+            dataType: VARCHAR(256)
+            description: ""
+            name: MAX_FF_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625236"
+                    stepCounter: "5612"
+                transform: SUBSTRING("MDM_DIM_FULFILL_CLIENTS"."MAX_INVOICE_DATE", 1,10)
+          - columnReference:
+              columnCounter: "625491"
+              stepCounter: "5676"
+            dataType: VARCHAR(256)
+            description: ""
+            name: MAX_WEB_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625246"
+                    stepCounter: "5669"
+                transform: SUBSTRING("MDM_DIM_WEBSITE_IDS_W_ORDERS"."MAX_ORDER_DATE", 1,10)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625409"
+              stepCounter: "5676"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625410"
+              stepCounter: "5676"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625411"
+              stepCounter: "5676"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625412"
+              stepCounter: "5676"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625413"
+              stepCounter: "5676"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625414"
+              stepCounter: "5676"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              MDM_DIM_FULFILL_CLIENTS: "5612"
+              MDM_DIM_WEBSITE_IDS_W_ORDERS: "5669"
+              TMP_ENTITY_DIMS_1: "5658"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: MDM_DIM_FULFILL_CLIENTS
+              - locationName: CLIENT_MDM
+                nodeName: TMP_ENTITY_DIMS_1
+              - locationName: CLIENT_MDM
+                nodeName: MDM_DIM_WEBSITE_IDS_W_ORDERS
+            join:
+              joinCondition: |
+                FROM {{ ref('CLIENT_MDM', 'TMP_ENTITY_DIMS_1') }} "TMP_ENTITY_DIMS_1"
+
+                    LEFT JOIN {{ ref('CLIENT_MDM', 'MDM_DIM_FULFILL_CLIENTS') }} "MDM_DIM_FULFILL_CLIENTS"
+                        ON "TMP_ENTITY_DIMS_1"."ORACLE_CUST_ID" = "MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_ID"
+                        AND "TMP_ENTITY_DIMS_1"."COMPANY_NAME" = "MDM_DIM_FULFILL_CLIENTS"."CUSTOMER_NAME"
+
+                LEFT JOIN {{ ref('CLIENT_MDM', 'MDM_DIM_WEBSITE_IDS_W_ORDERS') }} "MDM_DIM_WEBSITE_IDS_W_ORDERS"
+                    ON (
+                        "TMP_ENTITY_DIMS_1"."ECOMM_WEB_ID" = "MDM_DIM_WEBSITE_IDS_W_ORDERS"."WEBSITE_ID"
+                        OR
+                        "TMP_ENTITY_DIMS_1"."RC_TENANT_ID" = "MDM_DIM_WEBSITE_IDS_W_ORDERS"."WEBSITE_ID"
+                        )
+            name: T_DIM_MDM_ENTITY
+            noLinkRefs: []
+      name: T_DIM_MDM_ENTITY
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: "5676"

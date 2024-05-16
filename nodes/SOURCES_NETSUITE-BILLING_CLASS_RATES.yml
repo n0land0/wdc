@@ -1,0 +1,123 @@
+steps:
+  BILLING_CLASS_RATES-2408:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39232"
+              stepCounter: "2408"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: BILLING_CLASS_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39233"
+              stepCounter: "2408"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: BILLING_RATE_CARD_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39234"
+              stepCounter: "2408"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CURRENCY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39235"
+              stepCounter: "2408"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: UNIT_PRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39236"
+              stepCounter: "2408"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39237"
+              stepCounter: "2408"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39238"
+              stepCounter: "2408"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'BILLING_CLASS_RATES') }}
+      name: BILLING_CLASS_RATES
+      schema: ""
+      sqlType: Source
+      table: BILLING_CLASS_RATES
+      type: sourceInput
+    stepCounter: "2408"

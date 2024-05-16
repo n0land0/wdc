@@ -1,0 +1,347 @@
+steps:
+  TMP_FACT_ECOMMERCE_HEADER-5094:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |+
+        This table is where all tables needed to create the fact table are joined together. The tables used for the join are ORDERS_UNION, PAYMENTS UNION, BILLING INFO UNION, AND SHIPPING INFO UNION.
+
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180307"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179822"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180296"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179811"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180297"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179812"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180298"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179813"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180299"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179814"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180300"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179815"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180301"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179816"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180302"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: TOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179817"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "180325"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: BILLING_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179736"
+                    stepCounter: "5077"
+                transform: ""
+          - columnReference:
+              columnCounter: "180326"
+              stepCounter: "5094"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: TOTAL_ITEMS_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179937"
+                    stepCounter: "5074"
+                transform: ""
+          - columnReference:
+              columnCounter: "371469"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179829"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "371699"
+              stepCounter: "5094"
+            dataType: DATE
+            description: ""
+            name: ORDER_DATE_COMPLETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179810"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "371700"
+              stepCounter: "5094"
+            dataType: DATE
+            description: ""
+            name: ORDER_ORIGINAL_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179819"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "371701"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORDER_DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179820"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624879"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAYMENT_CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179697"
+                    stepCounter: "5075"
+                transform: ""
+          - columnReference:
+              columnCounter: "624944"
+              stepCounter: "5094"
+            dataType: BOOLEAN
+            description: ""
+            name: BYPASS_FULFILLMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179818"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624945"
+              stepCounter: "5094"
+            dataType: BOOLEAN
+            description: ""
+            name: IS_NON_TAXABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179809"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624946"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179806"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624947"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: SALES_CHANNEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179826"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624948"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WDC_ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179824"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624949"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WDC_SHIPPING_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179828"
+                    stepCounter: "5080"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624959"
+              stepCounter: "5094"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: TIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624958"
+                    stepCounter: "5075"
+                transform: ""
+          - columnReference:
+              columnCounter: "625023"
+              stepCounter: "5094"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: WDC_ORDER_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179823"
+                    stepCounter: "5080"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_DIM_BILLING_INFOS_UNION: "5077"
+              STG_DIM_ORDERS_UNION: "5080"
+              STG_DIM_PAYMENTS_UNION: "5075"
+              STG_DIM_SHIPPING_INFOS_UNION: "5074"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_SHIPPING_INFOS_UNION
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_PAYMENTS_UNION
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_BILLING_INFOS_UNION
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_ORDERS_UNION
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_ORDERS_UNION') }} "STG_DIM_ORDERS_UNION"
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_SHIPPING_INFOS_UNION') }} "STG_DIM_SHIPPING_INFOS_UNION"
+                ON "STG_DIM_ORDERS_UNION"."ORDER_ID" = "STG_DIM_SHIPPING_INFOS_UNION"."ORDER_ID"
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_PAYMENTS_UNION') }} "STG_DIM_PAYMENTS_UNION"
+                ON "STG_DIM_PAYMENTS_UNION"."ORDER_ID" = "STG_DIM_ORDERS_UNION"."ORDER_ID"
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_BILLING_INFOS_UNION') }} "STG_DIM_BILLING_INFOS_UNION"
+                ON "STG_DIM_BILLING_INFOS_UNION"."ORDER_ID" = "STG_DIM_ORDERS_UNION"."ORDER_ID"
+            name: TMP_FACT_ECOMMERCE_HEADER
+            noLinkRefs: []
+      name: TMP_FACT_ECOMMERCE_HEADER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5094"

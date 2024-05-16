@@ -1,0 +1,124 @@
+steps:
+  T_LABEL-efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 194b85af-103d-419d-8a54-b096d83b4e94
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRINT_SEQUENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 197b91d1-ea69-4a2e-82e4-fb549dfb95cc
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: LABEL_STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 924ee458-9ab0-442c-8833-e9beb670c83f
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: LABEL_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ea2ce15-a3ca-4d87-9151-53f0dbedd0af
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: BATCH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 95ab5a6c-56ec-4fbc-ac6f-40c933c84eb4
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PICK_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ace9ecb4-3a5d-4935-b083-524551ee268e
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3cfe87b-e379-4a47-bcf9-01598ad33704
+              stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_LABEL') }}
+      name: T_LABEL
+      schema: ""
+      sqlType: Source
+      table: T_LABEL
+      type: sourceInput
+    stepCounter: efe4d9c7-7b14-47fb-bd03-40d12c0fc1c4

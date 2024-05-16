@@ -1,0 +1,124 @@
+steps:
+  T_SHIP_VIA_LANES-2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 34a6ccd1-b65a-4aed-9ce5-53e6a36e072f
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1536d200-f594-4fa8-8b2f-0e95e08c05e5
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70ae6502-5233-4591-800f-0c73d927c58c
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PRIORITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a03b744e-691b-4377-a2b3-d211cc17bbeb
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: SHIP_VIA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66d244d6-39ed-424a-90ff-6d7c7a5bdf1d
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: LANE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: df4a0ebf-7431-4bc4-ba19-e49a796cc409
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25d6592d-2929-4569-a359-e36e7416fee3
+              stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_SHIP_VIA_LANES') }}
+      name: T_SHIP_VIA_LANES
+      schema: ""
+      sqlType: Source
+      table: T_SHIP_VIA_LANES
+      type: sourceInput
+    stepCounter: 2dedc0c3-7f6f-4c80-83b1-87f26f5ddef9

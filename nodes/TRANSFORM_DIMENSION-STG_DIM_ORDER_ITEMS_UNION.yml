@@ -1,0 +1,433 @@
+steps:
+  STG_DIM_ORDER_ITEMS_UNION-5076:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "179706"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BRAND_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179226"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179707"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179227"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179708"
+              stepCounter: "5076"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: WDC_COST_OF_GOOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179228"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179709"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_IS_SUB_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179229"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179710"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179230"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179216"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179711"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179231"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179205"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179712"
+              stepCounter: "5076"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179232"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179207"
+                    stepCounter: "5054"
+                transform: TO_VARCHAR("PSTG_ORDER_ITEMS_ANWD"."BC_ORDER_PRODUCT_ID")
+          - columnReference:
+              columnCounter: "179713"
+              stepCounter: "5076"
+            dataType: VARCHAR
+            description: this is the row causing issues
+            hashDetails: null
+            name: WDC_PRODUCT_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179233"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179714"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179234"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179715"
+              stepCounter: "5076"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179235"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179716"
+              stepCounter: "5076"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_NON_TAXABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179236"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179717"
+              stepCounter: "5076"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_PRICE_OVERRIDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179237"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179718"
+              stepCounter: "5076"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: ORIGINAL_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179238"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179719"
+              stepCounter: "5076"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: DEPOSIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179239"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179720"
+              stepCounter: "5076"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179240"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179214"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179728"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179206"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179729"
+              stepCounter: "5076"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179209"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179730"
+              stepCounter: "5076"
+            dataType: BOOLEAN
+            description: ""
+            name: IS_DIGITAL_PRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179210"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179731"
+              stepCounter: "5076"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: TOTAL_PRICE_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179211"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179732"
+              stepCounter: "5076"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: TOTAL_PRICE_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179212"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179733"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179213"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179734"
+              stepCounter: "5076"
+            dataType: DATE
+            description: ""
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179215"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179735"
+              stepCounter: "5076"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORDER_ITEM_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179217"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179727"
+              stepCounter: "5076"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179435"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179434"
+                    stepCounter: "5054"
+                transform: ""
+          - columnReference:
+              columnCounter: "179859"
+              stepCounter: "5076"
+            dataType: VARCHAR
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179857"
+                    stepCounter: "5055"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179858"
+                    stepCounter: "5054"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ORDER_ITEMS_CWD: "5055"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_ORDER_ITEMS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_ORDER_ITEMS_CWD') }} "PSTG_ORDER_ITEMS_CWD"
+                where "PSTG_ORDER_ITEMS_CWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: CWD
+            noLinkRefs: []
+          - aliases:
+              PSTG_ORDER_ITEMS_ANWD: "5054"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_ORDER_ITEMS_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_ORDER_ITEMS_ANWD') }} "PSTG_ORDER_ITEMS_ANWD"
+                where "PSTG_ORDER_ITEMS_ANWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: ANWD
+            noLinkRefs: []
+      name: STG_DIM_ORDER_ITEMS_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5076"

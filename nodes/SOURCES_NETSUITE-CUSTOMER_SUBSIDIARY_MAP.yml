@@ -1,0 +1,168 @@
+steps:
+  CUSTOMER_SUBSIDIARY_MAP-2499:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40779"
+              stepCounter: "2499"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40780"
+              stepCounter: "2499"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SUBSIDIARY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40781"
+              stepCounter: "2499"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: BALANCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40782"
+              stepCounter: "2499"
+            config: {}
+            dataType: VARCHAR(1020)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_SUBSIDIARY_MAP_EXTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40783"
+              stepCounter: "2499"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_SUBSIDIARY_MAP_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40784"
+              stepCounter: "2499"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DEPOSIT_BALANCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40785"
+              stepCounter: "2499"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: UNBILLED_ORDERS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40786"
+              stepCounter: "2499"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40787"
+              stepCounter: "2499"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40788"
+              stepCounter: "2499"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CUSTOMER_SUBSIDIARY_MAP') }}
+      name: CUSTOMER_SUBSIDIARY_MAP
+      schema: ""
+      sqlType: Source
+      table: CUSTOMER_SUBSIDIARY_MAP
+      type: sourceInput
+    stepCounter: "2499"

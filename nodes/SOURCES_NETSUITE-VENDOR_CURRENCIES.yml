@@ -1,0 +1,168 @@
+steps:
+  VENDOR_CURRENCIES-3008:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50486"
+              stepCounter: "3008"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: VENDOR_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50487"
+              stepCounter: "3008"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: FIVETRAN_INDEX
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50488"
+              stepCounter: "3008"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CURRENCY_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50489"
+              stepCounter: "3008"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: IN_TRANSIT_BALANCE_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50490"
+              stepCounter: "3008"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: OPENBALANCE_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50491"
+              stepCounter: "3008"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PREPAYMENT_BALANCE_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50492"
+              stepCounter: "3008"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: UNBILLED_ORDERS_FOREIGN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50493"
+              stepCounter: "3008"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50494"
+              stepCounter: "3008"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "50495"
+              stepCounter: "3008"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'VENDOR_CURRENCIES') }}
+      name: VENDOR_CURRENCIES
+      schema: ""
+      sqlType: Source
+      table: VENDOR_CURRENCIES
+      type: sourceInput
+    stepCounter: "3008"

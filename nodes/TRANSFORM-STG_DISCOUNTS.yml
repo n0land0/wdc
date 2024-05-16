@@ -1,0 +1,283 @@
+steps:
+  STG_DISCOUNTS-7e63e3f1-c4af-42a7-941e-048be8d52c2e:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 34456dee-58b9-4989-a1ee-b1c2c5ad1f1a
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1ac91e6-e7e2-4447-a6aa-99fc8ec082a9
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "DISCOUNTS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: f2543c94-3d66-4db6-b3f3-2dbe6322d08e
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: NUMBER(3,0)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b467fc08-c528-4cac-8399-927edd1ff99a
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: a5d91571-c5bb-4ff6-9e72-238996e06187
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d2b45da-8c17-4b7e-b69a-bfff4a5f3fcb
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "DISCOUNTS"."DELETED_AT")
+          - columnReference:
+              columnCounter: da4b03fc-c5a0-4109-a806-ca7e2fe12281
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 74eb0dfa-9222-4aca-8650-4b4e6834e6a7
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: a0122c5c-28f9-4af0-a848-105d4073ba8c
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: NUMBER(8,2)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca5d3315-639d-40c9-8677-5c927b33665b
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 72d2dcc1-167e-4198-9d42-bdfa60a400e6
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cec4d8d-bd7f-4424-8629-763f522cb78d
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: f3b3878d-2df3-4eea-bb1c-5c66f5bb09dc
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85364609-84d6-4f36-bb6c-4df9ac6eb57c
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 33776624-b292-46fc-bceb-19fe71de0c09
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 40159c3e-35cf-4ef6-8ed9-eb2c3a0d1ca6
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: fa481ee4-f6c6-42cd-a3e6-b7db52b09a27
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37247f5e-17ad-4e8b-b355-e87483ddb6db
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 307cd579-cb42-432d-b430-4d1f63e06aa0
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f1ca390-f5ff-4c55-aad8-11e4385f0a6c
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: d69f4066-b8c2-4ebf-b801-2dd198682c27
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ddff5b95-c03f-4d14-9e8b-c8084838872d
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 4bee79ee-f13c-43e1-a6b8-e8bfe1a85e9e
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_UNIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 857b47c3-edbf-475a-a7ea-e2aba541fd0c
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 3cfe070a-55e9-4b54-86df-d0a3b789e788
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d35a4f5-ca0c-4792-978d-018aa436fcb1
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 90cbbdd2-a86e-4d00-bedb-d72aa4d7d454
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c135811-35ff-46bf-a60b-2091335e314b
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 280cf022-d7f4-450b-b5ca-0f9270448cf6
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15fd573e-0647-4f99-b951-cd9d4b8f37fb
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 5d59a16e-3ede-43c5-beec-39ab323e618e
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 724ae0b5-478c-4e41-9a31-d7431aca9672
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: ""
+          - columnReference:
+              columnCounter: 3bee008e-cceb-4469-afd8-9fa7053b81fa
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9eeb2e5b-259b-4ad4-bc23-0204ad26a5f4
+                    stepCounter: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "DISCOUNTS"."CREATED_AT")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 07f31d18-29cf-406a-a418-0a98c4dd2a55
+              stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "DISCOUNTS"."ID" ORDER BY "DISCOUNTS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DISCOUNTS: 87add7db-4f7b-4d34-8cb7-3b57dcc941c6
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: DISCOUNTS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'DISCOUNTS') }} "DISCOUNTS"
+                WHERE "DISCOUNTS"."ID" IS NOT NULL 
+                QUALIFY R_NO = 1
+            name: STG_DISCOUNTS
+            noLinkRefs: []
+      name: STG_DISCOUNTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 7e63e3f1-c4af-42a7-941e-048be8d52c2e

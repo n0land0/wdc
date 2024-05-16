@@ -1,0 +1,364 @@
+steps:
+  STG_FACT_FULFILLMENT_BILLING-3924:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table is where the tables need to make to fact table are joined together. The tables joined are WD_INDIVIDUAL_INVOICE_HEADER and WD_INDIVISUAL_INVOICE_LINE.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "96238"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88064"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96239"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: BILLED_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88065"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96242"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CASE_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88068"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96253"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88079"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96254"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_ADJUSTMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88080"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96255"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_BEGIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88081"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96256"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_DAMAGED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88082"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96257"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_KIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88083"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "625016"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            name: WD_INDIVIDUAL_INVOICE_LINE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88063"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96258"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: QUANTITY_SHIPPED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88084"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96425"
+              stepCounter: "3924"
+            config: {}
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            keyColumnType: None
+            name: WD_INDIVIDUAL_INVOICE_HEADE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88012"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "370607"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88086"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "370609"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: HEADER_DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88017"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "371651"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88015"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "370611"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: HEADER_LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88021"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "370614"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: LINE_DATE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88070"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "370615"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: LINE_LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88075"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "370616"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: HEADER_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88018"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "370617"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: HEADER_NS_INVOICE_SUMMARY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88023"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "370618"
+              stepCounter: "3924"
+            dataType: DATE
+            description: ""
+            name: HEADER_PRINT_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88026"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "371650"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            name: LOCATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88077"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "624951"
+              stepCounter: "3924"
+            dataType: VARCHAR(16000)
+            description: ""
+            name: BILLING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88013"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "624952"
+              stepCounter: "3924"
+            dataType: FLOAT
+            description: ""
+            name: INVOICE_TYPE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88019"
+                    stepCounter: "3659"
+                transform: ""
+          - columnReference:
+              columnCounter: "624953"
+              stepCounter: "3924"
+            dataType: VARCHAR(16000)
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88071"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "625010"
+              stepCounter: "3924"
+            dataType: VARCHAR(16000)
+            description: ""
+            name: TRACKING_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88087"
+                    stepCounter: "3660"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_WD_INDIVIDUAL_INVOICE_HEADER: "3659"
+              PSTG_WD_INDIVIDUAL_INVOICE_LINE: "3660"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_WD_INDIVIDUAL_INVOICE_HEADER
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_WD_INDIVIDUAL_INVOICE_LINE
+            join:
+              joinCondition: |
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_WD_INDIVIDUAL_INVOICE_LINE') }} "PSTG_WD_INDIVIDUAL_INVOICE_LINE"
+                left join {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_WD_INDIVIDUAL_INVOICE_HEADER') }} "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"
+                ON ("PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."WD_INDIVIDUAL_INVOICE_HEADE_ID" = "PSTG_WD_INDIVIDUAL_INVOICE_LINE"."HEADER_INVOICE_NUMBER_ID")
+                AND("PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."SYSTEM_CURRENT_FLAG" = 'Y' )
+                WHERE ("PSTG_WD_INDIVIDUAL_INVOICE_LINE"."SYSTEM_CURRENT_FLAG" = 'Y')
+            name: STG_FACT_FULFILLMENT_BILLING
+            noLinkRefs: []
+      name: STG_FACT_FULFILLMENT_BILLING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "3924"

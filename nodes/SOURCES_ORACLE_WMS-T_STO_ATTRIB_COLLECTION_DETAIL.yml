@@ -1,0 +1,94 @@
+steps:
+  T_STO_ATTRIB_COLLECTION_DETAIL-041ed7ad-c31c-4097-a6b6-f65b8fef8dc1:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7db68aa8-6990-4ac6-b769-cfb7fa72d38c
+              stepCounter: 041ed7ad-c31c-4097-a6b6-f65b8fef8dc1
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ATTRIBUTE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e2ebf1b8-a463-43c9-895c-71b39346f776
+              stepCounter: 041ed7ad-c31c-4097-a6b6-f65b8fef8dc1
+            config: {}
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ATTRIBUTE_VALUE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14da1800-ab4a-4ad4-a60e-08ba08fc9fb6
+              stepCounter: 041ed7ad-c31c-4097-a6b6-f65b8fef8dc1
+            config: {}
+            dataType: NUMBER(20,0)
+            defaultValue: ""
+            description: ""
+            name: STORED_ATTRIBUTE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c2546e7d-f22a-437d-b309-5fa87a32be67
+              stepCounter: 041ed7ad-c31c-4097-a6b6-f65b8fef8dc1
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b90bc98c-b762-42c0-bbeb-e0b96908a93a
+              stepCounter: 041ed7ad-c31c-4097-a6b6-f65b8fef8dc1
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_STO_ATTRIB_COLLECTION_DETAIL') }}
+      name: T_STO_ATTRIB_COLLECTION_DETAIL
+      schema: ""
+      sqlType: Source
+      table: T_STO_ATTRIB_COLLECTION_DETAIL
+      type: sourceInput
+    stepCounter: 041ed7ad-c31c-4097-a6b6-f65b8fef8dc1

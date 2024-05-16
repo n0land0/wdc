@@ -1,0 +1,199 @@
+steps:
+  T_RCPT_SHIP_PO_DETAIL-0b5f064c-39c1-4081-ad51-e15427c28a77:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a84f4fb4-158d-4e82-a7b1-8558f159fa60
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: PO_NUMBER
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4daf01f5-a779-49d0-8045-27deee7db37c
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 965a540b-5d78-4a63-88cc-9666867d3700
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: RECEIVED_QTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fb23c088-2f78-4c8c-a41c-1c0f7962ace1
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11851568-3fc5-4bff-b7e5-3d64fb88ed40
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: RECONCILED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 92b9e101-ffb6-4a5e-b269-8156392e3f9b
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: EXPECTED_QTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e6ddd18-3cbd-4c4e-b3da-73fdb3a4b238
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: LINE_NUMBER
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e9a5709-5b4b-4d47-b982-4c4f38ab4950
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SCHEDULE_NUMBER
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79ac8f10-ed7d-4667-bf1f-95b4823bd135
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: SHIPMENT_NUMBER
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fecb76eb-e673-49d5-8444-99a9b365fdb7
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ITEM_NUMBER
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ae51c218-3bc1-4e82-b3a3-0b779c4c9a16
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f349acc8-48f3-4bda-94ed-e5ec270e41da
+              stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_RCPT_SHIP_PO_DETAIL') }}
+      name: T_RCPT_SHIP_PO_DETAIL
+      schema: ""
+      sqlType: Source
+      table: T_RCPT_SHIP_PO_DETAIL
+      type: sourceInput
+    stepCounter: 0b5f064c-39c1-4081-ad51-e15427c28a77

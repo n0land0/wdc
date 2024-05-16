@@ -1,0 +1,237 @@
+steps:
+  T_FACT_ECOMMERCE_LINE-5083:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_FACT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "186125"
+              stepCounter: "5083"
+            dataType: NUMBER
+            description: ""
+            name: LINE_ITEM_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180182"
+                    stepCounter: "5091"
+                transform: ""
+          - columnReference:
+              columnCounter: "188934"
+              stepCounter: "5083"
+            dataType: NUMBER
+            description: ""
+            name: DISCOUNTS_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "188907"
+                    stepCounter: "5473"
+                transform: ""
+          - columnReference:
+              columnCounter: "179950"
+              stepCounter: "5083"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179710"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "179951"
+              stepCounter: "5083"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179711"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "179952"
+              stepCounter: "5083"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179712"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "179964"
+              stepCounter: "5083"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179729"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "179966"
+              stepCounter: "5083"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: TOTAL_PRICE_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179731"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "179967"
+              stepCounter: "5083"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: TOTAL_PRICE_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179732"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "434905"
+              stepCounter: "5083"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: WDC_COST_OF_GOOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179708"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "434906"
+              stepCounter: "5083"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179715"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "434907"
+              stepCounter: "5083"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: ORIGINAL_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179718"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "434908"
+              stepCounter: "5083"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: DEPOSIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179719"
+                    stepCounter: "5076"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179977"
+              stepCounter: "5083"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179978"
+              stepCounter: "5083"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_DIM_ORDER_ITEMS_UNION: "5076"
+              T_DIM_ECOMMERCE_DISCOUNTS: "5473"
+              T_DIM_ECOMMERCE_ORDER_ITEMS: "5091"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_ORDER_ITEMS_UNION
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_ORDER_ITEMS
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: T_DIM_ECOMMERCE_DISCOUNTS
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_ORDER_ITEMS_UNION') }} "STG_DIM_ORDER_ITEMS_UNION"
+                LEFT JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_ECOMMERCE_ORDER_ITEMS') }} "T_DIM_ECOMMERCE_ORDER_ITEMS"
+                    ON "STG_DIM_ORDER_ITEMS_UNION"."ORDER_ITEM_ID" = "T_DIM_ECOMMERCE_ORDER_ITEMS"."ORDER_ITEM_ID"
+                    AND "T_DIM_ECOMMERCE_ORDER_ITEMS"."SYSTEM_CURRENT_FLAG" = 'Y'
+                LEFT JOIN {{ ref('PRESENTATION_DIMENSION', 'T_DIM_ECOMMERCE_DISCOUNTS') }} "T_DIM_ECOMMERCE_DISCOUNTS"
+                    ON "T_DIM_ECOMMERCE_DISCOUNTS"."ORDER_ITEM_ID" = "STG_DIM_ORDER_ITEMS_UNION"."ORDER_ITEM_ID"
+                    AND "T_DIM_ECOMMERCE_DISCOUNTS"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: T_FACT_ECOMMERCE_LINE
+            noLinkRefs: []
+      name: T_FACT_ECOMMERCE_LINE
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: "5083"

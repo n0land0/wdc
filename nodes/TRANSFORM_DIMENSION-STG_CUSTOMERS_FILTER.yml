@@ -1,0 +1,254 @@
+steps:
+  STG_CUSTOMERS_FILTER-4985:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table filters out any duplicate client records. The guidance on which record to choose was provided by Kalani from Wine Direct.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "124095"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123616"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124096"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_NAME_RAW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123617"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124097"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SITE_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123618"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124098"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PARENT_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123619"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124099"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: VOLUME_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123620"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124100"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_OR_MARKETPLACE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123621"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124101"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123622"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124102"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_STOP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123623"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124103"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123624"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124104"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123625"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124105"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE2_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123626"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124106"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ARPP_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123627"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "124107"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDI_FIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "123628"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "180572"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ALTERNATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180571"
+                    stepCounter: "4965"
+                transform: ""
+          - columnReference:
+              columnCounter: "180582"
+              stepCounter: "4985"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: NAME_JOIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180581"
+                    stepCounter: "4965"
+                transform: CASE WHEN "CUSTOMERS"."CUSTOMER_NAME_RAW" = "CUSTOMERS"."SITE_CUSTOMER" THEN "CUSTOMERS"."SITE_CUSTOMER" WHEN "CUSTOMERS"."CUSTOMER_NAME_RAW" <> CUSTOMERS."SITE_CUSTOMER" THEN CUSTOMERS."SITE_CUSTOMER" ELSE 'ERROR' END
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CUSTOMERS: "4965"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PRESENTATION_DIMENSION
+                nodeName: CUSTOMERS
+            join:
+              joinCondition: |
+                FROM {{ ref('PRESENTATION_DIMENSION', 'CUSTOMERS') }} "CUSTOMERS"
+                WHERE "CUSTOMERS"."CUSTOMER_NAME_RAW" = "CUSTOMERS"."SITE_CUSTOMER"
+                AND "CUSTOMERS"."CUSTOMER_ID" IS NOT NULL
+                AND "CUSTOMERS"."CUSTOMER_ID" <> '0'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'August Cellars'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Foley Food and Wine Society'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Expressions of the Vine'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Tank Garage Winery - Vendor'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Stoller Family Estate'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'World of Wine - Marketplace'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" NOT LIKE 'Groupon of O%'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'JFW - Legacy Wines'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'JFW - Arcanum'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Phoenix Vintners, LLC : ITO - Standup Packaging'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Trinchero Family Estates'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" NOT LIKE 'Exitus of O%'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW"  NOT LIKE 'Crimson Wine Group : Crimson%'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Stoller Wine Group : Stoller Wine Group DTC'
+                AND "CUSTOMERS"."CUSTOMER_NAME_RAW" <> 'Trinchero Family of Wines'
+                AND "CUSTOMERS"."CUSTOMER_ID" NOT IN ('23484139', '6558', '6432', 'FF NonVol')
+            name: STG_CUSTOMERS_FILTER
+            noLinkRefs: []
+      name: STG_CUSTOMERS_FILTER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "4985"

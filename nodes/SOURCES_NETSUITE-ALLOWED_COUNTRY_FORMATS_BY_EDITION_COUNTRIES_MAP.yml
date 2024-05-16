@@ -1,0 +1,93 @@
+steps:
+  ALLOWED_COUNTRY_FORMATS_BY_EDITION_COUNTRIES_MAP-2359:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38599"
+              stepCounter: "2359"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ALLOWED_COUNTRY_FORMATS_BY__ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38600"
+              stepCounter: "2359"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38601"
+              stepCounter: "2359"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38602"
+              stepCounter: "2359"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38603"
+              stepCounter: "2359"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ALLOWED_COUNTRY_FORMATS_BY_EDITION_COUNTRIES_MAP') }}
+      name: ALLOWED_COUNTRY_FORMATS_BY_EDITION_COUNTRIES_MAP
+      schema: ""
+      sqlType: Source
+      table: ALLOWED_COUNTRY_FORMATS_BY_EDITION_COUNTRIES_MAP
+      type: sourceInput
+    stepCounter: "2359"

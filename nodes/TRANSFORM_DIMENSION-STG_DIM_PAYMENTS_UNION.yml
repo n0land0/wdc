@@ -1,0 +1,365 @@
+steps:
+  STG_DIM_PAYMENTS_UNION-5075:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "179670"
+              stepCounter: "5075"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: PSTG_PAYMENTS_CWD_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179555"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179671"
+              stepCounter: "5075"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: PAYMENT_CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179556"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179288"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179672"
+              stepCounter: "5075"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179557"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179289"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179673"
+              stepCounter: "5075"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179558"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179290"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179674"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179559"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179295"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179675"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREDIT_CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179560"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179296"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179676"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179561"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179299"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179677"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179562"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179287"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179678"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179563"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179686"
+              stepCounter: "5075"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179571"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179442"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179696"
+              stepCounter: "5075"
+            dataType: VARCHAR(4)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179689"
+                    stepCounter: "5070"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179695"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179697"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179291"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179698"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179283"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179699"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179284"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179700"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179285"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179701"
+              stepCounter: "5075"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: BC_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179286"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179702"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GATEWAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179292"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179703"
+              stepCounter: "5075"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GATEWAY_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179293"
+                    stepCounter: "5058"
+                transform: ""
+          - columnReference:
+              columnCounter: "179704"
+              stepCounter: "5075"
+            dataType: BOOLEAN
+            description: ""
+            name: FRAUD_REVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179294"
+                    stepCounter: "5058"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624958"
+              stepCounter: "5075"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: TIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624957"
+                    stepCounter: "5070"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_PAYMENTS_CWD: "5070"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_PAYMENTS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_PAYMENTS_CWD') }} "PSTG_PAYMENTS_CWD"
+                WHERE "PSTG_PAYMENTS_CWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: CWD
+            noLinkRefs: []
+          - aliases:
+              PSTG_PAYMENTS_ANWD: "5058"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_PAYMENTS_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_PAYMENTS_ANWD') }} "PSTG_PAYMENTS_ANWD"
+                WHERE "PSTG_PAYMENTS_ANWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: ANWD
+            noLinkRefs: []
+      name: STG_DIM_PAYMENTS_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5075"

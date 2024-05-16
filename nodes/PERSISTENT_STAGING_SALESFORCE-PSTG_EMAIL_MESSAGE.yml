@@ -1,0 +1,772 @@
+steps:
+  PSTG_EMAIL_MESSAGE-4737:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117059"
+              stepCounter: "4737"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_EMAIL_MESSAGE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "117060"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109812"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117061"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109813"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117062"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACTIVITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109814"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117063"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109815"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117064"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109816"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117065"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109817"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117066"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109818"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117067"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SYSTEM_MODSTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109819"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117068"
+              stepCounter: "4737"
+            dataType: VARCHAR(393216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TEXT_BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109820"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117069"
+              stepCounter: "4737"
+            dataType: VARCHAR(393216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HTML_BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109821"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117070"
+              stepCounter: "4737"
+            dataType: VARCHAR(96000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HEADERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109822"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117071"
+              stepCounter: "4737"
+            dataType: VARCHAR(3000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SUBJECT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109823"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117072"
+              stepCounter: "4737"
+            dataType: VARCHAR(3000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FROM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109824"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117073"
+              stepCounter: "4737"
+            dataType: VARCHAR(3000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FROM_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109825"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117074"
+              stepCounter: "4737"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: VALIDATED_FROM_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109826"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117075"
+              stepCounter: "4737"
+            dataType: VARCHAR(4000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TO_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109827"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117076"
+              stepCounter: "4737"
+            dataType: VARCHAR(4000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CC_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109828"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117077"
+              stepCounter: "4737"
+            dataType: VARCHAR(4000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BCC_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109829"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117078"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: INCOMING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109830"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117079"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_ATTACHMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109831"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117080"
+              stepCounter: "4737"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109832"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117081"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MESSAGE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109833"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117082"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109834"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117083"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: REPLY_TO_EMAIL_MESSAGE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109835"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117084"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_PRIVATE_DRAFT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109836"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117085"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_EXTERNALLY_VISIBLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109837"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117086"
+              stepCounter: "4737"
+            dataType: VARCHAR(2295)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MESSAGE_IDENTIFIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109838"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117087"
+              stepCounter: "4737"
+            dataType: VARCHAR(2295)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: THREAD_IDENTIFIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109839"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117088"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_CLIENT_MANAGED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109840"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117089"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RELATED_TO_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109841"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117090"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_TRACKED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109842"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117091"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_OPENED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109843"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117092"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_OPENED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109844"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117093"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_OPENED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109845"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117094"
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_BOUNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109846"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117095"
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EMAIL_TEMPLATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109847"
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: "117096"
+              stepCounter: "4737"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "109848"
+                    stepCounter: "4414"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117097"
+              stepCounter: "4737"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117098"
+              stepCounter: "4737"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "117815"
+              stepCounter: "4737"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117099"
+              stepCounter: "4737"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117100"
+              stepCounter: "4737"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117101"
+              stepCounter: "4737"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "117102"
+              stepCounter: "4737"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 113f6150-342f-45d9-b6bb-ff8e5642439b
+              stepCounter: "4737"
+            dataType: VARCHAR(2295)
+            description: ""
+            name: CLIENT_THREAD_IDENTIFIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6519c4de-518d-488a-88cf-d2fd43019e2f
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: ef475b7e-0ca6-44d0-8fb3-9234aec2a713
+              stepCounter: "4737"
+            dataType: VARCHAR(765)
+            description: ""
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ff02952-5181-410a-b490-e68cbd64d367
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: f3a5d41e-a086-4649-9b32-8e55ef99c835
+              stepCounter: "4737"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af9138c1-287d-472a-8ea2-183ed1c1b170
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: b21d3ea7-a5ec-4101-96b1-d2d3705630b3
+              stepCounter: "4737"
+            dataType: VARCHAR(32768)
+            description: ""
+            name: ATTACHMENT_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f996fdf1-bd0d-4c47-86dd-713b51880ca9
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: 3f0e9b87-f4ed-48d3-84f9-3bd9bd8357f7
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            name: FROM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 40ec3256-22ae-4dc7-b69d-8d34238c2320
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: 7b766660-1622-40e5-8663-5a28e2d54b71
+              stepCounter: "4737"
+            dataType: VARCHAR(120)
+            description: ""
+            name: AUTOMATION_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25bca2a7-6792-4482-be69-86e60c327978
+                    stepCounter: "4414"
+                transform: ""
+          - columnReference:
+              columnCounter: 9dc9b122-47b9-4fdf-bd88-efda4790f76a
+              stepCounter: "4737"
+            dataType: VARCHAR(18)
+            description: ""
+            name: EMAIL_ROUTING_ADDRESS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00706a8a-88b2-4568-bc94-39bc4759a744
+                    stepCounter: "4414"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: EMAIL_MESSAGE
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'EMAIL_MESSAGE') }} "EMAIL_MESSAGE"
+            name: PSTG_EMAIL_MESSAGE
+            noLinkRefs: []
+      name: PSTG_EMAIL_MESSAGE
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4737"

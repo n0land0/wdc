@@ -1,0 +1,111 @@
+steps:
+  TMP_STG_WEBSITE_IDS_W_ORDERS-5657:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "624711"
+              stepCounter: "5657"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179842"
+                    stepCounter: "5080"
+                transform: ""
+          - columnReference:
+              columnCounter: "624708"
+              stepCounter: "5657"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179829"
+                    stepCounter: "5080"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625243"
+              stepCounter: "5657"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("STG_DIM_ORDERS_UNION"."ORIGINAL_ORDER_DATE", "STG_DIM_ORDERS_UNION"."DATE_MODIFIED")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625241"
+              stepCounter: "5657"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ORDER_YR_MO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: SUBSTRING(COALESCE("STG_DIM_ORDERS_UNION"."ORIGINAL_ORDER_DATE", "STG_DIM_ORDERS_UNION"."DATE_MODIFIED"), 1,7)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_DIM_ORDERS_UNION: "5080"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_ORDERS_UNION
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_ORDERS_UNION') }} "STG_DIM_ORDERS_UNION"
+            name: TMP_STG_WEBSITE_IDS_W_ORDERS
+            noLinkRefs: []
+      name: TMP_STG_WEBSITE_IDS_W_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5657"

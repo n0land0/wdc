@@ -1,0 +1,87 @@
+steps:
+  TMP_STG_CLIENT-5654:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "624541"
+              stepCounter: "5654"
+            dataType: VARCHAR(360)
+            description: ""
+            hashDetails: null
+            name: CLIENT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186801"
+                    stepCounter: "5457"
+                transform: SUBSTR("PSTG_HZ_PARTIES"."PARTY_NAME",1,100)
+          - columnReference:
+              columnCounter: "624599"
+              stepCounter: "5654"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: PARTY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186859"
+                    stepCounter: "5457"
+                transform: ""
+          - columnReference:
+              columnCounter: "624635"
+              stepCounter: "5654"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CUST_ACCOUNT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186271"
+                    stepCounter: "5453"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_HZ_CUST_ACCOUNTS: "5453"
+              PSTG_HZ_PARTIES: "5457"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_CUST_ACCOUNTS
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_PARTIES
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_PARTIES') }} "PSTG_HZ_PARTIES"
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_CUST_ACCOUNTS') }} "PSTG_HZ_CUST_ACCOUNTS"
+                    ON "PSTG_HZ_CUST_ACCOUNTS"."PARTY_ID" = "PSTG_HZ_PARTIES"."PARTY_ID"
+                    AND "PSTG_HZ_CUST_ACCOUNTS"."SYSTEM_CURRENT_FLAG" = 'Y'
+                WHERE "PSTG_HZ_PARTIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: TMP_STG_CLIENT
+            noLinkRefs: []
+      name: TMP_STG_CLIENT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5654"

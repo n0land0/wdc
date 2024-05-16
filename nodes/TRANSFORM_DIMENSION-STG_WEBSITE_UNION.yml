@@ -1,0 +1,90 @@
+steps:
+  STG_WEBSITE_UNION-5570:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |-
+        This table is taking all website ids from eComemrce Orders tables and the Recurly table. This is to ensure we are capturing as many websites as possible from source data.
+
+        This is a temporary table until the client MDM table is built out.
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "371009"
+              stepCounter: "5570"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 969712bd-51fb-4089-b63c-583b48759b54
+                    stepCounter: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+                transform: UPPER("PSTG_WEBSITES_FULL"."WEBSITEID")
+              - columnReferences:
+                  - columnCounter: "371015"
+                    stepCounter: "5571"
+                transform: UPPER("PSTG_WEBSITES_ANWD"."TENANT_ID")
+              - columnReferences:
+                  - columnCounter: "623956"
+                    stepCounter: "5637"
+                transform: UPPER("TMP_RECURLY_WEBSITES"."WESBITE_ID")
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_WEBSITES_FULL: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMM_CWD_SMD_DBO
+                nodeName: PSTG_WEBSITES_FULL
+            join:
+              joinCondition: |-
+                from {{ ref('PERSISTENT_STAGING_ECOMM_CWD_SMD_DBO', 'PSTG_WEBSITES_FULL') }} "PSTG_WEBSITES_FULL"
+                WHERE "PSTG_WEBSITES_FULL"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_WEBSITE_UNION
+            noLinkRefs: []
+          - aliases:
+              PSTG_WEBSITES_ANWD: "5571"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_WEBSITES_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_WEBSITES_ANWD') }} "PSTG_WEBSITES_ANWD"
+                where "PSTG_WEBSITES_ANWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: ANWD
+            noLinkRefs: []
+          - aliases:
+              TMP_RECURLY_WEBSITES: "5637"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: TMP_RECURLY_WEBSITES
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'TMP_RECURLY_WEBSITES') }}
+            name: Recurly
+            noLinkRefs: []
+      name: STG_WEBSITE_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5570"

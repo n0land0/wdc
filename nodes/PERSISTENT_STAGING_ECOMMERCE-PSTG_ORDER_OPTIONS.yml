@@ -1,0 +1,359 @@
+steps:
+  PSTG_ORDER_OPTIONS-5057:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ECOMMERCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179261"
+              stepCounter: "5057"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ORDER_OPTIONS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179262"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178868"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179263"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178869"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179264"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178870"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179265"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178871"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179266"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178872"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179267"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OPTION_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178873"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179268"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OPTION_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178874"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179269"
+              stepCounter: "5057"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178875"
+                    stepCounter: "5037"
+                transform: date(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_OPTIONS"."CREATED_AT"))
+          - columnReference:
+              columnCounter: "179270"
+              stepCounter: "5057"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178876"
+                    stepCounter: "5037"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_OPTIONS"."UPDATED_AT"))
+          - columnReference:
+              columnCounter: "179271"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178877"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179272"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ITEM_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178878"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179273"
+              stepCounter: "5057"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178879"
+                    stepCounter: "5037"
+                transform: ""
+          - columnReference:
+              columnCounter: "179274"
+              stepCounter: "5057"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178880"
+                    stepCounter: "5037"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_OPTIONS"."DELETED_AT"))
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179276"
+              stepCounter: "5057"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179277"
+              stepCounter: "5057"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179278"
+              stepCounter: "5057"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179279"
+              stepCounter: "5057"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179280"
+              stepCounter: "5057"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179281"
+              stepCounter: "5057"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179437"
+              stepCounter: "5057"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: ORDER_OPTIONS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ECOMMERCE', 'ORDER_OPTIONS') }} "ORDER_OPTIONS"
+            name: PSTG_ORDER_OPTIONS
+            noLinkRefs: []
+      name: PSTG_ORDER_OPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5057"

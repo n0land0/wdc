@@ -1,0 +1,52 @@
+steps:
+  STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE-e2459e90-e408-4c4f-bb7a-c763f9e74c40:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 956d1fb6-753f-46eb-9d44-a6810d9b4303
+              stepCounter: e2459e90-e408-4c4f-bb7a-c763f9e74c40
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: max(TO_DATE("PSTG_END_OF_DAY_RECAP_REPORT"."DATE"))
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_END_OF_DAY_RECAP_REPORT: 3ce47e13-6007-43a5-9437-784a6038fc91
+            customSQL:
+              customSQL: ""
+            dependencies: []
+            join:
+              joinCondition: FROM {{ ref_no_link('PERSISTENT_STAGING_SHAREPOINT', 'PSTG_END_OF_DAY_RECAP_REPORT') }} "PSTG_END_OF_DAY_RECAP_REPORT"
+            name: STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE
+            noLinkRefs:
+              - locationName: PERSISTENT_STAGING_SHAREPOINT
+                nodeName: PSTG_END_OF_DAY_RECAP_REPORT
+      name: STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: e2459e90-e408-4c4f-bb7a-c763f9e74c40

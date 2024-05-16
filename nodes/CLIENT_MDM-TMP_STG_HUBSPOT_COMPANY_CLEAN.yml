@@ -1,0 +1,160 @@
+steps:
+  TMP_STG_HUBSPOT_COMPANY_CLEAN-5397:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "185081"
+              stepCounter: "5397"
+            dataType: VARCHAR(256)
+            description: ""
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185024"
+                    stepCounter: "5109"
+                transform: DISTINCT "TMP_STG_HUBSPOT_COMPANY_RAW"."ID"
+          - columnReference:
+              columnCounter: "185069"
+              stepCounter: "5397"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181029"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185070"
+              stepCounter: "5397"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185064"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185075"
+              stepCounter: "5397"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181107"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185076"
+              stepCounter: "5397"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181108"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185077"
+              stepCounter: "5397"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181110"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185078"
+              stepCounter: "5397"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181111"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185079"
+              stepCounter: "5397"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181112"
+                    stepCounter: "5109"
+                transform: ""
+          - columnReference:
+              columnCounter: "185080"
+              stepCounter: "5397"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181113"
+                    stepCounter: "5109"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_STG_HUBSPOT_COMPANY_RAW: "5109"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: TMP_STG_HUBSPOT_COMPANY_RAW
+            join:
+              joinCondition: |-
+                FROM {{ ref('CLIENT_MDM', 'TMP_STG_HUBSPOT_COMPANY_RAW') }} "TMP_STG_HUBSPOT_COMPANY_RAW"
+                WHERE  "TMP_STG_HUBSPOT_COMPANY_RAW"."MAX_ID" = "TMP_STG_HUBSPOT_COMPANY_RAW"."ID"
+            name: TMP_STG_HUBSPOT_COMPANY_CLEAN
+            noLinkRefs: []
+      name: TMP_STG_HUBSPOT_COMPANY_CLEAN
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5397"

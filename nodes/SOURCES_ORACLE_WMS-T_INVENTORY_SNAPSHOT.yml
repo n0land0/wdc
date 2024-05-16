@@ -1,0 +1,199 @@
+steps:
+  T_INVENTORY_SNAPSHOT-efa711da-2019-48fc-979c-15159d1ea8d5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 19a08d3d-506e-4242-976a-5e97b2591b7a
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(22)
+            defaultValue: ""
+            description: ""
+            name: CARTON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe578997-2f89-4157-b99a-3e51aa073010
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: HJ_LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f402b9fb-945e-462e-8ea1-33756dda85cb
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: COFE_LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d67555a7-8708-42ac-a674-1de060288ba4
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: HJ_ITEM_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c35355d4-fa58-4ff3-a96c-146f5a33804e
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: HJ_QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2df325b6-3c77-4bfb-a8c6-b28c35edf1eb
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: COFE_QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dbb23fc1-711c-48ab-9a62-c8c9f2df6627
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: COFE_ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b6a8e333-436f-4bde-ae09-6fc3ed5b21e6
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: HJ_ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a244d6f-e543-43c1-b870-a464d5cb3c74
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SUPPLIER_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 073cbbdb-9693-4896-b330-e010f1a273aa
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 265d6b61-46c4-409a-92a3-0fd104707233
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 220241d8-500d-4036-9a34-cf4af92a5e2c
+              stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_INVENTORY_SNAPSHOT') }}
+      name: T_INVENTORY_SNAPSHOT
+      schema: ""
+      sqlType: Source
+      table: T_INVENTORY_SNAPSHOT
+      type: sourceInput
+    stepCounter: efa711da-2019-48fc-979c-15159d1ea8d5

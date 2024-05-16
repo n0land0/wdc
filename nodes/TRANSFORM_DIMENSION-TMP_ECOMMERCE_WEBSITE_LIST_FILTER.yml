@@ -1,0 +1,152 @@
+steps:
+  TMP_ECOMMERCE_WEBSITE_LIST_FILTER-5666:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "625178"
+              stepCounter: "5666"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 969712bd-51fb-4089-b63c-583b48759b54
+                    stepCounter: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+                transform: ""
+          - columnReference:
+              columnCounter: "625179"
+              stepCounter: "5666"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8eac94c5-b593-44aa-96ec-b42f60adcb7b
+                    stepCounter: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+                transform: ""
+          - columnReference:
+              columnCounter: "625180"
+              stepCounter: "5666"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd774f4f-9afd-4b18-aad2-9fa669c3c696
+                    stepCounter: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+                transform: ""
+          - columnReference:
+              columnCounter: "625181"
+              stepCounter: "5666"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE_ADDED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6530f7e7-e191-4c90-aa04-35fed5bcfabc
+                    stepCounter: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+                transform: TO_DATE("PSTG_WEBSITES_FULL"."DATEADDED")
+          - columnReference:
+              columnCounter: "625182"
+              stepCounter: "5666"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c98fafaf-5ede-4a5e-952a-cbbb555e2a11
+                    stepCounter: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+                transform: TO_DATE("PSTG_WEBSITES_FULL"."DATEMODIFIED")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2a202fd1-341d-45af-b17e-0e352c65dbf9
+              stepCounter: "5666"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: PSTG_WEBSITES_FULL_ROW_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "PSTG_WEBSITES_FULL"."WEBSITEID" ORDER BY "PSTG_WEBSITES_FULL"."DATEMODIFIED")
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_WEBSITES_FULL: facdca3f-d1d0-4833-9d1c-737e6a01e7c2
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMM_CWD_SMD_DBO
+                nodeName: PSTG_WEBSITES_FULL
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMM_CWD_SMD_DBO', 'PSTG_WEBSITES_FULL') }} "PSTG_WEBSITES_FULL"
+                WHERE "PSTG_WEBSITES_FULL"."SYSTEM_CURRENT_FLAG" = 'Y' AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%redesign%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%staging%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%UAT%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Template%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Testing%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Test%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE 'test'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Demo%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Sandbox%'
+                AND
+                (
+                    "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE 'WineDirect %' OR
+                    "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%WineDirect%' AND
+                    "PSTG_WEBSITES_FULL"."WEBSITENAME" ILIKE '% - WineDirect%'
+                )
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE 'zz %'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE 'zz%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE 'zzz%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE 'zz -%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Training%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Vin65%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%Kelton%'
+                AND "PSTG_WEBSITES_FULL"."WEBSITENAME" NOT ILIKE '%asfasdff%'
+                QUALIFY PSTG_WEBSITES_FULL_ROW_NUMBER = 1
+            name: TMP_ECOMMERCE_WEBSITE_LIST_FILTER
+            noLinkRefs: []
+      name: TMP_ECOMMERCE_WEBSITE_LIST_FILTER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5666"

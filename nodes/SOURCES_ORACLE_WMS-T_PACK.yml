@@ -1,0 +1,139 @@
+steps:
+  T_PACK-c5c7c66c-f94a-42da-9464-591ecce81756:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1db836de-c17f-4896-a4c4-7d8583a05b33
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 892a808f-6666-4800-a873-7b49b7def74e
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: DATE_LOGGED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c3460c8e-b5b1-4174-a60e-383a4fe83975
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: LOAD_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fb6933e9-98fe-4051-877c-5afb38a4b85d
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ORDER_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b481f2c-34e4-4ce8-8320-667c3e583e46
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d3e11a3-11dc-4754-baf9-88d617257f80
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 006475c9-c752-4da0-845b-8344e345d4fc
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a1ff506f-8736-4a45-88eb-63b94a509953
+              stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_PACK') }}
+      name: T_PACK
+      schema: ""
+      sqlType: Source
+      table: T_PACK
+      type: sourceInput
+    stepCounter: c5c7c66c-f94a-42da-9464-591ecce81756

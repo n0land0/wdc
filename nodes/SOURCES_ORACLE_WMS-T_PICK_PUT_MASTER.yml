@@ -1,0 +1,94 @@
+steps:
+  T_PICK_PUT_MASTER-8bcb0eb0-467f-4f80-9fcf-800762fd8dbf:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e876b629-7551-4005-ad57-0a705e6a2b9d
+              stepCounter: 8bcb0eb0-467f-4f80-9fcf-800762fd8dbf
+            config: {}
+            dataType: VARCHAR(400)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b2b6b56a-ebab-46af-af63-0cc05793703c
+              stepCounter: 8bcb0eb0-467f-4f80-9fcf-800762fd8dbf
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: PICK_PUT_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c9bc76a4-b41e-46cf-911d-c39c97bb1bbf
+              stepCounter: 8bcb0eb0-467f-4f80-9fcf-800762fd8dbf
+            config: {}
+            dataType: VARCHAR(60)
+            defaultValue: ""
+            description: ""
+            name: OVERRIDE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 10139522-6eb1-4c80-b074-19e3ddca681b
+              stepCounter: 8bcb0eb0-467f-4f80-9fcf-800762fd8dbf
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3f8e85e-c215-4ece-bfb5-8b551c810374
+              stepCounter: 8bcb0eb0-467f-4f80-9fcf-800762fd8dbf
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_PICK_PUT_MASTER') }}
+      name: T_PICK_PUT_MASTER
+      schema: ""
+      sqlType: Source
+      table: T_PICK_PUT_MASTER
+      type: sourceInput
+    stepCounter: 8bcb0eb0-467f-4f80-9fcf-800762fd8dbf

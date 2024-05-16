@@ -1,0 +1,94 @@
+steps:
+  T_CONTAINER_CLASS_TYPE-1ba139a5-4d53-440b-94ab-de483763e1bb:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f528fc9f-6f92-4399-bce9-3c3cdb1e231a
+              stepCounter: 1ba139a5-4d53-440b-94ab-de483763e1bb
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: CONTAINER_TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04ea71e8-7a3e-44ff-9a04-0b44cecc1f7f
+              stepCounter: 1ba139a5-4d53-440b-94ab-de483763e1bb
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4d9e51b1-7466-44a6-935d-d7c2e53bd152
+              stepCounter: 1ba139a5-4d53-440b-94ab-de483763e1bb
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: CONTAINER_CLASS
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5eb273b0-4454-4d87-a2e5-b4ca0481e243
+              stepCounter: 1ba139a5-4d53-440b-94ab-de483763e1bb
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c040937-47ce-44e1-853c-20a5cdcd2259
+              stepCounter: 1ba139a5-4d53-440b-94ab-de483763e1bb
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_CONTAINER_CLASS_TYPE') }}
+      name: T_CONTAINER_CLASS_TYPE
+      schema: ""
+      sqlType: Source
+      table: T_CONTAINER_CLASS_TYPE
+      type: sourceInput
+    stepCounter: 1ba139a5-4d53-440b-94ab-de483763e1bb

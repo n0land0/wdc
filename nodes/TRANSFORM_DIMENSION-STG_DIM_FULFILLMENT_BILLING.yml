@@ -1,0 +1,470 @@
+steps:
+  STG_DIM_FULFILLMENT_BILLING-3922:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "96116"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: WD_INDIVIDUAL_INVOICE_LINE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88063"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96120"
+              stepCounter: "3922"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: CARRIER_INVOICE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88067"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96124"
+              stepCounter: "3922"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88071"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96125"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: HEADER_INVOICE_NUMBER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88072"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96129"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: LOCATION_CODE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88076"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96130"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: LOCATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88077"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96140"
+              stepCounter: "3922"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: TRACKING_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88087"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96160"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: BILLING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88013"
+                    stepCounter: "3659"
+                transform: CASE WHEN "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."BILLING_CODE" IN ('STND', 'BILL_AS_DAILY', 'VC') THEN 'DAILY' WHEN "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."BILLING_CODE" IN ('BILL_AS_CLUB', 'CLUB') THEN 'CLUB' ELSE 'OTHER' END
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96161"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: CARRIER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88014"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96162"
+              stepCounter: "3922"
+            config: {}
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88015"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96163"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: CUSTOMER_ORDER_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88016"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96165"
+              stepCounter: "3922"
+            config: {}
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: INVOICE_TYPE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88019"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96174"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: PROCESSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88028"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96181"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: WD_ORDER_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88051"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96119"
+              stepCounter: "3922"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: BILLING_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88066"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96122"
+              stepCounter: "3922"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88069"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96126"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: INVOICE_CASE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88073"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96138"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SERVICE_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88085"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96141"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: UNIT_SELLING_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88088"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96142"
+              stepCounter: "3922"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: UNIT_STANDARD_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88089"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96143"
+              stepCounter: "3922"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            name: WD_INDIVIDUAL_INVOICE_LINE_EXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88090"
+                    stepCounter: "3660"
+                transform: ""
+          - columnReference:
+              columnCounter: "96168"
+              stepCounter: "3922"
+            config: {}
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: NS_INVOICE_NUMBER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88022"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96171"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: PRICING_MODEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88025"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96173"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: PRINT_INVOICE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88027"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96179"
+              stepCounter: "3922"
+            config: {}
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: SUBSIDIARY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88049"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - columnReference:
+              columnCounter: "96180"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            keyColumnType: None
+            name: WD_INDIVIDUAL_INVOICE_HEADE_EX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "88050"
+                    stepCounter: "3659"
+                transform: ""
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96290"
+              stepCounter: "3922"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ARPP_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."CUSTOMER_ID" IN (2091, 2092, 11982) THEN 'NON-WINE' ELSE 'WINE' END
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_WD_INDIVIDUAL_INVOICE_HEADER: "3659"
+              PSTG_WD_INDIVIDUAL_INVOICE_LINE: "3660"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_WD_INDIVIDUAL_INVOICE_HEADER
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_WD_INDIVIDUAL_INVOICE_LINE
+            join:
+              joinCondition: |
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_WD_INDIVIDUAL_INVOICE_HEADER') }} "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_WD_INDIVIDUAL_INVOICE_LINE') }} "PSTG_WD_INDIVIDUAL_INVOICE_LINE"
+                ON ("PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."WD_INDIVIDUAL_INVOICE_HEADE_ID" = "PSTG_WD_INDIVIDUAL_INVOICE_LINE"."HEADER_INVOICE_NUMBER_ID")
+                AND  "PSTG_WD_INDIVIDUAL_INVOICE_LINE"."WD_INDIVIDUAL_INVOICE_LINE_ID" IS NOT NULL 
+                AND "PSTG_WD_INDIVIDUAL_INVOICE_LINE"."SYSTEM_CURRENT_FLAG" = 'Y'
+                WHERE "PSTG_WD_INDIVIDUAL_INVOICE_HEADER"."SYSTEM_CURRENT_FLAG" = 'Y' 
+                AND "PSTG_WD_INDIVIDUAL_INVOICE_LINE"."WD_INDIVIDUAL_INVOICE_LINE_ID" IS NOT NULL
+            name: STG_DIM_FULFILLMENT_BILLING
+            noLinkRefs: []
+      name: STG_DIM_FULFILLMENT_BILLING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "3922"

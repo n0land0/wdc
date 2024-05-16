@@ -1,0 +1,93 @@
+steps:
+  EP_QUEUE_SETTINGS_DUMMY_PAYMENT_CREATOR_MAP-2560:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41720"
+              stepCounter: "2560"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: EP_DUMMY_LIST_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41721"
+              stepCounter: "2560"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: EP_QUEUE_SETTINGS_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41722"
+              stepCounter: "2560"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41723"
+              stepCounter: "2560"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "41724"
+              stepCounter: "2560"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'EP_QUEUE_SETTINGS_DUMMY_PAYMENT_CREATOR_MAP') }}
+      name: EP_QUEUE_SETTINGS_DUMMY_PAYMENT_CREATOR_MAP
+      schema: ""
+      sqlType: Source
+      table: EP_QUEUE_SETTINGS_DUMMY_PAYMENT_CREATOR_MAP
+      type: sourceInput
+    stepCounter: "2560"

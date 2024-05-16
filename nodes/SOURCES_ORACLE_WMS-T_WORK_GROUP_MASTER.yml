@@ -1,0 +1,94 @@
+steps:
+  T_WORK_GROUP_MASTER-128cadc9-be64-48da-a7a1-e5118ff216ff:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 01f57cb4-a9b7-4b74-a78e-dbee0f9313e1
+              stepCounter: 128cadc9-be64-48da-a7a1-e5118ff216ff
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WORK_GROUP_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5a5124d-832c-4f21-81bd-291ce719a667
+              stepCounter: 128cadc9-be64-48da-a7a1-e5118ff216ff
+            config: {}
+            dataType: VARCHAR(240)
+            defaultValue: ""
+            description: ""
+            name: WORK_GROUP_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b204f1a-70ba-4f35-8597-6c6484555056
+              stepCounter: 128cadc9-be64-48da-a7a1-e5118ff216ff
+            config: {}
+            dataType: VARCHAR(240)
+            defaultValue: ""
+            description: ""
+            name: PROCESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 453bba96-5fbb-46e3-9b68-c5c2c1713fb8
+              stepCounter: 128cadc9-be64-48da-a7a1-e5118ff216ff
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2e9864f-748f-47ec-adb5-533faa98fa6b
+              stepCounter: 128cadc9-be64-48da-a7a1-e5118ff216ff
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_WORK_GROUP_MASTER') }}
+      name: T_WORK_GROUP_MASTER
+      schema: ""
+      sqlType: Source
+      table: T_WORK_GROUP_MASTER
+      type: sourceInput
+    stepCounter: 128cadc9-be64-48da-a7a1-e5118ff216ff

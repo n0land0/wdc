@@ -1,0 +1,154 @@
+steps:
+  T_OUTCOFEPACKREADY-afa13b6f-b111-4674-a9a1-72de73ed3c83:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f07dc2c9-55d5-4ef4-9e3d-2a69bb92f189
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: PROCESSING_STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da65fa4a-0173-42ef-80f7-c7bce3090d4c
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: VARCHAR(2000)
+            defaultValue: ""
+            description: ""
+            name: PROCESSING_MESSAGE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bbe91a96-4637-489f-acc2-0d2810d8cb37
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: VARCHAR(34)
+            defaultValue: ""
+            description: ""
+            name: CONTAINER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39b8a056-9ee8-4e91-8c8d-9f41f23ad990
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63d50524-14dd-4f20-ac3c-d52e638fc6c2
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b81fcdb-dd56-4f54-86cb-bc6ec5d18358
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4a74a6dd-7f23-436e-9ee4-c52e9d585baf
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: PROCESSING_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: acfc6af7-5ee3-407e-9b71-a536d2c6d442
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: INTERFACED_ON
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ecc62e0-47c0-4c6e-8406-ce3b86c92076
+              stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: RECORD_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_OUTCOFEPACKREADY') }}
+      name: T_OUTCOFEPACKREADY
+      schema: ""
+      sqlType: Source
+      table: T_OUTCOFEPACKREADY
+      type: sourceInput
+    stepCounter: afa13b6f-b111-4674-a9a1-72de73ed3c83

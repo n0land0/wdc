@@ -1,0 +1,94 @@
+steps:
+  T_VAS_PROFILE_GROUP-9be55db6-d90a-4ac4-b765-77932e596545:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e887e542-f4d0-472c-86e6-f5a099b0ae77
+              stepCounter: 9be55db6-d90a-4ac4-b765-77932e596545
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PRECEDENCE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5b6b327d-92fc-4c59-9874-347ccd477db3
+              stepCounter: 9be55db6-d90a-4ac4-b765-77932e596545
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: VAS_PROFILE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41a9b830-f91d-42d7-aec3-f00d678271a3
+              stepCounter: 9be55db6-d90a-4ac4-b765-77932e596545
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: GROUP_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c70ceef9-89e2-4377-b43d-3183e49fcd44
+              stepCounter: 9be55db6-d90a-4ac4-b765-77932e596545
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 04b98be6-e48b-4121-bd7e-77ed10261d76
+              stepCounter: 9be55db6-d90a-4ac4-b765-77932e596545
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_VAS_PROFILE_GROUP') }}
+      name: T_VAS_PROFILE_GROUP
+      schema: ""
+      sqlType: Source
+      table: T_VAS_PROFILE_GROUP
+      type: sourceInput
+    stepCounter: 9be55db6-d90a-4ac4-b765-77932e596545

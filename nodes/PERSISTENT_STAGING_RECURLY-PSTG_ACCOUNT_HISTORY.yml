@@ -1,0 +1,621 @@
+steps:
+  PSTG_ACCOUNT_HISTORY-3204:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_RECURLY
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54671"
+              stepCounter: "3204"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ACCOUNT_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "54672"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371234"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54673"
+              stepCounter: "3204"
+            dataType: TIMESTAMP_NTZ
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371235"
+                    stepCounter: "5579"
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_ACCOUNT_HISTORY"."UPDATED_AT"::TIMESTAMP_NTZ)
+          - columnReference:
+              columnCounter: "54674"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371236"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54675"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BILL_TO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371237"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54676"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371238"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54677"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: USERNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371239"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54678"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371240"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54679"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371241"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54680"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371242"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54681"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CC_EMAILS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371243"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54682"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PREFERRED_LOCALE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371244"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54683"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371245"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54684"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: VAT_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371246"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54685"
+              stepCounter: "3204"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TAX_EXEMPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371247"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54686"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXEMPTION_CERTIFICATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371248"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54687"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HOSTED_LOGIN_TOKEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371249"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54688"
+              stepCounter: "3204"
+            dataType: TIMESTAMP_NTZ
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371250"
+                    stepCounter: "5579"
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_ACCOUNT_HISTORY"."CREATED_AT"::TIMESTAMP_NTZ)
+          - columnReference:
+              columnCounter: "54689"
+              stepCounter: "3204"
+            dataType: TIMESTAMP_NTZ
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371251"
+                    stepCounter: "5579"
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_ACCOUNT_HISTORY"."DELETED_AT"::TIMESTAMP_NTZ)
+          - columnReference:
+              columnCounter: "54690"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371252"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54691"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371253"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54692"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371254"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54693"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371255"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54694"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371256"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54695"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371257"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54696"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371258"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54697"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371259"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54698"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371260"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "54699"
+              stepCounter: "3204"
+            dataType: TIMESTAMP_NTZ
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371261"
+                    stepCounter: "5579"
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_ACCOUNT_HISTORY"."_FIVETRAN_SYNCED"::TIMESTAMP_NTZ)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54700"
+              stepCounter: "3204"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54701"
+              stepCounter: "3204"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54702"
+              stepCounter: "3204"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54703"
+              stepCounter: "3204"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54704"
+              stepCounter: "3204"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "54705"
+              stepCounter: "3204"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "55192"
+              stepCounter: "3204"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'RECURLY'"
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "623173"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_ANWDSTORE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623148"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "623174"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: CUSTOM_CLASSIC_WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623149"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: "623175"
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: PARENT_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623150"
+                    stepCounter: "5579"
+                transform: ""
+          - columnReference:
+              columnCounter: ce5b5b65-0b40-497b-9e8f-70df8ba90de5
+              stepCounter: "3204"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY''S ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "497841"
+                    stepCounter: "5579"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_ACCOUNT_HISTORY: "5579"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: TMP_ACCOUNT_HISTORY
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'TMP_ACCOUNT_HISTORY') }} "TMP_ACCOUNT_HISTORY"
+            name: PSTG_ACCOUNT_HISTORY
+            noLinkRefs: []
+      name: PSTG_ACCOUNT_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "3204"

@@ -1,0 +1,152 @@
+steps:
+  TMP_ORDER_ITEM_GROUPS-a662a4da-db28-4b8b-aef8-4b7b6f48f417:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6f6b0e43-a8d4-4bd3-94e6-b77ae10d434e
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178861"
+                    stepCounter: "5036"
+                transform: ""
+          - columnReference:
+              columnCounter: 47392c2a-745b-4a73-a907-b20a98cc5202
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178862"
+                    stepCounter: "5036"
+                transform: ""
+          - columnReference:
+              columnCounter: 404d7922-5cc0-44a1-9635-c453ccb6ccee
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_BUNDLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178863"
+                    stepCounter: "5036"
+                transform: ""
+          - columnReference:
+              columnCounter: 2d8c3741-a2a2-4301-a010-f6cf7ceed042
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178864"
+                    stepCounter: "5036"
+                transform: ""
+          - columnReference:
+              columnCounter: ddec62a9-7054-4a70-b7e2-4b82718ced21
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178865"
+                    stepCounter: "5036"
+                transform: ""
+          - columnReference:
+              columnCounter: 16dc72ec-5ac0-468a-b679-18ad4a74bea8
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178866"
+                    stepCounter: "5036"
+                transform: ""
+          - columnReference:
+              columnCounter: 32b8febf-32e0-4c2b-a0c7-40edd83fd4c1
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178867"
+                    stepCounter: "5036"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f07173b1-d9e5-4917-be3e-80e8a9e63f49
+              stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "ORDER_ITEM_GROUPS"."ID" ORDER BY "ORDER_ITEM_GROUPS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDER_ITEM_GROUPS: "5036"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: ORDER_ITEM_GROUPS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE', 'ORDER_ITEM_GROUPS') }} "ORDER_ITEM_GROUPS"
+                QUALIFY R_NO = 1
+            name: TMP_ORDER_ITEM_GROUPS
+            noLinkRefs: []
+      name: TMP_ORDER_ITEM_GROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417

@@ -1,0 +1,152 @@
+steps:
+  STG_ORDER_ITEM_GROUPS-c2fb0e71-da34-4888-ac7e-c9079490f073:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1c437e24-3e6d-423b-b7fa-c0c15afb77cc
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e31586fb-cbe9-42d5-8b80-ef97cd01107a
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: ""
+          - columnReference:
+              columnCounter: 243f2068-2347-4f3d-beb0-0add7ad8609d
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 616690c7-62f9-4fe4-8fb8-92875cb908e4
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: ""
+          - columnReference:
+              columnCounter: 1bcd4fb7-4b0e-4e63-af41-2882f550f604
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73d73d92-3252-47a9-92de-b4e579806135
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: ""
+          - columnReference:
+              columnCounter: ec02b0df-33e4-4150-8508-45265f8fdc2e
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db2f9f99-61f5-44f0-ba2c-ad69b14da9d4
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEM_GROUPS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: 3090a846-c0d6-44d9-8ebd-127f702273d4
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_BUNDLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 44c682ef-d497-4ab7-9651-43cfc2934970
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: ""
+          - columnReference:
+              columnCounter: c2e99a1d-1517-4cba-83e9-d80a8fefb5a2
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00d57036-55f5-4600-b12d-beb1aa23351e
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEM_GROUPS"."CREATED_AT")
+          - columnReference:
+              columnCounter: dfcb83fc-9278-459f-9147-9938827c409c
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0aa176b4-c110-41ea-b9d6-813970224bc1
+                    stepCounter: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEM_GROUPS"."DELETED_AT")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6cb1a16f-a232-4666-8c0d-a646128465db
+              stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "ORDER_ITEM_GROUPS"."ID" ORDER BY "ORDER_ITEM_GROUPS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDER_ITEM_GROUPS: 380e575a-5d04-49e8-bc0b-1d2118977bf4
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: ORDER_ITEM_GROUPS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'ORDER_ITEM_GROUPS') }} "ORDER_ITEM_GROUPS"
+                QUALIFY R_NO = 1
+            name: STG_ORDER_ITEM_GROUPS
+            noLinkRefs: []
+      name: STG_ORDER_ITEM_GROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: c2fb0e71-da34-4888-ac7e-c9079490f073

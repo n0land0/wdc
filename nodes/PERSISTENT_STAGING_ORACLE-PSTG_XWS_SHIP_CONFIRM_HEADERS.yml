@@ -1,0 +1,730 @@
+steps:
+  PSTG_XWS_SHIP_CONFIRM_HEADERS-5451:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ORACLE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186201"
+              stepCounter: "5451"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_XWS_SHIP_CONFIRM_HEADERS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "186202"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: SHIP_CONFIRM_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184898"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186203"
+              stepCounter: "5451"
+            dataType: VARCHAR(20)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MANIFEST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184899"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186204"
+              stepCounter: "5451"
+            dataType: VARCHAR(1024)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVERY_STATUS_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184900"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186205"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_DELIVERY_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184901"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186206"
+              stepCounter: "5451"
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CARRIER_FROM_WMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184902"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186207"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BILLED_WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184903"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186208"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SERVICE_LEVEL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184904"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186209"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184905"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186210"
+              stepCounter: "5451"
+            dataType: VARCHAR(1)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CARRIER_CHANGE_BILLABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184906"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186211"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184907"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186212"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIP_TO_LOCATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184908"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186213"
+              stepCounter: "5451"
+            dataType: VARCHAR(20)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVERY_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184909"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186214"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184910"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186215"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FUEL_SURCHARGE_PERCENTAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184911"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186216"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SHIP_DATE_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184912"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186217"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184913"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186218"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_PARTY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184914"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186219"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONTAINER_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184915"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186220"
+              stepCounter: "5451"
+            dataType: VARCHAR(50)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVERY_SIGNED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184916"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186221"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOLD_TO_ORG_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184917"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186222"
+              stepCounter: "5451"
+            dataType: VARCHAR(100)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SERVICE_LEVEL_FROM_WMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184918"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186223"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FREIGHT_CHARGE_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184919"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186224"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184920"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186225"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RATE_CARD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184921"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186226"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXCEPTION_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184922"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186227"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVER_TO_LOCATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184923"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186228"
+              stepCounter: "5451"
+            dataType: VARCHAR(80)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CARRIER_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184924"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186229"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_UPDATE_LOGIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184925"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186230"
+              stepCounter: "5451"
+            dataType: VARCHAR(80)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TRACKING_NUMBER_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184926"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186231"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DIMENSIONAL_WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184927"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186232"
+              stepCounter: "5451"
+            dataType: VARCHAR(30)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PACKAGE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184928"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186233"
+              stepCounter: "5451"
+            dataType: VARCHAR(80)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BILL_OF_LADING_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184929"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186234"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOMER_SHIPPED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184930"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186235"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184931"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186236"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SHIP_TO_PARTY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184932"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186237"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELIVERED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184933"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186238"
+              stepCounter: "5451"
+            dataType: VARCHAR(15)
+            description: ""
+            hashDetails: null
+            name: CONTAINER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184934"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186239"
+              stepCounter: "5451"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SHIPPING_ZONE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184935"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186240"
+              stepCounter: "5451"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184936"
+                    stepCounter: "5389"
+                transform: ""
+          - columnReference:
+              columnCounter: "186241"
+              stepCounter: "5451"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "184937"
+                    stepCounter: "5389"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186242"
+              stepCounter: "5451"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186243"
+              stepCounter: "5451"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186244"
+              stepCounter: "5451"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186245"
+              stepCounter: "5451"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186246"
+              stepCounter: "5451"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186247"
+              stepCounter: "5451"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "186248"
+              stepCounter: "5451"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ORACLE XWS'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ORACLE_XWS
+                nodeName: XWS_SHIP_CONFIRM_HEADERS
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_XWS', 'XWS_SHIP_CONFIRM_HEADERS') }} "XWS_SHIP_CONFIRM_HEADERS"
+            name: PSTG_XWS_SHIP_CONFIRM_HEADERS
+            noLinkRefs: []
+      name: PSTG_XWS_SHIP_CONFIRM_HEADERS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5451"

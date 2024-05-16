@@ -1,0 +1,154 @@
+steps:
+  T_CARTON_HISTORY-5e696b2e-3efa-4a7f-b5e1-e794f691eb53:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 15a678f0-2789-44c8-806b-240d9ecb5fab
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: VARCHAR(22)
+            defaultValue: ""
+            description: ""
+            name: CARTON_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3601aacc-42db-49d5-8e2f-271bc4d27197
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b285f7f7-6997-4bf2-b976-df759775b595
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: VARCHAR(500)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bc51aafd-fb6d-4cec-8ea2-d67bba3a3f74
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b9907a68-8126-4cc1-ac0b-5598e46469a0
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e08e5abe-fc1d-44ae-a72e-101462535cd2
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2a951951-45c3-47e9-bd8f-c19131f8e51b
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: TIME_RECORDED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 82af636f-2037-47d8-80ea-fc122442aa77
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39f7a24e-5c7c-405a-a4d0-20426e4506c8
+              stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: ROW_ID
+            nullable: true
+            primaryKey: true
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_CARTON_HISTORY') }}
+      name: T_CARTON_HISTORY
+      schema: ""
+      sqlType: Source
+      table: T_CARTON_HISTORY
+      type: sourceInput
+    stepCounter: 5e696b2e-3efa-4a7f-b5e1-e794f691eb53

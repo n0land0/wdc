@@ -1,0 +1,124 @@
+steps:
+  T_PICK_PUT_RULES-2a6c6a31-c9a0-4cdf-abe4-74323e06b40a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7bbc68ba-5501-4c94-8c1c-a7606af1cc41
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: BEFORE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da4573fe-ea87-4610-8731-a0dd721ea8c1
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: RULE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1dd52d3d-9742-4076-95dd-551168f9e46c
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: VARCHAR(400)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 710939bd-5ec9-4c52-a9bc-c4310debd85f
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: DURING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7a72c6f6-443b-416f-8fad-aaa026668cf5
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 66e20ec1-29ac-4c6d-b3e8-68e46edc9bfa
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b4a41e82-3450-423c-a8e1-0e109ab10b55
+              stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_PICK_PUT_RULES') }}
+      name: T_PICK_PUT_RULES
+      schema: ""
+      sqlType: Source
+      table: T_PICK_PUT_RULES
+      type: sourceInput
+    stepCounter: 2a6c6a31-c9a0-4cdf-abe4-74323e06b40a

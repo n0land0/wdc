@@ -1,0 +1,93 @@
+steps:
+  FAM_DEFAULT_ALT_DEPRECIATION_SUBSIDIARY_MAP-2600:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "42591"
+              stepCounter: "2600"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: FAM_DEFAULT_ALT_DEPRECIATIO_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "42592"
+              stepCounter: "2600"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: SUBSIDIARY_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "42593"
+              stepCounter: "2600"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "42594"
+              stepCounter: "2600"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "42595"
+              stepCounter: "2600"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'FAM_DEFAULT_ALT_DEPRECIATION_SUBSIDIARY_MAP') }}
+      name: FAM_DEFAULT_ALT_DEPRECIATION_SUBSIDIARY_MAP
+      schema: ""
+      sqlType: Source
+      table: FAM_DEFAULT_ALT_DEPRECIATION_SUBSIDIARY_MAP
+      type: sourceInput
+    stepCounter: "2600"

@@ -1,0 +1,94 @@
+steps:
+  T_EQUIPMENT_ATTRIB-e9ca859c-838d-41fd-88fd-f1f260511d17:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 16f49505-e7b4-4f6c-af11-eeaa05468deb
+              stepCounter: e9ca859c-838d-41fd-88fd-f1f260511d17
+            config: {}
+            dataType: VARCHAR(800)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 870aa075-b9a6-4a9a-b91a-ed5a22d95ab3
+              stepCounter: e9ca859c-838d-41fd-88fd-f1f260511d17
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: EQUIPMENT_ATTRIB_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5a5be039-b147-45d3-9826-e57351a0ff1c
+              stepCounter: e9ca859c-838d-41fd-88fd-f1f260511d17
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: EQUIPMENT_ATTRIB_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac87eaf3-406f-4143-8472-271c6f8f5909
+              stepCounter: e9ca859c-838d-41fd-88fd-f1f260511d17
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5dc02865-5405-4323-bab1-0a06fe549d2c
+              stepCounter: e9ca859c-838d-41fd-88fd-f1f260511d17
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_EQUIPMENT_ATTRIB') }}
+      name: T_EQUIPMENT_ATTRIB
+      schema: ""
+      sqlType: Source
+      table: T_EQUIPMENT_ATTRIB
+      type: sourceInput
+    stepCounter: e9ca859c-838d-41fd-88fd-f1f260511d17

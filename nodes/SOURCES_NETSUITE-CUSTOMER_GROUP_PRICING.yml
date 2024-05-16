@@ -1,0 +1,108 @@
+steps:
+  CUSTOMER_GROUP_PRICING-2494:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40734"
+              stepCounter: "2494"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40735"
+              stepCounter: "2494"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PRICE_TYPE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40736"
+              stepCounter: "2494"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PRICING_GROUP_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40737"
+              stepCounter: "2494"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40738"
+              stepCounter: "2494"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "40739"
+              stepCounter: "2494"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'CUSTOMER_GROUP_PRICING') }}
+      name: CUSTOMER_GROUP_PRICING
+      schema: ""
+      sqlType: Source
+      table: CUSTOMER_GROUP_PRICING
+      type: sourceInput
+    stepCounter: "2494"

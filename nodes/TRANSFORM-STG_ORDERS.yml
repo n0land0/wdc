@@ -1,0 +1,1023 @@
+steps:
+  STG_ORDERS-31819e7e-fc50-4e84-bbbe-d43cd4978e17:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f00f8959-a023-4a48-8d70-63c40de3f710
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_CHANNEL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55e5c9a1-865b-4cd4-8026-551cdc43b401
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: b96301e2-cdf3-48ed-be63-291f38f8409a
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(7,0)
+            description: ""
+            hashDetails: null
+            name: BC_CHANNEL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1610566-a0b3-4f6f-b303-5f61cf11895d
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 44fdd4ec-cd69-4dfa-aed6-79a6a0240aa8
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_CHANNEL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ecd2d0f3-2375-4efc-907b-4c52dc362d5d
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 1abb2cf6-60cd-4247-a987-73af9447f895
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6030e47f-ea43-4ac3-96ae-f2571d72357d
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDERS"."CREATED_AT")
+          - columnReference:
+              columnCounter: d9a0f774-aa30-4210-b888-26ab2776797f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STORED_CARD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4715e1a4-adfb-44af-b223-df4cfa37634a
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 8db06aec-69c2-4e42-8bfd-08826f242584
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccc1715f-b1aa-4ee5-846d-8a4daebc3733
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: ac557e64-3246-40e3-a950-82b16582d625
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(1,0)
+            description: ""
+            hashDetails: null
+            name: WDC_LOYALTY_POINTS_EARNED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10d9d50a-657d-444e-bb06-107bba2d86cc
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 18cd0145-f445-4b56-8fe6-dc40f8f2aa0b
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ADVANCED_COMPLIANCE_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89e15c4c-4da2-4fff-a8cc-5256ec58c369
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 80f3537b-3d34-43ec-8656-b592a0bd78f3
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BYPASS_FULFILLMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23382566-b294-4b42-ad1d-64fff94c0917
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 772ba202-f194-4801-9562-7f9866595560
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9cddb197-698e-4d45-80b2-8c2ef0b84e67
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 7dde3f23-0987-464f-a45f-353ae18b3779
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(13,6)
+            description: ""
+            hashDetails: null
+            name: TOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89faf601-b52d-4c50-b30f-fbe24b7c733c
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 8765c409-0dbd-488d-a1e7-dd3115f0058c
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(1,0)
+            description: ""
+            hashDetails: null
+            name: BC_PICKUP_METHOD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de7e5eca-3566-4b80-b7b8-0453752698fa
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: e64baf94-76e5-4615-98ab-a645b9e6bb16
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_CHANNEL_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef66faab-225d-4b5f-ad9b-bff25bbcc630
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 8cf1724e-435a-4b1d-b573-dcd1d9b62f53
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f552a85c-645a-4940-8a67-d9b81f8909af
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: a3724d9d-805f-4f0f-83ff-ae44e4f227f2
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_NON_TAXABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97ecad3c-f425-4845-8c32-3c370854a656
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 8e559663-643a-43dd-878f-1fa4497636f9
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: BC_CONSIGNMENT_PICKUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2513e871-be5e-4e60-9046-996bcb037130
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: cbca0553-4b4b-4f86-917e-65f2898f3814
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CLUB_OPTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f4fc977-a723-4af0-a9a3-af9c91907354
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: fa91b2ca-6e57-4d68-a883-a99f7e7df32a
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COMMIT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5bc41c9a-0cf3-49b1-a4ce-952292fbbf9d
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: d851c5a7-a8d9-4b0d-8579-58339e8eae63
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(6,4)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ee36558-d5ca-4257-bda5-97223fa7b320
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 407115cd-abbc-4cbe-a3d3-b64f0303312c
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be78b930-a018-49c8-b9ef-c03f47814144
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: e30ba5d6-6a6b-4102-af44-af217f091b20
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a5c09a5-d6db-424a-be20-0c7392289dd6
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 9dad9c5a-fe9c-497f-87e9-12207036e27a
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(11,6)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c541f3ae-a8c7-4230-98cc-88b420e09c08
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 20ebd3c0-3860-40cd-9a42-cec58cede89f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(6,2)
+            description: ""
+            hashDetails: null
+            name: DISCOUNT_AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 60d49adf-ba62-4c73-9cd9-571de8716f6d
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: ac0c453a-1cd0-4c99-9d33-0a4c6220e5cf
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DEPARTMENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7223b4c-e672-41a6-860f-f4f616e48520
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 22b867f3-a00d-4f86-9462-51209ccb3466
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PROCESSING_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c081c6e-2cf6-4da1-bc04-665cfc51f3ca
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: d7e0f5c5-1b0b-43ff-bd8c-6aa15f954281
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(11,4)
+            description: ""
+            hashDetails: null
+            name: TOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aadd7742-85b9-4350-938c-a63a717159d5
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 4919acf4-23c7-410e-85c9-01e3ef10cf82
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e045129-ce1a-4d09-b3c0-ed01de554e71
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDERS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: f62195b9-7e4c-47e6-bbea-07f549730996
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: MANUAL_PROCESSING_REQUIRED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28371adc-5b80-49fb-8350-8c1c444bcdc5
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: a99952cb-93b2-4315-bf33-2f2bc98c7412
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: RELEASE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae1309d6-b2bd-41d2-b950-82bb53d1d329
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: db3bea09-570a-4907-bd63-408a9a9c48fd
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: WDC_DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ed4126d-fe5c-42d9-8e66-f7d089646c6f
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDERS"."WDC_DATE_MODIFIED")
+          - columnReference:
+              columnCounter: 1f059322-f4b6-45be-933e-639d2922d97f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DELIVERY_METHOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 229f8c24-ab22-489f-9427-c584f6f7ddc6
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: b69def84-08f7-4e80-bd5e-4c49995eaff8
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(7,0)
+            description: ""
+            hashDetails: null
+            name: BC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a323b40a-d177-4df3-8942-1b47fa3f0d92
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 8e9ae16f-fbd9-4448-ad16-9ff986b8d9eb
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(9,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3948b6b-51cc-4e17-b4ff-732eb95da7a8
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: f55f5d3e-b13d-4749-aadd-32baf0e90f60
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f5da714-3618-47f9-b3e3-8aea850a5601
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 887d256d-e8cb-42de-85de-c4f59c6ff24d
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 130dd7d8-b479-4b78-9ea9-cdedbb43200c
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 3d107a9a-87fb-4014-b27f-43d9417b35d7
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_ORDER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0455a86-70d0-439e-bd75-0913b6e4efc0
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 0256d63c-cdd8-469a-ba9f-4cc2c07c7bae
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: ORIGINAL_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2ad3688-5e92-4d99-bcd6-125d3ec8c462
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDERS"."ORIGINAL_ORDER_DATE")
+          - columnReference:
+              columnCounter: e4b53cc3-d8c2-4104-b344-0464a0ada67d
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_DRAFT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f593d006-bb52-4333-a974-edf9c44c67a1
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: edf78a66-2c68-4849-b0ea-bf3775018c6f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(13,6)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 962750ac-f4e9-49cf-907f-4c1d31726cd8
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 64de77b2-62d5-43f4-a322-f2300309da77
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b18aa8c-1a0a-4e20-bd66-96fa1dfa96da
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 48c0cec6-b325-46a8-a944-95f1803afddb
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(7,4)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2599c663-97a8-4b8e-9d82-32fb9ba65836
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 4d7f69fd-a9ec-44c0-acec-289bcbbed39f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BC_CART_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5bdbcf6-7569-41d4-af0d-552bdeba614e
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 56891ecd-69e0-4729-a350-ee37cbb25ca2
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: MEMBERSHIP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f84b9db-a201-4685-a124-67a26e7be301
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 7258e0a0-061b-4bb1-b4f2-bd6ab749fd8a
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CLUB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a9b1a03-858c-42fe-a6b4-7e0a51866136
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 9486171d-26ec-49bb-962b-5384a027df40
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: FUTURE_SHIP_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39f37f01-e1a2-4e33-a2ad-207923efc702
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDERS"."FUTURE_SHIP_DATE")
+          - columnReference:
+              columnCounter: e28a90f3-d103-4bcb-9ac0-d563a9a2abe8
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e446cf73-671e-4bdb-a4d5-04f21444c6ad
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: be7ec5db-3f7b-41e9-98e6-730ae7ff070a
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b2c9eeb-920c-4381-aac1-a44e90e4f822
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: a5f290e2-72db-4624-85ec-1dcdd1791168
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(1,0)
+            description: ""
+            hashDetails: null
+            name: WDC_LITER_TAX_TOTAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d87ca26-c831-403a-8ffa-67bfcd7a83e4
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 7b487649-eb7d-4427-8f77-9c0dd94eb819
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf3c1bb3-d586-4fef-8973-8454ddc05eab
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 3cfdd9ea-4ee6-4c83-bc54-3c377516039d
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ANWD_FULFILLMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 438eeaac-a075-4a3e-9856-ad9370a1b533
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: a0e68cdd-501f-43b0-992d-4eb4a95c71c5
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DATE_COMPLETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be709bd6-3f8a-4efd-b992-bfa52f5be86b
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDERS"."DATE_COMPLETED")
+          - columnReference:
+              columnCounter: 97007625-d7f2-4c76-a6e4-ee9cb3ea0e8b
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_SALES_ASSOCIATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f5d09a5-a987-454d-aec5-f8d8a4e67bae
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 07bab9f5-e72a-48f9-baf0-aa831ac433a1
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PLATFORM_APPLICATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 214f6475-1e2a-4489-b066-096410e944f6
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 07a53d73-df17-4bda-9797-f698b7e32b54
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: MANUAL_PROCESSING_INSTRUCTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 162cc2d6-9402-442c-8efc-272b7a420399
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 2ab034a4-3619-4a1e-943c-52f1975f2d5f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_MEMBER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f074fd3-a436-45ad-8e48-e70016e117d5
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: b5e8da9c-a087-4170-862a-d8aa5f28056d
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_SHIPPING_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5882bd50-e09f-413a-8bb1-a58ee31da725
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 7a67b14a-f943-4b19-a3f0-05a8f9bb24dc
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 856fb25c-050d-47fb-bea2-82bb4c6c7e6b
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: ec2f2da3-0556-46fb-9f21-9b7e1cde8b6b
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SALES_ASSOCIATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1fae2aa2-5db3-471a-af1b-acb281ffcb94
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: b51b60f4-59a2-4896-a033-b282f3dccaa3
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(6,2)
+            description: ""
+            hashDetails: null
+            name: WDC_TIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 591ffc29-9120-4ce9-ad7c-120f40d575b0
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 22cda104-9724-4e7c-bf0e-0d94e4d4e536
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ea41e19-9c6c-4cb3-846d-9d23c366885b
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: f0488339-575f-487a-9374-5060e1ba4cc5
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_WHOLESALE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d21f4434-50db-4658-811e-0d455bd12735
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 40c5500e-2e5e-4654-b55b-db2f34603aaf
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_SHIPPING_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4498b5fc-ad0f-46d2-98f5-d6d69f9d5285
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 2275f175-7671-4216-8a05-641146d3798a
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 816082c8-9f84-4a1f-b2e2-0fd6ab56ee71
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: b34c7862-8119-4ec9-bcef-8d511f1edaa2
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7669336-578c-4333-ae46-4402297848bd
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: ef823e10-a37a-487b-b068-e7ec8e69cf40
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38d52085-3e6f-41f2-b50a-04aa6f77d6c4
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 0c742ec9-3a6e-419d-b0c0-87a2f68aaa57
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: NUMBER(9,6)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5ca4074-4695-4a21-a543-cb9606127d96
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 18bd95e9-e13b-4f76-8beb-ab5bcba8d42f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: UNDRAFT_PROCESS_IN_PROGRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2af9bc1-c9b9-43a0-bc72-2494399c0726
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 3cd3b821-1c2e-4ace-8235-97c921e57ca2
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_PAYMENT_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5351f9b-2bd4-4d16-9e26-235df8a24f06
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 8621e844-f532-4bca-967f-cb01856ef6bd
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STAFF_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bf4f5596-95ef-456b-9d26-e560d5fc35fc
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 234b6ad9-38a3-43fd-b69f-83e6af55d07f
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_SHIPPING_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea26c334-b8df-44c5-9cbd-3f50ddc0c349
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 21ea1ca3-464f-415d-8b57-f83867c6ca3c
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b58fdd5-526d-4a00-b71f-26382c09dbaa
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 9ded054f-dae4-4d74-b6f0-a98c1ed07d26
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SALE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ec50607-a325-4848-9d28-f5071cbd3575
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: 55b25114-44f5-46ee-936e-63ac3d7ffedb
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df31f582-9f23-41e6-a18e-ffadeb6e5fe2
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - columnReference:
+              columnCounter: fe455b30-70fe-4dc8-9c3c-0288fd88ad76
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SHIPMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 984877e9-56e1-433f-b9b1-c0a610714850
+                    stepCounter: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 331e6355-fd9a-4c94-b30f-8979b57cf924
+              stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "ORDERS"."ID" ORDER BY coalesce("ORDERS"."UPDATED_AT", "ORDERS"."WDC_DATE_MODIFIED") DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDERS: dc20ae18-1ddf-4b2f-ae95-d27e12cc53f2
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: ORDERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'ORDERS') }} "ORDERS"
+                QUALIFY R_NO = 1
+            name: STG_ORDERS
+            noLinkRefs: []
+      name: STG_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 31819e7e-fc50-4e84-bbbe-d43cd4978e17

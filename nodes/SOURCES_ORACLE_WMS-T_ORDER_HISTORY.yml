@@ -1,0 +1,124 @@
+steps:
+  T_ORDER_HISTORY-6faf2e70-98ad-4e55-9b7b-797bfdcafa17:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0593ca33-66aa-40a8-970f-0b2ddc3c8353
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b86520f3-f86a-4115-8058-ff38be8c2db8
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: VARCHAR(500)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9dc00d8a-bd78-486c-890b-1011dd10e1dd
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: ORDER_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1c153e61-b40b-43b0-91ee-9ae02b0bdc02
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1c29a158-8f6b-4d49-8432-791762602dca
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 328a8072-4f50-4af5-9280-d2813f298356
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: TIME_RECORDED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c108454b-d8e2-449a-9726-35e0084a4923
+              stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: ROW_ID
+            nullable: true
+            primaryKey: true
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ORDER_HISTORY') }}
+      name: T_ORDER_HISTORY
+      schema: ""
+      sqlType: Source
+      table: T_ORDER_HISTORY
+      type: sourceInput
+    stepCounter: 6faf2e70-98ad-4e55-9b7b-797bfdcafa17

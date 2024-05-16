@@ -1,0 +1,93 @@
+steps:
+  ONLINE_FILING_COVERED_PERIODS_MAP-2783:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45558"
+              stepCounter: "2783"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ONLINE_FILING_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45559"
+              stepCounter: "2783"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TAX_PERIOD_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45560"
+              stepCounter: "2783"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45561"
+              stepCounter: "2783"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "45562"
+              stepCounter: "2783"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'ONLINE_FILING_COVERED_PERIODS_MAP') }}
+      name: ONLINE_FILING_COVERED_PERIODS_MAP
+      schema: ""
+      sqlType: Source
+      table: ONLINE_FILING_COVERED_PERIODS_MAP
+      type: sourceInput
+    stepCounter: "2783"

@@ -1,0 +1,138 @@
+steps:
+  PROJECT_REVENUE_RLS_CHARGE_RLS-2837:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46876"
+              stepCounter: "2837"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ACTUAL_AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46877"
+              stepCounter: "2837"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CHARGE_RULE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46878"
+              stepCounter: "2837"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_AMOUNT_MODIFIED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46879"
+              stepCounter: "2837"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: FORECAST_AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46880"
+              stepCounter: "2837"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PROJECT_REVENUE_RULE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46881"
+              stepCounter: "2837"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46882"
+              stepCounter: "2837"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46883"
+              stepCounter: "2837"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'PROJECT_REVENUE_RLS_CHARGE_RLS') }}
+      name: PROJECT_REVENUE_RLS_CHARGE_RLS
+      schema: ""
+      sqlType: Source
+      table: PROJECT_REVENUE_RLS_CHARGE_RLS
+      type: sourceInput
+    stepCounter: "2837"

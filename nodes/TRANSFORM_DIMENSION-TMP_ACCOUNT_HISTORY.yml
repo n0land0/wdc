@@ -1,0 +1,498 @@
+steps:
+  TMP_ACCOUNT_HISTORY-5579:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Recurly has a PK combination that includes the updated_at column. Due to this PK combination, every time a record is updated coalesce will see it as a branch new record and not a modified record. In order to have the records persisted correctly, a row_number() function is used to group records by account_id and then choose the most up-to-date record to pass to the persisted layer.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "371234"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33104"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371235"
+              stepCounter: "5579"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33105"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371236"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33106"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "497841"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY'S ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: "371237"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: BILL_TO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33107"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371238"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33108"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371239"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: USERNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33109"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371240"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33110"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371241"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33111"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371242"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33112"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371243"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: CC_EMAILS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33113"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371244"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: PREFERRED_LOCALE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33114"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371245"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33115"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371246"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: VAT_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33116"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371247"
+              stepCounter: "5579"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: TAX_EXEMPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33117"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371248"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: EXEMPTION_CERTIFICATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33118"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371249"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: HOSTED_LOGIN_TOKEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33119"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371250"
+              stepCounter: "5579"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33120"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371251"
+              stepCounter: "5579"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33121"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371252"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33122"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371253"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33123"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371254"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33124"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371255"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33125"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371256"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33126"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371257"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33127"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371258"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33128"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371259"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33129"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371260"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33130"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "371261"
+              stepCounter: "5579"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "33131"
+                    stepCounter: "1478"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371262"
+              stepCounter: "5579"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ACCOUNT_HISTORY_ROW_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "ACCOUNT_HISTORY"."ID" ORDER BY "ACCOUNT_HISTORY"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371523"
+              stepCounter: "5579"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "ACCOUNT_HISTORY_ROW_NUMBER" = 1 THEN 'Y' WHEN "ACCOUNT_HISTORY_ROW_NUMBER" <> 1 THEN 'N' ELSE 'ERROR' END
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "623148"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_ANWDSTORE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623143"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "623149"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_CLASSIC_WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623144"
+                    stepCounter: "1478"
+                transform: ""
+          - columnReference:
+              columnCounter: "623150"
+              stepCounter: "5579"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PARENT_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623147"
+                    stepCounter: "1478"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ACCOUNT_HISTORY: "1478"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_RECURLY
+                nodeName: ACCOUNT_HISTORY
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_RECURLY', 'ACCOUNT_HISTORY') }} "ACCOUNT_HISTORY"
+                QUALIFY ACTIVE_FLAG = 'Y'
+            name: TMP_ACCOUNT_HISTORY
+            noLinkRefs: []
+      name: TMP_ACCOUNT_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5579"

@@ -1,0 +1,93 @@
+steps:
+  PAYMENT_SCHEDULE_DAYS_OF_WEEK_MAP-2808:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46525"
+              stepCounter: "2808"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: DAY_OF_WEEK_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46526"
+              stepCounter: "2808"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PAYMENT_SCHEDULE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46527"
+              stepCounter: "2808"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46528"
+              stepCounter: "2808"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "46529"
+              stepCounter: "2808"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'PAYMENT_SCHEDULE_DAYS_OF_WEEK_MAP') }}
+      name: PAYMENT_SCHEDULE_DAYS_OF_WEEK_MAP
+      schema: ""
+      sqlType: Source
+      table: PAYMENT_SCHEDULE_DAYS_OF_WEEK_MAP
+      type: sourceInput
+    stepCounter: "2808"

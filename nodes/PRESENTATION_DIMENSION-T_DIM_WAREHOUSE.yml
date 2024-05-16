@@ -1,0 +1,285 @@
+steps:
+  T_DIM_WAREHOUSE-3927:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table contains the warehouse information for fulfillment. This dimension will soon be conformed with OMS data.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96302"
+              stepCounter: "3927"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: WAREHOUSE_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "96303"
+              stepCounter: "3927"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WAREHOUSE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96066"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96304"
+              stepCounter: "3927"
+            dataType: VARCHAR(400)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAREHOUSE_ADDRESSEE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96068"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96305"
+              stepCounter: "3927"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAREHOUSE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96077"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96306"
+              stepCounter: "3927"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96076"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96307"
+              stepCounter: "3927"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAREHOUSE_INVENTORY_AVAILABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96078"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96308"
+              stepCounter: "3927"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAREHOUSE_INVENTORY_AVAILABLE_WEB_STORE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96079"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96309"
+              stepCounter: "3927"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAREHOUSE_SUPPLY_PLANNING_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96081"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96310"
+              stepCounter: "3927"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WAREHOUSE_LOCATION_PLANNING_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96083"
+                    stepCounter: "3921"
+                transform: ""
+          - columnReference:
+              columnCounter: "96311"
+              stepCounter: "3927"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: USE_BINS_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "96096"
+                    stepCounter: "3921"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96312"
+              stepCounter: "3927"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96313"
+              stepCounter: "3927"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96314"
+              stepCounter: "3927"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96315"
+              stepCounter: "3927"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96316"
+              stepCounter: "3927"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "96317"
+              stepCounter: "3927"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_DIM_WAREHOUSE: "3921"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_WAREHOUSE
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_WAREHOUSE') }} "STG_DIM_WAREHOUSE"
+            name: T_DIM_WAREHOUSE
+            noLinkRefs: []
+      name: T_DIM_WAREHOUSE
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: "3927"

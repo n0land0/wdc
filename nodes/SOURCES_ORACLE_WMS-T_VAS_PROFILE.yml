@@ -1,0 +1,109 @@
+steps:
+  T_VAS_PROFILE-5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c141ae9d-2a94-461f-9cbf-3a74f4df3732
+              stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: VAS_PROFILE_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6bb6472-d0ed-44c1-9307-4a04dd1d34fe
+              stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7aee867a-68a7-4fc0-b618-6731ba8a5b15
+              stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3edb52c4-ca09-4030-990c-29ec28b32e5d
+              stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: VAS_PROFILE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 659cb8b2-6bbc-4842-8886-3c2128944cfe
+              stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c578dc5b-85cb-4f80-a2d5-21069c19ea88
+              stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_VAS_PROFILE') }}
+      name: T_VAS_PROFILE
+      schema: ""
+      sqlType: Source
+      table: T_VAS_PROFILE
+      type: sourceInput
+    stepCounter: 5b7e5e5c-44c0-4ec6-ae24-b3ba51c99e83

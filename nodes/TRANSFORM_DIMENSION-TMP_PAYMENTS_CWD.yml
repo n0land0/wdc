@@ -1,0 +1,217 @@
+steps:
+  TMP_PAYMENTS_CWD-5073:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "179627"
+              stepCounter: "5073"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179546"
+                    stepCounter: "5069"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "PAYMENTS_CWD"."PAYMENT_TIMESTAMP"))
+          - columnReference:
+              columnCounter: "179628"
+              stepCounter: "5073"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179547"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179629"
+              stepCounter: "5073"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179548"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179630"
+              stepCounter: "5073"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179549"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179631"
+              stepCounter: "5073"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREDIT_CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179550"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179632"
+              stepCounter: "5073"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179551"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179633"
+              stepCounter: "5073"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PAYMENT_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179552"
+                    stepCounter: "5069"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624956"
+              stepCounter: "5073"
+            dataType: NUMBER(38,2)
+            description: ""
+            name: TIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624955"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179634"
+              stepCounter: "5073"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179553"
+                    stepCounter: "5069"
+                transform: ""
+          - columnReference:
+              columnCounter: "179688"
+              stepCounter: "5073"
+            dataType: VARCHAR(3)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179687"
+                    stepCounter: "5069"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624954"
+              stepCounter: "5073"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: PAYMENT_ROW_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "PAYMENTS_CWD"."WDC_ORDER_ID","PAYMENTS_CWD"."AMOUNT" ORDER BY "PAYMENTS_CWD"."PAYMENT_TIMESTAMP" DESC)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624975"
+              stepCounter: "5073"
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CASE WHEN "PAYMENT_ROW_NUMBER" = 1 THEN 'Y' WHEN "PAYMENT_ROW_NUMBER" <> 1 THEN 'N' ELSE 'ERROR' END
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PAYMENTS_CWD: "5069"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: PAYMENTS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE', 'PAYMENTS_CWD') }} "PAYMENTS_CWD"
+                QUALIFY "ACTIVE_FLAG" = 'Y'
+            name: TMP_PAYMENTS_CWD
+            noLinkRefs: []
+      name: TMP_PAYMENTS_CWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5073"

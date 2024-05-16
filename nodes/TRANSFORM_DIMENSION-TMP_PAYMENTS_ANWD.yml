@@ -1,0 +1,349 @@
+steps:
+  TMP_PAYMENTS_ANWD-5673:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "625306"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178905"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625307"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178906"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625308"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178907"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625309"
+              stepCounter: "5673"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: BC_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178908"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625310"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178909"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625311"
+              stepCounter: "5673"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178910"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625312"
+              stepCounter: "5673"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178911"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625313"
+              stepCounter: "5673"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178912"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625314"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178913"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625315"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178914"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625316"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178915"
+                    stepCounter: "5039"
+                transform: IFF("PAYMENTS_ANWD"."GATEWAY_TRANSACTION_ID"='', NULL, "PAYMENTS_ANWD"."GATEWAY_TRANSACTION_ID")
+          - columnReference:
+              columnCounter: "625317"
+              stepCounter: "5673"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: FRAUD_REVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178916"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625318"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178917"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625319"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREDIT_CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178918"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625320"
+              stepCounter: "5673"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178919"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625321"
+              stepCounter: "5673"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178920"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625322"
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178921"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625323"
+              stepCounter: "5673"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178922"
+                    stepCounter: "5039"
+                transform: ""
+          - columnReference:
+              columnCounter: "625326"
+              stepCounter: "5673"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179692"
+                    stepCounter: "5039"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625327"
+              stepCounter: "5673"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "PAYMENTS_ANWD"."ID" ORDER BY "PAYMENTS_ANWD"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f16926de-fcdd-4945-b74a-d8670335e38a
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5cfe6f8f-6cc4-4e12-a567-8fdb51b012b7
+                    stepCounter: "5039"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 276b5c82-dee6-480c-8945-a357531b4b1d
+              stepCounter: "5673"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a3a9c94-bc65-4648-b46c-92f56621f7c8
+                    stepCounter: "5039"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PAYMENTS_ANWD: "5039"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: PAYMENTS_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE', 'PAYMENTS_ANWD') }} "PAYMENTS_ANWD"
+                WHERE "PAYMENTS_ANWD"."EMAIL" not like '%suzyeaston.tech%'
+                --and "PAYMENTS_ANWD"."EMAIL" not like '%suzyeaston@icloud.com%'
+                --and "PAYMENTS_ANWD"."EMAIL" not like '%joshclysdale%'
+                and "PAYMENTS_ANWD"."EMAIL" not like '%winedirect.com%'
+                and "PAYMENTS_ANWD"."EMAIL" not like '%test.com%'
+                and "PAYMENTS_ANWD"."COMPANY" not like '%Wine Direct%'
+                QUALIFY R_NO = 1
+            name: TMP_PAYMENTS_ANWD
+            noLinkRefs: []
+      name: TMP_PAYMENTS_ANWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5673"

@@ -1,0 +1,109 @@
+steps:
+  T_LANES-3e625be8-8ce4-41d6-9625-fe117993279d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97466c5f-482e-40c4-aad7-9913d9b970a2
+              stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cae23988-564b-4a90-9a46-a12960c2c18f
+              stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c999b553-fb1b-4735-a1da-92f7ce9be440
+              stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: AUTO_LOAD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5c841db4-10b8-4104-ae9e-8bcb06db3f87
+              stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: LANE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 787914b6-9bdf-404b-9058-c9607a658b59
+              stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b397496-185b-41dd-a24d-729352c0e02e
+              stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_LANES') }}
+      name: T_LANES
+      schema: ""
+      sqlType: Source
+      table: T_LANES
+      type: sourceInput
+    stepCounter: 3e625be8-8ce4-41d6-9625-fe117993279d

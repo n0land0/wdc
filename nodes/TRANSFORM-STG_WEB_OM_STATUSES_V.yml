@@ -1,0 +1,172 @@
+steps:
+  STG_WEB_OM_STATUSES_V-364fd2b9-ebc6-4454-8b67-2e40b615abfe:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: false
+        truncateBefore: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4757a223-39fb-4e17-9664-ba3c81b93473
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(30)
+            description: ""
+            name: LOOKUP_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 697d90c8-22d0-4ac4-9a5a-f8e7f2ed8721
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: d91a7017-06ec-46b0-bfe6-79818985b541
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(80)
+            description: ""
+            hashDetails: null
+            name: MEANING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d193c6e0-4fbd-4e37-9e70-eb8d0a38cb43
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: d33a1e43-ce1d-4289-b50a-7487fa5f9c0f
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 858d9524-794b-49a2-9d66-8373556c2eeb
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: 62d2f1d6-4a55-49a6-8732-8d4887a95276
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(150)
+            description: ""
+            hashDetails: null
+            name: ATTRIBUTE10
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7a12fc7-8a4b-4330-bef9-759deac70706
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: 88dff874-1d49-47db-bb05-de7b9fc63534
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(150)
+            description: ""
+            hashDetails: null
+            name: ATTRIBUTE9
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f4b2169-c449-48d5-b243-baa3c6cb9999
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: 3a512671-cc2f-46bc-a1b4-116ab7711ea8
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(150)
+            description: ""
+            hashDetails: null
+            name: ATTRIBUTE8
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0364e248-363f-475c-babc-45be35a16de7
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: fa402234-b6fc-418c-81c9-0e6a5954f64c
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(150)
+            description: ""
+            hashDetails: null
+            name: ATTRIBUTE7
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef2ae328-47d0-48b1-abe2-2b049af4643d
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: 1ef8bbb8-d1cf-452b-87c5-15b815215649
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: VARCHAR(150)
+            description: ""
+            hashDetails: null
+            name: ATTRIBUTE4
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c07b3996-bd8b-40ae-be38-851ce7ef2b25
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: ""
+          - columnReference:
+              columnCounter: 13b09f85-c2f4-43c8-8dff-4560ebb3166c
+              stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe
+            dataType: NUMBER(38, 0)
+            description: ""
+            name: ATTRIBUTE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02d08757-5093-48a6-9264-421f9c9df892
+                    stepCounter: 6de153fe-e7c2-4823-91ce-74d478fca40d
+                transform: to_number(nvl(attribute2, '999999'))
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE TRANSIENT TABLE {{ ref('TRANSFORM', 'STG_WEB_OM_STATUSES_V')}} AS (
+                select
+                    flv.lookup_code,
+                    flv.meaning,
+                    flv.description,
+                    flv.attribute7,
+                    flv.attribute8,
+                    flv.attribute4,
+                    flv.attribute9,
+                    flv.attribute10,
+                    to_number(nvl(flv.attribute2, '999999')) as attribute2
+                from {{ ref('SOURCES_ORACLE_APPLSYS', 'FND_LOOKUP_VALUES') }} flv
+                where
+                    flv._fivetran_deleted = false
+                    and flv.lookup_type = 'FLOW_STATUS'
+                    and flv.enabled_flag = 'Y'
+                    and flv.start_date_active <= current_date()
+                    and (flv.end_date_active is null or flv.end_date_active > current_date())
+                )
+            dependencies:
+              - locationName: SOURCES_ORACLE_APPLSYS
+                nodeName: FND_LOOKUP_VALUES
+            join:
+              joinCondition: FROM {{ ref('SOURCES_ORACLE_APPLSYS', 'FND_LOOKUP_VALUES') }} "FND_LOOKUP_VALUES"
+            name: STG_WEB_OM_STATUSES_V
+            noLinkRefs: []
+      name: STG_WEB_OM_STATUSES_V
+      overrideSQL: true
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 364fd2b9-ebc6-4454-8b67-2e40b615abfe

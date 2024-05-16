@@ -1,0 +1,1201 @@
+steps:
+  STG_COMPANIES-5100:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table is filtering out and records where company_id is null. Company_id is necessary to join to the fact table.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180472"
+              stepCounter: "5100"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: PSTG_COMPANIES_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57055"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180473"
+              stepCounter: "5100"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: COMPANY_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57056"
+                    stepCounter: "3308"
+                transform: CAST("PSTG_COMPANIES"."COMPANY_ID" AS VARCHAR)
+          - columnReference:
+              columnCounter: "180475"
+              stepCounter: "5100"
+            dataType: VARCHAR(332)
+            description: ""
+            hashDetails: null
+            name: COMPANYNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57068"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180476"
+              stepCounter: "5100"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            name: COMPANY_EXTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57069"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180477"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: COMPANY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57070"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180478"
+              stepCounter: "5100"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57071"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180479"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57072"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180480"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CURRENCY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57073"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180481"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_COMMISSION_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57074"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180482"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_DD_ENTITY_BANK_FOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57075"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180483"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_DD_ENTITY_BANK_SUB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57076"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180484"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_PO_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57077"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180485"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_PO_NUMBER_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57078"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180486"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_REFUND_ENTITY_BANK_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57079"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180487"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_REFUND_ENTITY_BANK__0
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57080"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180488"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: CUST_REF_FILE_FORMAT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57081"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180489"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: DATE_LAST_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57082"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180490"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: DD_FILE_FORMAT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57083"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180491"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: DELEGATE_APPROVAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57084"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180492"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: DELEGATE_TO_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57085"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180493"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: DIC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57086"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180494"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: DIRECT_DEBIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57087"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180495"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: DIRECT_DEBIT_FILE_FORMAT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57088"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180496"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: EFT_BILL_PAYMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57089"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180497"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: EFT_CUSTOMER_REFUND_PAYMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57090"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180498"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: EFT_FILE_FORMAT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57091"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180499"
+              stepCounter: "5100"
+            dataType: VARCHAR(1016)
+            description: ""
+            hashDetails: null
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57092"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180500"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: EMAIL_ADDRESS_FOR_PAYMENT_NOT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57093"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180501"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: EMPLOYEE_COMMISSION_RATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57094"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180502"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: EMPLOYEE_PLANNING_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57095"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180503"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57096"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180504"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: FILLKILL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57097"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180505"
+              stepCounter: "5100"
+            dataType: VARCHAR(7200)
+            description: ""
+            hashDetails: null
+            name: FULL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57098"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180506"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: HIGH_IMPACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57099"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180507"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: ICO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57100"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180508"
+              stepCounter: "5100"
+            dataType: VARCHAR(80)
+            description: ""
+            hashDetails: null
+            name: ID_NUMBER_IN_THE_COUNTRY_OF_R
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57101"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180509"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: ID_TYPE_IN_THE_COUNTRY_OF_R_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57102"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180510"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: INDUSTRY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57103"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180511"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: INVOICING_FREQUENCY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57104"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180512"
+              stepCounter: "5100"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            name: ISINACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57105"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180513"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: JOURNAL_ENTRY_APPROVAL_LIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57106"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180514"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: JOURNAL_ENTRY_APPROVER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57107"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180515"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: JOURNAL_ENTRY_LIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57108"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180516"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57109"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180517"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: LAST_SALES_ACTIVITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57110"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180518"
+              stepCounter: "5100"
+            dataType: VARCHAR(12)
+            description: ""
+            hashDetails: null
+            name: LOGINACCESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57111"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180519"
+              stepCounter: "5100"
+            dataType: VARCHAR(1020)
+            description: ""
+            hashDetails: null
+            name: LSA_LINK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57112"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180520"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: LSA_LINK_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57113"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180521"
+              stepCounter: "5100"
+            dataType: VARCHAR(332)
+            description: ""
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57114"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180522"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: NO__OF_EMPLOYEES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57115"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180523"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57116"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180524"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: PAYMENT_PRIORITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57117"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180525"
+              stepCounter: "5100"
+            dataType: VARCHAR(400)
+            description: ""
+            hashDetails: null
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57118"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180526"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: PLANNING__BUDGETING_CATEGOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57119"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180527"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: RECURLY_WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57120"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180528"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SALES_ORDER_APPROVAL_LIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57121"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180529"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SALES_ORDER_APPROVER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57122"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180530"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SALES_ORDER_ENTRY_LIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57123"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180531"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57124"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180532"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: SUBSIDIARY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57126"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180533"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: TAX_CONTACT_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57127"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180534"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: TAX_CONTACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57128"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180535"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: TAX_CONTACT_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57129"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180536"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: TAX_CONTACT_MIDDLE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57130"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180537"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: TAX_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57131"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180538"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: TRANSACTIONS_NEED_APPROVAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57132"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180539"
+              stepCounter: "5100"
+            dataType: VARCHAR(64)
+            description: ""
+            hashDetails: null
+            name: UEN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57133"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180540"
+              stepCounter: "5100"
+            dataType: VARCHAR(400)
+            description: ""
+            hashDetails: null
+            name: URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57134"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180541"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: USES_ECOMMERCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57135"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180542"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: USES_ECOMMERCE_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57136"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180543"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: USES_FULFILLMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57137"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180544"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: USES_FULFILLMENT_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57138"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180545"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: USES_MARKETPLACE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57139"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180546"
+              stepCounter: "5100"
+            dataType: VARCHAR(16000)
+            description: ""
+            hashDetails: null
+            name: VAT_REGISTRATION_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57140"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180547"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: VENDOR_BANK_FEES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57141"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180548"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: VENDOR_BILL_APPROVAL_LIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57142"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180549"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: VENDOR_BILL_APPROVER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57143"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180550"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: VENDOR_BILL_ENTRY_LIMIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57144"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180551"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: VENDOR_ENTITY_BANK_FORMAT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57145"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180552"
+              stepCounter: "5100"
+            dataType: VARCHAR(600)
+            description: ""
+            hashDetails: null
+            name: ADDRESS1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180398"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180553"
+              stepCounter: "5100"
+            dataType: VARCHAR(600)
+            description: ""
+            hashDetails: null
+            name: ADDRESS2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180399"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180554"
+              stepCounter: "5100"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180400"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180555"
+              stepCounter: "5100"
+            dataType: VARCHAR(200)
+            description: ""
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180402"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180556"
+              stepCounter: "5100"
+            dataType: VARCHAR(144)
+            description: ""
+            hashDetails: null
+            name: ZIPCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180403"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180557"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: VENDOR_ENTITY_BANK_SUBSIDIA_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57146"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180558"
+              stepCounter: "5100"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            name: VENDOR_PLANNING_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57147"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180559"
+              stepCounter: "5100"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: VINTAGE_FUNDS_AUTOREDEPOSIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57148"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180561"
+              stepCounter: "5100"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: DATE_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57151"
+                    stepCounter: "3308"
+                transform: ""
+          - columnReference:
+              columnCounter: "180565"
+              stepCounter: "5100"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "58435"
+                    stepCounter: "3308"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_COMPANIES: "3308"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_COMPANIES
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_COMPANIES') }} "PSTG_COMPANIES"
+                where "PSTG_COMPANIES"."COMPANY_ID" is not null
+                and "PSTG_COMPANIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_COMPANIES
+            noLinkRefs: []
+      name: STG_COMPANIES
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5100"

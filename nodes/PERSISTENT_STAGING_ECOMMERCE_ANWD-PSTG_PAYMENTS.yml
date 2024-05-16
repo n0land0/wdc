@@ -1,0 +1,509 @@
+steps:
+  PSTG_PAYMENTS-2519dfe6-1931-4139-abaf-c97a96fe47fd:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: PERSISTENT_STAGING_ECOMMERCE_ANWD
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7de6b3ee-b4d5-42ff-80ce-50f2d4b204be
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_PAYMENTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 4c934fd6-4aea-46db-aeff-26641b64ddfd
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 39abfea7-3398-4bd3-b4d6-3d1a42b0683d
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 4192d303-8e70-41bd-8c0a-a20ef655fbb7
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PAYMENT_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a52b518-1375-4aa2-aaca-ab664f1d2389
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 12037a64-23e7-4a58-967f-829c81178ed2
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d2b78d0-88fe-440c-9dcb-168eae91b5a8
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: ba11b36b-becb-401a-8a03-b53064b41e8d
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 801c5394-9b35-442d-ac97-e70ff94170dd
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: a724586c-eea1-480a-895d-ec783db08c88
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d6d57d5-53d2-4e9c-821f-6d94b366525c
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 028f7468-1b8d-44f5-a6bb-84ee3c5e50c2
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 189c556a-14b0-49f5-a2a2-86f0d56b7508
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 169dbf95-b2e9-4972-a1cf-63c03ecc0920
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: adeef78d-e66f-4cf9-a6d4-9e4e7fb62c13
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: b0141911-34c3-437b-a7f2-88544ac7a277
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_TENDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0c8523e-7560-4de1-89ed-23a535e6f172
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: b3896a71-56c6-40b7-938d-ba03443f6c83
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de59d30a-abf8-411d-8b3a-c88bfa6c5f42
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 0059168c-8c78-4f25-975f-b3ce7fab2bba
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7926256-0a3e-4b67-957d-1f804f08edf0
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: c444c8f0-1426-4cad-923c-d234445ca135
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 65fddc07-fda3-4678-a4b5-e3efbd67bc0d
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: edf3c990-2d3f-4d6e-ab9f-821cca168bef
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b470ff0b-558a-49c6-9018-b592a3d90db3
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 23e6f066-577d-472d-81ea-f7f9e0e44293
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY_RESPONSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00bc0d91-cbd4-4324-a229-d4882147f5e6
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 7626e1aa-e34f-47e1-af58-0e9e25d8a7dd
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b25d1e9-4bf6-4359-9ee5-4b3981bfd77d
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 880d4f4a-4035-4f9b-a865-5341c9221b00
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b92fa1f0-7281-468c-8395-c5cf8b428eab
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 9ea6633d-13bd-4bf0-84d0-46210a8dfb86
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be3514d2-5ef1-4cff-a7e4-34cac857e702
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 049c38eb-b16c-482a-bd4b-a37a390f1e93
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FRAUD_REVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 921ef0d2-53ba-476c-94a0-1979651b5e41
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 45b9ed04-b188-4c16-a140-4f050d6b17f6
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d527773-a110-4802-8dc2-14125cc00706
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 2c2bf542-97b3-456e-9b41-0ce90764002f
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: NUMBER(9,0)
+            description: ""
+            hashDetails: null
+            name: BC_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c46da590-de3d-42f2-a822-cd2f97490688
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 7639906d-fff7-432b-9cd4-f087f60fbd82
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a11a72a6-549a-4641-9133-693e68d10d43
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: b38f94a1-8cca-4baa-b77d-1e762176b0c5
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1852f3ba-be4c-4f68-a57e-d41181057b69
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 764a654c-20f2-464d-a50a-210ae8df1e14
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b751951f-3422-42c7-9bab-9e0214d7e453
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: 044a48b4-3ce5-40a0-b9d1-bd25d14d0b3a
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1f6d06a-3c44-4274-9287-743537c64960
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - columnReference:
+              columnCounter: a2b5d50e-6643-4d83-9bee-a44a38246ee2
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREDIT_CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5ac1589e-025a-43ee-9230-84865f2936ec
+                    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7521422a-1d25-41d4-8325-d091f4f12938
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 70a2d2d7-026d-41e1-bd4d-c8bcdd8306e4
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 44f6a02a-559e-479c-93a8-1b8b19d86144
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0bc46e70-ed89-41e3-ab21-ac51d4560bb0
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 34b2ba2f-3ee3-4a44-b2b2-0b2f5bc947ed
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 923fbc01-a3ed-4960-8dda-9eeb1372bc06
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 361eb299-23d8-45d1-8031-34953106dcd3
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca00337e-d7d0-441b-826f-5275628e670a
+              stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd
+            config: {}
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'ANWD'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM
+                nodeName: STG_PAYMENTS
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM', 'STG_PAYMENTS') }} "STG_PAYMENTS"
+            name: PSTG_PAYMENTS
+            noLinkRefs: []
+      name: PSTG_PAYMENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: 2519dfe6-1931-4139-abaf-c97a96fe47fd

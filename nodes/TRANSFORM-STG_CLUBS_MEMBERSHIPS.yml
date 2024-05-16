@@ -1,0 +1,373 @@
+steps:
+  STG_CLUBS_MEMBERSHIPS-81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fcc7c3e3-8ca9-491a-8a57-2c059b96a52e
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: OP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ca9d6f0-cbff-4727-8e15-838e6774d09e
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 5de6f9f6-f6ba-4cc1-9f29-6b9419650739
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CLUB_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 429293cf-b3a4-40a7-8ba1-fa8e1910521f
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 5526cedb-2148-4078-9cb0-79a4a37b6fcd
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CANCELLATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fadd0a15-c426-4279-8828-39378c6a5b25
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "CLUBS_MEMBERSHIPS"."CANCELLATION_DATE")
+          - columnReference:
+              columnCounter: 80b59528-5b8b-4cce-bbf5-cb06448fe41c
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STORED_CARD_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f1876000-4b0f-451a-82e8-d51cdd293d33
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 66d17bb0-5454-475a-afbd-16a15688ade4
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8424629-9014-4228-9fac-675e866fadea
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: e248e3e9-1c36-497b-81b8-56534b68d522
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f332156-a294-4805-ae1d-4b5a7c909657
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: e027b22e-f3bf-41e4-b03c-d1d8d6093b4b
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b1e6bd8-b4d1-40c2-ab4a-0d0469db46b7
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "CLUBS_MEMBERSHIPS"."CREATED_AT")
+          - columnReference:
+              columnCounter: 3e6d25a6-5b24-4e11-b4d9-f18533e97a19
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREATION_CHANNEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d50bfd2-e5e6-44b7-b962-65ba534b2c18
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 960b121b-92e7-4c4a-b250-61c326362c65
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DELIVERY_PREFERENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1843bcb2-904c-4574-b7a3-775c710f89f3
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 8db5a579-5fb9-49dd-9bd3-9e1461fc5bdc
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: HARD_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08d35ef9-3d3a-4cfc-a66a-db072ee19294
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: ae909f2d-9295-4b90-827b-2a12c5d06f4c
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16b4e62e-f6dd-4c02-b7cd-a9d6966969ef
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: ee15c32c-3640-4046-91be-042be7dbb0fc
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: MANUAL_PROCESSING_INSTRUCTIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ec45ae3c-140e-45b4-aee1-0407078bc42d
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: e0817f4e-05de-42fa-99c6-e02bb965d2b0
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: MANUAL_PROCESSING_REQUIRED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bb437a5e-d3a3-4d5f-a0ba-7dc063395210
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 87607d4b-2d4e-4a5e-8a3e-75735295013e
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: TERMS_ACCEPTED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e4b47ccf-47e9-43db-b0b6-197cedc36fa2
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "CLUBS_MEMBERSHIPS"."TERMS_ACCEPTED_AT")
+          - columnReference:
+              columnCounter: 7070f711-2ba1-45bf-95be-dcf1dacd2d6f
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4134dbad-ae14-40f1-adde-2fcc0bc69b2c
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 602a31af-2aac-4ea3-9964-9955e6a7c31d
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12d72395-e88d-4bc3-8b5d-d8fee771a685
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 9da60685-c52a-4408-82aa-3edca8d01c86
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRIMARY_SHIPPING_ADDRESS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1c70862-16f0-4e75-ab74-b4c4bddd8bb4
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 1146beea-36a9-478d-b08d-86ae094fc5d1
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c89693a-31a5-4864-a03b-9138d2d534c6
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "CLUBS_MEMBERSHIPS"."START_DATE")
+          - columnReference:
+              columnCounter: 96dd27f1-3d73-4998-a0b5-d0f3e5a931b6
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34faf320-5649-48fc-8461-678820bc090f
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "CLUBS_MEMBERSHIPS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: 8dee2732-e445-4c70-9700-f1795011bccf
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CLUB_OPTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 913eb665-e5da-4aa4-831c-624437a566f8
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: e39d6312-e8b0-4c57-a029-cf2fe5101df5
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: NUMBER(5,0)
+            description: ""
+            hashDetails: null
+            name: HUMAN_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e45be83-a496-4d13-b0d6-1c7189cd4960
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: 9f3987fb-622c-43df-baf0-80a7bedb9269
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PICKUP_POOL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cd2e1ad-c2d1-4aca-b29e-1cfda9af5e03
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: ef7ee47a-2aa8-4be9-8710-1356885cb332
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STAFF_NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b483689-7d3e-46e6-ba86-9c4218df938a
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - columnReference:
+              columnCounter: b481dc67-47e0-459e-90ee-8b11461e4ab6
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRIMARY_BILLING_ADDRESS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3de62ddf-62d7-44a1-be25-6cc903dbb561
+                    stepCounter: 32baf001-00b8-46b0-9f9e-08311732b65e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7f323b3f-6f56-49f6-8f01-c2df19038fda
+              stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "CLUBS_MEMBERSHIPS"."ID" ORDER BY "CLUBS_MEMBERSHIPS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CLUBS_MEMBERSHIPS: 32baf001-00b8-46b0-9f9e-08311732b65e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: CLUBS_MEMBERSHIPS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'CLUBS_MEMBERSHIPS') }} "CLUBS_MEMBERSHIPS"
+                QUALIFY R_NO = 1
+            name: STG_CLUBS_MEMBERSHIPS
+            noLinkRefs: []
+      name: STG_CLUBS_MEMBERSHIPS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 81f6ced9-3ee7-4c97-ba1b-2997e8ab37f1

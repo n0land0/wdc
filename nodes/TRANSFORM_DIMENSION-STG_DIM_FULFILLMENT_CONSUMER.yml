@@ -1,0 +1,277 @@
+steps:
+  STG_DIM_FULFILLMENT_CONSUMER-5645:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "624322"
+              stepCounter: "5645"
+            dataType: VARCHAR(150)
+            description: ""
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186766"
+                    stepCounter: "5457"
+                transform: DISTINCT "PSTG_HZ_PARTIES"."PERSON_FIRST_NAME"
+          - columnReference:
+              columnCounter: "624323"
+              stepCounter: "5645"
+            dataType: VARCHAR(150)
+            description: ""
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186880"
+                    stepCounter: "5457"
+                transform: ""
+          - columnReference:
+              columnCounter: "624321"
+              stepCounter: "5645"
+            dataType: VARCHAR(360)
+            description: ""
+            name: FULL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186801"
+                    stepCounter: "5457"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624324"
+              stepCounter: "5645"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ADDRESS_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: NVL("PSTG_HZ_LOCATIONS"."ATTRIBUTE4", "PSTG_HZ_LOCATIONS"."ADDRESS1")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624325"
+              stepCounter: "5645"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ADDRESS_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: NVL("PSTG_HZ_LOCATIONS"."ATTRIBUTE5", "PSTG_HZ_LOCATIONS"."ADDRESS2")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624326"
+              stepCounter: "5645"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: NVL("PSTG_HZ_LOCATIONS"."ATTRIBUTE8", "PSTG_HZ_LOCATIONS"."CITY")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624327"
+              stepCounter: "5645"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: NVL("PSTG_HZ_LOCATIONS"."ATTRIBUTE9", "PSTG_HZ_LOCATIONS"."STATE")
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624328"
+              stepCounter: "5645"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: NVL("PSTG_HZ_LOCATIONS"."ATTRIBUTE10", "PSTG_HZ_LOCATIONS"."POSTAL_CODE")
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "624329"
+              stepCounter: "5645"
+            dataType: VARCHAR(60)
+            description: ""
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186703"
+                    stepCounter: "5456"
+                transform: ""
+          - columnReference:
+              columnCounter: "624349"
+              stepCounter: "5645"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: SHIPPING_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186574"
+                    stepCounter: "5455"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624330"
+              stepCounter: "5645"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'OMS'"
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "625436"
+              stepCounter: "5645"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: SITE_USE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186574"
+                    stepCounter: "5455"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_HZ_CUST_ACCOUNTS: "5453"
+              PSTG_HZ_CUST_ACCT_SITES_ALL: "5454"
+              PSTG_HZ_CUST_SITE_USES_ALL: "5455"
+              PSTG_HZ_LOCATIONS: "5456"
+              PSTG_HZ_PARTIES: "5457"
+              PSTG_HZ_PARTY_SITES: "5458"
+              PSTG_HZ_PERSON_PROFILES: "5459"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_CUST_ACCOUNTS
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_CUST_ACCT_SITES_ALL
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_CUST_SITE_USES_ALL
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_LOCATIONS
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_PARTIES
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_PARTY_SITES
+              - locationName: PERSISTENT_STAGING_ORACLE
+                nodeName: PSTG_HZ_PERSON_PROFILES
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_CUST_ACCT_SITES_ALL') }} "PSTG_HZ_CUST_ACCT_SITES_ALL"
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_CUST_SITE_USES_ALL') }} "PSTG_HZ_CUST_SITE_USES_ALL"
+                    ON "PSTG_HZ_CUST_SITE_USES_ALL"."CUST_ACCT_SITE_ID" = "PSTG_HZ_CUST_ACCT_SITES_ALL"."CUST_ACCT_SITE_ID"
+                    AND "PSTG_HZ_CUST_ACCT_SITES_ALL"."SYSTEM_CURRENT_FLAG" = 'Y'
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_CUST_ACCOUNTS') }} "PSTG_HZ_CUST_ACCOUNTS"
+                    ON "PSTG_HZ_CUST_ACCOUNTS"."CUST_ACCOUNT_ID" = "PSTG_HZ_CUST_ACCT_SITES_ALL"."CUST_ACCOUNT_ID"
+                    AND "PSTG_HZ_CUST_ACCOUNTS"."SYSTEM_CURRENT_FLAG" = 'Y'
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_PARTIES') }} "PSTG_HZ_PARTIES"
+                    ON "PSTG_HZ_PARTIES"."PARTY_ID" = "PSTG_HZ_CUST_ACCOUNTS"."PARTY_ID"
+                    AND "PSTG_HZ_PARTIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_PARTY_SITES') }} "PSTG_HZ_PARTY_SITES"
+                    ON "PSTG_HZ_PARTY_SITES"."PARTY_ID" = "PSTG_HZ_PARTIES"."PARTY_ID"
+                    AND "PSTG_HZ_PARTY_SITES"."SYSTEM_CURRENT_FLAG" = 'Y'
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_PERSON_PROFILES') }} "PSTG_HZ_PERSON_PROFILES"
+                    ON "PSTG_HZ_PERSON_PROFILES"."PARTY_ID" = "PSTG_HZ_PARTIES"."PARTY_ID"
+                    AND "PSTG_HZ_PERSON_PROFILES"."SYSTEM_CURRENT_FLAG" = 'Y'
+                JOIN {{ ref('PERSISTENT_STAGING_ORACLE', 'PSTG_HZ_LOCATIONS') }} "PSTG_HZ_LOCATIONS"
+                    ON "PSTG_HZ_LOCATIONS"."LOCATION_ID" = "PSTG_HZ_PARTY_SITES"."LOCATION_ID"
+                    AND "PSTG_HZ_LOCATIONS"."SYSTEM_CURRENT_FLAG" = 'Y'
+                WHERE "PSTG_HZ_CUST_ACCT_SITES_ALL"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_DIM_FULFILLMENT_CONSUMER
+            noLinkRefs: []
+      name: STG_DIM_FULFILLMENT_CONSUMER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5645"

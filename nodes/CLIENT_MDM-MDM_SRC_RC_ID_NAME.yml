@@ -1,0 +1,202 @@
+steps:
+  MDM_SRC_RC_ID_NAME-5627:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Pulls columns on relevant to Client MDM process from the Recurly Account_history table to make tables cleaner to join and light to run.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "623314"
+              stepCounter: "5627"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54672"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623344"
+              stepCounter: "5627"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: PARENT_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623175"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623316"
+              stepCounter: "5627"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54674"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623325"
+              stepCounter: "5627"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54683"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623350"
+              stepCounter: "5627"
+            dataType: VARCHAR(256)
+            description: WHEN TENANT_ID IS ADDED TO RECURLY ACCOUNT_HISTORY TABLE, THIS SOURCE COLUMN WILL NEED TO BE MAPPED TO THE TENANT_ID COLUMN.
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce5b5b65-0b40-497b-9e8f-70df8ba90de5
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623342"
+              stepCounter: "5627"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54700"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623343"
+              stepCounter: "5627"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54701"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623345"
+              stepCounter: "5627"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54702"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623346"
+              stepCounter: "5627"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54703"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623347"
+              stepCounter: "5627"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54704"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623348"
+              stepCounter: "5627"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54705"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623349"
+              stepCounter: "5627"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "55192"
+                    stepCounter: "3204"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ACCOUNT_HISTORY: "3204"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_ACCOUNT_HISTORY
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_ACCOUNT_HISTORY') }} "PSTG_ACCOUNT_HISTORY"
+                WHERE "PSTG_ACCOUNT_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+                AND "PSTG_ACCOUNT_HISTORY"."COMPANY" IS NOT NULL
+                AND TRIM("PSTG_ACCOUNT_HISTORY"."COMPANY", ' ') <> ''
+            name: MDM_SRC_RC_ID_NAME
+            noLinkRefs: []
+      name: MDM_SRC_RC_ID_NAME
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5627"

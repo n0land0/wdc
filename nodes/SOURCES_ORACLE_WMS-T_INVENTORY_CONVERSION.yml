@@ -1,0 +1,154 @@
+steps:
+  T_INVENTORY_CONVERSION-f851d7de-63a9-4d95-92b6-599a2f277f06:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13d8c747-26bb-46f8-8f4e-340353f01b3c
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 29caeeb8-77f5-44a8-97f0-001dbfe5235e
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 76627f2a-aafc-4fb4-89a3-b9fa50757c9c
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: VARCHAR(800)
+            defaultValue: ""
+            description: ""
+            name: ERR_MSG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4d2298cd-d91f-4393-bae3-20824ef32eda
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ACTUAL_QTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 31b86d13-b425-4449-aa0f-287a23850552
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ADDED_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ffe5233-07cf-4f99-a74d-5a4b1b4bf436
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ITEM_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e716ee05-24c0-4a9f-a128-bceb90e57062
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 894cd3c7-366c-4234-be28-1f529c6d54f8
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: db2c2a55-6a9b-4e6f-89d5-1c43a21a3e1f
+              stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_INVENTORY_CONVERSION') }}
+      name: T_INVENTORY_CONVERSION
+      schema: ""
+      sqlType: Source
+      table: T_INVENTORY_CONVERSION
+      type: sourceInput
+    stepCounter: f851d7de-63a9-4d95-92b6-599a2f277f06

@@ -1,0 +1,492 @@
+steps:
+  PSTG_HOLIDAY-4786:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118488"
+              stepCounter: "4786"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_HOLIDAY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "118489"
+              stepCounter: "4786"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110599"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118490"
+              stepCounter: "4786"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110600"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118491"
+              stepCounter: "4786"
+            dataType: VARCHAR(300)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110601"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118492"
+              stepCounter: "4786"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_ALL_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110602"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118493"
+              stepCounter: "4786"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACTIVITY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110603"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118494"
+              stepCounter: "4786"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: START_TIME_IN_MINUTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110604"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118495"
+              stepCounter: "4786"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: END_TIME_IN_MINUTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110605"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118496"
+              stepCounter: "4786"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110606"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118497"
+              stepCounter: "4786"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110607"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118498"
+              stepCounter: "4786"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110608"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118499"
+              stepCounter: "4786"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110609"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118500"
+              stepCounter: "4786"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SYSTEM_MODSTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110610"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118501"
+              stepCounter: "4786"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_RECURRENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110611"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118502"
+              stepCounter: "4786"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110612"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118503"
+              stepCounter: "4786"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_END_DATE_ONLY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110613"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118504"
+              stepCounter: "4786"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110614"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118505"
+              stepCounter: "4786"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_INTERVAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110615"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118506"
+              stepCounter: "4786"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_DAY_OF_WEEK_MASK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110616"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118507"
+              stepCounter: "4786"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_DAY_OF_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110617"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118508"
+              stepCounter: "4786"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_INSTANCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110618"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118509"
+              stepCounter: "4786"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURRENCE_MONTH_OF_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110619"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118510"
+              stepCounter: "4786"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110620"
+                    stepCounter: "4461"
+                transform: ""
+          - columnReference:
+              columnCounter: "118511"
+              stepCounter: "4786"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "110621"
+                    stepCounter: "4461"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118512"
+              stepCounter: "4786"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118513"
+              stepCounter: "4786"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "118637"
+              stepCounter: "4786"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118514"
+              stepCounter: "4786"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118515"
+              stepCounter: "4786"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118516"
+              stepCounter: "4786"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "118517"
+              stepCounter: "4786"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: HOLIDAY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'HOLIDAY') }} "HOLIDAY"
+            name: PSTG_HOLIDAY
+            noLinkRefs: []
+      name: PSTG_HOLIDAY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4786"

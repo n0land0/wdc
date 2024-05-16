@@ -1,0 +1,1214 @@
+steps:
+  PSTG_ENGAGEMENT_TASK-1639:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37794"
+              stepCounter: "1639"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ENGAGEMENT_TASK_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "37795"
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ENGAGEMENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35060"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37796"
+              stepCounter: "1639"
+            dataType: VARCHAR(8192)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35061"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37797"
+              stepCounter: "1639"
+            dataType: VARCHAR(2048)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SUBJECT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35062"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37798"
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35063"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37799"
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FOR_OBJECT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35064"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37800"
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TASK_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35065"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37801"
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: COMPLETION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35066"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37802"
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35067"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37803"
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SEQUENCE_STEP_ORDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35068"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37804"
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROBABILITY_TO_COMPLETE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35069"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37805"
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PRIORITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35070"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37806"
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_ALL_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35071"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 1d37927b-1ad4-473f-a451-079a08fed6ad
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_FOR_OBJECT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d57ac769-713c-4f6b-b89c-b65a8b4e38df
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 88fc2db2-d3ed-4111-a20d-ddec8578a088
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HUBSPOT_TEAM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5aa35ed-30f3-48e7-8f34-bf815bcf3f6e
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c7693c82-f919-4e3d-a953-38afab0cf17f
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_TASK_REMINDERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b807fd36-1a22-469b-a528-f1d255a96843
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 18a91c97-7cea-4ba9-a57c-d1d52bbbfda3
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 58cda891-60bb-4a1e-84a1-1bf88c0d4a32
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4b6da2c4-b2d3-4923-b02a-04435e909eeb
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_SEQUENCE_STEP_ORDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4cf79799-c3d9-41d0-bcfa-ee484eddc0c5
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: e97d2e36-997f-4f95-b03b-4c0413caf702
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_PRIORITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 688643a2-09ac-40ac-8b98-e6451a9f9de8
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 6a18c6c2-3e6a-4439-bbe0-d6cccf8d78c1
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ENGAGEMENT_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 987580cc-7c4d-4fab-b187-e5e65adcb69f
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: fadcdef1-fbe9-499a-8825-631c299879bb
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aaf3be46-f1fd-4605-8287-ed00604f86e5
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 17010573-07d1-4987-8063-97c7483f7ab0
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_LASTMODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ce6e5f41-efaa-47d3-8861-fdff5ca3a902
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4dd64f41-567b-4c46-af76-53fe602acefa
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28522f58-6bdb-4843-868d-2a6efc4c8a69
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4c17cf86-f685-479c-be17-e6b1d7d056a0
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_NUM_ASSOCIATED_CONTACTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 574c3ec2-5166-44bf-aa59-2590adbb6b18
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c94f584c-f206-4f4c-a7aa-31afc67e7d71
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_IS_COMPLETED_EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a928e16-c516-4cf3-81af-8aea1bf305ad
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 7c0e793c-4a18-4776-a01d-2b98e4781d01
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_TASK_COMPLETION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 119d83a1-6921-415c-87e8-849a9eafa28a
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 49ed5cd9-ff46-4bed-9cb3-458015bb3b54
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_NUM_ASSOCIATED_TICKETS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08f95291-9fac-4896-bf1b-61f50de4e170
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 1e67572d-2fe4-4539-8718-886792505b42
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_UNIQUE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0fecb4a-966f-44bc-a91b-2844cab471f1
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 338bc686-84b1-4dba-8754-1205ec279dc4
+              stepCounter: "1639"
+            dataType: VARCHAR(8192)
+            description: ""
+            name: PROPERTY_HS_BODY_PREVIEW_HTML
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 166dcd46-c523-42df-be94-6844fd8a4e21
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: be022d22-5387-42aa-bed7-8a18eceac256
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_TASK_SEND_DEFAULT_REMINDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f6c2190c-789c-4473-b7a9-43ca33b98727
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 03000915-136f-4d07-82e3-ca4c47064d95
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_IS_COMPLETED_CALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dab8964b-3d84-4a2b-83da-ff91d71702bd
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: e06eeb28-8435-48bd-a699-d5f4ce1c0682
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_TASK_LAST_SALES_ACTIVITY_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3bfb5f4-0584-4ed8-a583-71a8d37fd378
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 704be902-a82a-4d99-a95d-315c9822d7d6
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_TASK_SEQUENCE_STEP_ENROLLMENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7163f2e1-5d84-4c7c-ae25-6a19fa4b67b2
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: e809e562-caee-4063-8668-4ef03722ad7c
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_TASK_MISSED_DUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 871b30e7-0989-4b18-971f-79d783ea59a5
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: b6cf8198-785c-4974-88cb-11eee5da9ca6
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_MISSED_DUE_DATE_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: daa48d3e-e8b8-4446-8b5e-ee34dbe313ac
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c364177a-6ebc-4bff-95cb-9bb0fb1c767c
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_REPEAT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 954fb16d-4bdd-4c84-b228-395ff296de59
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 6d242b00-fd27-4efd-9656-a2cb50ae3d03
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1250605b-ebdb-4435-86b3-e13cb5f2e3d8
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 5e5a9cff-5159-4724-a527-77a30096b828
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_NUM_ASSOCIATED_COMPANIES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79d29267-3fcf-4457-931d-88ac44c7404b
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: ccd711bd-1987-4286-b025-cf5cac1bcba6
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_NUM_ASSOCIATED_DEALS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a34fa3d0-0f62-4e29-ac24-21be38ef1097
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: a385e11d-1a97-4a29-b918-f8a87e3d65d3
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_IS_COMPLETED_SEQUENCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa49ac09-e466-412a-88fd-2e45f79616e0
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: eea9f7b7-43ab-4f43-b8e3-bad76e2c854a
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_USER_IDS_OF_ALL_OWNERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfd2c9d9-207d-4a4e-8862-5d3c9df6ee9c
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 30d0d554-5d34-42f8-ad17-7461973de963
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_MODIFIED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 654b0d6f-20c3-43f5-b452-a09c3e1d8171
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: bc0fd502-c1b4-4ea6-99f3-53dbcf7e5e1b
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_PROBABILITY_TO_COMPLETE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 103282c2-0b36-44a7-baa6-74aea5ec40f3
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 50452cfd-fc79-4ed0-a812-8b6560821bf5
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_RELATIVE_REMINDERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17da44a9-abea-4177-9982-476a9809ee9f
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: fd491d72-4301-4c22-bcd8-505bc8bcc739
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_CONTACT_TIMEZONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: abfed165-be02-438e-9b22-b44594e38706
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: f8d3bbfe-1efa-411e-a836-2e9b91961c8e
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ALL_ACCESSIBLE_TEAM_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6c46104-475d-4247-8318-faa8220bb54f
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: dcadaa8f-b690-4f81-b9e8-ea7cbd9a913a
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_NUM_ASSOCIATED_QUEUE_OBJECTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 560788f1-327a-4432-a7f5-967c23207554
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 5772c2c8-43a2-4591-86a6-9bf7b615c839
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f8af1b51-92a2-431a-9871-39ec712e7e72
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 10b8b1fa-dc94-433b-a980-a5234b408a65
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_BODY_PREVIEW_IS_TRUNCATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3bf6328b-94f3-4b80-b1db-4b53d537325d
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 8df160c8-1097-40a7-bf5d-96de9dbafc80
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_TASK_LAST_CONTACT_OUTREACH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a652c506-2306-479c-9fb0-ce670c755ddc
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: b6457774-4bf5-4378-bac8-c9adec8b5ea0
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_CREATEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83984bd8-1c65-4593-8c9f-00ea20dcca61
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 51740034-b174-432a-a59c-893ca7d3b334
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_IS_COMPLETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cc54c84c-50b0-44c2-9206-75b56843c75f
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 39022918-a251-4288-aec9-411e99ef0b33
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_IS_COMPLETED_LINKED_IN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 48b7aa12-d888-496e-818f-c26bffc7227a
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 13860819-f94a-4f71-9674-1cc3c95f1c93
+              stepCounter: "1639"
+            dataType: VARCHAR(8192)
+            description: ""
+            name: PROPERTY_HS_TASK_BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06789295-5124-46db-9122-0c4a06cba251
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 1aeb9ef6-54c9-4751-a236-f4857f2bc170
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_TASK_IS_ALL_DAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9ede2ed-b093-456a-b950-9ef154f53c39
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c9529d8c-8916-4331-aff1-cb2b02ecead0
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_UPDATED_BY_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08323ce3-bff6-4961-9aea-1d7c90543d2e
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: b5f3ca00-0ed9-49f2-8b35-cb8272fe4436
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CREATED_BY_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7838cfd7-3bd9-43f1-9068-6f50dfd7fac0
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 75a3a316-dd5c-44d2-8f42-13679e2cbb76
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ENGAGEMENT_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1420ea2d-72d1-4b6a-941a-f228d6e6b7b4
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c8067066-6473-4cf8-a75b-ca26cccc2348
+              stepCounter: "1639"
+            dataType: VARCHAR(2048)
+            description: ""
+            name: PROPERTY_HS_BODY_PREVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ed62e813-856f-40bf-9bd4-d079f4c3660c
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 151db13c-ede6-4e6d-9a98-8fcd619ee6f2
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_COMPLETION_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89dbf989-8480-4736-8804-5395e6907b8f
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 3a864ed7-43f3-4703-9af0-3b73d1bc4b8c
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HUBSPOT_OWNER_ASSIGNEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e86c580-a515-4194-9f1e-12fcdd37e5cf
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 2ef8219b-8f24-4dba-9047-19ed0b7248e0
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_GDPR_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23b7e6da-a36f-40f9-a021-cf3e233699ed
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 6defdf65-8d7d-4ec3-8ae5-a59569a0aff8
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: af44eda4-7e8e-4ca7-b728-9cc8444ac46a
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 96cfdbf6-fab7-41c1-b6d1-386139d8de1c
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_REPEAT_INTERVAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f6b379f0-957a-4320-889a-01b4bbd488f1
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 2381ac2c-2e5d-425b-8f97-9bcedad92e5a
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_TASK_TEMPLATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ff68f54-d039-44eb-888a-558930412d97
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 7389608f-6758-4855-930f-14612fd5fb5e
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_TASK_IS_OVERDUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cfcbfe91-7945-4efb-aa84-0837299d0503
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 0efaa35d-9b07-406f-962b-9950369784b2
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_QUEUE_MEMBERSHIP_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c2780c4-c99d-42eb-a42f-80a86aac3a34
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: ecf64753-a9dd-47d2-89fc-080c5bd0b8da
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_FAMILY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd7bdf01-c8fc-42e0-a5de-fc6344b733c0
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4b0c8bdd-ca78-4e91-9743-15a36d0e7296
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_ALL_TEAM_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b94428d9-25fb-4298-b4eb-2ee4ad00a7dc
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: a82705b7-ca6b-4712-aaf7-0e93ecf32303
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16c9f261-84b5-4646-9f2c-8f6640f535e8
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4e40b0c7-02c6-4437-a077-36ed493d6be7
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HUBSPOT_OWNER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b4763b6-0edd-4bfa-a11f-b32cda2215af
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 5fca6ddf-4c67-41b8-a909-34e14045fe2f
+              stepCounter: "1639"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e915dfe0-0f78-43bd-86b5-eeca4f61747e
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 9ff34b88-f09e-4b80-bd87-0eb1bee5d3ca
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_OBJECT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac1ab9d0-6c1d-4a18-8d17-9fd355f02e82
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 6a1664cd-487c-4c67-bcf2-af5dd720e5e2
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_TASK_IS_PAST_DUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eed21092-ced5-400e-99a8-74cb0244182a
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4711706a-dfce-48a2-bd05-ec051cdecdc7
+              stepCounter: "1639"
+            dataType: VARCHAR(2048)
+            description: ""
+            name: PROPERTY_HS_TASK_SUBJECT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7110c559-14d5-4852-8688-a6c9d42640dd
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c1bed674-b5ee-4023-86b9-e96ca772e440
+              stepCounter: "1639"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_TASK_SEQUENCE_ENROLLMENT_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 752d1e68-e2eb-44c5-97b8-eec22806f351
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: a3240b34-0cd2-4991-aaad-290a5414d04e
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_ALL_OWNER_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b29bb21e-a5ed-4e96-9278-0db4c3545a4d
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 5017b924-ceb2-4386-974d-99f72dec2acf
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3374fb66-e96b-49d6-a156-29c2fa4190a0
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 4b109c53-e2db-4a15-ba04-386055321811
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_TASK_CAMPAIGN_GUID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfdc51ba-d558-478d-98c9-2f0c0026f499
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: 558a2210-4290-46ae-8198-8bb6e4b7cbd0
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_MARKETING_TASK_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0a6ca4a-3028-45a1-9edb-dcbed9a54b49
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: ccd40c23-809d-47d2-b76a-5b098f0ab9a8
+              stepCounter: "1639"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_MARKETING_TASK_CATEGORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d34af50-3a93-46e0-82f7-e9bf2ba6edbd
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: c63631cc-fa7a-4bfb-98bb-5fbab48c32e3
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_AT_MENTIONED_OWNER_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16abe133-aa09-4081-b42b-a09e9dfdbacf
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: ab82b5a9-e92f-46d8-8083-0afa1243ab67
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_LABEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8b8baed-fdf6-498d-a5f9-fdfe22f9f9e7
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37807"
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TEMPLATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35072"
+                    stepCounter: "1544"
+                transform: ""
+          - columnReference:
+              columnCounter: "37808"
+              stepCounter: "1639"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SEQUENCE_STEP_ENROLLMENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35073"
+                    stepCounter: "1544"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37809"
+              stepCounter: "1639"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37810"
+              stepCounter: "1639"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38334"
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37811"
+              stepCounter: "1639"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37812"
+              stepCounter: "1639"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37813"
+              stepCounter: "1639"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37814"
+              stepCounter: "1639"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: fa2ff8f7-a6e3-471c-a6c7-964e474470cd
+              stepCounter: "1639"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_PIPELINE_STAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c1f4ee8-a1f8-4b44-a06e-7b5c02976b79
+                    stepCounter: "1544"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: ENGAGEMENT_TASK
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'ENGAGEMENT_TASK') }} "ENGAGEMENT_TASK"
+            name: PSTG_ENGAGEMENT_TASK
+            noLinkRefs: []
+      name: PSTG_ENGAGEMENT_TASK
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1639"

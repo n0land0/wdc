@@ -1,0 +1,427 @@
+steps:
+  STG_DIM_BILLING_INFOS_UNION-5077:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "179736"
+              stepCounter: "5077"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179084"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179056"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179737"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179085"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179057"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179738"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179086"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179058"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179739"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179087"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179059"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179740"
+              stepCounter: "5077"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_PICKUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179088"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179060"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179741"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179089"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179066"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179742"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179090"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179062"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179743"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179091"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179063"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179744"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179092"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179065"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179746"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179094"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179067"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179747"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179095"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179068"
+                    stepCounter: "5049"
+                transform: NULLIF("PSTG_BILLING_INFOS_ANWD"."STREET_2", '')
+          - columnReference:
+              columnCounter: "179748"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SUBDIVISION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179096"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179069"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179749"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179097"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179070"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179750"
+              stepCounter: "5077"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179098"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179071"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179751"
+              stepCounter: "5077"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: ORIGINAL_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179099"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179061"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179752"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ZIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179100"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179072"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179753"
+              stepCounter: "5077"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179101"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179073"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179754"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179102"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179074"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179755"
+              stepCounter: "5077"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179103"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179075"
+                    stepCounter: "5049"
+                transform: NULLIF("PSTG_BILLING_INFOS_ANWD"."PHONE", '')
+          - columnReference:
+              columnCounter: "179756"
+              stepCounter: "5077"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: BIRTHDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179104"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179076"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179853"
+              stepCounter: "5077"
+            dataType: VARCHAR
+            description: ""
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179431"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179430"
+                    stepCounter: "5049"
+                transform: ""
+          - columnReference:
+              columnCounter: "179854"
+              stepCounter: "5077"
+            dataType: VARCHAR(4)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179845"
+                    stepCounter: "5050"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179846"
+                    stepCounter: "5049"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_BILLING_INFOS_CWD: "5050"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_BILLING_INFOS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_BILLING_INFOS_CWD') }} "PSTG_BILLING_INFOS_CWD"
+                WHERE "PSTG_BILLING_INFOS_CWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: WDC
+            noLinkRefs: []
+          - aliases:
+              PSTG_BILLING_INFOS_ANWD: "5049"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_BILLING_INFOS_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_BILLING_INFOS_ANWD') }} "PSTG_BILLING_INFOS_ANWD"
+                WHERE "PSTG_BILLING_INFOS_ANWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: ANWD
+            noLinkRefs: []
+      name: STG_DIM_BILLING_INFOS_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5077"

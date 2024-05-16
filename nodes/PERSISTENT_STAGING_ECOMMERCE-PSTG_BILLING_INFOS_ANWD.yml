@@ -1,0 +1,486 @@
+steps:
+  PSTG_BILLING_INFOS_ANWD-5049:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ECOMMERCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179055"
+              stepCounter: "5049"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_BILLING_INFOS_ANWD_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179056"
+              stepCounter: "5049"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625364"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179057"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625365"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179058"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625366"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179059"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625367"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179060"
+              stepCounter: "5049"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_PICKUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625368"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179061"
+              stepCounter: "5049"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625369"
+                    stepCounter: "5675"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_BILLING_INFOS_ANWD"."CREATED_AT"))
+          - columnReference:
+              columnCounter: "179062"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625370"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179063"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625371"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179064"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625372"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179065"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625373"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179066"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625374"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179067"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625375"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179068"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625376"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179069"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SUBDIVISION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625377"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179070"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625378"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179071"
+              stepCounter: "5049"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625379"
+                    stepCounter: "5675"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_BILLING_INFOS_ANWD"."UPDATED_AT"))
+          - columnReference:
+              columnCounter: "179072"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ZIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625380"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179073"
+              stepCounter: "5049"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625381"
+                    stepCounter: "5675"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "TMP_BILLING_INFOS_ANWD"."DELETED_AT"))
+          - columnReference:
+              columnCounter: "179074"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625382"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179075"
+              stepCounter: "5049"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625383"
+                    stepCounter: "5675"
+                transform: ""
+          - columnReference:
+              columnCounter: "179076"
+              stepCounter: "5049"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BIRTHDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625384"
+                    stepCounter: "5675"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179077"
+              stepCounter: "5049"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179078"
+              stepCounter: "5049"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179079"
+              stepCounter: "5049"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179080"
+              stepCounter: "5049"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179081"
+              stepCounter: "5049"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179082"
+              stepCounter: "5049"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179430"
+              stepCounter: "5049"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "179846"
+              stepCounter: "5049"
+            dataType: VARCHAR(4)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625385"
+                    stepCounter: "5675"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_BILLING_INFOS_ANWD: "5675"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: TMP_BILLING_INFOS_ANWD
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'TMP_BILLING_INFOS_ANWD') }} "TMP_BILLING_INFOS_ANWD"
+            name: PSTG_BILLING_INFOS_ANWD
+            noLinkRefs: []
+      name: PSTG_BILLING_INFOS_ANWD
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5049"

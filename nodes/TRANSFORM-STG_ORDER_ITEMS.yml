@@ -1,0 +1,569 @@
+steps:
+  STG_ORDER_ITEMS-fd8b3c83-e52b-4d38-be3c-f50d03fb09d0:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1e8df8da-aa16-4a05-925e-79e314a06609
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: BC_PARENT_ORDER_PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 935faa00-4cf3-43dc-9006-520eb694c861
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: df18d7d1-62ad-4b50-8ba0-fa5085f2aa82
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea8d2f01-96d2-4e84-8eba-4c9812e8b0f1
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: f97cf04d-d894-4bb5-95a8-5375bdb4e4bc
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRODUCT_TYPE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 823fcc7f-fc13-4954-8067-00c0c5f7d1a4
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: d3541864-2014-442d-bc21-cccd140ca127
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: WDC_IS_SUB_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 059b484a-e904-4da1-80d4-a9e5633b6c16
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 4e26cd20-bfba-44af-8984-64d9741f0695
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c106520-d9b5-432d-b90f-e8016772dded
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 803d3158-0460-44c9-8098-d7e1c290f41e
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3499311-fe5f-4478-86a1-dd8a03be5e8d
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 6027a3b5-be3e-4e60-a6ac-2bb7e98cfaee
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4076e7c2-5b43-418a-bd12-49bb44682177
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEMS"."CREATED_AT")
+          - columnReference:
+              columnCounter: b1565ead-7368-483b-90ca-5e03f11a092f
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1446bddb-4a18-44b2-9708-94b4b1284a19
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 777097e3-92a7-4033-ac6c-5543a4270679
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(9,4)
+            description: ""
+            hashDetails: null
+            name: PRICE_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4044a27f-7d82-4f2b-8da1-3dbde1589ca5
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: edbcf89f-eb8a-47da-855d-980bd6efe50b
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: TOTAL_PRICE_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9cf20271-c8ea-4f79-82d1-cdcc85667a24
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 3e3141b8-a7cb-4757-87d7-684008e282bd
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(5,2)
+            description: ""
+            hashDetails: null
+            name: WEIGHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 651a76c1-5b9d-4fd9-a753-88958d2206aa
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: e3d06b52-e7fb-4eb0-b36e-f825b7e1f78f
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5fc3cad8-630f-4abd-86f5-c8c744625db9
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 2867d954-5581-4c86-8c67-95dd1b9e2231
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_PRICE_OVERRIDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a6771eb-f007-4f01-97e6-77b8ff26317e
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: d093b8fc-2b3c-4fd0-a5d5-98343704c70f
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe4bb03a-fd7b-4306-bb74-5ccb542032ad
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEMS"."DELETED_AT")
+          - columnReference:
+              columnCounter: b764c8d0-d84c-4eb3-a7b9-d8d2e3512be1
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_BUNDLED_PRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7d69d43-63ad-4c10-928e-7ecd98051ff6
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 024e5d59-1326-4319-aa03-5e0a8a0c06b9
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: ORIGINAL_PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8a2faf5-81ac-47c5-867c-aabed0a8c644
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 9cd25119-a22c-4ecc-b296-df99841aa346
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PARENT_SKU_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 95f5c605-a309-4202-80f5-73c373d7b194
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 094cb126-9878-4c56-938b-45bf7ab37494
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(9,4)
+            description: ""
+            hashDetails: null
+            name: TOTAL_PRICE_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 06fb9812-ba4b-4453-a063-659158f4a4cd
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: f49223ed-5f94-4f3a-a1f0-ad8c80d407dc
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46c4c0ee-b12d-41bd-92b3-05b442a09aa4
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_ITEMS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: c34961a8-a290-4999-b968-dcf7742ff324
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: BC_ORDER_PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 607d1992-af6c-4363-a07e-b8a34d1db4cd
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: a19760c6-54f8-4e9c-8bf0-a5148bdf11b0
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: PRICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f5ab484-2614-4a45-b1a2-f4b0fcd794f8
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 7be0c1b4-9fc2-4d48-a46f-ea186efc0dfe
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_DIGITAL_PRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afd86f6c-21a7-4e6b-83d9-107abaead979
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 4b75b14a-330d-4760-ace1-ea1b580a9fd6
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRODUCT_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8557e2af-6a33-4298-ae2e-25ac6ac101a1
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: a27175a2-ef3e-4a1c-b673-30f885703de6
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35aa3c03-a2d9-4ff2-b188-29b9ff989899
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 1ed9d3ec-9e6c-4826-91e1-72f69d05ad06
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PRODUCT_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 754e9ab2-0073-4e57-8495-d5705e851894
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: cb3e6afe-6362-4147-9428-d153f103a05c
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd26da9d-f7dc-4812-a85c-d8f040c2bf6b
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 22f1805b-5a51-4dbd-b87d-f2abfccff83d
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: BC_PRODUCT_VARIANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d3df7f6-184a-4e2e-8b33-55b87e31e692
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: cf406cc0-17c0-4583-b2b6-0be21f06ecd3
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(2,1)
+            description: ""
+            hashDetails: null
+            name: DEPOSIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1b81bd0-8ad0-4d36-ad16-00bf2f566d4a
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 459b7b4e-8bf1-4019-b7cf-1ffacbd26cf5
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e2d88bb-526e-4c40-a30d-fa829632a0cd
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: a5c218d0-c26e-4e40-99bf-947544cfba19
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 877ef5ef-7c96-4af0-8c71-2c4c32b9c872
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 2f719ebe-cf74-44c7-8b85-5397e6fab0ce
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55d58acb-ad5b-4410-b4ce-6b160360c344
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 602b604b-4035-4897-ac6f-e23aa3e1e0b2
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(6,2)
+            description: ""
+            hashDetails: null
+            name: WDC_COST_OF_GOOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eccde162-54ed-48bd-8b11-b11c8b2337b5
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: c7745084-4c7d-4bc1-bf0f-b2d8e3d9275b
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: PRICE_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 49da4daa-2eb1-4e6f-83d4-fe7d6be9dd3c
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: b8725abd-b2b5-46e4-b875-d1fd5a22a920
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0afeffdf-fa71-410b-abb1-ecdf9b89a115
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 6cadc73e-c541-4208-a1d0-d8b756c07e62
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRODUCT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21eedc61-e2da-4c88-aced-e8f602258b0a
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 87985ce8-3092-4fbb-81f6-e8142a5b05ba
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BRAND_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b680d26f-c7e2-4373-af5c-b4000755cf56
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 7d59b806-0c20-4de6-b42b-0478f62e4142
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: BC_PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db86af3c-483b-41c4-9def-0af4a480fa47
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 83219a00-03aa-4be4-93b2-867989eaee1d
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 33ac99c7-ddd0-4faa-8263-bb2fe1f36515
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - columnReference:
+              columnCounter: 05d2c116-454d-492d-af0e-34d89a083030
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_NON_TAXABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e19717bc-6535-4783-847d-883ea33078d4
+                    stepCounter: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 92a5a66a-6a2f-43cd-a1d3-29c52e4c3e24
+              stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "ORDER_ITEMS"."ID" ORDER BY "ORDER_ITEMS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDER_ITEMS: 017c47ee-1a06-4ff6-b8cf-0d832a7db87a
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: ORDER_ITEMS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'ORDER_ITEMS') }} "ORDER_ITEMS"
+                WHERE "ORDER_ITEMS"."ID" IS NOT NULL 
+                QUALIFY R_NO = 1
+            name: STG_ORDER_ITEMS
+            noLinkRefs: []
+      name: STG_ORDER_ITEMS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: fd8b3c83-e52b-4d38-be3c-f50d03fb09d0

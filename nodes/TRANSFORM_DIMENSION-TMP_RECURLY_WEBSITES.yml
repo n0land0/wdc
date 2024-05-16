@@ -1,0 +1,67 @@
+steps:
+  TMP_RECURLY_WEBSITES-5637:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table is pulling only the unique websites_ids from the account history table.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "623956"
+              stepCounter: "5637"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: WESBITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54674"
+                    stepCounter: "3204"
+                transform: " DISTINCT(\"PSTG_ACCOUNT_HISTORY\".\"CODE\")"
+          - columnReference:
+              columnCounter: "623988"
+              stepCounter: "5637"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "55192"
+                    stepCounter: "3204"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ACCOUNT_HISTORY: "3204"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_ACCOUNT_HISTORY
+            join:
+              joinCondition: FROM {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_ACCOUNT_HISTORY') }} "PSTG_ACCOUNT_HISTORY"
+            name: TMP_RECURLY_WEBSITES
+            noLinkRefs: []
+      name: TMP_RECURLY_WEBSITES
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5637"

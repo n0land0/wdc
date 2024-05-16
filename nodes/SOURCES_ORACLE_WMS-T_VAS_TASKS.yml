@@ -1,0 +1,184 @@
+steps:
+  T_VAS_TASKS-50673b04-8930-4cfc-82ee-08d54499fd43:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e38b07ee-aa63-429e-aabe-0ee0b7d54274
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: VAS_OPERATION_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 807aed0c-05cc-499a-9af7-769100d4ee29
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: VAS_TASK_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3e368735-c78f-4a1d-b216-2916bf0c58b7
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: VAS_TASK_DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97b31e04-3e5e-4432-b508-de2d6e09bdc9
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 81583389-b912-4ed9-9fdf-d8b641f10c1a
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: DISPLAY_COMMENTS_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 28f29b33-c059-4ce7-8365-155250ea175a
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: VAS_TASK_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2665e764-11fb-42d9-bd76-c27be40fa674
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: WORKERS_REQUIRED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 86a2fe61-b6a8-4d40-988e-6a27be3c4d07
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: VAS_TASK_TRAN_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fce00f6d-f762-4e00-8905-7b0845a9cefe
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: VAS_LOCATION_TYPE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca87e732-83aa-42db-96db-2c4f6da58357
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3976a4f1-1259-45f6-ae92-e62fefc932ce
+              stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_VAS_TASKS') }}
+      name: T_VAS_TASKS
+      schema: ""
+      sqlType: Source
+      table: T_VAS_TASKS
+      type: sourceInput
+    stepCounter: 50673b04-8930-4cfc-82ee-08d54499fd43

@@ -1,0 +1,138 @@
+steps:
+  REVENUE_PLAN_VERSIONS-2870:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47651"
+              stepCounter: "2870"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: CREATED_BY_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47652"
+              stepCounter: "2870"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47653"
+              stepCounter: "2870"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PLAN_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47654"
+              stepCounter: "2870"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PLAN_VERSION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47655"
+              stepCounter: "2870"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PLAN_VERSION_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47656"
+              stepCounter: "2870"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47657"
+              stepCounter: "2870"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "47658"
+              stepCounter: "2870"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'REVENUE_PLAN_VERSIONS') }}
+      name: REVENUE_PLAN_VERSIONS
+      schema: ""
+      sqlType: Source
+      table: REVENUE_PLAN_VERSIONS
+      type: sourceInput
+    stepCounter: "2870"

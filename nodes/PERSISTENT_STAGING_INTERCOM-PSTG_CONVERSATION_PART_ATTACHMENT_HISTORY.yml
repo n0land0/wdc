@@ -1,0 +1,278 @@
+steps:
+  PSTG_CONVERSATION_PART_ATTACHMENT_HISTORY-e837fbc1-2e71-470c-83ee-b6dbc30b1c34:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_INTERCOM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 73657bbf-7d89-494f-bdb2-9e9a11be7f09
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CONVERSATION_PART_ATTACHMENT_HISTORY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: be87adff-59f6-431b-840e-ed3f5f73f34d
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CONVERSATION_PART_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3cd229e9-82e4-46e8-9dff-d33b34e8dcaf
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - columnReference:
+              columnCounter: fba28155-04b5-462c-9b88-3ba023523eb9
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: CONVERSATION_PART_UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4647379-2f8b-4379-81d7-8af30ae25f5e
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - columnReference:
+              columnCounter: bb05fea1-b5af-4ec2-a146-f863da01d278
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: VARCHAR(512)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: URL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32b49a22-7e63-4f1e-bc91-242392b52a04
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - columnReference:
+              columnCounter: 5b53971b-6208-452e-ac00-57a64f6c7d20
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d61a986-ea67-4d73-84fa-6526bbd7255b
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - columnReference:
+              columnCounter: 4d22a92c-06df-4d0c-9ed5-15519123002b
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c87abe34-818a-4973-a313-8bb1e57e45df
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca53f754-c561-43bd-b1cd-81b830327673
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0bbde27-d2fd-4c2e-a083-2739b6d2f660
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bd881261-f5b8-4308-9d5c-ad1e81c963a7
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'INTERCOM'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8334765f-2118-4591-8859-159bf5cea095
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 845e163d-353c-4819-8caf-d3f09406db9f
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1005627b-8e38-4d05-8992-42bc0ed1294e
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6e533a3a-784c-416e-9f61-66e66fe98395
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 755cc934-ba88-4ff7-926f-07a1f0d3f545
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75ae6a36-c71b-4d2f-bac6-1551d9388f6a
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - columnReference:
+              columnCounter: ca4b211d-dd00-4a84-b175-754a1b50f418
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_END
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2d61ac7-0034-4423-bfa9-ab02c3ada86e
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+          - columnReference:
+              columnCounter: 6ee859eb-4666-4587-b426-ba3913304edc
+              stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cfcfedff-3d0e-41f5-b4eb-daeb3769add2
+                    stepCounter: 98618de8-8c7c-41dc-8229-ac5ac0b48354
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_INTERCOM
+                nodeName: CONVERSATION_PART_ATTACHMENT_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_INTERCOM', 'CONVERSATION_PART_ATTACHMENT_HISTORY') }} "CONVERSATION_PART_ATTACHMENT_HISTORY"
+            name: PSTG_CONVERSATION_PART_ATTACHMENT_HISTORY
+            noLinkRefs: []
+      name: PSTG_CONVERSATION_PART_ATTACHMENT_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: e837fbc1-2e71-470c-83ee-b6dbc30b1c34

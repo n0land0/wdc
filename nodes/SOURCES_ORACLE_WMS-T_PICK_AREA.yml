@@ -1,0 +1,184 @@
+steps:
+  T_PICK_AREA-d06b9ab9-89d9-4425-8cec-101069c2c2ff:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5c7154e-c6c3-4afb-8d13-6388e5a69693
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: ""
+            name: WORK_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c80ea9e8-ad5e-49ec-93d8-2cf271d73fe1
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: DEFAULT_PRINTER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ccddf5f-8885-4759-b3cd-ee8db84cfeb6
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b44c4a3-9939-4870-87f0-d2d4e65b0106
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: PICK_AREA
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6a25e699-0f77-4f20-9f9e-887a7117c497
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(2000)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a5ddea41-88bc-4028-942c-52c4fc042037
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: PICK_AREA_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 18d90d44-e345-4ad0-a4e3-75762af9ccf8
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TARGET_PICK_PERCENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8b0f5aa7-e24d-48f8-a2fa-0c54d70a3e71
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CONTAINER_CLASS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1b676963-0428-44c0-afce-33fa089d6117
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: PREMANIFEST_FLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b1290afa-863b-44d5-9a36-08c3630003d7
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bafa1468-78bf-441a-ab63-3f29d7066638
+              stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_PICK_AREA') }}
+      name: T_PICK_AREA
+      schema: ""
+      sqlType: Source
+      table: T_PICK_AREA
+      type: sourceInput
+    stepCounter: d06b9ab9-89d9-4425-8cec-101069c2c2ff

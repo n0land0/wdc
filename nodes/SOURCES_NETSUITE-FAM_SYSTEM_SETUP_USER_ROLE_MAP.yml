@@ -1,0 +1,93 @@
+steps:
+  FAM_SYSTEM_SETUP_USER_ROLE_MAP-2639:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "43131"
+              stepCounter: "2639"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: FAM_SYSTEM_SETUP_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "43132"
+              stepCounter: "2639"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: ROLE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "43133"
+              stepCounter: "2639"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "43134"
+              stepCounter: "2639"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "43135"
+              stepCounter: "2639"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'FAM_SYSTEM_SETUP_USER_ROLE_MAP') }}
+      name: FAM_SYSTEM_SETUP_USER_ROLE_MAP
+      schema: ""
+      sqlType: Source
+      table: FAM_SYSTEM_SETUP_USER_ROLE_MAP
+      type: sourceInput
+    stepCounter: "2639"

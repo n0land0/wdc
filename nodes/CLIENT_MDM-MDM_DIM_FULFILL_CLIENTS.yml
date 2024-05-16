@@ -1,0 +1,116 @@
+steps:
+  MDM_DIM_FULFILL_CLIENTS-5612:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "434909"
+              stepCounter: "5612"
+            dataType: VARCHAR(360)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "434177"
+                    stepCounter: "5595"
+                transform: ""
+          - columnReference:
+              columnCounter: "434913"
+              stepCounter: "5612"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "434157"
+                    stepCounter: "5595"
+                transform: ""
+          - columnReference:
+              columnCounter: "434918"
+              stepCounter: "5612"
+            dataType: VARCHAR(20)
+            description: ""
+            hashDetails: null
+            name: LOAD_YR_MO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "434206"
+                    stepCounter: "5595"
+                transform: ""
+          - columnReference:
+              columnCounter: "434917"
+              stepCounter: "5612"
+            dataType: VARCHAR(20)
+            description: ""
+            hashDetails: null
+            name: MAX_INVOICE_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: MAX("TMP_STG_FULFILL_BILLING"."INVOICE_MONTH")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "625236"
+              stepCounter: "5612"
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: MAX_INVOICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: MAX("TMP_STG_FULFILL_BILLING"."INVOICE_DATE")
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_STG_FULFILL_BILLING: "5595"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: TMP_STG_FULFILL_BILLING
+            join:
+              joinCondition: |-
+                FROM {{ ref('CLIENT_MDM', 'TMP_STG_FULFILL_BILLING') }} "TMP_STG_FULFILL_BILLING"
+                WHERE "INVOICE_TYPE" = 'Direct Shipping Invoice'
+                GROUP BY "CUSTOMER_NAME", "CUSTOMER_ID", "LOAD_YR_MO"
+            name: MDM_DIM_FULFILL_CLIENTS
+            noLinkRefs: []
+      name: MDM_DIM_FULFILL_CLIENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5612"

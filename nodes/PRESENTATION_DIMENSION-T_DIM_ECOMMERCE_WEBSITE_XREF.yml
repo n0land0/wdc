@@ -1,0 +1,261 @@
+steps:
+  T_DIM_ECOMMERCE_WEBSITE_XREF-5593:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |-
+        This table represents the eCommerce websites. This is a temporary table until access to the website table is granted. 
+
+        This table is taken from a wesbites from eCommerce orders and joined to Recurly Account_History table, Netsuite Companies table and a spreadsheet provided by WineDirect. This join was done to pull in Recurly ID and Netsuite ID where they match as well as company name where none is provided in the spreadsheet. 
+
+        Website Name is first chosen from the spreadsheet, then Recurly and then Netsuite.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PRESENTATION_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371685"
+              stepCounter: "5593"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: WEBSITE_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "371686"
+              stepCounter: "5593"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371675"
+                    stepCounter: "5592"
+                transform: upper("TMP_ECOMM_WEB_ID_LIST"."WEBSITE_ID")
+          - columnReference:
+              columnCounter: "371689"
+              stepCounter: "5593"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WEBSITE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371681"
+                    stepCounter: "5592"
+                transform: ""
+          - columnReference:
+              columnCounter: "624414"
+              stepCounter: "5593"
+            dataType: VARCHAR
+            description: ""
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624413"
+                    stepCounter: "5592"
+                transform: ""
+          - columnReference:
+              columnCounter: "371690"
+              stepCounter: "5593"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NS_COMPANY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371683"
+                    stepCounter: "5592"
+                transform: ""
+          - columnReference:
+              columnCounter: "371691"
+              stepCounter: "5593"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECURLY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "371684"
+                    stepCounter: "5592"
+                transform: ""
+          - columnReference:
+              columnCounter: "623181"
+              stepCounter: "5593"
+            dataType: VARCHAR(256)
+            description: ""
+            isChangeTracking: true
+            name: PARENT_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623178"
+                    stepCounter: "5592"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624918"
+              stepCounter: "5593"
+            dataType: VARCHAR(16777216)
+            description: ""
+            isChangeTracking: true
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624917"
+                    stepCounter: "5592"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371692"
+              stepCounter: "5593"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371693"
+              stepCounter: "5593"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371694"
+              stepCounter: "5593"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371695"
+              stepCounter: "5593"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371696"
+              stepCounter: "5593"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371697"
+              stepCounter: "5593"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_ECOMM_WEB_ID_LIST: "5592"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: TMP_ECOMM_WEB_ID_LIST
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'TMP_ECOMM_WEB_ID_LIST') }} "TMP_ECOMM_WEB_ID_LIST"
+            name: T_DIM_ECOMMERCE_WEBSITE_XREF
+            noLinkRefs: []
+      name: T_DIM_ECOMMERCE_WEBSITE_XREF
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: "5593"

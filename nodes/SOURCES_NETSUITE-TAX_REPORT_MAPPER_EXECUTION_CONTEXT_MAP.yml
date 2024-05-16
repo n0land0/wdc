@@ -1,0 +1,93 @@
+steps:
+  TAX_REPORT_MAPPER_EXECUTION_CONTEXT_MAP-2963:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "49371"
+              stepCounter: "2963"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TAX_REPORT_MAPPER_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "49372"
+              stepCounter: "2963"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: TAX_REPORT_MAP_OPTION_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "49373"
+              stepCounter: "2963"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "49374"
+              stepCounter: "2963"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "49375"
+              stepCounter: "2963"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'TAX_REPORT_MAPPER_EXECUTION_CONTEXT_MAP') }}
+      name: TAX_REPORT_MAPPER_EXECUTION_CONTEXT_MAP
+      schema: ""
+      sqlType: Source
+      table: TAX_REPORT_MAPPER_EXECUTION_CONTEXT_MAP
+      type: sourceInput
+    stepCounter: "2963"

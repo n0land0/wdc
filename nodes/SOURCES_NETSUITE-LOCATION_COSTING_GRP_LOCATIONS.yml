@@ -1,0 +1,93 @@
+steps:
+  LOCATION_COSTING_GRP_LOCATIONS-2720:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44690"
+              stepCounter: "2720"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: LOCATION_COSTING_GROUP_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44691"
+              stepCounter: "2720"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: LOCATION_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44692"
+              stepCounter: "2720"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44693"
+              stepCounter: "2720"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "44694"
+              stepCounter: "2720"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'LOCATION_COSTING_GRP_LOCATIONS') }}
+      name: LOCATION_COSTING_GRP_LOCATIONS
+      schema: ""
+      sqlType: Source
+      table: LOCATION_COSTING_GRP_LOCATIONS
+      type: sourceInput
+    stepCounter: "2720"

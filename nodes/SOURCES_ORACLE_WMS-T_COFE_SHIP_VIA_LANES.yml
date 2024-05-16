@@ -1,0 +1,139 @@
+steps:
+  T_COFE_SHIP_VIA_LANES-18b270df-0a39-4118-acf7-0371b94055cf:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5eae50f8-9969-4e85-b9ad-ac3d72fd0b33
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d0d450f8-f523-415a-87e9-b7a5b60a0a96
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: SHIPVIA_DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd353e0e-8b93-4524-bbff-cd499f499840
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PRIORITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 35f08cf3-f7fb-4375-ac57-e412c9567e48
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: SHIP_VIA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41a0c647-e388-4407-bb8f-01ba828143d7
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: LANE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d12cb6a-a400-4a4f-8136-4dfac7bba61f
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f764b337-ec71-4773-9f07-d1ba911703f3
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 748b1d3f-99d4-41ed-9233-65a7f6561476
+              stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_COFE_SHIP_VIA_LANES') }}
+      name: T_COFE_SHIP_VIA_LANES
+      schema: ""
+      sqlType: Source
+      table: T_COFE_SHIP_VIA_LANES
+      type: sourceInput
+    stepCounter: 18b270df-0a39-4118-acf7-0371b94055cf

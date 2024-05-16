@@ -1,0 +1,190 @@
+steps:
+  MDM_SRC_SF_ID_NAME-5628:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Strips the ID, Name, Parent ID and Account number from the Salesforce PSTG Account table. Makes Salesforce data easier to work with and lighter to run.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "623352"
+              stepCounter: "5628"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117618"
+                    stepCounter: "4758"
+                transform: DISTINCT "PSTG_ACCOUNT"."ID"
+          - columnReference:
+              columnCounter: "623355"
+              stepCounter: "5628"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117621"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623357"
+              stepCounter: "5628"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            name: PARENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117623"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623376"
+              stepCounter: "5628"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            name: ACCOUNT_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117642"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623446"
+              stepCounter: "5628"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117712"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623447"
+              stepCounter: "5628"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117713"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623448"
+              stepCounter: "5628"
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117718"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623449"
+              stepCounter: "5628"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117714"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623450"
+              stepCounter: "5628"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117715"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623451"
+              stepCounter: "5628"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117716"
+                    stepCounter: "4758"
+                transform: ""
+          - columnReference:
+              columnCounter: "623452"
+              stepCounter: "5628"
+            dataType: TIMESTAMP
+            description: ""
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "117717"
+                    stepCounter: "4758"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ACCOUNT: "4758"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_SALESFORCE
+                nodeName: PSTG_ACCOUNT
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_SALESFORCE', 'PSTG_ACCOUNT') }} "PSTG_ACCOUNT"
+                WHERE "PSTG_ACCOUNT"."NAME" IS NOT NULL 
+                AND "PSTG_ACCOUNT"."DATE_CANCELLED_C" IS NULL
+                AND "PSTG_ACCOUNT"."SYSTEM_CURRENT_FLAG" = 'Y'
+                AND "PSTG_ACCOUNT"."ACCOUNT_NUMBER" <> 'A791F92C-F50C-820F-6B9E-67D3CE6C200F'
+            name: MDM_SRC_SF_ID_NAME
+            noLinkRefs: []
+      name: MDM_SRC_SF_ID_NAME
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5628"

@@ -1,0 +1,1070 @@
+steps:
+  PSTG_ENGAGEMENT_CALL-1628:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37615"
+              stepCounter: "1628"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ENGAGEMENT_CALL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "37616"
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ENGAGEMENT_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34958"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37617"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TO_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34959"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37618"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FROM_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34960"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37619"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34961"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37620"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXTERNAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34962"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37621"
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DURATION_MILLISECONDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34963"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37622"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXTERNAL_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34964"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37623"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: RECORDING_URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34965"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37624"
+              stepCounter: "1628"
+            dataType: VARCHAR(8192)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34966"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37625"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DISPOSITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34967"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37626"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CALLEE_OBJECT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34968"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 57554ea7-c105-45d7-9838-3aaa723da757
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HUBSPOT_TEAM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 131e8b98-d44a-47f2-8ec2-0268d70bd767
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 730cedc0-cf1e-47db-8b4b-ff3f65cef184
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f142132d-8d94-43f6-bbb5-a30c08201411
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 40209b86-33d4-4e7e-8262-05bde630ff51
+              stepCounter: "1628"
+            dataType: VARCHAR(8192)
+            description: ""
+            name: PROPERTY_HS_CALL_BODY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d9a4bbc-3d77-499e-9229-29e290fcb135
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 4e4a3bfc-aa3f-480e-85db-c138c9959d33
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ENGAGEMENT_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 577fb9ee-f1b4-496b-bc8d-1ba35024cc55
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 140146d6-3802-443c-b6ff-f1b8d4bf3426
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_VOICEMAIL_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ba2c957-e62d-4fe1-b8d3-f51a90b4470c
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: d90fca33-4ea7-40ff-b9c0-d1c261df9bdb
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 545f446b-82b0-4bea-bcf5-336f72420b77
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 2a14b81f-8574-4f93-822d-f5a7085490fa
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_VIDEO_RECORDING_URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: adacd5b5-bf68-4a2d-8b90-94b3158c1510
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 8fe81b45-f12f-4a99-b66c-c0a6d922d093
+              stepCounter: "1628"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_LASTMODIFIEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2c075f44-0e67-400f-905d-ed4760bc0ac9
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: fb1fba71-641b-459c-b01a-0f389366639c
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_EXTERNAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14b7ae88-b7ea-40b9-a624-09ee4d77163a
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 15f2da10-faab-4013-a6af-3b4d1a31f9e7
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_DEAL_STAGE_DURING_CALL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16c37dba-960f-432b-9a15-5f2e2c078e74
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: dc50aa16-196d-471f-a5e5-7bd0151543ae
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c530f7ec-0286-40f0-82c7-fa4def7c13a4
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: d038f716-5ed9-4054-b4e6-8a02178be3d4
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_CALL_HAS_TRANSCRIPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07b5fa9b-261b-430b-9d03-b77c76a017c0
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: f57f44c6-dccf-4566-85db-c1c2eaf86f8d
+              stepCounter: "1628"
+            dataType: VARCHAR(8192)
+            description: ""
+            name: PROPERTY_HS_BODY_PREVIEW_HTML
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26949f61-0a77-40b2-ac15-660e5fe98e43
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 0b11a1a5-7d06-4ff0-96e7-0d796372a376
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CALL_CALLEE_OBJECT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4a1d4c50-61e4-47d8-ae51-7b0eacaed23a
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 39f05d06-5f7b-4849-b6f4-c33ac7614988
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_DIRECTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75edd22d-99d9-4f01-bee6-68cdfaefbff9
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: f6526590-775d-4824-a422-31d33e2b3c4f
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66509d6c-e46e-49ba-a652-abdf426725e5
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: dcbadb58-1677-4420-8261-2eed92f11928
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ACTIVITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73e5c040-1454-491c-9b9e-1adb07720be4
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: e9578cb5-11fe-4378-8d76-21a698bc3a22
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_CALLEE_OBJECT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54d28f6f-8f9a-4765-9648-aee80374da69
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: d774ccfb-d205-4896-93bb-741456309bec
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_FROM_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e4cebe42-e76f-46e0-bfd1-6ddf8ef3d756
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 9af7e691-571d-497f-8154-28876dad1b7e
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_USER_IDS_OF_ALL_OWNERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 827d81fc-7aa2-476c-b487-0bc0b0b46804
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 3c41a889-b957-4d08-b261-8d6fe7e0433d
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_MODIFIED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c41c6620-4dc5-4401-9e26-cbfa39d10db3
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 3149c790-8e90-4ff9-8037-2400eb7b310e
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b1d8c08-af25-4cb4-88ae-9adc521b9459
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 67cece4d-3fb2-4a93-9f02-adb66ca46cbb
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CONNECTED_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04296842-3963-4575-baa0-c716e56dee84
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 6e9d49f1-c6bb-4954-b722-743522edc61c
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ALL_ACCESSIBLE_TEAM_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89a03c3c-725d-4ffb-b658-e2241afcfa0b
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 32c26dd9-1e36-4583-952c-743acce496d1
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_UNKNOWN_VISITOR_CONVERSATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17426411-efd5-47db-a67c-d6f2a1ab3e41
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 03fd84b9-4939-4214-83c5-357dedbb2a95
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_DISPOSITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ade2a48c-c3bf-4cb8-9fec-4979db93a2c7
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: f83aafb1-e797-41bc-9766-1a5ae54d612d
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_BODY_PREVIEW_IS_TRUNCATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cff0c093-453c-45fd-81ed-fd7cb755e342
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 76fd0bfa-7284-4542-89de-031d2526e35d
+              stepCounter: "1628"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_CREATEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1994518b-10e0-4a24-8ad1-c51c8fe1330d
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: f69bec4b-52e9-4880-a259-c341f92117a5
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_TO_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de06c41f-de90-4cf1-af96-d42fd19b4107
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 98552584-b96b-40a2-b9a0-d08346efa937
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CALL_DURATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d50c5c95-83c1-4f1b-a84b-58e1d1846e70
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: a17c0343-41fa-424d-9337-8b1b52f7d2f4
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_RECORDING_URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f777cdac-aef4-40c6-a9dc-f31d1ad8ef26
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 99c16ed6-7e7a-4e97-8de9-0c5490b5aad9
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_UPDATED_BY_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 908d4163-dd5b-4870-aae9-f18e25d06707
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: fe680ab9-1b4f-42be-b413-6f040d96849d
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CREATED_BY_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ef8b65c-b1ad-4f3d-b3f1-19722d2a98a4
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 23191655-d876-4555-a94e-ccccd51e514b
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ENGAGEMENT_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08866f5f-84b8-4e31-96a5-893e44464103
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 2b845b06-80aa-4f82-9dfa-6c16c29705bd
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_ATTACHMENT_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7bfe846-b0ba-498e-8ada-46659a35e992
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: a770f755-3e54-4db1-be81-fded6d30ba9b
+              stepCounter: "1628"
+            dataType: VARCHAR(4096)
+            description: ""
+            name: PROPERTY_HS_BODY_PREVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa5fee87-7b6f-4a8a-93b5-8998ee53b5d8
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: f7a0450b-b9a2-4f8f-b40f-f08532e5a963
+              stepCounter: "1628"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HUBSPOT_OWNER_ASSIGNEDDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 01cd2f23-5d54-4ce2-b461-8c3ff8cea42f
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 50f44b06-c46f-40fb-916a-16b7033539e6
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            name: PROPERTY_HS_GDPR_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3450126d-249b-4cf8-966c-e76710cb57ba
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 528bf795-5f6d-442b-88ab-46ee9db9982e
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_AUTHED_URL_PROVIDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5ada9916-a8fc-4ed1-815d-dfa06ae5f8c9
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 729f1460-a632-4694-a5fc-c9fa150a1675
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dac2338a-0e84-43c4-9a89-b73f2e63302c
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 30c7959c-98ac-4b4f-9098-116bb4ea72d8
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_ALL_TEAM_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c97dab3a-6fd2-4eb0-852a-d58dc01f6366
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: cfc9ac27-336f-4385-aa3b-26c284e09dd0
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_CREATED_BY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5a2ea81-d788-4cf3-bcc5-89705343e8f0
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 80e803c7-d1b3-44ef-8e61-c715786a3cd6
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HUBSPOT_OWNER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f8f650f5-ab80-4e6d-b888-d7c6ecd855fc
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 24f0e9d8-40e7-4773-bcf6-68e3339b683f
+              stepCounter: "1628"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: PROPERTY_HS_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c283d303-e998-4ac0-bf4f-fd8d3cfef436
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: bedf258f-75af-4332-8eb8-5cb7c56fc613
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_EXTERNAL_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99260f9f-d408-461f-be73-bffc6ccc0456
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 1c9865dc-83bc-4091-9c16-d1c8e234dd6d
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 602e68c7-3aa4-4b23-9038-524d632b710e
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: fc6a41a0-b4fd-40c6-af90-508ef6c3eb42
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_OBJECT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb7831c8-0075-4799-a451-b2ce1c81a6f1
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: c9c5f450-1e7e-4fc5-8660-e1bdcc7ed368
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: PROPERTY_HS_ALL_OWNER_IDS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bab7030c-bdc1-420a-86c4-94a5ce34ec83
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 90716fbe-d141-4d83-8b08-098386649ac5
+              stepCounter: "1628"
+            dataType: FLOAT
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b80df57-08cd-4bc9-aed0-57b2fa59a9e3
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: 87580d39-ff9d-43db-9300-48b78583fcdd
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_LABEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 40eab895-a0fe-4431-9382-cdd4c970692f
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37627"
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CALLEE_OBJECT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34969"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37628"
+              stepCounter: "1628"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TRANSCRIPTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34970"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37629"
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UNKNOWN_VISITOR_CONVERSATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34971"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37630"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34972"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37631"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34973"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37632"
+              stepCounter: "1628"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34974"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37633"
+              stepCounter: "1628"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_TRANSCRIPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34975"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37634"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DIRECTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34976"
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: "37635"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: VIDEO_RECORDING_URL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "34977"
+                    stepCounter: "1533"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37636"
+              stepCounter: "1628"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37637"
+              stepCounter: "1628"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38323"
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37638"
+              stepCounter: "1628"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37639"
+              stepCounter: "1628"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37640"
+              stepCounter: "1628"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "37641"
+              stepCounter: "1628"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 9310ddca-78f3-4290-b96f-7c67be75bae6
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_OBJECT_SOURCE_DETAIL_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2c695c7-839e-4fea-9360-308b3932728b
+                    stepCounter: "1533"
+                transform: ""
+          - columnReference:
+              columnCounter: e7e8eda3-1c86-499f-aaf0-22b84b9d9c4f
+              stepCounter: "1628"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PROPERTY_HS_CALL_VIDEO_MEETING_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e50658d-9c1e-4451-8f9a-88bf9b4f4c36
+                    stepCounter: "1533"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: ENGAGEMENT_CALL
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'ENGAGEMENT_CALL') }} "ENGAGEMENT_CALL"
+            name: PSTG_ENGAGEMENT_CALL
+            noLinkRefs: []
+      name: PSTG_ENGAGEMENT_CALL
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1628"

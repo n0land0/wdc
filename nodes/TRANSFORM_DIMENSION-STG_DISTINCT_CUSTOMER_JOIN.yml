@@ -1,0 +1,255 @@
+steps:
+  STG_DISTINCT_CUSTOMER_JOIN-5099:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: This table is Johns fulfillment customer spreadsheet is joined with the companies table from NetSuite. The purpose of this table is to pull the company_id from the companies table. The company_id column is needed to join Johns spreadsheet to the fact table
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "180457"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124109"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180458"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CUSTOMER_NAME_RAW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124110"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180459"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SITE_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124111"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180460"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PARENT_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124112"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180461"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: VOLUME_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124113"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180462"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_OR_MARKETPLACE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124114"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180463"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124115"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180464"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FULFILLMENT_STOP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124116"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180465"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124117"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180466"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124118"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180467"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE2_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124119"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180570"
+              stepCounter: "5099"
+            dataType: FLOAT
+            description: ""
+            name: COMPANY_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "180473"
+                    stepCounter: "5100"
+                transform: COALESCE("STG_COMPANIES"."COMPANY_ID", SCN."COMPANY_ID", "BARRA"."COMPANY_ID" )
+          - columnReference:
+              columnCounter: "180468"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ARPP_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124120"
+                    stepCounter: "4986"
+                transform: ""
+          - columnReference:
+              columnCounter: "180469"
+              stepCounter: "5099"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDI_FIT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "124121"
+                    stepCounter: "4986"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "180586"
+              stepCounter: "5099"
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: ROW_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER (PARTITION BY "STG_DISTINCT_CUSTOMER"."SITE_CUSTOMER" ORDER BY "STG_DISTINCT_CUSTOMER"."CUSTOMER_NAME_RAW" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              BARRA: "5100"
+              SCN: "5100"
+              STG_COMPANIES: "5100"
+              STG_DISTINCT_CUSTOMER: "4986"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DISTINCT_CUSTOMER
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_COMPANIES
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DISTINCT_CUSTOMER') }} "STG_DISTINCT_CUSTOMER"
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION',  'STG_COMPANIES') }} "STG_COMPANIES"
+                ON TRIM("STG_COMPANIES"."COMPANY_EXTID") = "STG_DISTINCT_CUSTOMER"."CUSTOMER_ID"
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION', 'STG_COMPANIES') }} SCN
+                ON SCN."COMPANYNAME" = "STG_DISTINCT_CUSTOMER"."CUSTOMER_NAME_RAW"
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION',  'STG_COMPANIES') }} BARRA
+                ON "BARRA"."FULL_NAME" = "STG_DISTINCT_CUSTOMER"."ALTERNATE_ID"
+            name: STG_DISTINCT_CUSTOMER_JOIN
+            noLinkRefs: []
+      name: STG_DISTINCT_CUSTOMER_JOIN
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5099"

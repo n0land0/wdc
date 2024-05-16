@@ -1,0 +1,64 @@
+steps:
+  REFUNDS-5041:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ECOMMERCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "178934"
+              stepCounter: "5041"
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: DATA_SOURCE_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "178935"
+              stepCounter: "5041"
+            config: {}
+            dataType: NUMBER(38,2)
+            defaultValue: ""
+            description: ""
+            name: REFUND_AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "178936"
+              stepCounter: "5041"
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: WDC_ORDER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ECOMMERCE', 'REFUNDS') }}
+      name: REFUNDS
+      schema: ""
+      sqlType: Source
+      table: REFUNDS
+      type: sourceInput
+    stepCounter: "5041"

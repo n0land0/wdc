@@ -1,0 +1,277 @@
+steps:
+  PSTG_ORDER_ITEM_GROUPS-5056:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_ECOMMERCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179247"
+              stepCounter: "5056"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ORDER_ITEM_GROUPS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179248"
+              stepCounter: "5056"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f6b0e43-a8d4-4bd3-94e6-b77ae10d434e
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - columnReference:
+              columnCounter: "179249"
+              stepCounter: "5056"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47392c2a-745b-4a73-a907-b20a98cc5202
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - columnReference:
+              columnCounter: "179250"
+              stepCounter: "5056"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_BUNDLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 404d7922-5cc0-44a1-9635-c453ccb6ccee
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - columnReference:
+              columnCounter: "179251"
+              stepCounter: "5056"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d8c3741-a2a2-4301-a010-f6cf7ceed042
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - columnReference:
+              columnCounter: "179252"
+              stepCounter: "5056"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ddec62a9-7054-4a70-b7e2-4b82718ced21
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - columnReference:
+              columnCounter: "179253"
+              stepCounter: "5056"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16dc72ec-5ac0-468a-b679-18ad4a74bea8
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - columnReference:
+              columnCounter: "179254"
+              stepCounter: "5056"
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32b8febf-32e0-4c2b-a0c7-40edd83fd4c1
+                    stepCounter: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179255"
+              stepCounter: "5056"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179256"
+              stepCounter: "5056"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179257"
+              stepCounter: "5056"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179258"
+              stepCounter: "5056"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179259"
+              stepCounter: "5056"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179260"
+              stepCounter: "5056"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "179436"
+              stepCounter: "5056"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_ORDER_ITEM_GROUPS: a662a4da-db28-4b8b-aef8-4b7b6f48f417
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM
+                nodeName: TMP_ORDER_ITEM_GROUPS
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM', 'TMP_ORDER_ITEM_GROUPS') }} "TMP_ORDER_ITEM_GROUPS"
+            name: PSTG_ORDER_ITEM_GROUPS
+            noLinkRefs: []
+      name: PSTG_ORDER_ITEM_GROUPS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5056"

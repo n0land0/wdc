@@ -1,0 +1,328 @@
+steps:
+  PSTG_TICKET_PIPELINE_STAGE-1663:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_HUBSPOT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38222"
+              stepCounter: "1663"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_TICKET_PIPELINE_STAGE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38223"
+              stepCounter: "1663"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: STAGE_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35320"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38224"
+              stepCounter: "1663"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PIPELINE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35321"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38225"
+              stepCounter: "1663"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LABEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35322"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38226"
+              stepCounter: "1663"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35323"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38227"
+              stepCounter: "1663"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DISPLAY_ORDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35324"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38228"
+              stepCounter: "1663"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_CLOSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35325"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38229"
+              stepCounter: "1663"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TICKET_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35326"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38230"
+              stepCounter: "1663"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: _FIVETRAN_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35327"
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: "38231"
+              stepCounter: "1663"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "35328"
+                    stepCounter: "1568"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38232"
+              stepCounter: "1663"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38233"
+              stepCounter: "1663"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "38357"
+              stepCounter: "1663"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'HUBSPOT'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38234"
+              stepCounter: "1663"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38235"
+              stepCounter: "1663"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38236"
+              stepCounter: "1663"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "38237"
+              stepCounter: "1663"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: f40b3a68-a4c0-4e5b-93f2-6e2a8aa83e89
+              stepCounter: "1663"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27a1dce5-f837-45ba-9b18-f7a184cf7b76
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: 5f9b81fe-a316-4bf2-8a65-e214ddb653b6
+              stepCounter: "1663"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdd646ae-4acc-4efd-bc9a-7cd3660a1641
+                    stepCounter: "1568"
+                transform: ""
+          - columnReference:
+              columnCounter: 5995011e-48e4-4b3c-955d-50632852c3d2
+              stepCounter: "1663"
+            dataType: VARCHAR(256)
+            description: ""
+            name: WRITE_PERMISSIONS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4fb60d80-ec50-4b51-8a91-1f72327c7445
+                    stepCounter: "1568"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_HUBSPOT
+                nodeName: TICKET_PIPELINE_STAGE
+            join:
+              joinCondition: FROM {{ ref('SOURCES_HUBSPOT', 'TICKET_PIPELINE_STAGE') }} "TICKET_PIPELINE_STAGE"
+            name: PSTG_TICKET_PIPELINE_STAGE
+            noLinkRefs: []
+      name: PSTG_TICKET_PIPELINE_STAGE
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "1663"

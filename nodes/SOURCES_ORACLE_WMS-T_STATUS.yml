@@ -1,0 +1,109 @@
+steps:
+  T_STATUS-bec5e14e-0cb3-4b84-b439-5ae455d0b11b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d0d2f26-3196-4e69-9159-21aab123c1da
+              stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2dbf11da-778a-4c1e-9128-0aec9409b131
+              stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: TABLE_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7f382a6b-1381-4f32-ac36-f5f08e683dc6
+              stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b
+            config: {}
+            dataType: VARCHAR(400)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 81a0b041-d0b9-42b4-891e-c8b0565eafbb
+              stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: STATUS_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c065b83-9915-4fb7-ac0b-8ccd29948b73
+              stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78be0eda-0c8a-4ac9-a1c6-eabc80de19d9
+              stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_STATUS') }}
+      name: T_STATUS
+      schema: ""
+      sqlType: Source
+      table: T_STATUS
+      type: sourceInput
+    stepCounter: bec5e14e-0cb3-4b84-b439-5ae455d0b11b

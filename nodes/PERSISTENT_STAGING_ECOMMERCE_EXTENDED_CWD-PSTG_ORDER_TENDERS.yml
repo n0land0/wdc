@@ -1,0 +1,647 @@
+steps:
+  PSTG_ORDER_TENDERS-e9d68e73-fc4f-4164-80f6-51ff334030ac:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: PERSISTENT_STAGING_ECOMMERCE_EXTENDED_CWD
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7de85a50-4eff-4665-bc68-de797b0ecb36
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_ORDER_TENDERS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 09a0c1ac-9140-4250-9a96-4f6e421abf23
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: OP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e1f918b-d9d3-42c8-913b-73744795e569
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 25536196-e0c3-4cfe-8a16-8a0e4158c2f5
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: TIMESTAMP_TRACK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 273f4d64-7802-4a5b-a53e-920790a767da
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: b3900a5e-e36e-499d-8d34-c3fee28b5773
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            isBusinessKey: true
+            name: ORDERTENDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66fe9748-ba51-4e07-8f6b-526f6e3a39b1
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: eb10b855-d27a-4825-bea2-410a60996c8f
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5560e6ef-1144-4fd4-89a4-5268d411c7f6
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 986b5553-8362-40c5-964d-4f4154e1e9da
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAYMENTTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cff92cce-661f-43ac-9289-2df9e3809f30
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 0d07a4a7-fc52-43c4-9451-0fce49ffd47b
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(18,2)
+            description: ""
+            name: AMOUNTTENDERED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa3b13fe-93b7-4de0-916e-639dde4e0717
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 131031d1-2ca1-4138-8d5a-9976a1374e92
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: CREDITCARDTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c7519eca-7087-4e1d-b6f8-1102e353695b
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 87cfa955-c990-41d8-af1d-1e2c1fef44a7
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ENCRYPTEDCARDNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b5df64c8-6f0d-4569-a508-4b2269eafcea
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: bbb3d9d0-e4ee-45c5-81b7-35a266d58599
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: CARDNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d57743c9-2048-4ce0-90fe-33c6c7f7f87d
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 9d2d620e-bd99-4fef-9644-30848d75fa77
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CARDEXPIRYMO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 509600f6-cd34-49d3-abca-450d80df353c
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: b3374122-7278-4502-a1dd-ef3d074e77f6
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CARDEXPIRYYR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f792be8-5064-4caf-8910-c6dbd800b82e
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: ec0b2b3d-bbf4-4cf0-ae98-36d942c968d0
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: NAMEONCARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4865c0e8-b878-4165-b33a-8c484fcd1f85
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: aca7cb72-f7f6-451a-9ecf-0b19cc81df18
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GIFTCARDID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a53ff33e-8800-41cc-aec5-de5cbc4f5ca4
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 97d59076-f278-41ce-a61c-28a03b297216
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GIFTCARDCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aabb6529-36ab-4829-a237-ac93c5ec7c65
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 5308a469-89c0-4554-8b5a-c1ab8950570a
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(38,0)
+            description: ""
+            name: GIFTCARDNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efa8a16e-1244-4eab-9827-04a7f5500a0d
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 20481293-0b87-42f9-b95f-5dea2c333ee5
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GIFTCARDVENDOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72189318-d82d-4fd2-8812-0bd9386a120a
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: e002b161-6144-47a2-9a48-09cbda4cd0c3
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(38,0)
+            description: ""
+            name: POINTSREDEEMED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7849c2b-9ccb-415f-96e1-000410a75040
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 946186a7-5ede-43f4-b58a-bc0e231c38b1
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: POINTSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5ed2f7c-2b4a-4108-bb95-921726d3c51a
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 430b2e9e-0807-46c6-a87d-adce216ec33f
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            name: PAYMENTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b46bc0d4-ab02-4087-8171-d8ded577b113
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 41c78356-1c34-45a6-a1e3-c1f772317461
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: BOOLEAN
+            description: ""
+            name: ISBEFORESPLITTENDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d0bc8de-5c47-4c36-b17c-9d3a0320e7fa
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 3bd89f06-644d-4aa6-a4ec-e39322704023
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAYMENTSTATUSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d569c93-bbdf-436d-816a-83622cb7fb00
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: dfdcb153-d5ab-4a5d-bad0-689b1aeb5560
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAYMENTTERMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2d56d6d6-0cf5-408e-ba52-2194f7ebb6c4
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 174dd9ed-240a-4f09-ae60-10c1b6ed659f
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: MEMBERCREDITCARDID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4eaad46a-40b2-46ca-8970-70bc698ba45b
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: e093b9b9-11e5-4b81-a649-6990e547866e
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: SIGNATURE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11fed43a-fa5b-4019-80de-3678fb3fd226
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 269a110e-5235-4a2f-8347-25c704e2bdbe
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GIFTCARDAUTHORIZATIONCODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6c0d199-e92b-4b67-b50d-05622ad63ee7
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 285059d7-6a49-475b-bc67-086cdffdf97c
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(18,2)
+            description: ""
+            name: CASHTENDERED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99dd6182-de5f-41c5-bb9a-2e7d59e1e4a8
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 63b412b7-a72a-4c03-8172-1c73b26fe951
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(18,2)
+            description: ""
+            name: TIPONTENDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 52e2c5e3-894a-4361-a71e-d19405356ca1
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 74d21c87-9c95-4f37-848e-546d07c27a71
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(18,2)
+            description: ""
+            name: GIFTCARDTENDERED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ec035f8-ef48-45fa-ba02-a203b757ced1
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 1e3c2f60-a104-46e1-ab25-d25c5a9b7b97
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: BOOLEAN
+            description: ""
+            name: ISDATAFROMMIGRATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9b7aa953-dcc5-4b23-aaaa-3fd9403a6e62
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: cf75a5dc-7b7d-4099-9900-f89200e8271a
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: BOOLEAN
+            description: ""
+            name: ISACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4960d273-8f08-454e-8a0c-b54c080737e3
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: a6558030-6679-44ac-930d-8d60f8e888a5
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: NUMBER(18,2)
+            description: ""
+            name: CREDITTENDERED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b8e2cc2-531b-4db6-8517-b19055d2b83a
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 083a66c4-7266-4333-9275-9f948bba755c
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: CREDITID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfdbadf3-ce34-4ae6-a843-fe77889a2bd3
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: af109f9e-9644-4a49-868e-01707ecf919e
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: REMOTEPOINTSTRANSACTIONID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e1733ef-cb2e-4455-a270-ce90df73a5dd
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 4f7e684e-cf07-41e6-9856-e715997b13a0
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: BOOLEAN
+            description: ""
+            name: CARDTYPEUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 288a72cb-9ba7-4660-a0d0-420b98867f89
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 88a87367-6bb7-4981-a0d8-1367b0266f1f
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ORIGINALCREDITCARDTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ec6ada98-57e5-4ed1-bfdd-b4fb29b9390e
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 88c98114-c8b0-4d5a-a359-be1577bcacb6
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: PAYPALSALEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ba3b7a0-34cd-4399-8185-0eeb9ce87b88
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 9f65ce99-708c-4b21-8334-0fe9586a602b
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GIFTCARDTITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d0d60ae-f5c7-4cfe-8a66-cedefc5b02fe
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 3765295a-3fef-4e45-8dfd-8b7d7574db1e
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: GIFTCARDWEBSITEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d50225a-b499-4295-b882-8950120b47d5
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 93d779b6-bf50-466a-af38-e9efa2a847f7
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: POSDEVICEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 102aec29-413b-4f2f-8439-89e54a879232
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - columnReference:
+              columnCounter: 90fa7d01-b836-4522-a288-0390b2730e95
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d7ced36-3248-4ece-b62c-1276af536637
+                    stepCounter: b311763f-0a31-4f7e-aefa-7a7d2e83b47c
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d348dc70-f774-421d-ad2c-10644dc73f31
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f37eeb42-6187-4b81-a455-6fc84aedf033
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ed36000f-88fd-48a9-8046-62d6cdc20478
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bd8d4676-9cc0-4475-842d-8d9fa69d8887
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78e3530a-fae2-46ed-9fa6-4d1889063d01
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 96485c9c-70cc-42a2-bc99-2b5ef96cade3
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 594bc7c9-2249-4116-b1ae-7bdb649e348c
+              stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac
+            dataType: VARCHAR
+            description: ""
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'E-COMMERCE'"
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_ORDER_TENDERS
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'STG_ORDER_TENDERS') }} "STG_ORDER_TENDERS"
+            name: PSTG_ORDER_TENDERS
+            noLinkRefs: []
+      name: PSTG_ORDER_TENDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: e9d68e73-fc4f-4164-80f6-51ff334030ac

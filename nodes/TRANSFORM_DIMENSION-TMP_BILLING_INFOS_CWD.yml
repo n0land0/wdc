@@ -1,0 +1,355 @@
+steps:
+  TMP_BILLING_INFOS_CWD-5443:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "186045"
+              stepCounter: "5443"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178660"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186046"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178661"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186047"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178662"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186048"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178663"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186049"
+              stepCounter: "5443"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_PICKUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178664"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186050"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178665"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186051"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178666"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186052"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178667"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186053"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178668"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186054"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178669"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186055"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178670"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186056"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: STREET_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178671"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186057"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SUBDIVISION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178672"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186058"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178673"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186059"
+              stepCounter: "5443"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: WDC_DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178674"
+                    stepCounter: "5027"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "BILLING_INFOS_WDC"."WDC_DATE_MODIFIED"))
+          - columnReference:
+              columnCounter: "186060"
+              stepCounter: "5443"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: WDC_ORIGINAL_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178675"
+                    stepCounter: "5027"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "BILLING_INFOS_WDC"."WDC_ORIGINAL_ORDER_DATE"))
+          - columnReference:
+              columnCounter: "186061"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ZIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178676"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186062"
+              stepCounter: "5443"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178677"
+                    stepCounter: "5027"
+                transform: DATE(CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "BILLING_INFOS_WDC"."DELETED_AT"))
+          - columnReference:
+              columnCounter: "186063"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178678"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186064"
+              stepCounter: "5443"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178679"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186065"
+              stepCounter: "5443"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: BIRTHDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178680"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186066"
+              stepCounter: "5443"
+            dataType: NUMBER(18,0)
+            description: ""
+            hashDetails: null
+            name: CURRENT_RECORD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178681"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186067"
+              stepCounter: "5443"
+            dataType: VARCHAR(5)
+            description: ""
+            hashDetails: null
+            name: ACTIVE_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "178682"
+                    stepCounter: "5027"
+                transform: ""
+          - columnReference:
+              columnCounter: "186068"
+              stepCounter: "5443"
+            dataType: VARCHAR(3)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179844"
+                    stepCounter: "5027"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              BILLING_INFOS_WDC: "5027"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE
+                nodeName: BILLING_INFOS_WDC
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE', 'BILLING_INFOS_WDC') }} "BILLING_INFOS_WDC"
+                WHERE "BILLING_INFOS_WDC"."ACTIVE_FLAG" = 'Y'
+            name: TMP_BILLING_INFOS_CWD
+            noLinkRefs: []
+      name: TMP_BILLING_INFOS_CWD
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5443"

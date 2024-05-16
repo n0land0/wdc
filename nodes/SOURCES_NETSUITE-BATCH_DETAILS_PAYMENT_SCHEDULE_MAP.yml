@@ -1,0 +1,93 @@
+steps:
+  BATCH_DETAILS_PAYMENT_SCHEDULE_MAP-2393:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39030"
+              stepCounter: "2393"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: BATCH_DETAILS_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39031"
+              stepCounter: "2393"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PAYMENT_SCHEDULE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39032"
+              stepCounter: "2393"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39033"
+              stepCounter: "2393"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "39034"
+              stepCounter: "2393"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'BATCH_DETAILS_PAYMENT_SCHEDULE_MAP') }}
+      name: BATCH_DETAILS_PAYMENT_SCHEDULE_MAP
+      schema: ""
+      sqlType: Source
+      table: BATCH_DETAILS_PAYMENT_SCHEDULE_MAP
+      type: sourceInput
+    stepCounter: "2393"

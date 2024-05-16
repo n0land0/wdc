@@ -1,0 +1,94 @@
+steps:
+  T_ERROR_MESSAGES-d58d2994-785a-49b1-b516-38ce741cb543:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 17c5b152-1964-4e53-be5b-fff25cc1ceee
+              stepCounter: d58d2994-785a-49b1-b516-38ce741cb543
+            config: {}
+            dataType: VARCHAR(2000)
+            defaultValue: ""
+            description: ""
+            name: MESSAGE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af757c12-9091-4f74-964b-bf3856f59093
+              stepCounter: d58d2994-785a-49b1-b516-38ce741cb543
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3a51e848-9af1-4581-a7a2-e1d581613acd
+              stepCounter: d58d2994-785a-49b1-b516-38ce741cb543
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 913e9c6c-4d13-41dd-b7e1-3fe27a3c5da0
+              stepCounter: d58d2994-785a-49b1-b516-38ce741cb543
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 94483c72-0677-411e-9454-a2e384b9656a
+              stepCounter: d58d2994-785a-49b1-b516-38ce741cb543
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: MESSAGE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ERROR_MESSAGES') }}
+      name: T_ERROR_MESSAGES
+      schema: ""
+      sqlType: Source
+      table: T_ERROR_MESSAGES
+      type: sourceInput
+    stepCounter: d58d2994-785a-49b1-b516-38ce741cb543

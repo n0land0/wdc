@@ -1,0 +1,168 @@
+steps:
+  TMP_STG_ACTIVE_CUSTOMER-5446:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: FROM THE ACTIVE CUSTOMERS SPREADSHEET
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "186085"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185994"
+                    stepCounter: "5439"
+                transform: TRIM("ACTIVE_CUSTOMERS"."ACCOUNT_NUMBER", '')
+          - columnReference:
+              columnCounter: "186084"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: ALT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185993"
+                    stepCounter: "5439"
+                transform: ""
+          - columnReference:
+              columnCounter: "186086"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Active Customer'"
+          - columnReference:
+              columnCounter: "370952"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: PLATFORM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CONCAT("ACTIVE_CUSTOMERS"."ACCOUNT_NUMBER", '|', "ACTIVE_CUSTOMERS"."PARTY_NAME")
+          - columnReference:
+              columnCounter: "186087"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185996"
+                    stepCounter: "5439"
+                transform: ""
+          - columnReference:
+              columnCounter: "186088"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: ENTITY_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'Fulfillment Customer'"
+          - columnReference:
+              columnCounter: "186090"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "185999"
+                    stepCounter: "5439"
+                transform: ""
+          - columnReference:
+              columnCounter: "186092"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186001"
+                    stepCounter: "5439"
+                transform: ""
+          - columnReference:
+              columnCounter: "186093"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186002"
+                    stepCounter: "5439"
+                transform: ""
+          - columnReference:
+              columnCounter: "186094"
+              stepCounter: "5446"
+            dataType: VARCHAR(1000)
+            description: ""
+            hashDetails: null
+            name: POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "186003"
+                    stepCounter: "5439"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ACTIVE_CUSTOMERS: "5439"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: ACTIVE_CUSTOMERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('CLIENT_MDM', 'ACTIVE_CUSTOMERS') }} "ACTIVE_CUSTOMERS"
+                WHERE "PARTY_NAME"IS NOT NULL
+            name: TMP_STG_ACTIVE_CUSTOMER
+            noLinkRefs: []
+      name: TMP_STG_ACTIVE_CUSTOMER
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5446"

@@ -1,0 +1,153 @@
+steps:
+  STANDARD_COST_COMPONENTS-2908:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SOURCES_NETSUITE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48345"
+              stepCounter: "2908"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: COMPONENT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48346"
+              stepCounter: "2908"
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: COST_CATEGORY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48347"
+              stepCounter: "2908"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: LINE_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48348"
+              stepCounter: "2908"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: PLANNED_STANDARD_COST_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48349"
+              stepCounter: "2908"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48350"
+              stepCounter: "2908"
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: STANDARD_COST
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48351"
+              stepCounter: "2908"
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48352"
+              stepCounter: "2908"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: DATE_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "48353"
+              stepCounter: "2908"
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_NETSUITE', 'STANDARD_COST_COMPONENTS') }}
+      name: STANDARD_COST_COMPONENTS
+      schema: ""
+      sqlType: Source
+      table: STANDARD_COST_COMPONENTS
+      type: sourceInput
+    stepCounter: "2908"

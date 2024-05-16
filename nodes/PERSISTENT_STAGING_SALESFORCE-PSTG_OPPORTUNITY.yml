@@ -1,0 +1,842 @@
+steps:
+  PSTG_OPPORTUNITY-4821:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_SALESFORCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119439"
+              stepCounter: "4821"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_OPPORTUNITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "119440"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111273"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119441"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_DELETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111274"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119442"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111275"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119443"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_PRIVATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111276"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119444"
+              stepCounter: "4821"
+            dataType: VARCHAR(360)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111277"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119445"
+              stepCounter: "4821"
+            dataType: VARCHAR(96000)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111278"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119446"
+              stepCounter: "4821"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: STAGE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111279"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119447"
+              stepCounter: "4821"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111280"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119448"
+              stepCounter: "4821"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PROBABILITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111281"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119449"
+              stepCounter: "4821"
+            dataType: NUMBER(18,2)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXPECTED_REVENUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111282"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119450"
+              stepCounter: "4821"
+            dataType: FLOAT
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TOTAL_OPPORTUNITY_QUANTITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111283"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119451"
+              stepCounter: "4821"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CLOSE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111284"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119452"
+              stepCounter: "4821"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111285"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119453"
+              stepCounter: "4821"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NEXT_STEP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111286"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119454"
+              stepCounter: "4821"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LEAD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111287"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119455"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_CLOSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111288"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119456"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IS_WON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111289"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119457"
+              stepCounter: "4821"
+            dataType: VARCHAR(120)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FORECAST_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111290"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119458"
+              stepCounter: "4821"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FORECAST_CATEGORY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111291"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119459"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CAMPAIGN_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111292"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119460"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_OPPORTUNITY_LINE_ITEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111293"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119461"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PRICEBOOK_2_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111294"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119462"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OWNER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111295"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119463"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111296"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119464"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111297"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119465"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111298"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119466"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_MODIFIED_BY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111299"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119467"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SYSTEM_MODSTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111300"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119468"
+              stepCounter: "4821"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_ACTIVITY_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111301"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119469"
+              stepCounter: "4821"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PUSH_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111302"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119470"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_STAGE_CHANGE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111303"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119471"
+              stepCounter: "4821"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FISCAL_QUARTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111304"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119472"
+              stepCounter: "4821"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FISCAL_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111305"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119473"
+              stepCounter: "4821"
+            dataType: VARCHAR(6)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: FISCAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111306"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119474"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONTACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111307"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119475"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_VIEWED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111308"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119476"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_REFERENCED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111309"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119477"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SYNCED_QUOTE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111310"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119478"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CONTRACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111311"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119479"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_OPEN_ACTIVITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111312"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119480"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_OVERDUE_TASK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111313"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119481"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_AMOUNT_CHANGED_HISTORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111314"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119482"
+              stepCounter: "4821"
+            dataType: VARCHAR(18)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_CLOSE_DATE_CHANGED_HISTORY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111315"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119483"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BUDGET_CONFIRMED_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111316"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119484"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: DISCOVERY_COMPLETED_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111317"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119485"
+              stepCounter: "4821"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ROI_ANALYSIS_COMPLETED_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111318"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119486"
+              stepCounter: "4821"
+            dataType: VARCHAR(765)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOSS_REASON_C
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111319"
+                    stepCounter: "4496"
+                transform: ""
+          - columnReference:
+              columnCounter: "119487"
+              stepCounter: "4821"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "111320"
+                    stepCounter: "4496"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119488"
+              stepCounter: "4821"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119489"
+              stepCounter: "4821"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "120334"
+              stepCounter: "4821"
+            config: {}
+            dataType: VARCHAR(240)
+            description: ""
+            hashDetails: null
+            keyColumnType: None
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'SALESFORCE'"
+            systemColumnType: None
+            type: Column
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119490"
+              stepCounter: "4821"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119491"
+              stepCounter: "4821"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119492"
+              stepCounter: "4821"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "119493"
+              stepCounter: "4821"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_SALESFORCE
+                nodeName: OPPORTUNITY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_SALESFORCE', 'OPPORTUNITY') }} "OPPORTUNITY"
+            name: PSTG_OPPORTUNITY
+            noLinkRefs: []
+      name: PSTG_OPPORTUNITY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "4821"

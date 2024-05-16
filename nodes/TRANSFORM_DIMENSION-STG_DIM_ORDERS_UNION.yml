@@ -1,0 +1,523 @@
+steps:
+  STG_DIM_ORDERS_UNION-5080:
+    operation:
+      config:
+        insertStrategy: UNION
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: true
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "179804"
+              stepCounter: "5080"
+            dataType: NUMBER
+            description: ""
+            hashDetails: null
+            name: PSTG_ORDERS_CWD_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179171"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179805"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179172"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179806"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179173"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179517"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179807"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179174"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179808"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179175"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179517"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179809"
+              stepCounter: "5080"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: IS_NON_TAXABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179176"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179518"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179810"
+              stepCounter: "5080"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE_COMPLETED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179177"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179811"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179178"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179519"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179812"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SUBTOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179179"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179520"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179813"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179180"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179521"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179814"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: SHIPPING_TOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179181"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179522"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179815"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_EX_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179182"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179523"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179816"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: HANDLING_COST_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179183"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179524"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179817"
+              stepCounter: "5080"
+            dataType: NUMBER(38,2)
+            description: ""
+            hashDetails: null
+            name: TOTAL_INC_TAX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179184"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179526"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179818"
+              stepCounter: "5080"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: BYPASS_FULFILLMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179185"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179529"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179819"
+              stepCounter: "5080"
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: ORIGINAL_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179186"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179533"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179820"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATE_MODIFIED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179187"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179531"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179821"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_MEMBER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179188"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179822"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179189"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179515"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179823"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179190"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179824"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179191"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179825"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179192"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179826"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SALES_CHANNEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179193"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179827"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_SALES_ASSOCIATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179194"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179828"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_SHIPPING_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179195"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179829"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179196"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179516"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179830"
+              stepCounter: "5080"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_WHOLESALE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179197"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "179837"
+              stepCounter: "5080"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179433"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179542"
+                    stepCounter: "5068"
+                transform: ""
+          - columnReference:
+              columnCounter: "179842"
+              stepCounter: "5080"
+            dataType: VARCHAR(4)
+            description: ""
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179841"
+                    stepCounter: "5053"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: "179840"
+                    stepCounter: "5068"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ORDERS_CWD: "5053"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_ORDERS_CWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_ORDERS_CWD') }} "PSTG_ORDERS_CWD"
+                WHERE "PSTG_ORDERS_CWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: CWD
+            noLinkRefs: []
+          - aliases:
+              PSTG_ORDERS_ANWD: "5068"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_ECOMMERCE
+                nodeName: PSTG_ORDERS_ANWD
+            join:
+              joinCondition: |-
+                FROM {{ ref('PERSISTENT_STAGING_ECOMMERCE', 'PSTG_ORDERS_ANWD') }} "PSTG_ORDERS_ANWD"
+                WHERE "PSTG_ORDERS_ANWD"."SYSTEM_CURRENT_FLAG" = 'Y'
+            name: ANWD
+            noLinkRefs: []
+      name: STG_DIM_ORDERS_UNION
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5080"

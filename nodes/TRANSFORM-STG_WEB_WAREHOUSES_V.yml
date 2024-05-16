@@ -1,0 +1,155 @@
+steps:
+  STG_WEB_WAREHOUSES_V-bba5a716-aa0d-4490-bfc7-03678bdaf548:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: false
+        truncateBefore: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b7ea879d-96c4-467e-9edf-39ec756381dd
+              stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548
+            dataType: FLOAT
+            description: ""
+            name: ORGANIZATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181920"
+                    stepCounter: "5262"
+                transform: ""
+          - columnReference:
+              columnCounter: 42c43a2a-0825-4af0-a5a4-1e6b294a7911
+              stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548
+            dataType: VARCHAR(3)
+            description: ""
+            name: ORGANIZATION_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181985"
+                    stepCounter: "5262"
+                transform: ""
+          - columnReference:
+              columnCounter: 5a44494d-ab53-4585-b031-bb70b748ac0a
+              stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548
+            dataType: VARCHAR(50)
+            description: ""
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebeabe60-84cc-49f5-bf4d-7ff4305319dc
+                    stepCounter: d2fa9e2d-2d2e-4124-8905-953fa7374383
+                transform: ""
+          - columnReference:
+              columnCounter: 7e98a309-1a59-44ac-8a0a-50c107e0e4dc
+              stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548
+            dataType: VARCHAR(150)
+            description: ""
+            name: ATTRIBUTE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181941"
+                    stepCounter: "5262"
+                transform: ""
+          - columnReference:
+              columnCounter: 2c1bcc72-81cb-4c33-87c4-e15479296ec9
+              stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548
+            dataType: VARCHAR(150)
+            description: ""
+            name: ATTRIBUTE4
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "181954"
+                    stepCounter: "5262"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a3287954-7748-49e9-88a2-3a2b18e9dc9c
+              stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: DEFAULT_ORG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: decode(organization_id, 102, 'Y', 'N')
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE TRANSIENT TABLE {{ ref('TRANSFORM', 'STG_WEB_WAREHOUSES_V')}} AS (
+                with
+                    mtl_parameters as (
+                        select mp.organization_id, mp.organization_code, mp.attribute1, mp.attribute4
+                        from {{ ref('SOURCES_ORACLE_INV', 'MTL_PARAMETERS') }} as mp
+                        where
+                            _fivetran_deleted = false
+                            and mp.organization_id <> mp.master_organization_id
+                            and mp.attribute2 = 'Y'
+                    ),
+
+                    hr_all_organization_units as (
+                        select haou.name, haou.organization_id
+                        from {{ ref('SOURCES_ORACLE_HR', 'HR_ALL_ORGANIZATION_UNITS') }} as haou
+                        where
+                            -- _fivetran_deleted=false AND 
+                            haou.date_from <= current_date()
+                            and (haou.date_to is null or haou.date_to > current_date())
+                    )
+
+                select
+                    mp.organization_id,
+                    mp.organization_code,
+                    haou.name,
+                    mp.attribute1,
+                    mp.attribute4,
+                    decode(mp.organization_id, 102, 'Y', 'N') as default_org
+                from mtl_parameters as mp
+                inner join
+                    hr_all_organization_units as haou on mp.organization_id = haou.organization_id
+                	)    
+            dependencies:
+              - locationName: SOURCES_ORACLE_HR
+                nodeName: HR_ALL_ORGANIZATION_UNITS
+              - locationName: SOURCES_ORACLE_INV
+                nodeName: MTL_PARAMETERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ORACLE_INV', 'MTL_PARAMETERS') }} "MTL_PARAMETERS"
+                INNER JOIN {{ ref('SOURCES_ORACLE_HR', 'HR_ALL_ORGANIZATION_UNITS') }} "HR_ALL_ORGANIZATION_UNITS"
+                ON "MTL_PARAMETERS"./*COLUMN*/ = "HR_ALL_ORGANIZATION_UNITS"./*COLUMN*/
+            name: STG_WEB_WAREHOUSES_V
+            noLinkRefs: []
+      name: STG_WEB_WAREHOUSES_V
+      overrideSQL: true
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: bba5a716-aa0d-4490-bfc7-03678bdaf548

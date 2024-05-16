@@ -1,0 +1,172 @@
+steps:
+  STG_DIM_ECOMMERCE_PRODUCTS-5560:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: false
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "370386"
+              stepCounter: "5560"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: PRODUCT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179712"
+                    stepCounter: "5076"
+                transform: DISTINCT "STG_DIM_ORDER_ITEMS_UNION"."PRODUCT_ID"
+          - columnReference:
+              columnCounter: "370380"
+              stepCounter: "5560"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: BRAND_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179706"
+                    stepCounter: "5076"
+                transform: CASE WHEN "STG_DIM_ORDER_ITEMS_UNION"."BRAND_NAME" = '' THEN NULL ELSE "STG_DIM_ORDER_ITEMS_UNION"."BRAND_NAME" END
+          - columnReference:
+              columnCounter: "370381"
+              stepCounter: "5560"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179707"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "370383"
+              stepCounter: "5560"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: SUB_SKU_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179709"
+                    stepCounter: "5076"
+                transform: CASE WHEN "STG_DIM_ORDER_ITEMS_UNION"."WDC_IS_SUB_SKU" = 'true' then 'T' WHEN "STG_DIM_ORDER_ITEMS_UNION"."WDC_IS_SUB_SKU" = 'false' then 'F' else 'ERROR' end
+          - columnReference:
+              columnCounter: "370387"
+              stepCounter: "5560"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: PRODUCT_SKU
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179713"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "370388"
+              stepCounter: "5560"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PRODUCT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179714"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "370399"
+              stepCounter: "5560"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            name: DIGITAL_PRODUCT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179730"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "370404"
+              stepCounter: "5560"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ITEM_GROUP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179735"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "370409"
+              stepCounter: "5560"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179727"
+                    stepCounter: "5076"
+                transform: ""
+          - columnReference:
+              columnCounter: "370410"
+              stepCounter: "5560"
+            dataType: VARCHAR
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "179859"
+                    stepCounter: "5076"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_DIM_ORDER_ITEMS_UNION: "5076"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_DIM_ORDER_ITEMS_UNION
+            join:
+              joinCondition: FROM {{ ref('TRANSFORM_DIMENSION', 'STG_DIM_ORDER_ITEMS_UNION') }} "STG_DIM_ORDER_ITEMS_UNION"
+            name: STG_DIM_ECOMMERCE_PRODUCTS
+            noLinkRefs: []
+      name: STG_DIM_ECOMMERCE_PRODUCTS
+      overrideSQL: false
+      schema: ""
+      sqlType: "25"
+      type: sql
+    stepCounter: "5560"

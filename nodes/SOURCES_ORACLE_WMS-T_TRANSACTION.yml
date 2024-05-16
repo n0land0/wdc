@@ -1,0 +1,124 @@
+steps:
+  T_TRANSACTION-a373c37e-0888-4c28-b2b6-49fbe4cf2f5e:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0061a550-25c2-46c3-b0ec-91b17b47fd6b
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: SYSTEM_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6a136fbd-271b-4378-8e20-971e65dad1fe
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: TRAN_TYPE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ba491584-4836-4f06-a5ba-c67781c08736
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9bde9ffc-e3d1-47e8-85fe-3c7ed51fe383
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: INVENTORY_ACTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bfdd727c-36fd-461b-8bf4-57d773fc9a3f
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: VARCHAR(12)
+            defaultValue: ""
+            description: ""
+            name: SEND_TO_ADV_LINK
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5696af53-f240-4879-a9f5-1b822697d897
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fef90fae-0092-418f-857e-03ffd97a5804
+              stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_TRANSACTION') }}
+      name: T_TRANSACTION
+      schema: ""
+      sqlType: Source
+      table: T_TRANSACTION
+      type: sourceInput
+    stepCounter: a373c37e-0888-4c28-b2b6-49fbe4cf2f5e

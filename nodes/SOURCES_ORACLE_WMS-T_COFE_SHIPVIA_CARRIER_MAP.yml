@@ -1,0 +1,154 @@
+steps:
+  T_COFE_SHIPVIA_CARRIER_MAP-cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2758e404-5395-4941-a24c-d6b3fb77848c
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: ROUTE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bb976f15-b3f4-469d-b4c7-3fda7ab76a2b
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ab07240d-0fef-4969-94d3-bf588d35500d
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 630ebb9e-8d88-41d2-a5ce-a9fc015570ef
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: SERVICE_LEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 64a79266-d7b8-4578-bd43-3ac4fdd7e00c
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SHIP_VIA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78063682-0056-424e-a6ae-914973d48d50
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: CARRIER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 86fcf08e-4d4d-4f9d-8af3-f9b059b4828e
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 78900e7c-c8ca-4093-97c9-3e961c658dff
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0736f1f1-046f-4940-ac10-0040c9eb9739
+              stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_COFE_SHIPVIA_CARRIER_MAP') }}
+      name: T_COFE_SHIPVIA_CARRIER_MAP
+      schema: ""
+      sqlType: Source
+      table: T_COFE_SHIPVIA_CARRIER_MAP
+      type: sourceInput
+    stepCounter: cf5ddca3-c7bc-422d-9203-4dbd9ec88fd8

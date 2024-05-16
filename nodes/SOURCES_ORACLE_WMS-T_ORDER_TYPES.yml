@@ -1,0 +1,184 @@
+steps:
+  T_ORDER_TYPES-ff58210a-fd75-419f-9353-463dd0d55c5c:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6c7b6842-282e-40c9-9411-0a2d8ac30248
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: CREATED_BY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 842e49b3-19a7-4df5-b596-3d51c77f0723
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: REQUIRED_VAS_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e40a252f-6362-439c-8927-0d4577f60fe6
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b6d8919-fae8-42ee-9dfc-db8ee47c294d
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: REQUIRES_VAS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d248cc03-ce67-4127-b31c-ef3c9c07a4c3
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: UPDATED_BY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39c7417d-2f99-45e2-8532-6afb3e3cd059
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: ORDER_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a2bda78a-b416-42e0-b6e1-ce7a46133ec3
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ORDER_TYPE_CODE
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4887127b-9369-453d-b471-060aecec9eee
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fb01303d-9585-4e1c-b9bb-aee11940eda9
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1c381063-d4e7-46de-b99a-8a34c83f363e
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: UPDATED_ON
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 663fc35d-d23d-47b2-a0dd-f4d519602a3c
+              stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED_ON
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_ORDER_TYPES') }}
+      name: T_ORDER_TYPES
+      schema: ""
+      sqlType: Source
+      table: T_ORDER_TYPES
+      type: sourceInput
+    stepCounter: ff58210a-fd75-419f-9353-463dd0d55c5c

@@ -1,0 +1,124 @@
+steps:
+  T_AFO_WAVE_DETAIL-c100132b-b2fa-48c5-b1d1-4772c04a5565:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCES_ORACLE_WMS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3d8c3f49-fd60-45a4-a29a-bbb880c09ca8
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: WAVE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b9dd76e1-36ca-46f7-bab0-f65ad31be17d
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: WH_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d445a39f-a3a5-4b87-8941-bb818158113e
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: WAVE_DETAIL_ID
+            nullable: false
+            primaryKey: true
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9057e097-46f9-4acc-9d44-6cddd3f14e1e
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ORDER_NUMBER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1861569b-6200-4c93-8040-4ca8d1eed707
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: LOAD_SEQ
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 432dfaae-4ef1-49e8-9b4a-ab49c96ff8a1
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: BOOLEAN
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_DELETED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 39196513-e1b2-4cb8-a2ba-c776b5935b7c
+              stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565
+            config: {}
+            dataType: TIMESTAMP_TZ(9)
+            defaultValue: ""
+            description: ""
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCES_ORACLE_WMS', 'T_AFO_WAVE_DETAIL') }}
+      name: T_AFO_WAVE_DETAIL
+      schema: ""
+      sqlType: Source
+      table: T_AFO_WAVE_DETAIL
+      type: sourceInput
+    stepCounter: c100132b-b2fa-48c5-b1d1-4772c04a5565

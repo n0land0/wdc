@@ -1,0 +1,998 @@
+steps:
+  PSTG_CONTACT_HISTORY-5715:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: PERSISTENT_STAGING_INTERCOM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692303"
+              stepCounter: "5715"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: PSTG_CONTACT_HISTORY1_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: "692304"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692174"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692305"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isBusinessKey: true
+            name: UPDATED_AT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692175"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692306"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ROLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692176"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692307"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: WORKSPACE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692177"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692308"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EXTERNAL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692178"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692309"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692179"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692310"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692180"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692311"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692181"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692312"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: AVATAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692182"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692313"
+              stepCounter: "5715"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: HAS_HARD_BOUNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692183"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692314"
+              stepCounter: "5715"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: MARKED_EMAIL_AS_SPAM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692184"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692315"
+              stepCounter: "5715"
+            dataType: BOOLEAN
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: UNSUBSCRIBED_FROM_EMAILS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692185"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692316"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692186"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692317"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: SIGNED_UP_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692187"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692318"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_SEEN_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692188"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692319"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_CONTACTED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692189"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692320"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_REPLIED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692190"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692321"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_EMAIL_OPENED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692191"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692322"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LAST_EMAIL_CLICKED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692192"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692323"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LANGUAGE_OVERRIDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692193"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692324"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BROWSER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692194"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692325"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BROWSER_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692195"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692326"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: BROWSER_LANGUAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692196"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692327"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: OS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692197"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692328"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ANDROID_APP_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692198"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692329"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ANDROID_APP_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692199"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692330"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ANDROID_DEVICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692200"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692331"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ANDROID_OS_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692201"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692332"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ANDROID_SDK_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692202"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692333"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ANDROID_LAST_SEEN_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692203"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692334"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IOS_APP_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692204"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692335"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IOS_APP_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692205"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692336"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IOS_DEVICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692206"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692337"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IOS_OS_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692207"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692338"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IOS_SDK_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692208"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692339"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: IOS_LAST_SEEN_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692209"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692340"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCATION_COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692210"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692341"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCATION_REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692211"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692342"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: LOCATION_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692212"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692344"
+              stepCounter: "5715"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: ADMIN_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692214"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692345"
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692215"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692346"
+              stepCounter: "5715"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_ARTICLE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692216"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692347"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_APP_CL_ACCESS_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692217"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692348"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_LATEST_FULL_STORY_SESSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692218"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692349"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_JOB_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692219"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692350"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_OWNER_ROLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692220"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692351"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_OWNER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692221"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692352"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_OBJECT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692222"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692353"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_OWNER_EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692223"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692354"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_OWNER_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692224"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692355"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692225"
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: "692356"
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            isChangeTracking: true
+            name: CUSTOM_SALESFORCE_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "692226"
+                    stepCounter: "5706"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692357"
+              stepCounter: "5715"
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692358"
+              stepCounter: "5715"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ce80c3b3-344d-4ddc-bbd0-90f3eae029ce
+              stepCounter: "5715"
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SOURCE_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'INTERCOM'"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692359"
+              stepCounter: "5715"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692360"
+              stepCounter: "5715"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692361"
+              stepCounter: "5715"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "692362"
+              stepCounter: "5715"
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 82531a46-9d84-477f-b216-5cd0395811b6
+              stepCounter: "5715"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: CUSTOM_CONVERSATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa6200f8-871b-44f2-a487-b6a2d7d33255
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: 777b9dda-8a6a-4fc8-9673-d7bd378b7fa2
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            name: FORMATTED_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: da9bcde8-21d2-4065-a710-99d02bc9bd12
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: 38062cbc-8cdb-46ca-8fc0-1bda0343b8ea
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_080423_POST_WEBSITE_AFFECTED_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e7132b8-4e66-4efe-9bd5-9424809dd5c7
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: e6ec56e7-c92d-491d-949f-ff81cf60cf6b
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_USER_INDICATED_APPLICATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e1bfff18-9eca-44e0-a38e-0ed1b5b6b86f
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: d373a495-d7f6-4aae-962c-71ca9eadca22
+              stepCounter: "5715"
+            dataType: VARCHAR(256)
+            description: ""
+            name: CUSTOM_SALESFORCE_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6267aec7-4ae6-4d6b-af07-72df26620468
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: 769965b5-f10f-440b-b525-275ef91d9b3e
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04fb25f0-0af7-48f9-be0b-b4cd87d06b05
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: 6b30bb7a-87df-4f54-b61d-352faa110790
+              stepCounter: "5715"
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            name: _FIVETRAN_END
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2302ada-d009-487a-a63a-0ef09b1edc0f
+                    stepCounter: "5706"
+                transform: ""
+          - columnReference:
+              columnCounter: 3bc28c27-6c0c-4367-bbf0-7173be5e39be
+              stepCounter: "5715"
+            dataType: BOOLEAN
+            description: ""
+            name: _FIVETRAN_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d3b4b04-7255-4a17-b440-0825c3a77051
+                    stepCounter: "5706"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CONTACT_HISTORY: "5706"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_INTERCOM
+                nodeName: CONTACT_HISTORY
+            join:
+              joinCondition: FROM {{ ref('SOURCES_INTERCOM', 'CONTACT_HISTORY') }} "CONTACT_HISTORY"
+            name: PSTG_CONTACT_HISTORY
+            noLinkRefs: []
+      name: PSTG_CONTACT_HISTORY
+      overrideSQL: false
+      schema: ""
+      sqlType: "18"
+      type: sql
+    stepCounter: "5715"

@@ -1,0 +1,170 @@
+steps:
+  TMP_ECOMM_WEB_ID_LIST-5592:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        selectDistinct: true
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: |-
+        This table pulls all unique website_ids from eCommerce Orders and  Recurly and join then join to Account History, Companies and the spreadsheet provided by WineDirect. 
+
+        The website name first pulls from the spreadsheet, then account history and then from the companies table.
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: TRANSFORM_DIMENSION
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "371675"
+              stepCounter: "5592"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624935"
+                    stepCounter: "5660"
+                transform: distinct upper("STG_WEBSITES_DATA_SOURCE"."WEBSITE_ID")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "371681"
+              stepCounter: "5592"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: WEBSITE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("TMP_ECOMMERCE_WEBSITE_LIST_FILTER"."WEBSITE_NAME", 'UNKNOWN')
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: "371683"
+              stepCounter: "5592"
+            dataType: VARCHAR
+            description: ""
+            name: NS_COMPANY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "57056"
+                    stepCounter: "3308"
+                transform: CAST("PSTG_COMPANIES"."COMPANY_ID" AS VARCHAR)
+          - columnReference:
+              columnCounter: "371684"
+              stepCounter: "5592"
+            dataType: VARCHAR(256)
+            description: ""
+            name: RECURLY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "54672"
+                    stepCounter: "3204"
+                transform: ""
+          - columnReference:
+              columnCounter: "623178"
+              stepCounter: "5592"
+            dataType: VARCHAR(256)
+            description: ""
+            name: PARENT_ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "623175"
+                    stepCounter: "3204"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624917"
+              stepCounter: "5592"
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624936"
+                    stepCounter: "5660"
+                transform: upper("STG_WEBSITES_DATA_SOURCE"."DATA_SOURCE_NAME")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: "624413"
+              stepCounter: "5592"
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: COMPANY_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: COALESCE("PSTG_ACCOUNT_HISTORY"."COMPANY", "PSTG_COMPANIES"."COMPANYNAME")
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_ACCOUNT_HISTORY: "3204"
+              PSTG_COMPANIES: "3308"
+              STG_WEBSITES_DATA_SOURCE: "5660"
+              TMP_ECOMMERCE_WEBSITE_LIST_FILTER: "5666"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: PERSISTENT_STAGING_NETSUITE
+                nodeName: PSTG_COMPANIES
+              - locationName: PERSISTENT_STAGING_RECURLY
+                nodeName: PSTG_ACCOUNT_HISTORY
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: STG_WEBSITES_DATA_SOURCE
+              - locationName: TRANSFORM_DIMENSION
+                nodeName: TMP_ECOMMERCE_WEBSITE_LIST_FILTER
+            join:
+              joinCondition: |
+                FROM {{ ref('TRANSFORM_DIMENSION', 'STG_WEBSITES_DATA_SOURCE') }} "STG_WEBSITES_DATA_SOURCE"
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_RECURLY', 'PSTG_ACCOUNT_HISTORY') }} "PSTG_ACCOUNT_HISTORY"
+                ON UPPER("PSTG_ACCOUNT_HISTORY"."CODE") = UPPER("STG_WEBSITES_DATA_SOURCE"."WEBSITE_ID")
+                AND "PSTG_ACCOUNT_HISTORY"."SYSTEM_CURRENT_FLAG" = 'Y'
+                LEFT JOIN {{ ref('PERSISTENT_STAGING_NETSUITE', 'PSTG_COMPANIES') }} "PSTG_COMPANIES"
+                ON UPPER("STG_WEBSITES_DATA_SOURCE"."WEBSITE_ID") = UPPER("PSTG_COMPANIES"."COMPANY_EXTID")
+                AND "PSTG_COMPANIES"."SYSTEM_CURRENT_FLAG" = 'Y'
+                LEFT JOIN {{ ref('TRANSFORM_DIMENSION', 'TMP_ECOMMERCE_WEBSITE_LIST_FILTER') }} "TMP_ECOMMERCE_WEBSITE_LIST_FILTER"
+                ON UPPER("TMP_ECOMMERCE_WEBSITE_LIST_FILTER"."WEBSITE_ID") = UPPER("STG_WEBSITES_DATA_SOURCE"."WEBSITE_ID")
+            name: TMP_ECOMM_WEB_ID_LIST
+            noLinkRefs: []
+      name: TMP_ECOMM_WEB_ID_LIST
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5592"

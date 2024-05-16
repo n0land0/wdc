@@ -1,0 +1,374 @@
+steps:
+  STG_PAYMENTS-e6b4d8b9-9385-4d24-adbe-54622400f9bf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 39abfea7-3398-4bd3-b4d6-3d1a42b0683d
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bbb74c54-4a6a-45ef-9767-350074d8aaa1
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 0a52b518-1375-4aa2-aaca-ab664f1d2389
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PAYMENT_STATUS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c0521f1-48c1-41eb-b7a7-27bde9f35180
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 5d2b78d0-88fe-440c-9dcb-168eae91b5a8
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 826dd210-9439-4f4a-a9b0-76c84e3a7296
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 801c5394-9b35-442d-ac97-e70ff94170dd
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15d7f8bc-1743-46fc-a2ca-86a3ae9e55c4
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 3d6d57d5-53d2-4e9c-821f-6d94b366525c
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d2398d9-bb5e-42d8-a0c6-f16789574bcd
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 189c556a-14b0-49f5-a2a2-86f0d56b7508
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff9f8eeb-70cf-4f96-8424-034b1dd22525
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "PAYMENTS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: adeef78d-e66f-4cf9-a6d4-9e4e7fb62c13
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f6af4d56-e6cd-4255-8cbb-356d85b5d6a9
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: a0c8523e-7560-4de1-89ed-23a535e6f172
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_ORDER_TENDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6744bd99-f837-4b82-bff4-9e24ba10e975
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: de59d30a-abf8-411d-8b3a-c88bfa6c5f42
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bef7e72-1acb-4302-93a1-92a9679cf137
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: b7926256-0a3e-4b67-957d-1f804f08edf0
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WDC_PAYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c508f4bf-bb94-4edd-9d69-85725bdae1de
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 65fddc07-fda3-4678-a4b5-e3efbd67bc0d
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 734fb32f-f302-4f78-be90-b77e9c6889e7
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: b470ff0b-558a-49c6-9018-b592a3d90db3
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 697d0eb0-cd68-498b-b9fd-459055b309d0
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "PAYMENTS"."DELETED_AT")
+          - columnReference:
+              columnCounter: 00bc0d91-cbd4-4324-a229-d4882147f5e6
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY_RESPONSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2007eaf2-4496-4aca-8b67-8d19984489db
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 9b25d1e9-4bf6-4359-9ee5-4b3981bfd77d
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9767843-fbec-4e00-8ab3-c7a38c995cea
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: b92fa1f0-7281-468c-8395-c5cf8b428eab
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: PAYMENT_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2879bd9-d873-41a1-a445-017ffd8f4daa
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "PAYMENTS"."PAYMENT_TIMESTAMP")
+          - columnReference:
+              columnCounter: be3514d2-5ef1-4cff-a7e4-34cac857e702
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: IS_SUCCESSFUL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b9df216b-bdef-480e-a916-fd74b489ed5c
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 921ef0d2-53ba-476c-94a0-1979651b5e41
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: FRAUD_REVIEW
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ad1a92c-a656-431f-ad23-f7ba600b19d5
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 0d527773-a110-4802-8dc2-14125cc00706
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: NUMBER(7,2)
+            description: ""
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3949b394-d396-426e-baaa-3c88b9f38664
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: c46da590-de3d-42f2-a822-cd2f97490688
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: NUMBER(9,0)
+            description: ""
+            hashDetails: null
+            name: BC_TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac3f0c9d-630f-499a-94f4-e460e98e58bb
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: a11a72a6-549a-4641-9133-693e68d10d43
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: DATA_SOURCE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 22cfeea2-c9bc-4415-a8b8-2b78fcff4c63
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 1852f3ba-be4c-4f68-a57e-d41181057b69
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ab8bd65-0d85-4420-9192-5c5e9c33ebc4
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "PAYMENTS"."CREATED_AT")
+          - columnReference:
+              columnCounter: b751951f-3422-42c7-9bab-9e0214d7e453
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: GATEWAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: faeaf980-418d-46c5-bdf5-37d0420f6eb1
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: a1f6d06a-3c44-4274-9287-743537c64960
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CURRENCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d89116bc-9aa6-4c12-afe4-9af818e4cc4a
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - columnReference:
+              columnCounter: 5ac1589e-025a-43ee-9230-84865f2936ec
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: CREDIT_CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d95fd48f-20d5-423d-afaf-02c4b0972e77
+                    stepCounter: cc07caa3-106b-4549-adef-c44729f75d26
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c80ecd14-4b99-4963-b1fb-8767104ecece
+              stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "PAYMENTS"."ID" ORDER BY "PAYMENTS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PAYMENTS: cc07caa3-106b-4549-adef-c44729f75d26
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: PAYMENTS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'PAYMENTS') }} "PAYMENTS"
+                WHERE "PAYMENTS"."ID" IS NOT NULL 
+                QUALIFY R_NO = 1
+            name: STG_PAYMENTS
+            noLinkRefs: []
+      name: STG_PAYMENTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: e6b4d8b9-9385-4d24-adbe-54622400f9bf

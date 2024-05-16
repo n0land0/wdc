@@ -1,0 +1,96 @@
+steps:
+  MDM_DIM_WEBSITE_IDS_W_ORDERS-5669:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: CLIENT_MDM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: "625244"
+              stepCounter: "5669"
+            dataType: VARCHAR(4)
+            description: ""
+            hashDetails: null
+            name: ECOMMERCE_PLATFORM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624711"
+                    stepCounter: "5657"
+                transform: ""
+          - columnReference:
+              columnCounter: "625245"
+              stepCounter: "5669"
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: WEBSITE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "624708"
+                    stepCounter: "5657"
+                transform: ""
+          - columnReference:
+              columnCounter: "625246"
+              stepCounter: "5669"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: MAX_ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: MAX("TMP_STG_WEBSITE_IDS_W_ORDERS"."ORDER_DATE")
+          - columnReference:
+              columnCounter: "625247"
+              stepCounter: "5669"
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: MAX_ORDER_YR_MO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "625241"
+                    stepCounter: "5657"
+                transform: MAX("TMP_STG_WEBSITE_IDS_W_ORDERS"."ORDER_YR_MO")
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              TMP_STG_WEBSITE_IDS_W_ORDERS: "5657"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: CLIENT_MDM
+                nodeName: TMP_STG_WEBSITE_IDS_W_ORDERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('CLIENT_MDM', 'TMP_STG_WEBSITE_IDS_W_ORDERS') }} "TMP_STG_WEBSITE_IDS_W_ORDERS"
+
+                group by "ECOMMERCE_PLATFORM", "WEBSITE_ID"
+            name: MDM_DIM_WEBSITE_IDS_W_ORDERS
+            noLinkRefs: []
+      name: MDM_DIM_WEBSITE_IDS_W_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "5669"

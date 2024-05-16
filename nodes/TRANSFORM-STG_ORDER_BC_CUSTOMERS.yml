@@ -1,0 +1,152 @@
+steps:
+  STG_ORDER_BC_CUSTOMERS-60057f7f-52f5-4b4c-a60e-56ae8843b976:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8e3f206c-3630-4d0d-96f2-7fb51e2af579
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            config: {}
+            dataType: NUMBER(38, 0)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: R_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ROW_NUMBER() OVER(PARTITION BY "ORDER_BC_CUSTOMERS"."ID" ORDER BY "ORDER_BC_CUSTOMERS"."UPDATED_AT" DESC)
+            systemColumnType: None
+            transform: ""
+          - columnReference:
+              columnCounter: 2e87a7fb-4e86-43f9-acc7-6e172ae4aace
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: NUMBER(5,0)
+            description: ""
+            hashDetails: null
+            name: BC_CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 191b4019-d542-4ad6-b974-6feb0cbe16b7
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: ""
+          - columnReference:
+              columnCounter: d8f1082f-fcc2-4f5d-8164-ab9e04d9f46b
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46be02fa-1e34-4ded-9a44-ec0ce074792b
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_BC_CUSTOMERS"."CREATED_AT")
+          - columnReference:
+              columnCounter: 6e834d93-92ae-40de-9d7e-645ca8be125d
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: UPDATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cc850d45-40fc-4853-9b29-d904e91a1de2
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_BC_CUSTOMERS"."UPDATED_AT")
+          - columnReference:
+              columnCounter: 66cea9d9-a81e-4ead-9314-6ebda53e32c0
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashDetails: null
+            name: DELETED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19e39b22-e1d6-46db-a7c0-57fe01a0aff5
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: CONVERT_TIMEZONE('UTC', 'America/Los_Angeles', "ORDER_BC_CUSTOMERS"."DELETED_AT")
+          - columnReference:
+              columnCounter: 63553754-f2bd-4f67-845a-29c9e9ef4cb8
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: TENANT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a39b06d-e9c2-473c-9f06-66f769c76dcf
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: ""
+          - columnReference:
+              columnCounter: 2933f8b7-36d7-4251-ab89-755b01b9af6a
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 53c20ab4-5aa0-426b-b70e-ab7c95b7dee5
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: ""
+          - columnReference:
+              columnCounter: 834d1ac9-fa2d-45b8-a05d-19071fe424fe
+              stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 390a5b23-85a1-48d9-a280-e85f54f734fa
+                    stepCounter: 5336202b-44bc-4d2a-b72d-c415a7c027de
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              ORDER_BC_CUSTOMERS: 5336202b-44bc-4d2a-b72d-c415a7c027de
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCES_ECOMMERCE_ANWD
+                nodeName: ORDER_BC_CUSTOMERS
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCES_ECOMMERCE_ANWD', 'ORDER_BC_CUSTOMERS') }} "ORDER_BC_CUSTOMERS"
+                QUALIFY R_NO = 1
+            name: STG_ORDER_BC_CUSTOMERS
+            noLinkRefs: []
+      name: STG_ORDER_BC_CUSTOMERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 60057f7f-52f5-4b4c-a60e-56ae8843b976

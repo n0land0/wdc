@@ -1,0 +1,188 @@
+steps:
+  STG_END_OF_DAY_RECAP_REPORT_2-01871a60-d319-42f8-804a-3db371a44bc5:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: TRANSFORM
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 47c5e292-901f-421f-bff0-2abbf64173b6
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: _LINE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e0db777-dfd7-4bad-b180-cf7b6a3ed9ca
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: de6093eb-c028-463e-b6b0-bd0e25392267
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: DATE
+            description: ""
+            hashDetails: null
+            name: DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4071e2a-cf28-48d1-86da-8db3949f9005
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: |-
+                  case
+                    when "PSTG_END_OF_DAY_RECAP_REPORT"."DATE" IS NULL AND "STG_END_OF_DAY_RECAP_REPORT_1"."DATE" = "STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE"."DATE"
+                       then NULL
+                    else "STG_END_OF_DAY_RECAP_REPORT_1"."DATE"
+                  end
+          - columnReference:
+              columnCounter: d4af631d-9adc-415a-a472-3ad4084f024a
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: WH_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 15300fa5-c658-4d55-930e-fbe93ffb8692
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: 17049681-51cc-43dd-9b1c-c10aba9533a8
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: ORDERTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be5b7eb2-035e-4fa3-8a33-7c302890c6de
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: 48843103-5b05-4a74-91ed-7118de02bbf9
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: TIMESTAMP_TZ(9)
+            description: ""
+            hashDetails: null
+            name: _FIVETRAN_SYNCED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a172c092-e516-4c56-98d7-90be0129bc14
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: 2c50e919-94f6-4656-8610-2b30ef0d42ed
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: ORDERS_MATCHED_IN_COFE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6517939c-5ac7-413a-84ed-12ed1fbe3353
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: bd6ea3c1-2ffc-4c29-b27d-b6ce424b6ceb
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: NO_FILLS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a7a9868d-d2c1-45ac-bf9d-b0d7329283b9
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: 47e93615-8755-4591-a5de-7d71903ba24e
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: CARRY_OVER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94932e1b-a4eb-41d0-84f9-3aab31fce5c9
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: 4c9fc1f3-bf39-4be1-b82e-d11d2849fd4e
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: VARCHAR(256)
+            description: ""
+            hashDetails: null
+            name: NOTES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0485399a-c2ce-4979-8bf3-199289fd66be
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+          - columnReference:
+              columnCounter: 62af648f-d928-47e0-990d-8498658a6342
+              stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
+            dataType: NUMBER(38,0)
+            description: ""
+            hashDetails: null
+            name: UNITS_MATCHED_IN_COFE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ae564dba-3392-4824-b30c-307d8e298590
+                    stepCounter: 792c992e-3828-4353-9ecc-c58d8f47a81b
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_END_OF_DAY_RECAP_REPORT: 3ce47e13-6007-43a5-9437-784a6038fc91
+              STG_END_OF_DAY_RECAP_REPORT_1: 792c992e-3828-4353-9ecc-c58d8f47a81b
+              STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE: e2459e90-e408-4c4f-bb7a-c763f9e74c40
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TRANSFORM
+                nodeName: STG_END_OF_DAY_RECAP_REPORT_1
+              - locationName: TRANSFORM
+                nodeName: STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE
+            join:
+              joinCondition: |+
+                FROM {{ ref('TRANSFORM', 'STG_END_OF_DAY_RECAP_REPORT_1') }} "STG_END_OF_DAY_RECAP_REPORT_1"
+                LEFT JOIN {{ ref_no_link('PERSISTENT_STAGING_SHAREPOINT', 'PSTG_END_OF_DAY_RECAP_REPORT') }} "PSTG_END_OF_DAY_RECAP_REPORT"
+                ON 
+                "STG_END_OF_DAY_RECAP_REPORT_1"."WH_ID" = "PSTG_END_OF_DAY_RECAP_REPORT"."WH_ID" AND
+                "STG_END_OF_DAY_RECAP_REPORT_1"."ORDERTYPE" = "PSTG_END_OF_DAY_RECAP_REPORT"."ORDERTYPE" AND
+                "STG_END_OF_DAY_RECAP_REPORT_1"."_FIVETRAN_SYNCED"::DATE = "PSTG_END_OF_DAY_RECAP_REPORT"."_FIVETRAN_SYNCED"::DATE
+                CROSS JOIN {{ ref('TRANSFORM', 'STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE') }} "STG_PSTG_END_OF_DAY_RECAP_REPORT_MAX_DATE"
+
+            name: STG_END_OF_DAY_RECAP_REPORT_2
+            noLinkRefs:
+              - locationName: PERSISTENT_STAGING_SHAREPOINT
+                nodeName: PSTG_END_OF_DAY_RECAP_REPORT
+      name: STG_END_OF_DAY_RECAP_REPORT_2
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 01871a60-d319-42f8-804a-3db371a44bc5
